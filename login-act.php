@@ -1,11 +1,11 @@
 <?php
 
-require_once('/requires/connect.php');
+require_once('requires/connect.php');
 session_start();
 
 extract($_POST);
 
-$senhaF = substr(md5($senha),0,6);
+$senhaF = md5($senha);
 
 $sql_login=$BD->query("SELECT * FROM usuarios WHERE nome_usuario='$user' and senha='$senhaF'");
 
