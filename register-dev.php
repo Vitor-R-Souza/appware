@@ -16,7 +16,7 @@
         require_once('header.php');
     ?>
     <main>
-        <form action="cadastro-act.php" method="$_POST" class="signin" autocomplete="off">
+        <form action="cadastro-act.php" method="post" class="signin" autocomplete="off">
             <h2>Cadastro de Desenvolvedor</h2>
             <div class="data-user">
                 <div class="box-user">

@@ -7,7 +7,7 @@ extract($_POST);
 
 $senhaF = substr(md5($senha),0,6);
 
-$sql_login=mysqli_query($con, "SELECT * FROM usuarios WHERE nome_usuario='$user' and senha='$senhaF'");
+$sql_login=$BD->query("SELECT * FROM usuarios WHERE nome_usuario='$user' and senha='$senhaF'");
 
 if(mysqli_num_rows($sql_login) !=0){
    

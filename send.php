@@ -19,7 +19,7 @@ require 'PHPMailer/src/SMTP.php';
         $senha = substr(md5(random_int(1, 999999)) ,0,6); //senha para o usuario
         $senhaF = substr(md5($senha),0,6) ; //senha no BD
 
-        if(mysqli_query($con, "UPDATE `usuarios` SET `Senha` = '$senhaF' WHERE `Email` = '$user';")){ //update
+        if($BD->query("UPDATE `usuarios` SET `Senha` = '$senhaF' WHERE `Email` = '$user';")){ //update
 
             //todo o role do email
             $mail->isSMTP();
@@ -38,12 +38,12 @@ require 'PHPMailer/src/SMTP.php';
 
             $mail->send(); //enviando o email
             echo"<script>
-                    alert('FOI CARALHO');
+                    alert('codigo enviado');
                     window.location.href='rec-senha.php'
                 </script>";
         }else{
             echo"<script>
-                    alert('FUDEU DEU ERRO');
+                    alert('ocorreu um erro');
                     window.location.href='rec-senha.php'
                 </script>";
         }
