@@ -14,7 +14,7 @@ $color-details: #03f484;
     text-decoration: none;
     color: #fff;
     font-family: 'Poppins', Arial, sans-serif;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: bold;
 }
 
@@ -47,6 +47,7 @@ header{
             width: 120px;
             font-size: 25px;
             /*transform: translateX(-35px);*/
+            text-transform: uppercase;
         }
 
         .search_box{

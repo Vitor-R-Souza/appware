@@ -4,7 +4,7 @@ body .box .heading {
   display: -ms-flexbox;
   display: flex;
   width: 80%;
-  margin-top: .7rem;
+  margin-top: 0.7rem;
   height: 60px;
   border-radius: 5px;
   -webkit-box-align: center;
@@ -15,53 +15,45 @@ body .box .heading {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #1f1f1f;
-  border: 1px solid #fafdff0d;
+  border: 1px solid rgba(250, 253, 255, 0.0509803922);
 }
-
 body .box .heading .heading-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.3rem;
   text-align: center;
   color: red;
   font-size: 30px;
-  margin-left: .3rem;
+  margin-left: 0.3rem;
 }
-
 body .box .heading .swiper-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-right: 2.5rem;
 }
-
 body .box .heading .swiper-btn .swiper-button-next {
   margin-top: -6rem;
 }
-
 body .box .heading .swiper-btn .swiper-button-prev {
   margin-top: -6rem;
 }
-
 body .box .heading .swiper-btn .swiper-button-next,
 body .box .heading .swiper-btn .swiper-button-prev {
   position: static !important;
   margin: 0 0 0 10px !important;
 }
-
 body .box .heading .swiper-btn .swiper-button-next::after,
 body .box .heading .swiper-btn .swiper-button-prev::after {
   color: #fff;
   font-size: 26px !important;
   font-weight: 700;
 }
-
 body .box .popular-content {
   width: 80%;
   -ms-flex-line-pack: center;
       align-content: center;
 }
-
 body .box .popular-content .swiper-wrapper .swiper-slide .movie-box {
   position: relative;
   width: 100%;
@@ -70,7 +62,6 @@ body .box .popular-content .swiper-wrapper .swiper-slide .movie-box {
   margin-top: -2rem;
   overflow: hidden;
 }
-
 body .box .popular-content .swiper-wrapper .swiper-slide .movie-box .movie-box-img {
   width: 100%;
   height: auto;
@@ -92,7 +83,7 @@ body .box .popular-content .swiper-wrapper .swiper-slide .movie-box .movie-box-i
     font-size: 15px;
   }
   .swiper-button-next::after,
-  .swiper-button-prev::after {
+.swiper-button-prev::after {
     color: #fff;
     font-size: 15px !important;
     font-weight: 700;
@@ -106,5 +97,4 @@ body .box .popular-content .swiper-wrapper .swiper-slide .movie-box .movie-box-i
   .movie-box-img {
     margin-top: 2.1rem;
   }
-}
-/*# sourceMappingURL=carousel.css.map */
+}/*# sourceMappingURL=carousel.css.map */
