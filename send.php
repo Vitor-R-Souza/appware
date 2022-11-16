@@ -7,7 +7,7 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-    require_once('connect.php'); //conectar BD
+    require_once('/requires/connect.php'); //conectar BD
 
     extract($_POST);//extraindo
 

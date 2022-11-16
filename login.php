@@ -15,7 +15,7 @@
         require('header.php');
     ?>
     <main>
-        <form action="#" class="login">
+        <form action="login-act.php" class="login">
             <h2>Login</h2> 
             <div class="box-user">
                 <input type="text" name="user" id="user" required>
@@ -32,14 +32,14 @@
                     <span class="checkmark"></span>
                     <label for="connected" class="checkmark">Lembrar-me</label>
                 </div>
-                <div class="new-senha"><a href="#">Esqueceu a senha?</a></div>
+                <div class="new-senha"><a href="rec-senha.php">Esqueceu a senha?</a></div>
             </div>
             <div class="login-sign">
                 <div>
                     <input type="submit" value="Entrar" id="btn">
                 </div>
                 <div>
-                    <p id="sign-in">Não tem uma conta? <a href="pre-register.html">Cadastrar agora</a></p>
+                    <p id="sign-in">Não tem uma conta? <a href="pre-register.php">Cadastrar agora</a></p>
                 </div>
             </div>
         </form>

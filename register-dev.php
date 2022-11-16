@@ -16,7 +16,7 @@
         require('header.php');
     ?>
     <main>
-        <form action="#" class="signin" autocomplete="off">
+        <form action="cadastro-act.php" class="signin" autocomplete="off">
             <h2>Cadastro de Desenvolvedor</h2>
             <div class="data-user">
                 <div class="box-user">

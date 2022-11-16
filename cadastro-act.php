@@ -1,6 +1,6 @@
 <?php 
 
-require_once('connect.php');
+require_once('/requires/connect.php');
 
 extract($_POST);
 

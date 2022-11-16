@@ -1,6 +1,6 @@
 <?php
 
-require_once('connect.php');
+require_once('/requires/connect.php');
 session_start();
 
 extract($_POST);
@@ -14,7 +14,7 @@ if(mysqli_num_rows($sql_login) !=0){
     $_SESSION['logado_user'] = $usuario;
     $_SESSION['logado_senha'] = $senha;
     
-    header('location:home.html');
+    header('location:index.php');
 
 }else {
     
