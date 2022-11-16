@@ -42,7 +42,7 @@
                 </div>
                 <div class="slide-item" data-slide="item" data-index="2">
                     <div class="slide-content">
-                        <img src="./assets/imgs/GTA-V.png" alt="GTA" />
+                        <img src="./assets/imgs/gta5.png" alt="GTA" />
                         <div class="slide-description">
                             <h3>GTA V</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
