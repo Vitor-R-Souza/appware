@@ -33,7 +33,7 @@
                 <p id="text-mode">Nesse modo você poderá analisar a compatibilidade de todos os jogos.</p>
             </div>
             <div class="next-btn">
-                <a href="register-user.html" id="btnNextRegister"><input type="button" value="Próximo"></a>
+                <a href="register-user.php" id="btnNextRegister"><input type="button" value="Próximo"></a>
             </div>
         </section>
     </main>

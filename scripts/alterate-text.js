@@ -7,12 +7,12 @@ function switchToggle(){
         document.getElementById('mode').innerHTML = "Modo Usuário"
         document.getElementById('text-mode').innerHTML = "Nesse modo você poderá analisar a compatibilidade de todos os jogos."
         document.getElementById('mode').style.transition = "margin-right 2s"
-        btnNext.href = "register-user.html"
+        btnNext.href = "register-user.php"
     } else{
         document.getElementById('mode').innerHTML = "Modo Desenvolvedor"
         document.getElementById('text-mode').innerHTML = "Você poderá fazer tudo do Modo Usuário + publicar seus jogos."
         document.getElementById('mode').style.transition = "all 2.5s"
-        btnNext.href = "register-dev.html"
+        btnNext.href = "register-dev.php"
     }
 }
 

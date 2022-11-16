@@ -19,28 +19,30 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   background-color: #2A2F2E;
   height: 8vh;
   position: relative;
-  padding: 0 0px; /*estava 0 200px*/
+  padding: 0 00px;
+  /*estava 0 200px*/
   /*
-  .teste{
-      height: 50%;
-      width: 100px;
-      display: flex;
-      align-items: center;
-      background-color: teal;
+    .teste{
+        height: 50%;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        background-color: teal;
 
-      .teste2{
-          background-color: #00A3A3;
-          height: 4.5vh;
-          border-radius: 50%;
-          cursor: pointer;
-      }
-  }*/
+        .teste2{
+            background-color: #00A3A3;
+            height: 4.5vh;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }*/
 }
+
 nav .side-bar {
   background: red;
   /*rgba(255, 255, 255, 0.1)*/
@@ -56,16 +58,19 @@ nav .side-bar {
   transition: 0.6s case;
   -webkit-transition-property: left;
   transition-property: left;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
+
 nav .side-bar .menu-sidebar {
   width: 100%;
   margin-top: 80px;
 }
+
 nav .side-bar .menu-sidebar .item {
   position: relative;
   cursor: pointer;
 }
+
 nav .side-bar .menu-sidebar .item a {
   color: #fff;
   text-decoration: none;
@@ -74,20 +79,25 @@ nav .side-bar .menu-sidebar .item a {
   padding: 5px 30px;
   line-height: 60px;
 }
+
 nav a {
   color: white;
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
+
 nav a:hover {
-  opacity: 0.9; /*Estava 0.6 originalmente*/
+  opacity: 0.9;
+  /*Estava 0.6 originalmente*/
 }
+
 nav .logo {
   font-size: 24px;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+
 nav .box-search {
   width: 400px;
   height: 50%;
@@ -95,6 +105,7 @@ nav .box-search {
   display: -ms-flexbox;
   display: flex;
 }
+
 nav .box-search #search {
   width: 100%;
   height: 100%;
@@ -104,12 +115,15 @@ nav .box-search #search {
   padding-left: 15px;
   font-size: 1.2em;
 }
+
 nav .box-search #search:focus {
   outline: 0;
 }
+
 nav .box-search #search::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+
 nav .box-search .botao-search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,22 +138,26 @@ nav .box-search .botao-search {
   width: 40px;
   border-radius: 0 10px 10px 0;
 }
+
 nav .nav-list {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; /*Para cada li ficar do lado do outro*/
+  display: flex;
+  /*Para cada li ficar do lado do outro*/
   /*
-  li{
-      margin-left: 60px;
-      letter-spacing: 2px;
-      cursor: pointer;
-  }*/
+        li{
+            margin-left: 60px;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }*/
 }
+
 nav .nav-list .nav-link {
   position: relative;
   z-index: 9999;
 }
+
 nav .nav-list .nav-link a {
   line-height: 3rem;
   color: white;
@@ -155,16 +173,20 @@ nav .nav-list .nav-link a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
+
 nav .nav-list .nav-link a i {
-  margin-left: 0.2rem;
+  margin-left: .2rem;
 }
+
 nav .nav-list .nav-link a:hover {
   -webkit-transform: scale(1);
-          transform: scale(1); /*Efeito de expansão*/
+          transform: scale(1);
+  /*Efeito de expansão*/
 }
+
 nav .nav-list .nav-link .dropdown {
   position: absolute;
   top: 112%;
@@ -174,14 +196,16 @@ nav .nav-list .nav-link .dropdown {
           transform: translateY(10px);
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
   list-style: none;
   z-index: 9999;
 }
+
 nav .nav-list .nav-link .dropdown ul {
   position: relative;
 }
+
 nav .nav-list .nav-link .dropdown ul .arrow {
   position: absolute;
   width: 11px;
@@ -192,31 +216,34 @@ nav .nav-list .nav-link .dropdown ul .arrow {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
   z-index: -1;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link {
   position: relative;
   /*input[type=button]*/
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: white;
   color: #2E4242;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  padding: .5rem 1rem;
+  font-size: .9rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link .link-icon {
   padding-left: -30px;
   color: #2E4242;
@@ -224,21 +251,26 @@ nav .nav-list .nav-link .dropdown .dropdown-link .link-icon {
       -ms-flex-pack: left;
           justify-content: left;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link .link-icon i {
   margin-right: 5px;
   color: #2E4242;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link .link-icon:hover {
   color: white;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link .link-icon:hover i {
   color: white;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link #icon-login {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   margin-right: 10px;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link button {
   width: 100%;
   height: 40px;
@@ -254,6 +286,7 @@ nav .nav-list .nav-link .dropdown .dropdown-link button {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link #login:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(whitesmoke), to(white));
   background-image: linear-gradient(to right, whitesmoke, white);
@@ -263,6 +296,7 @@ nav .nav-list .nav-link .dropdown .dropdown-link #login:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link #login:hover #icon-login {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -271,28 +305,34 @@ nav .nav-list .nav-link .dropdown .dropdown-link #login:hover #icon-login {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link:first-child:hover ~ .arrow {
   background-color: #2A2F2E;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link:hover a {
   background-color: #2A2F2E;
   color: white;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link:hover .dropdown {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
   pointer-events: auto;
 }
+
 nav .nav-list .nav-link .dropdown .dropdown-link:not(:nth-last-child(2)) {
   border-bottom: 1px solid whitesmoke;
 }
+
 nav .nav-list .nav-link:hover > .dropdown {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
   pointer-events: auto;
 }
+
 nav .profile {
   height: 100%;
   display: -webkit-box;
@@ -302,11 +342,13 @@ nav .profile {
       -ms-flex-align: center;
           align-items: center;
 }
+
 nav .profile img {
   height: 4.5vh;
   border-radius: 50%;
   cursor: pointer;
 }
+
 nav .hamburger-menu-container {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -319,6 +361,7 @@ nav .hamburger-menu-container {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+
 nav .hamburger-menu-container .hamburger-menu {
   width: 2.5rem;
   height: 2.5rem;
@@ -332,6 +375,7 @@ nav .hamburger-menu-container .hamburger-menu {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+
 nav .hamburger-menu-container .hamburger-menu div {
   width: 1.6rem;
   height: 3px;
@@ -339,28 +383,32 @@ nav .hamburger-menu-container .hamburger-menu div {
   background-color: white;
   position: relative;
   z-index: 1001;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
+
 nav .hamburger-menu-container .hamburger-menu div:before,
 nav .hamburger-menu-container .hamburger-menu div:after {
-  content: "";
+  content: '';
   position: absolute;
   width: inherit;
   height: inherit;
   background-color: white;
   border-radius: 3px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
+
 nav .hamburger-menu-container .hamburger-menu div:before {
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
 }
+
 nav .hamburger-menu-container .hamburger-menu div:after {
   -webkit-transform: translateY(7px);
           transform: translateY(7px);
 }
+
 nav #check {
   position: absolute;
   top: 50%;
@@ -374,10 +422,12 @@ nav #check {
   opacity: 0;
   display: none;
 }
+
 nav #check:checked ~ .hamburger-menu-container .hamburger-menu div:before {
   -webkit-transform: translateY(0) rotate(-45deg);
           transform: translateY(0) rotate(-45deg);
 }
+
 nav #check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
   -webkit-transform: translateY(0) rotate(45deg);
           transform: translateY(0) rotate(45deg);
@@ -408,6 +458,7 @@ nav #check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
             transform: translateY(0px);
   }
 }
+
 @media (max-width: 920px) {
   .hamburger-menu-container {
     display: -webkit-box;
@@ -438,8 +489,8 @@ nav #check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
     overflow-y: auto;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    -webkit-transition: 0.65s;
-    transition: 0.65s;
+    -webkit-transition: .65s;
+    transition: .65s;
   }
   .nav-list ul {
     -webkit-box-orient: vertical;
@@ -461,8 +512,8 @@ nav #check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
     font-size: 1.1rem;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
+    -webkit-transition: .7s;
+    transition: .7s;
   }
   .nav-list ul .nav-link .dropdown {
     position: initial;
@@ -492,8 +543,8 @@ nav #check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
     left: 100%;
     -webkit-transform: scale(1.1) rotate(45deg);
             transform: scale(1.1) rotate(45deg);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: .5s;
+    transition: .5s;
   }
   .nav-list ul .nav-link .dropdown .dropdown-link:hover > a {
     background-color: #3a91bd;
@@ -503,8 +554,8 @@ nav #check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
   }
   .nav-list ul .nav-link .dropdown i {
     font-size: 1rem;
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
+    -webkit-transition: .7s;
+    transition: .7s;
   }
   .nav-list ul .nav-link:hover > a {
     -webkit-transform: scale(1);
@@ -512,11 +563,11 @@ nav #check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
     background-color: #50a9d6;
   }
   .nav-list ul .nav-link:hover > .dropdown,
-.nav-list ul .dropdown-link:hover > .dropdown {
+  .nav-list ul .dropdown-link:hover > .dropdown {
     display: block;
   }
   .nav-list ul .nav-link:hover > a > i,
-.nav-list ul .dropdown-link:hover > a > i {
+  .nav-list ul .dropdown-link:hover > a > i {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -532,6 +583,7 @@ nav #check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
             animation: animation 0.5s ease forwards var(--i);
   }
 }
+
 /*
 header{
     position: sticky;
@@ -545,4 +597,5 @@ header{
 main{
     background-color: $primary-color;
     height: 92vh;
-}*//*# sourceMappingURL=nav.css.map */
+}*/
+/*# sourceMappingURL=nav.css.map */

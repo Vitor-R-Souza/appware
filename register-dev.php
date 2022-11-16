@@ -13,10 +13,10 @@
 
 <body>
     <?php
-        require('header.php');
+        require_once('header.php');
     ?>
     <main>
-        <form action="cadastro-act.php" class="signin" autocomplete="off">
+        <form action="cadastro-act.php" method="$_POST" class="signin" autocomplete="off">
             <h2>Cadastro de Desenvolvedor</h2>
             <div class="data-user">
                 <div class="box-user">
@@ -81,7 +81,7 @@
                     <input type="submit" value="Cadastrar" id="btn">
                 </div>
                 <div>
-                    <p id="sign-in">Já tem uma conta? <a href="login.html">Entrar agora</a> ou <a href="pre-register.html">Voltar</a></p>
+                    <p id="sign-in">Já tem uma conta? <a href="login.php">Entrar agora</a> ou <a href="pre-register.php">Voltar</a></p>
                 </div>
             </div>
         </form>

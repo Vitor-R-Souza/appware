@@ -4,7 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
@@ -20,22 +20,26 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
+
 main .pre-form {
   background-color: #2A2F2E;
   padding: 40px;
   width: 400px;
   border-radius: 10px;
 }
+
 main .pre-form h2 {
   margin-bottom: 30px;
   font-size: 30px;
   color: white;
   text-align: center;
 }
+
 main .pre-form .text-apresentation {
   font-size: 1em;
   line-height: 1.3em;
 }
+
 main .pre-form .switch-btn .toggle {
   margin-bottom: 40px;
   margin-top: 40px;
@@ -46,9 +50,11 @@ main .pre-form .switch-btn .toggle {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 main .pre-form .switch-btn .toggle input {
   display: none;
 }
+
 main .pre-form .switch-btn .toggle label {
   position: relative;
   display: block;
@@ -60,6 +66,7 @@ main .pre-form .switch-btn .toggle label {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 main .pre-form .switch-btn .toggle label:after {
   position: absolute;
   left: -4px;
@@ -71,28 +78,34 @@ main .pre-form .switch-btn .toggle label:after {
   background: #fff;
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
-  content: "";
+  content: '';
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 main .pre-form .switch-btn .toggle label:active:after {
   -webkit-transform: scale(1.15, 0.85);
           transform: scale(1.15, 0.85);
 }
+
 main .pre-form .switch-btn .toggle input:checked ~ label {
   background: #6fbeb5;
 }
+
 main .pre-form .switch-btn .toggle input:checked ~ label:after {
   left: 40px;
   background: #179588;
 }
+
 main .pre-form .switch-btn .toggle input:disabled ~ label {
   background: #d5d5d5;
   pointer-events: none;
 }
+
 main .pre-form .switch-btn .toggle input:disabled ~ label:after {
   background: #bcbdbc;
 }
+
 main .pre-form .mode-dev-user {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,14 +115,17 @@ main .pre-form .mode-dev-user {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
 main .pre-form .mode-dev-user h3 {
   text-align: center;
   margin-bottom: 5px;
   color: #03f484;
 }
+
 main .pre-form .mode-dev-user p {
   text-align: center;
 }
+
 main .pre-form .next-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,6 +134,7 @@ main .pre-form .next-btn {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 main .pre-form .next-btn input {
   width: 300px;
   height: 60px;
@@ -136,6 +153,8 @@ main .pre-form .next-btn input {
   text-transform: uppercase;
   margin-top: 25px;
 }
+
 main .pre-form .next-btn input:hover {
   background-color: #00A3A3;
-}/*# sourceMappingURL=pre-register.css.map */
+}
+/*# sourceMappingURL=pre-register.css.map */
