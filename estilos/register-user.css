@@ -3,71 +3,56 @@
 * {
   margin: 0%;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 main {
   background-color: #2E4242;
   height: 92vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 main .signin {
   background-color: #2A2F2E;
   padding: 40px;
   width: 800px;
   border-radius: 10px;
 }
-
 main .signin h2 {
   margin-bottom: 30px;
   font-size: 30px;
   color: white;
   text-align: center;
+  font-weight: bold;
 }
-
 main .signin .data-user {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 main .signin .data-user .box-user {
   position: relative;
   width: 45%;
   margin-bottom: 5px;
   /*
-                input:focus,
-                input:valid{
-                    background: none;
-                    -webkit-text-fill-color: #ffffff !important;
-                }*/
+  input:focus,
+  input:valid{
+      background: none;
+      -webkit-text-fill-color: #ffffff !important;
+  }*/
   /*
-                input:focus~label:-webkit-autofill,
-                input:focus~label:-webkit-autofill:hover, 
-                input:focus~label:-webkit-autofill:focus, 
-                input:focus~label:-webkit-autofill:active,
-                input:valid~label:-webkit-autofill,
-                input:valid~label:-webkit-autofill:hover,
-                input:valid~label:-webkit-autofill:focus,
-                input:valid~label:-webkit-autofill:active{
-                    -webkit-text-fill-color: #ffffff00 !important;
-                }*/
+  input:focus~label:-webkit-autofill,
+  input:focus~label:-webkit-autofill:hover, 
+  input:focus~label:-webkit-autofill:focus, 
+  input:focus~label:-webkit-autofill:active,
+  input:valid~label:-webkit-autofill,
+  input:valid~label:-webkit-autofill:hover,
+  input:valid~label:-webkit-autofill:focus,
+  input:valid~label:-webkit-autofill:active{
+      -webkit-text-fill-color: #ffffff00 !important;
+  }*/
 }
-
 main .signin .data-user .box-user input {
   width: 100%;
   padding: 10px 0;
@@ -79,7 +64,6 @@ main .signin .data-user .box-user input {
   font-size: 16px;
   margin-bottom: 30px;
 }
-
 main .signin .data-user .box-user input:-webkit-autofill,
 main .signin .data-user .box-user input:-webkit-autofill:hover,
 main .signin .data-user .box-user input:-webkit-autofill:focus,
@@ -88,12 +72,10 @@ main .signin .data-user .box-user input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
-
 main .signin .data-user .box-user input:-webkit-autofill:valid {
   -webkit-text-fill-color: #ffffff !important;
   /*Tava deixando bg do input branco meio transparente*/
 }
-
 main .signin .data-user .box-user label {
   position: absolute;
   top: 0;
@@ -101,121 +83,88 @@ main .signin .data-user .box-user label {
   padding: 15px 0;
   color: white;
   font-size: 16px;
-  pointer-events: none;
-  /*Indicando campo diitável*/
-  -webkit-transition: .5s;
-  transition: .5s;
+  pointer-events: none; /*Indicando campo diitável*/
+  transition: 0.5s;
 }
-
 main .signin .data-user .box-user input:focus ~ label,
-main .signin .data-user .box-user input:valid ~ label {
-  /*imput focado, label muda*/
+main .signin .data-user .box-user input:valid ~ label { /*imput focado, label muda*/
   top: -25px;
   left: 0;
   color: #03f484;
   font-size: 12px;
 }
-
-main .signin .data-user .box-user input[type="date"] {
+main .signin .data-user .box-user input[type=date] {
   width: 100%;
 }
-
 main .signin .data-user .box-user label#date {
   visibility: hidden;
-  -webkit-transition: none;
   transition: none;
 }
-
-main .signin .data-user .box-user input[type="date"]:focus ~ label#date {
-  -webkit-transition: 0.5s;
+main .signin .data-user .box-user input[type=date]:focus ~ label#date {
   transition: 0.5s;
 }
-
-main .signin .data-user .box-user input[type="date"]:focus ~ label#date,
-main .signin .data-user .box-user input[type="date"]:valid ~ label#date {
+main .signin .data-user .box-user input[type=date]:focus ~ label#date,
+main .signin .data-user .box-user input[type=date]:valid ~ label#date {
   visibility: visible;
   top: -25px;
   left: 0;
   color: #03f484;
   font-size: 12px;
 }
-
-main .signin .data-user .box-user input[type="date"]::-webkit-calendar-picker-indicator {
+main .signin .data-user .box-user input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
-  -webkit-filter: invert(0.8) brightness(500%) sepia(10%) saturate(10%) hue-rotate(20deg);
-          filter: invert(0.8) brightness(500%) sepia(10%) saturate(10%) hue-rotate(20deg);
+  filter: invert(0.8) brightness(500%) sepia(10%) saturate(10%) hue-rotate(20deg);
 }
-
 main .signin .data-user .box-user img {
   position: absolute;
   top: 40%;
   right: 0px;
   color: white;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
-
 main .signin .data-user .box-user .span-required {
   font-size: 12px;
   margin: -25px 0 0 1px;
   color: red;
   display: none;
 }
-
 main .signin .data-user .box-user i {
   position: absolute;
   top: 45px;
   right: 10px;
   visibility: hidden;
 }
-
 main .signin .data-user .box-user small {
   visibility: hidden;
   position: absolute;
   margin-top: 5px;
   font-size: 14px;
 }
-
 main .signin .sign-up {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
-
 main .signin .sign-up .check {
   font-size: 14px;
 }
-
 main .signin .sign-up .check label {
   margin-left: 5px;
 }
-
 main .signin .sign-up .check input[type=checkbox] {
   accent-color: darkgreen;
 }
-
 main .signin .sign-up .check a {
   color: #03f484;
   text-decoration: none;
   font-weight: bold;
 }
-
 main .signin .sign-up #btn {
-  background-image: -webkit-gradient(linear, left top, right top, from(#137B7B), to(#00A3A3));
   background-image: linear-gradient(to right, #137B7B, #00A3A3);
   width: 300px;
   height: 60px;
@@ -228,27 +177,21 @@ main .signin .sign-up #btn {
   text-transform: uppercase;
   margin-top: 15px;
 }
-
 main .signin .sign-up #btn:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(#179494), to(#01cccc));
   background-image: linear-gradient(to right, #179494, #01cccc);
   width: 300px;
   height: 60px;
 }
-
 main .signin .sign-up #sign-in {
   margin-top: 15px;
   font-size: 13px;
 }
-
 main .signin .sign-up #sign-in a {
   text-decoration: none;
   font-weight: bold;
 }
-
 main .signin .sign-up #sign-in a:hover {
   text-decoration: none;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.774);
-}
-/*# sourceMappingURL=register-user.css.map */
+}/*# sourceMappingURL=register-user.css.map */

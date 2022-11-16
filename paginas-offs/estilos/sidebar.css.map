@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,OAAO,CAAC,qFAAI;AAOZ,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,qBAAqB;CACrC;;AACD;;;;;;;;;;;;EAYE",
-    "sources": [
-        "sidebar.scss"
-    ],
-    "names": [],
-    "file": "sidebar.css"
-}
+{"version":3,"sources":["sidebar.scss","sidebar.css"],"names":[],"mappings":"AAAQ,6FAAA;AAOR;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,YAAA;EACA,gBAAA;EACA,kCAAA;ACLJ;;ADOA;;;;;;;;;;;;CAAA","file":"sidebar.css"}
