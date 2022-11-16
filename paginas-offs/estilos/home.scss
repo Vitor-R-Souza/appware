@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+$primary-color: #2E4242;
+$secondary-color: #2A2F2E;
+$color1-btn: #137B7B;
+$color2-btn: #00A3A3;
+$color-details: #03f484;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: $primary-color;
+}
+
+main{
+    height: 200vh;
+    width: 100%;
+    background-color: $primary-color;
+    /*position: absolute;*/
+
+    #ware{
+        /*você pode alterar largura usando width*/
+        /*padding:50px;
+        background:darkgreen;*/
+        position:fixed;
+        bottom:20px;/*altura da classe*/
+        right: 40px;
+        transform: translateY(0px);
+        animation: float 5s ease-in-out infinite;
+        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.342));
+        z-index: 50;
+        filter: grayscale(15%);
+        filter: saturate(60%);
+        cursor: pointer;
+        scroll-behavior: smooth;
+    }
+
+    .carousel{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 800px;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondary-color;
+
+    
+        .container{
+            width: 100%; /*Original 1000px*/
+            height: 100%; /*Original 500px, dps 650px*/
+            border-radius: 0px 0px 10px 10px;
+            overflow: hidden;
+            position: absolute;
+            top: -50%; /*-21,8%*/
+            left: 50%; /*50%*/
+            transform: translate(-50%,50%);
+            box-shadow: 0px 2px 5px #000;
+            z-index: 1;
+
+            .slides{
+                display: flex;
+                width: 500%;
+                height: 100%;
+
+                input{
+                    display: none;
+                }
+
+                /*Quando um slide tiver checkado, a imagem aparecerá em destaque(one)*/
+                #slide-1:checked~.one{ 
+                    margin-left: 0;
+                }
+                #slide-2:checked~.one{ 
+                    margin-left: -20%;
+                }
+                #slide-3:checked~.one{ 
+                    margin-left: -40%;
+                }
+                #slide-4:checked~.one{ 
+                    margin-left: -60%;
+                }
+                #slide-5:checked~.one{ 
+                    margin-left: -80%;
+                }
+            }
+
+            .images{
+                width: 20%;
+                transition: 0.5s;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .navigation{
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+                transform: translate(-50%);
+                display: flex;
+
+                .nav{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    border: 2px solid gray;
+                    margin: 6px;
+                    cursor: pointer;
+                    transition: .5s;
+                }
+
+                .nav:hover{
+                    background-color: #fff;
+                    border: 2px solid #fff;
+                }
+            }
+        }
+    }
+
+    .content{
+        width: 100%;
+        height: 1500px;
+        display: flex;
+        /*justify-content: space-between;*/
+        
+        .content-left{
+                height: 600px;
+                width: 15%;
+                /*background-color: $color2-btn;*/
+                display: flex;
+                flex-direction: column;
+                /*align-items: center;*/
+                margin: 0 auto;
+
+            .category{
+                width: 100%;
+                /*height: 600px*/
+                /*background-color: $color1-btn;*/
+                display: flex;
+                flex-direction: column;
+                /*align-items: center;*/
+                padding: 12px;
+                
+                .category-title{
+                    background-color: $color2-btn;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding: 10px 0;
+                    border-radius: 10px 10px 0 0;
+                    margin-top: 25px;
+                }
+    
+                .checkbox-category{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    accent-color: $color-details;
+                    font-size: 0.8em;
+                    padding: 10px;
+                    background-color: #2E4242;
+                    /*border-radius: 0 0 10px 10px;*/
+    
+                    .category-left{
+                        display: flex;
+                        flex-direction: column;
+                        width: 50%;
+                        margin-left: 5px;
+                        line-height: 25px;
+                    }
+    
+                    .category-right{
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 5px;
+                        line-height: 25px;
+    
+                    }
+                }
+
+                .more-category{
+                    background-color: #2E4242;
+                    border-radius: 0 0 10px 10px;
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px;
+
+                    input{
+                        width: 100%;
+                        padding: 3px;
+                        background-color: $color1-btn;
+                        outline: none;
+                        border: 1px solid $color2-btn;
+                        border-radius: 5px;
+                        color: white;
+                        transition: 0.3s;
+                        cursor: pointer;
+                    }
+
+                    input:hover{
+                        background-color: $color2-btn;
+                    }
+                }
+            }
+
+            .age-group{
+                width: 100%;
+                /*height: 600px*/
+                /*background-color: $color1-btn;*/
+                display: flex;
+                flex-direction: column;
+                /*align-items: center;*/
+                padding: 12px;
+
+                .age-title{
+                    background-color: $color2-btn;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding: 10px 0;
+                    border-radius: 10px 10px 0 0;
+                    margin-top: 15px;
+                }
+    
+                .checkbox-age{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    accent-color: $color-details;
+                    font-size: 0.9em;
+                    padding: 10px;
+                    background-color: #2E4242;
+                    border-radius: 0 0 10px 10px;
+    
+                    .age-left{
+                        display: flex;
+                        flex-direction: column;
+                        width: 50%;
+                        margin-left: 5px;
+                        line-height: 25px;
+                    }
+    
+                    .age-right{
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 5px;
+                        line-height: 25px;
+    
+                    }
+                }
+            }
+        }
+        
+
+        .main-content{
+            height: 1500px;
+            width: 70%;
+            background-color: #243333;
+
+            
+        }
+
+        .ads{
+            height: 600px;
+            width: 15%;
+            /*background-color: $color2-btn;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            img{
+                display: flex;
+                cursor: pointer;
+                width: 100%;
+            }
+            /*
+            .ads-gow{
+                display: flex;
+                height: 600px;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+
+                
+                img{
+                    cursor: pointer;
+                    width: 75%;
+                }
+            }*/
+        }
+    }
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

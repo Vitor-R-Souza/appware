@@ -1,0 +1,4 @@
+https://pt.stackoverflow.com/questions/162291/como-criar-um-bot%C3%A3o-toggle-on-e-toggle-off
+
+Para select, input, e textarea mudar preenchimento automatico
+https://pt.stackoverflow.com/questions/256541/alterar-o-background-do-input-preenchido-pelo-autocomplete-do-chrome

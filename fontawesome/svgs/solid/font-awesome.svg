@@ -1,0 +1,5 @@
+dn)) is a WIA device (internal type: 0x00000031)
+WIA: 4024.4220 31 8 0 [wiaservc.dll] DeviceInfoSet::GetDeviceStatus, CM_Get_DevNode_Status for device ({6BDD1FC6-810F-11D0-BEC7-08002BE2092F}\0002) failed, return code 0x0000000D, DEV_STATE_ACTIVE not set
+WIA: 4024.4548 31 0 0 [wiaservc.dll] USDWrapper::RefreshSettings, (EPSON37B4DC (L6160 Series)) is a WIA device (internal type: 0x00000031)
+WIA: 4024.4548 31 8 0 [wiaservc.dll] DeviceInfoSet::GetDeviceStatus, CM_Get_DevNode_Status for device ({6BDD1FC6-810F-11D0-BEC7-08002BE2092F}\0000) failed, return code 0x0000000D, DEV_STATE_ACTIVE not set
+WIA: 4024.4548 31 4 0 [wiaservc.dll] USDWrapper::RefreshSettings, Device state for (EPSON37B4DC (L6160 Se

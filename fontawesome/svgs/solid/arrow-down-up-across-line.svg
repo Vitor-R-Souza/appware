@@ -1,0 +1,5 @@
+servc.dll] DeviceListManager::ProcessDeviceRemoval, We are not generating a DISCONNECT event for device (NPI92E8D9 (HP LaserJet 400 MFP M425dn)), because it has already been done
+WIA: 3844.4412 47 80000000 0 [wiaservc.dll] WiaService::CheckForActivityAndShutdown, Not shutting down service because 2 devices are installed
+WIA: 3844.4412 47 8 0 [wiaservc.dll] DeviceListManager::DeviceCallback, The device (EPSON37B4DC (L6160 Series)) seems to be inactive - its driver will not be loaded
+WIA: 3844.4412 47 2 0 [wiaservc.dll] SCMControlHandler::UpdateServiceStatus, Updating service status. CurrentState=SERVICE_RUNNING, StateCode=4, WaitHint=0
+WIA: 3844.4132 47 1 0 [wiaservc.dll] USDWrapper::~USDWrapper, ~USDWrapper (000002BC75408E60) for {6BDD1FC6-810F-11D0-BEC7-08002BE2092F}\0002, with friendly name (NPI92E8D9 (HP LaserJet

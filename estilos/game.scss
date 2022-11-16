@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+$primary-color: #2E4242;
+$secondary-color: #2A2F2E;
+$terciary-color: #3c4643;
+$color1-btn: #137B7B;
+$color2-btn: #00A3A3;
+$color-details: #03f484;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    list-style: none;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body{
+    background-color: $primary-color;
+}
+
+main{
+    width: 80vw;
+    background-color: $primary-color;
+    overflow-x: hidden;
+    margin: 0 auto;
+
+    section.section1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $terciary-color;
+
+        .title-game{
+            height: 100px;
+            width: 100%;
+            /*background-color: #00A3A3;*/
+            display: flex;
+
+            .titles{
+                width: 90%;
+                display: flex;
+                align-items: center;
+
+                h1{
+                    font-size: 4em;
+                }
+            }
+
+            #favorite{
+                width: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .fa-heart{
+                    font-size: 3.5em;
+                    cursor: pointer;
+                    transition: ease-in-out 0.1s;
+                }
+
+                .fa-heart.ativo{
+                    font-size: 3.5em;
+                    color: rgb(247, 41, 76);
+                }
+            }
+        }
+
+        .img-infos{
+            display: flex;
+
+            .img-game{
+                width: 65%;
+                /*background-color: darkgreen;*/
+                display: flex;
+                margin-bottom: 50px;
+                
+
+                img{
+                    background-size: cover;
+                    width: 100%;
+                    height: 100%; /*Deixar ou não? SSSS*/
+                    margin: auto;
+                    padding: 0px;
+                    border-radius: 10px;
+                }
+            }
+
+            .infos-game{
+                width: 35%;
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+
+                .sinopse{
+
+                    .title-sinopse{
+                        height: 50px;
+                        background-color: #2A2F2E;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 3em;
+                        text-transform: uppercase;
+
+                    }
+
+                    .text-sinopse{
+                        padding: 25px;
+                        text-align: justify;
+                        font-size: 1.1em;
+                    }
+                }
+
+                .year-note{
+                    display: flex;
+                    margin-bottom: 15px;
+
+                    .year{
+                        width: 50%;
+                        padding-left: 30px;
+                        /*background-color: #00A3A3;*/
+
+                        .title-year{
+                            color: $color-details;
+                        }
+                    }
+
+                    .notes{
+                        padding-left: 30px;
+
+                        .title-note{
+                            color: $color-details;
+                        }
+
+                        i{
+                            color: gold;
+                        }
+                    }
+                }
+
+                hr{
+                    margin: 0 30px;
+                    opacity: 0.5;
+                }
+
+                .theme-dev{
+                    display: flex;
+                    margin-top: 15px;
+                    
+                    .theme{
+                        width: 50%;
+                        padding-left: 30px;
+
+                        .title-theme{
+                            color: $color-details;
+                        }
+
+                        .genero{
+
+                        }
+                    }
+
+                    .dev{
+                        padding-left: 30px;
+
+                        .title-dev{
+                            color: $color-details;
+                        }
+                    }
+                }
+
+                .btn-analise{
+                    text-align: center;
+                    margin-top: 15px;
+
+                    button{
+                        width: 90%;
+                        height: 60px;
+                        border-radius: 10px;
+                        outline: none;
+                        border: none;
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        color: white;
+                        background-image: linear-gradient(to right,  #137B7B, #00A3A3);               
+                        cursor: pointer;
+                        transition: 0.3s;
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    hr{
+        opacity: 0.3;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.678);
+    }
+
+    .section2{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: $primary-color;
+
+        .results{
+            border-radius: 20px 20px 20px 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-right: 45px;
+            width: 65%;
+            background-color: $secondary-color;
+
+            .title-results{
+                background-color: #1e2020;
+                text-align: center;
+                font-size: 2em;
+                border-radius: 20px 20px 0 0;
+                text-transform: uppercase;
+            }
+
+            .component{
+                margin: 25px 0;
+                padding-left: 60px;
+                padding-right: 60px;
+
+                .title-component{
+                    font-size: 1.3em;
+                    background-image: linear-gradient(to right, rgb(2, 73, 2), transparent);
+                    border-radius: 10px;
+                    padding-left: 10px;
+
+                    h5{
+                        color: $color-details;
+                    }
+                }
+
+                .result-component{
+                    font-size: 1.8em;
+                    padding-left: 10px;
+
+                    p{
+
+                    }
+                }
+            }
+
+            .percentage{
+                text-align: center;
+                font-size: 1.5em;
+                border-radius: 20px;
+                margin-bottom: 20px;
+            }
+
+            hr{
+                margin: 0 60px;
+            }
+
+            .avaliation{
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0;
+
+                .aval-title{
+                    /*text-align: right;*/
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .aval-star{
+
+                    .avaliacao{
+                        display: flex;
+                        padding-left: 10px;
+                        justify-content: center;
+                       }
+                      .star-icon{
+                        list-style-type: none;
+                        cursor: pointer;
+                        color: #ffe500;
+                        font-size: 25px;/* alterar o tamanho das estrelas */
+                      }
+                      .star-icon::before{
+                        content: "\2605";
+                      }
+                      .star-icon.ativo ~ .star-icon::before{
+                        content: "\2606";
+                      }
+                      .avaliacao:hover .star-icon::before{
+                        content: "\2605";
+                      }
+                      .star-icon:hover ~ .star-icon::before{
+                        content: "\2606";
+                      }
+                }
+                
+            }
+            
+        }
+
+        .requireds{
+            border-radius: 20px 20px 20px 20px;
+            width: 35%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background-color: $secondary-color;
+            height: 70%;
+
+            #minimum-req{
+                border-radius: 20px 20px 0 0;
+            }
+
+            .title-requireds{
+                text-align: center;
+                font-size: 1.2em;
+                text-transform: uppercase;
+                padding: 10px;
+                background-color: #1e2020;
+
+            }
+
+            .minimum-recommended{
+                margin: 5px 0;
+                padding: 0 20px;
+                line-height: 1.5em;
+
+                .requireds-game{
+
+                    .title-requisit{
+                    
+                        h6{
+                            color: $color-details;
+                        }
+                    }
+
+                    .first-component{
+                        margin-top: 15px;
+                    }
+
+                    .last-component{
+                        margin-bottom: 15px;
+                    }
+                }
+                /*
+                .req{
+                    padding: 0%;
+                    text-align: center;
+                    font-size: 1.5em;
+                    text-transform: uppercase;
+                    padding: 15px;
+                    background-color: $terciary-color;
+                }*/
+            }
+
+            hr{
+                margin: 20px;
+                opacity: 0.3;
+            }
+
+        }
+    }
+}
+

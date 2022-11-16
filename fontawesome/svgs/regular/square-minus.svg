@@ -1,0 +1,6 @@
+20.4088 62 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
+WIA: 3820.4088 62 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
+WIA: 3820.4088 62 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
+WIA: 3820.4088 62 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @WFSR.DLL,-25105
+WIA: 3820.4088 62 80000000 0 [wiaservc.dll] WiaService::Run, The WIA service is now running.
+WIA: 3820.4088 62 8000000

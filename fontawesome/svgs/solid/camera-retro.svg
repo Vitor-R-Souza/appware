@@ -1,0 +1,6 @@
+:ControlThread, Processing control request (control: 11, event type: 32768)...
+WIA: 3848.4284 844 2 0 [wiaservc.dll] Dispatcher::ProcessEvent, System event received: dwControl 11, dwEventType 32768, lpEventData: 0x000001C38E208CD0
+WIA: 3848.4284 844 0 0 [wiaservc.dll] DeviceClassEnumeratorHandler::ProcessEvent, Processing system event, control code 11, event type 32768..
+WIA: 3848.4284 844 2 0 [wiaservc.dll] DeviceClassEnumeratorHandler::ProcessEvent, Message from PnP: DBT_DEVICEARRIVAL
+WIA: 3848.4284 844 2 0 [wiaservc.dll] DeviceClassEnumeratorHandler::GetDeviceNameFromDevHdr, Received a DBT_DEVTYP_DEVICEINTERFACE message
+WIA: 3848.4284 844 2 0 [wiaservc.dll] De

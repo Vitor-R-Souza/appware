@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+$primary-color: #2E4242;
+$secondary-color: #2A2F2E;
+$color1-btn: #137B7B;
+$color2-btn: #00A3A3;
+$color-details: #03f484;
+
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    background-color: $primary-color;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .signin{
+        background-color: $secondary-color;
+        padding: 40px;
+        width: 800px;
+        border-radius: 10px;
+
+        h2{
+            margin-bottom: 30px;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .data-user{
+            display: flex;
+            justify-content: space-between;
+
+            .box-user{
+                position: relative;
+                width: 45%;
+                margin-bottom: 5px;
+
+                input{
+                    width: 100%;
+                    padding: 10px 0;
+                    outline: none;
+                    border: 0;
+                    background-color: transparent;
+                    border-bottom: 1px solid white;
+                    color: white;
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
+
+                
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover, 
+                input:-webkit-autofill:focus, 
+                input:-webkit-autofill:active{
+                    -webkit-text-fill-color: rgba(255, 255, 255, 0)tant;
+                    transition: background-color 5000s ease-in-out 0s;
+                }
+                input:-webkit-autofill:valid{
+                    -webkit-text-fill-color: #ffffff !important;
+                    /*Tava deixando bg do input branco meio transparente*/
+                }
+    
+                label{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 15px 0;
+                    color: white;
+                    font-size: 16px;
+                    pointer-events: none; /*Indicando campo diitável*/
+                    transition: .5s;
+                }
+
+                /*
+                input:focus,
+                input:valid{
+                    background: none;
+                    -webkit-text-fill-color: #ffffff !important;
+                }*/
+    
+                /*
+                input:focus~label:-webkit-autofill,
+                input:focus~label:-webkit-autofill:hover, 
+                input:focus~label:-webkit-autofill:focus, 
+                input:focus~label:-webkit-autofill:active,
+                input:valid~label:-webkit-autofill,
+                input:valid~label:-webkit-autofill:hover,
+                input:valid~label:-webkit-autofill:focus,
+                input:valid~label:-webkit-autofill:active{
+                    -webkit-text-fill-color: #ffffff00 !important;
+                }*/
+
+                input:focus~label,
+                input:valid~label
+                { /*imput focado, label muda*/
+                    top: -25px;
+                    left: 0;
+                    color: $color-details;
+                    font-size: 12px;
+                }
+
+                input[type="date"]{
+                    width: 100%;
+                }
+                
+                label#date{
+                    visibility: hidden;
+                    transition: none;
+                }
+
+                input[type="date"]:focus~label#date{
+                    transition: 0.5s;
+                }
+
+                input[type="date"]:focus~label#date,
+                input[type="date"]:valid~label#date{
+                    visibility: visible;
+                    top: -25px;
+                    left: 0;
+                    color: $color-details;
+                    font-size: 12px;
+                }
+
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    cursor: pointer;
+                    filter: invert(0.8) brightness(0500%) sepia(10%) saturate(10%) hue-rotate(20deg);
+                }
+
+                img{
+                    position: absolute;
+                    top: 40%;
+                    right: 0px;
+                    color: white;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+
+                .btn-eye{
+
+                }
+
+                .span-required{
+                    font-size: 12px;
+                    margin: -25px 0 0 1px;
+                    color: red;
+                    display: none;
+                }
+
+                i{
+                    position: absolute;
+                    top: 45px;
+                    right: 10px;
+                    visibility: hidden;
+                }
+
+                small{
+                    visibility: hidden;
+                    position: absolute;
+                    margin-top: 5px;
+                    font-size: 14px;
+                }
+            }
+            
+        }
+        .sign-up{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+
+            .check{
+                font-size: 14px;
+
+                label{
+                    margin-left: 5px;
+                }
+
+                input[type=checkbox]{
+                    accent-color: darkgreen;
+                }
+
+                a{
+                    color: $color-details;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+
+            #btn{
+                background-image: linear-gradient(to right,  #137B7B, #00A3A3);
+                width: 300px;
+                height: 60px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin-top: 15px;
+
+                &:hover{
+                    background-image: linear-gradient(to right, #179494, #01cccc);
+                    width: 300px;
+                    height: 60px;
+                }
+            }
+
+
+            #sign-in{
+                margin-top: 15px;
+                font-size: 13px;
+
+                a{
+                    text-decoration: none;
+                    font-weight: bold;
+
+                    &:hover{
+                        text-decoration: none;
+                        font-weight: bold;
+                        color: rgba(255, 255, 255, 0.774);  
+                    }
+                }
+            }
+        }
+    }
+}

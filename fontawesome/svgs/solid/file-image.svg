@@ -1,0 +1,4 @@
+60 Series)): \\?\swd#dafwsdprovider#urn:uuid:cfe92100-67c4-11d4-a45f-f8d02737b4dc#uri:urn:uuid:cfe92100-67c4-11d4-a45f-f8d02737b4dc#01#{6bdd1fc6-810f-11d0-bec7-08002be2092f}
+WIA: 4048.4604 31 4 0 [wiaservc.dll] USDWrapper::RefreshSettings, New PnP identifier for (EPSON37B4DC (L6160 Series)): \\?\swd#dafwsdprovider#urn:uuid:cfe92100-67c4-11d4-a45f-f8d02737b4dc#uri:urn:uuid:cfe92100-67c4-11d4-a45f-f8d02737b4dc#01#{6bdd1fc6-810f-11d0-bec7-08002be2092f}
+WIA: 4048.4604 31 8 0 [wiaservc.dll] DeviceListManager::ProcessDeviceArrival, Device (EPSON37B4DC (L6160 Series)) state is currently marked 0x00000000
+WIA: 4048.4604 31 8 0 [wiaservc.dll] DeviceListManager::ProcessDeviceArrival, Device (EPSON37B4DC (L6160 Series)) is 

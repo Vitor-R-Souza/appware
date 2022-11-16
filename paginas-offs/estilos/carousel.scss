@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body{
+    
+    .box{
+        .heading{
+            display: flex;
+            width: 80%;
+            margin-top: .7rem;
+            height: 60px;
+            border-radius: 5px;
+            align-items: center;
+            margin-inline: auto;
+            justify-content: space-between;
+            background: #1f1f1f;
+            border: 1px solid #fafdff0d;
+
+            .heading-title {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                font-size: 1.3rem;
+                text-align: center;
+                color: red;
+                font-size: 30px;
+                margin-left: .3rem;
+            }
+            .swiper-btn {
+                display: flex;
+                margin-right: 2.5rem;
+
+                .swiper-button-next {
+                    margin-top: -6rem;
+                }
+                .swiper-button-prev {
+                    margin-top: -6rem;
+                }
+                .swiper-button-next,
+                .swiper-button-prev{
+                    position: static !important;
+                    margin: 0 0 0 10px !important ;
+                }
+                .swiper-button-next::after,
+                .swiper-button-prev::after{
+                    color: #fff;
+                    font-size: 26px !important;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .popular-content {
+            width: 80%;
+            align-content: center;
+
+            .swiper-wrapper{
+
+                .swiper-slide{
+
+                    .movie-box{
+                        position: relative;
+                        width: 100%;
+                        box-shadow: #0f1119 0rem 2rem 2rem -1rem;
+                        margin-top: -2rem;
+                        overflow: hidden;
+
+                        .movie-box-img{
+                            width: 100%;
+                            height: auto;
+                            border: #242b2b solid;
+                            border-radius: 7px;
+                            margin-top: 2.5rem;
+                            align-items: center;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+
+
+@media (max-width:771px) {
+    .heading {
+        height: 35px;
+    }
+    .heading-title {
+        font-size: 15px;
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after{
+        color: #fff;
+        font-size: 15px !important;
+        font-weight: 700;
+    }
+    .swiper-btn {
+        display: flex;
+        margin-left: 8.5rem;
+    }
+    .movie-box-img {
+        margin-top: 2.1rem;
+    }
+}

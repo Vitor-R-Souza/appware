@@ -1,0 +1,8 @@
+rrival, Device (EPSON37B4DC (L6160 Series)) state is currently marked 0x00000000
+WIA: 3948.4368 47 8 0 [wiaservc.dll] DeviceListManager::ProcessDeviceArrival, Device (EPSON37B4DC (L6160 Series)) is inactive
+WIA: 3948.4368 47 8 0 [wiaservc.dll] DeviceListManager::DeviceCallback, The device (NPI92E8D9 (HP LaserJet 400 MFP M425dn)) seems to be inactive - its driver will not be loaded
+WIA: 3948.4368 47 8 0 [wiaservc.dll] DeviceListManager::DeviceCallback, The device (EPSON37B4DC (L6160 Series)) seems to be inactive - its driver will not be loaded
+WIA: 3948.4368 47 2 0 [wiaservc.dll] SCMControlHandler::UpdateServiceStatus, Updating service status. CurrentState=SERVICE_RUNNING, StateCode=4, WaitHint=0
+WIA: 3948.3740 47 4 0 [wiaservc.dll] USDWrapper::RefreshSettings, Device state for (NPI92E8D9 (HP LaserJet 400 MFP M425dn)) remains 0x00000000
+WIA: 3948.3740 47 4 0 [wiaservc.dll] USDWrapper::RefreshSettings, Device state 0x00000001 means 'disabled', 0x00000002 'removed',  0x00000004 'active'
+WIA: 3948.3740 47 4 0 [wiaservc.dll] USDWrapper::RefreshSettings, Previous PnP identifier of (NPI92E8D9 (HP LaserJet 400 MFP M425dn)): \\?\swd#dafwsdprovi

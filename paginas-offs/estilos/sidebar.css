@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*
+.side-bar{
+    background: rgb(255, 255, 255,0.1);
+    backdrop-filter: blur(15px);
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: 0.6s;
+}
+*/
+/*# sourceMappingURL=sidebar.css.map */

@@ -1,0 +1,5 @@
+ [wiaservc.dll] DeviceListManager::Enumerate, The DeviceListManager is done enumerating devices
+WIA: 3808.4060 32 8 0 [wiaservc.dll] DeviceListManager::DeviceCallback, The device (NPI92E8D9 (HP LaserJet 400 MFP M425dn)) seems to be inactive - its driver will not be loaded
+WIA: 3808.4060 32 8 0 [wiaservc.dll] DeviceListManager::DeviceCallback, The device (EPSON37B4DC (L6160 Series)) seems to be inactive - its driver will not be loaded
+WIA: 3808.4236 32 8 0 [wiaservc.dll] DeviceListManager::ProcessDeviceRemoval, Processing removal for device (NPI92E8D9 (HP LaserJet 400 MFP M425dn))..
+WIA: 3808.4236 32 8 0 [wiaservc.dll] DeviceListManager::ProcessDeviceR

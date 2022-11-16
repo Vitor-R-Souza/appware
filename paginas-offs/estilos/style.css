@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+:root{
+    --primary-color: #2E4242;
+    --secondary-color: #2A2F2E;
+    --color1-btn: #137B7B;
+    --color2-btn: #00A3A3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    background-color: #2E4242;
+    /*background-image: linear-gradient(to bottom, #12362b, #1b473b, #12362b);*/
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+header{
+    margin: auto;
+    margin-top: 20px;
+    height: 100px;
+    width: 70%;
+    background-color: #2A2F2E;
+    /*background-color: #0a1b16;
+    backdrop-filter: blur(1px);*/
+    border-radius: 20px;
+
+}
+
+input{
+    height: 30px;
+    width: 70px;
+    background-image: linear-gradient(to right, #137B7B, #00A3A3);
+}

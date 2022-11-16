@@ -1,0 +1,5 @@
+ervc.dll] USDWrapper::STI_Initialize, (EPSON37B4DC (L6160 Series)) completed IStiUSD::Initialize returning hr 0x80072EFD
+WIA: 3956.4460 1016 0 0 [wiaservc.dll] ERROR: USDWrapper::LoadDriver, Error loading driver for (EPSON37B4DC (L6160 Series)): IStiUSD::Initialize failed with hr = 0x80072EFD
+WIA: 3956.4460 1016 0 0 [wiaservc.dll] ERROR: USDWrapper::LoadDriver, We encountered an error attempting to load driver for (EPSON37B4DC (L6160 Series)), error (0x80072efd)
+WIA: 3956.4460 1016 0 0 [wiaservc.dll] USDWrapper::UnloadDriver, The WIA service is preparing to unload the driver for (EPSON37B4DC (L6160 Series))
+WIA: 395

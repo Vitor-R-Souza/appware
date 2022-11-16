@@ -1,0 +1,6 @@
+eCallback, The device (EPSON37B4DC (L6160 Series)) seems to be inactive - its driver will not be loaded
+WIA: 3824.3980 31 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
+WIA: 3824.3980 31 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
+WIA: 3824.3980 31 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
+WIA: 3824.3980 31 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
+WIA: 3824.3980 31 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring C

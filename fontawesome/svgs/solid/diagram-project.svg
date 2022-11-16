@@ -1,0 +1,5 @@
+WIA: 3824.3828 859 0 0 [wiaservc.dll] SCMControlQueue::Push, SERVICE_CONTROL_DEVICEEVENT (control: 11, event type: 32768): DBT_DEVTYP_DEVICEINTERFACE (5), 346 bytes
+WIA: 3824.3828 859 0 0 [wiaservc.dll] SCMControlQueue::Push, Adding control request to queue (control: 11, event type: 32768)
+WIA: 3824.3828 859 0 0 [wiaservc.dll] SCMControlHandler::ControlFunction, Signaling control thread to resume...
+WIA: 3824.3828 859 0 0 [wiaservc.dll] SCMControlHandler::ControlFunction, Control function (control: 11, event type: 32768) returning
+WIA: 3824.4292 859 0 0 [wiaservc.dll] SCMControlHandler::ControlThread, Res
