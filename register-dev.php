@@ -81,7 +81,7 @@
                     <input type="submit" value="Cadastrar" id="btn">
                 </div>
                 <div>
-                    <p id="sign-in">Já tem uma conta? <a href="login.html">Entrar agora</a> ou <a href="pre-register.html">Voltar</a></p>
+                    <p id="sign-in">Já tem uma conta? <a href="login.php">Entrar agora</a> ou <a href="pre-register.php">Voltar</a></p>
                 </div>
             </div>
         </form>

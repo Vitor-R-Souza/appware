@@ -33,6 +33,7 @@ main .login h2 {
   font-size: 30px;
   color: white;
   text-align: center;
+  font-weight: bold;
 }
 main .login .box-user {
   position: relative;
