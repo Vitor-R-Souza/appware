@@ -6,7 +6,7 @@
           box-sizing: border-box;
   color: white;
   list-style: none;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 body {
@@ -23,7 +23,6 @@ body {
           flex-direction: row;
   margin: 80px;
 }
-
 .profile .container-infos {
   width: 20%;
   background-color: #00A3A3;
@@ -40,29 +39,24 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .profile .container-infos img {
   width: 90%;
   border-radius: 50%;
 }
-
 .profile .container-infos hr {
   width: 100%;
   margin: 20px 0;
 }
-
 .profile .container-infos .infos {
   background-color: #2E4242;
   width: 100%;
 }
-
 .profile .container-infos .infos .info-user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 50px;
 }
-
 .profile .container-infos .infos .info-user .icon-user {
   width: 20%;
   display: -webkit-box;
@@ -78,11 +72,9 @@ body {
   border-radius: 40%;
   margin-right: 10px;
 }
-
 .profile .container-infos .infos .info-user .icon-user i {
   font-size: 1.5em;
 }
-
 .profile .container-infos .infos .info-user .dados {
   width: 80%;
   display: -webkit-box;
@@ -94,21 +86,17 @@ body {
           flex-direction: column;
   margin-left: 10px;
 }
-
 .profile .container-infos .infos .info-user .dados .type-dados {
   font-size: 20px;
 }
-
 .profile .container-infos .infos .info-user .dados .info-dados input {
   color: #fff;
   background-color: #2E4242;
   outline: none;
   border: none;
 }
-
 .profile .container-profile {
   width: 80%;
   background-color: darkgreen;
   margin-left: 20px;
-}
-/*# sourceMappingURL=profile.css.map */
+}/*# sourceMappingURL=profile.css.map */

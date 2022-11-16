@@ -13,7 +13,6 @@ body {
   background-color: #2E4242;
   height: 100vh;
 }
-
 body .box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,7 +23,6 @@ body .box {
           flex-direction: column;
   z-index: 1;
 }
-
 body .box .slide-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,7 +39,6 @@ body .box .slide-wrapper {
   width: 100%;
   z-index: 2;
 }
-
 body .box .slide-wrapper .slide-nav-button {
   position: absolute;
   color: #fff;
@@ -51,21 +48,17 @@ body .box .slide-wrapper .slide-nav-button {
   font-size: 46px;
   z-index: 1;
 }
-
 body .box .slide-wrapper .slide-nav-previous {
   left: 20px;
 }
-
 body .box .slide-wrapper .slide-nav-next {
   right: 20px;
 }
-
 body .box .slide-wrapper .slide-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
 body .box .slide-wrapper .slide-list .slide-item {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -74,7 +67,6 @@ body .box .slide-wrapper .slide-list .slide-item {
   cursor: -webkit-grab;
   cursor: grab;
 }
-
 body .box .slide-wrapper .slide-list .slide-item .slide-content {
   border: 1px solid #fff;
   -webkit-box-shadow: #070707 0px 12px 12px;
@@ -83,12 +75,10 @@ body .box .slide-wrapper .slide-list .slide-item .slide-content {
   border-radius: 10px;
   /*TAMANHO DAS IMAGENS */
 }
-
 body .box .slide-wrapper .slide-list .slide-item .slide-content img {
   width: 100%;
   border-radius: 10px;
 }
-
 body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-description {
   background: -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent));
   background: linear-gradient(to top, #000, transparent);
@@ -99,27 +89,23 @@ body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-descripti
   width: 100%;
   border-radius: 10px;
 }
-
 body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-description h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 42px;
   position: relative;
   top: 16px;
   text-transform: uppercase;
 }
-
 body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-description p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 28px;
   text-transform: none;
 }
-
 body .box .slide-wrapper .slide-controls {
   margin: 30px auto 0;
   margin: 0 auto;
   padding-top: 2rem;
 }
-
 body .box .slide-wrapper .slide-controls .slide-control-button {
   color: #fff;
   cursor: pointer;
@@ -127,17 +113,15 @@ body .box .slide-wrapper .slide-controls .slide-control-button {
   font-size: 20px;
   margin: 0 3px;
 }
-
 body .box .slide-wrapper .slide-controls .slide-control-button.active {
   color: aqua;
 }
-
 body .box .slide-wrapper .heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 80%;
-  margin-top: .7rem;
+  margin-top: 0.7rem;
   height: 60px;
   border-radius: 5px;
   -webkit-box-align: center;
@@ -148,61 +132,51 @@ body .box .slide-wrapper .heading {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #1f1f1f;
-  border: 1px solid #fafdff0d;
+  border: 1px solid rgba(250, 253, 255, 0.0509803922);
 }
-
 body .box .slide-wrapper .heading .heading-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.3rem;
   text-align: center;
   color: #fff;
   font-size: 30px;
-  margin-left: .3rem;
+  margin-left: 0.3rem;
 }
-
 body .box .slide-wrapper .heading .swiper-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-right: 2.5rem;
 }
-
 body .box .slide-wrapper .heading .swiper-btn .swiper-button-next {
   margin-top: -6rem;
 }
-
 body .box .slide-wrapper .heading .swiper-btn .swiper-button-prev {
   margin-top: -6rem;
 }
-
 body .box .slide-wrapper .heading .swiper-btn .swiper-button-next,
 body .box .slide-wrapper .heading .swiper-btn .swiper-button-prev {
   position: static !important;
   margin: 0 0 0 10px !important;
 }
-
 body .box .slide-wrapper .heading .swiper-btn .swiper-button-next::after,
 body .box .slide-wrapper .heading .swiper-btn .swiper-button-prev::after {
   color: #fff;
   font-size: 26px !important;
   font-weight: 700;
 }
-
 body .box .slide-wrapper .popular-content {
   width: 80%;
   -ms-flex-line-pack: center;
       align-content: center;
 }
-
 body .box .slide-wrapper .popular-content .swiper-wrapper {
   padding: 5px;
 }
-
 body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide {
   padding: 10px;
 }
-
 body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-box {
   position: relative;
   width: 100%;
@@ -211,7 +185,6 @@ body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-b
   margin-top: -2rem;
   overflow: hidden;
 }
-
 body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-box .movie-box-img {
   width: 100%;
   height: auto;
@@ -224,24 +197,21 @@ body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-b
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-box:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   border-radius: 10px;
 }
-
 body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-box::before {
   border: 0.4rem solid rgba(255, 255, 255, 0);
-  border-radius: .3rem;
-  content: '';
+  border-radius: 0.3rem;
+  content: "";
   position: absolute;
   inset: 0;
-  -webkit-transition: border .3s;
-  transition: border .3s;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
   margin-top: 35px;
 }
-
 body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-box:hover::before {
   border-color: rgba(255, 255, 255, 0.7);
   margin-top: 37px;
@@ -285,7 +255,6 @@ body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-b
     right: 10px;
   }
 }
-
 @media (max-width: 771px) {
   .heading {
     height: 35px;
@@ -294,7 +263,7 @@ body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-b
     font-size: 15px;
   }
   .swiper-button-next::after,
-  .swiper-button-prev::after {
+.swiper-button-prev::after {
     color: #fff;
     font-size: 15px !important;
     font-weight: 700;
@@ -308,5 +277,4 @@ body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-b
   .movie-box-img {
     margin-top: 2.1rem;
   }
-}
-/*# sourceMappingURL=estilo.css.map */
+}/*# sourceMappingURL=estilo.css.map */
