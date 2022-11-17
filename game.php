@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="btn-analise">
-                        <button>Analisar</button>
+                        <a href="V21-3.exe" download><button>Analisar</button></a>
                     </div>
                 </div>
             </div>
