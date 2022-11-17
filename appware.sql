@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 16-Nov-2022 às 17:29
--- Versão do servidor: 8.0.27
+-- Tempo de geração: 17-Nov-2022 às 14:12
+-- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `categorias`;
 CREATE TABLE IF NOT EXISTS `categorias` (
-  `id_categorias` int NOT NULL AUTO_INCREMENT,
+  `id_categorias` int(11) NOT NULL AUTO_INCREMENT,
   `Generos` varchar(60) NOT NULL,
   PRIMARY KEY (`id_categorias`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `categorias`
@@ -90,7 +90,7 @@ INSERT INTO `categorias` (`id_categorias`, `Generos`) VALUES
 
 DROP TABLE IF EXISTS `dados`;
 CREATE TABLE IF NOT EXISTS `dados` (
-  `id_dados` int NOT NULL AUTO_INCREMENT,
+  `id_dados` int(11) NOT NULL AUTO_INCREMENT,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
   `processador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `dados` (
   `nome_computador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_dados`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -109,11 +109,11 @@ CREATE TABLE IF NOT EXISTS `dados` (
 
 DROP TABLE IF EXISTS `historico`;
 CREATE TABLE IF NOT EXISTS `historico` (
-  `id_J` int NOT NULL,
-  `id_U` int NOT NULL,
+  `id_J` int(11) NOT NULL,
+  `id_U` int(11) NOT NULL,
   KEY `id_jogos_idx` (`id_J`),
   KEY `id_usuario_idx` (`id_U`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `historico` (
 
 DROP TABLE IF EXISTS `jogos`;
 CREATE TABLE IF NOT EXISTS `jogos` (
-  `id_jogos` int NOT NULL AUTO_INCREMENT,
+  `id_jogos` int(11) NOT NULL AUTO_INCREMENT,
   `nome_jogo` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `classificacao_indi` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `sinopse` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `jogos` (
   `img_carrossel` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `qts_analisados` decimal(15,0) NOT NULL,
   PRIMARY KEY (`id_jogos`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `jogos`
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `jogos` (
 
 INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `espaco_armazenamento`, `memoria_ram`, `ano_lancamento`, `arquitetura_sistema`, `desenvolvedora`, `capa_jogo`, `avaliacao`, `img_carrossel`, `qts_analisados`) VALUES
 (1, 'Red Dead Redemption 2', '+18', 'Red Dead Redemption 2, a épica aventura de mundo aberto da Rockstar Games aclamada pela crítica e o jogo mais bem avaliado desta geração de consoles, agora chega aprimorado para PC com conteúdos inéditos no Modo História, melhorias visuais e muito mais.', '150', '12', '2018-10-26', '64 bits', 'Rockstar Games', 'https://image.api.playstation.com/cdn/UP1004/', '', '', '0'),
-(2, 'Marvel Spider-Man Remastered', '12', 'Em Marvel s Spider-Man Remasterizado, os mundos de Peter Parker e Spider-Man entram em conflito em uma história original cheia de ação. Jogue como um Peter Parker experiente que combate as maiores ameaças do crime e vilões icônicos na Nova York da Marvel.', '75', '8', '2019-08-28', '64 bits', 'Insomniac Games, Nixxes Software', '', '', '', '0'),
+(2, 'Marvel Spider-Man Remastered', '12', 'Em Marvel\'s Spider-Man Remasterizado, os mundos de Peter Parker e Spider-Man entram em conflito em uma história original cheia de ação. Jogue como um Peter Parker experiente que combate as maiores ameaças do crime e vilões icônicos na Nova York da Marvel.', '75', '8', '2019-08-28', '64 bits', 'Insomniac Games, Nixxes Software', '', '', '', '0'),
 (3, 'Outlast 2', '+18', 'Outlast 2 traz-te Sullivan Knoth e os seus seguidores, que abandonaram o nosso mundo cruel para fundar Temple Gate, uma cidade situada nas profundezas do deserto, longe da civilização. Knoth e o seu rebanho estão a preparar-se para as adversidades do fim dos tempos, e tu estás no centro do furacão.\n\nTu és Blake Langermann, um operador de câmara que trabalha com a sua esposa, Lynn. Sois ambos jornalistas de investigação, dispostos a correr riscos e ir até ao fundo para descobrir as histórias que mais ninguém se atreveria a investigar.\n\nEstais a seguir o rastro das pistas que tiveram origem no assassinato aparentemente impossível de uma mulher grávida, apenas conhecida como Jane Doe.\n\nA investigação conduziu-vos até ao centro do deserto do Arizona, a uma escuridão tão profunda que ninguém poderia lançar um fio de luz sobre ela, e a uma corrupção tão intensa que enlouquecer poderá ser a solução mais sensata.', '30', '4', '2017-04-24', '64 bits', 'Red Barrels', '', '', '', '0'),
 (4, 'Forza Horizon 5', 'L', 'Sua maior aventura Horizon te espera! Explore o mundo aberto vibrante e em constante evolução nas terras mexicanas. Participe de corridas divertidas e sem limites enquanto pilota centenas dos melhores carros do mundo. Comece hoje sua Aventura Horizon e adicione o jogo a sua Lista de Desejos!', '110', '8', '2021-11-05', '64 bits', 'Playground Games', '', '', '', '0'),
 (5, 'FIFA 23', 'L', 'FIFA 23 traz o Jogo de Todo Mundo aos gramados com a tecnologia HyperMotion2, proporcionando ainda mais realismo às partidas, a FIFA World Cup™ masculina e feminina (lançamento durante a temporada), times femininos, recursos de crossplay* e muito mais.', '100', '8', '2022-09-30', '64 bits', 'EA Canada & EA Romania', '', '', '', '0'),
@@ -205,11 +205,11 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 
 DROP TABLE IF EXISTS `requisitos minimos`;
 CREATE TABLE IF NOT EXISTS `requisitos minimos` (
-  `id_M` int NOT NULL AUTO_INCREMENT,
+  `id_M` int(11) NOT NULL AUTO_INCREMENT,
   `processador` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `placa_video` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_M`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -219,11 +219,11 @@ CREATE TABLE IF NOT EXISTS `requisitos minimos` (
 
 DROP TABLE IF EXISTS `requisitos recomendados`;
 CREATE TABLE IF NOT EXISTS `requisitos recomendados` (
-  `id_R` int NOT NULL AUTO_INCREMENT,
+  `id_R` int(11) NOT NULL AUTO_INCREMENT,
   `processador` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `placa_video` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_R`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -233,12 +233,12 @@ CREATE TABLE IF NOT EXISTS `requisitos recomendados` (
 
 DROP TABLE IF EXISTS `sistema_operacional`;
 CREATE TABLE IF NOT EXISTS `sistema_operacional` (
-  `id_sistema` int NOT NULL AUTO_INCREMENT,
+  `id_sistema` int(11) NOT NULL AUTO_INCREMENT,
   `NomeSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `VersaoSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `direct_x` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_sistema`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `sistema_operacional`
@@ -275,7 +275,7 @@ INSERT INTO `sistema_operacional` (`id_sistema`, `NomeSistema`, `VersaoSistema`,
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuario` int NOT NULL AUTO_INCREMENT,
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome_usuario` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -286,7 +286,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `senha` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `icone` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `usuarios`

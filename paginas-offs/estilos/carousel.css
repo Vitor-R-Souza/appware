@@ -1,64 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 body .box .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 80%;
-  margin-top: 0.7rem;
+  margin-top: .7rem;
   height: 60px;
   border-radius: 5px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-inline: auto;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #1f1f1f;
-  border: 1px solid rgba(250, 253, 255, 0.0509803922);
+  border: 1px solid #fafdff0d;
 }
+
 body .box .heading .heading-title {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.3rem;
   text-align: center;
   color: red;
   font-size: 30px;
-  margin-left: 0.3rem;
+  margin-left: .3rem;
 }
+
 body .box .heading .swiper-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-right: 2.5rem;
 }
+
 body .box .heading .swiper-btn .swiper-button-next {
   margin-top: -6rem;
 }
+
 body .box .heading .swiper-btn .swiper-button-prev {
   margin-top: -6rem;
 }
+
 body .box .heading .swiper-btn .swiper-button-next,
 body .box .heading .swiper-btn .swiper-button-prev {
   position: static !important;
   margin: 0 0 0 10px !important;
 }
+
 body .box .heading .swiper-btn .swiper-button-next::after,
 body .box .heading .swiper-btn .swiper-button-prev::after {
   color: #fff;
   font-size: 26px !important;
   font-weight: 700;
 }
+
 body .box .popular-content {
   width: 80%;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
+
 body .box .popular-content .swiper-wrapper .swiper-slide .movie-box {
   position: relative;
   width: 100%;
-  box-shadow: #0f1119 0rem 2rem 2rem -1rem;
+  -webkit-box-shadow: #0f1119 0rem 2rem 2rem -1rem;
+          box-shadow: #0f1119 0rem 2rem 2rem -1rem;
   margin-top: -2rem;
   overflow: hidden;
 }
+
 body .box .popular-content .swiper-wrapper .swiper-slide .movie-box .movie-box-img {
   width: 100%;
   height: auto;
   border: #242b2b solid;
   border-radius: 7px;
   margin-top: 2.5rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -71,16 +92,19 @@ body .box .popular-content .swiper-wrapper .swiper-slide .movie-box .movie-box-i
     font-size: 15px;
   }
   .swiper-button-next::after,
-.swiper-button-prev::after {
+  .swiper-button-prev::after {
     color: #fff;
     font-size: 15px !important;
     font-weight: 700;
   }
   .swiper-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: 8.5rem;
   }
   .movie-box-img {
     margin-top: 2.1rem;
   }
-}/*# sourceMappingURL=carousel.css.map */
+}
+/*# sourceMappingURL=carousel.css.map */
