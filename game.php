@@ -36,7 +36,7 @@
                             <h4>Sinopse</h4>
                         </div>
                         <div class="text-sinopse">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, minus magnam asperiores consequatur explicabo non? Reprehenderit asperiores ducimus quia beatae illum omnis non sequi, aliquid, facere odit earum excepturi sunt.</p>
+                            <p>Explore a vasta Zona de Exclusão de Tchornóbil, repleta de inimigos perigosos, anomalias letais e artefatos poderosos. Viva a sua própria história épica enquanto tenta alcançar o Coração de Tchornóbil.</p>
                         </div>
                     </div>
                     <div class="year-note">

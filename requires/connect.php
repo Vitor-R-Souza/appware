@@ -1,6 +1,6 @@
 <?php
 
-    $BD = new mysqli('localhost','ROOT','123','appware');
+    $BD = new mysqli('localhost','root','','appware');
 
     if($BD->connect_errno){
         echo "<p>Erro de conexão ao banco de dados. <br>

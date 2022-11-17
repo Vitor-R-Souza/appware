@@ -24,10 +24,10 @@
             <div class="slide-list" data-slide="list">
                 <div class="slide-item" data-slide="item" data-index="0">
                     <div class="slide-content">
-                        <img src="./assets/imgs/red dead .png" alt="Red Dead Redemption 2" />
+                        <img src="./assets/imgs/red-dead-redemption2.png" alt="Red Dead Redemption 2" />
                         <div class="slide-description">
                             <h3>Red Dead Redemption 2</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Seja um fora da lei sobrevivendo a perseguições no Velho Oeste.</p>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                         <img src="./assets/imgs/league-of-legends.png" alt="League of Legends" />
                         <div class="slide-description">
                             <h3>League of Legends</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Escolha um campeão e ajude sua equipe a destruir a base inimiga.</p>
                         </div>
                     </div>
                 </div>
@@ -44,26 +44,30 @@
                     <div class="slide-content">
                         <img src="./assets/imgs/gta5.png" alt="GTA" />
                         <div class="slide-description">
-                            <h3>GTA V</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3>Grand Theft Auto V</h3>
+                            <p>Controle três criminosos na grande cidade de Los Santos.</p>
                         </div>
                     </div>
                 </div>
                 <div class="slide-item" data-slide="item" data-index="3">
                     <div class="slide-content">
-                        <img src="./assets/imgs/hitman.png" alt="Hitman" />
-                        <div class="slide-description">
-                            <h3>Hitman 2</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
+                        <a href="game.php">
+                            <img src="imagens/stalker-2-1.jpg" alt="">
+                            <!--<img src="./assets/imgs/hitman2.png" alt="Hitman" />-->
+                            <div class="slide-description">
+                                <h3>S.T.A.L.K.E.R 2</h3>
+                                <p>Sobreviva na zona de exclusão no coração de Chernobyl.</p>
+                                <!--<p>Acompanhe o assassino Agente 47 em sua viagem para defender a Providence.</p>-->
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="slide-item" data-slide="item" data-index="4">
                     <div class="slide-content">
-                        <img src="./assets/imgs/halo-5.png" alt="Halo" />
+                        <img src="./assets/imgs/halo5.png" alt="Halo" />
                         <div class="slide-description">
-                            <h3>Halo 5</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h3>Halo 5: Guardians</h3>
+                            <p>Elimine a ameaça de alienígenas através do 2º capítulo da história de Master Chief.</p>
                         </div>
                     </div>
                 </div>
