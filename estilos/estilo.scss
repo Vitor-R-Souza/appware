@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+$primary-color: #2E4242;
+$secondary-color: #2A2F2E;
+$color1-btn: #137B7B;
+$color2-btn: #00A3A3;
+$color-details: #03f484;
+
 *, *::before, *::after{
     margin: 0;
     padding: 0;
@@ -72,6 +78,11 @@ body {
                             width: 100%;
                             border-radius: 10px;
     
+                            h6{
+                                color: $color-details;
+                                font-family: cursive;
+                                top: 10px;
+                            }
                             h3 {
                                 font-family: 'Poppins', sans-serif;
                                 font-size: 42px;

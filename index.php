@@ -24,6 +24,7 @@
                     <div class="slide-content">
                         <img src="./capas/red-dead-redemption2.png" alt="Red Dead Redemption 2" />
                         <div class="slide-description">
+                            <h6>Mais populares - #1</h6>
                             <h3>Red Dead Redemption 2</h3>
                             <p>Seja um fora da lei sobrevivendo a perseguições no Velho Oeste.</p>
                         </div>

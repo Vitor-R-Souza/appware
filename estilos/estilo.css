@@ -100,6 +100,12 @@ body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-descripti
   border-radius: 10px;
 }
 
+body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-description h6 {
+  color: #03f484;
+  font-family: cursive;
+  top: 10px;
+}
+
 body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-description h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 42px;
