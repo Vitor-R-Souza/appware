@@ -79,9 +79,13 @@ body {
                             border-radius: 10px;
     
                             h6{
+                                position: absolute;
                                 color: $color-details;
-                                font-family: cursive;
-                                top: 10px;
+                                font-family: 'Poppins', sans-serif;
+                                text-transform: uppercase;
+                                font-weight: normal;
+                                font-size: 20px;
+                                top: 30px;
                             }
                             h3 {
                                 font-family: 'Poppins', sans-serif;
@@ -226,6 +230,9 @@ body {
 
 @media screen and (max-width: 1168px) {
 
+    .slide-description h6 {
+        display: none;
+    }
     .slide-description h3 {
         font-size: 24px;
         top: 0;

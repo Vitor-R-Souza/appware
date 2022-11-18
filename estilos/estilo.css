@@ -101,9 +101,13 @@ body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-descripti
 }
 
 body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-description h6 {
+  position: absolute;
   color: #03f484;
-  font-family: cursive;
-  top: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 20px;
+  top: 30px;
 }
 
 body .box .slide-wrapper .slide-list .slide-item .slide-content .slide-description h3 {
@@ -256,6 +260,9 @@ body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-b
 }
 
 @media screen and (max-width: 1168px) {
+  .slide-description h6 {
+    display: none;
+  }
   .slide-description h3 {
     font-size: 24px;
     top: 0;
