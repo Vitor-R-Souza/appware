@@ -12,6 +12,8 @@
 <body>
     <?php
         require('header.php');
+        require_once('requires/connect.php');
+        require_once('requires/func.php');
     ?>
     <main>
         <form action="login-act.php" method="post" class="login">

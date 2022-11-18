@@ -14,6 +14,8 @@
 <body>
     <?php
         require('header.php');
+        require_once('requires/connect.php');
+        require_once('requires/func.php');
     ?>
     <main>
         <section class="pre-form">

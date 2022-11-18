@@ -1,18 +1,20 @@
 <?php
 
 require_once('requires/connect.php');
+require_once('requires/func.php');
+
 session_start();
 
 extract($_POST);
 
-$senhaF = md5($senha);
+$senhaF = gerarHash($senha);
 
 $sql_login=$BD->query("SELECT * FROM usuarios WHERE nome_usuario='$user' and senha='$senhaF'");
 
 if(mysqli_num_rows($sql_login) !=0){
    
-    $_SESSION['logado_user'] = $usuario;
-    $_SESSION['logado_senha'] = $senha;
+    $_SESSION['user'] = $usuario;
+    $_SESSION['senha'] = $senha;
     
     header('location:index.php');
 

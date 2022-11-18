@@ -14,6 +14,8 @@
 <body>
 <?php
         require('header.php');
+        require_once('requires/connect.php');
+        require_once('requires/func.php');
     ?>
     <main>
         <section class="section1">
@@ -66,7 +68,7 @@
                         </div>
                     </div>
                     <div class="btn-analise">
-                        <a href="V21-3.exe" download><button>Analisar</button></a>
+                        <a href="" download><button>Analisar</button></a>
                     </div>
                 </div>
             </div>

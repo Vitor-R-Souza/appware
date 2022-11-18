@@ -1,6 +1,7 @@
 <?php 
 
 require_once('requires/connect.php');
+require_once('requires/func.php');
 
 extract($_POST);
 
@@ -30,7 +31,7 @@ if($busca->num_rows != 0){
 
 }else{
 
-    $senhaF = md5($senha);
+    $senhaF = gerarHash($senha);
 
     $sql_cadastro=$BD->query("INSERT INTO usuarios (nome, nome_usuario, data_nascimento, email, senha)
     VALUES ('$name', '$user', '$date', '$email', '$senhaF')");

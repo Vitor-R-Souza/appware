@@ -14,6 +14,8 @@
 <body>
     <?php
         require('header.php');
+        require_once('requires/connect.php');
+        require_once('requires/func.php');
     ?>
     <div class="box">
         <div class="slide-wrapper" data-slide="wrapper">

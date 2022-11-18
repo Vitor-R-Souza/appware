@@ -8,6 +8,7 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
     require_once('requires/connect.php'); //conectar BD
+    require_once('requires/func.php');
 
     extract($_POST);//extraindo
 
