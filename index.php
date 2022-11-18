@@ -83,71 +83,66 @@
             <div class="heading">
                 <h2 class="heading-title">Lançamentos</h2>
                 <div class="swiper-btn">
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-prev data"></div>
                     <div class="swiper-button-next"></div>
                 </div>
             </div>
-            <div class="popular-content swiper">
+            <div class="popular-content swiper mini-carousel1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="movie-box">
-                            <img src="./mini-capas/bayonetta.jpg" alt="" class="movie-box-img">
+                            <img src="./mini-capas/cod-mw2.jpg" alt="" class="movie-box-img">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="movie-box">
-                            <img src="./mini-capas/bully.jpg" alt="" class="movie-box-img">
+                            <img src="./mini-capas/gotham-nights.jpg" alt="" class="movie-box-img">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="movie-box">
-                            <img src="./mini-capas/dying-light2.jpg" alt="" class="movie-box-img">
+                            <img src="./mini-capas/elden-ring.jpg" alt="" class="movie-box-img">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="movie-box">
                             <a href="/">
-                                <img src="./mini-capas/csgo.jpg" alt="" class="movie-box-img">
+                                <img src="./mini-capas/aplague-tale-requiem.jpg" alt="" class="movie-box-img">
                             </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="movie-box">
-                            <img src="./mini-capas/farcry6.jpg" alt="" class="movie-box-img">
+                            <img src="./mini-capas/elden-ring.jpg" alt="" class="movie-box-img">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="movie-box">
-                            <img src="./mini-capas/marvel-spiderman.jpg" alt="" class="movie-box-img">
+                            <img src="./mini-capas/marvel-spiderman-miles-morales.jpg" alt="" class="movie-box-img">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="movie-box">
-                            <img src="./mini-capas/cod-warzone.jpg" alt="" class="movie-box-img">
+                            <img src="./mini-capas/overwatch2.jpg" alt="" class="movie-box-img">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="movie-box">
-                            <img src="./mini-capas/gow.jpg" alt="" class="movie-box-img">
+                            <img src="./mini-capas/fifa23.jpg" alt="" class="movie-box-img">
                         </div>
                     </div>
                 </div>
                 <br>
-            </div>
-
-
-
-            <div class="slide-controls" data-slide="controls-wrapper">
             </div>
             <br>
             <div class="heading" id="populares">
                 <h2 class="heading-title">Populares</h2>
                 <div class="swiper-btn">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev prev2"></div>
+                    <div class="swiper-button-next next2"></div>
                 </div>
             </div>
-            <div class="popular-content swiper">
+            <div class="popular-content swiper mini-carousel2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="movie-box">
@@ -193,11 +188,6 @@
                     </div>
                 </div>
                 <br>
-            </div>
-
-
-
-            <div class="slide-controls" data-slide="controls-wrapper">
             </div>
             <br>
             <div class="heading" id="indies">
@@ -207,7 +197,7 @@
                     <div class="swiper-button-next"></div>
                 </div>
             </div>
-            <div class="popular-content swiper">
+            <div class="popular-content swiper mini-carousel3">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="movie-box">

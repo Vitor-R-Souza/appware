@@ -19,6 +19,7 @@
         <form action="cadastro-act.php" method="post" class="signin" autocomplete="off">
             <h2>Cadastro de Usuário</h2>
             <div class="data-user">
+                <input type="hidden" name="tipo" value="User">
                 <div class="box-user">
                     <input type="text" name="name" id="nameUser" class="required" oninput="nameValidate()" required>
                     <label for="nameUser" class="label-error">Nome</label>

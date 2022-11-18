@@ -6,6 +6,8 @@ require_once('requires/func.php');
 extract($_POST);
 
 
+echo $tipo;
+
 $busca = $BD->query("SELECT * from `usuarios` where `email` = '$email'");
 $buscaU = $BD->query("SELECT * from `usuarios` where `nome_usuario` = '$user'");
 
@@ -33,8 +35,8 @@ if($busca->num_rows != 0){
 
     $senhaF = gerarHash($senha);
 
-    $sql_cadastro=$BD->query("INSERT INTO usuarios (nome, nome_usuario, data_nascimento, email, senha)
-    VALUES ('$name', '$user', '$date', '$email', '$senhaF')");
+    $sql_cadastro=$BD->query("INSERT INTO usuarios (nome, nome_usuario, data_nascimento, email, senha, tipos)
+    VALUES ('$name', '$user', '$date', '$email', '$senhaF', '$tipo')");
 
     if($sql_cadastro == true){
 
@@ -56,6 +58,7 @@ if($busca->num_rows != 0){
         </script>";
 
     }
+
 }
 
 ?>
