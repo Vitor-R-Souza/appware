@@ -47,7 +47,7 @@ body .box .slide-wrapper .slide-nav-button {
   color: #fff;
   cursor: pointer;
   background: transparent;
-  margin-top: -38rem;
+  top: 43vh;
   font-size: 46px;
   z-index: 1;
 }
@@ -147,7 +147,7 @@ body .box .slide-wrapper .heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
+  width: 70%;
   margin-top: .7rem;
   height: 60px;
   border-radius: 5px;
@@ -201,14 +201,18 @@ body .box .slide-wrapper .heading .swiper-btn .swiper-button-prev::after {
   font-weight: 700;
 }
 
+body .box .slide-wrapper #populares {
+  background-color: #0a2222;
+}
+
 body .box .slide-wrapper .popular-content {
-  width: 80%;
+  width: 70%;
   -ms-flex-line-pack: center;
       align-content: center;
 }
 
 body .box .slide-wrapper .popular-content .swiper-wrapper {
-  padding: 5px;
+  padding: 2px;
 }
 
 body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide {
@@ -290,8 +294,10 @@ body .box .slide-wrapper .popular-content .swiper-wrapper .swiper-slide .movie-b
             justify-content: center;
   }
   .slide-nav-button {
-    margin-top: -22rem;
+    /*margin-top: -22rem;*/
     font-size: 28px;
+    /*top: 50%;
+        transform: translateY(-50%);*/
   }
   .slide-nav-previous {
     left: 10px;

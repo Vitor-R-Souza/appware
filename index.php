@@ -34,6 +34,7 @@
                     <div class="slide-content">
                         <img src="./capas/league-of-legends.png" alt="League of Legends" />
                         <div class="slide-description">
+                            <h6>Lançamentos - #1</h6>
                             <h3>League of Legends</h3>
                             <p>Escolha um campeão e ajude sua equipe a destruir a base inimiga.</p>
                         </div>
@@ -43,6 +44,7 @@
                     <div class="slide-content">
                         <img src="./capas/gta5.png" alt="GTA" />
                         <div class="slide-description">
+                            <h6>Indies - #1</h6>
                             <h3>Grand Theft Auto V</h3>
                             <p>Controle três criminosos na grande cidade de Los Santos.</p>
                         </div>
@@ -54,6 +56,7 @@
                             <img src="capas/stalker2.jpg" alt="">
                             <!--<img src="./assets/imgs/hitman2.png" alt="Hitman" />-->
                             <div class="slide-description">
+                                <h6>Mais populares - #2</h6>
                                 <h3>S.T.A.L.K.E.R 2</h3>
                                 <p>Sobreviva na zona de exclusão no coração de Chernobyl.</p>
                                 <!--<p>Acompanhe o assassino Agente 47 em sua viagem para defender a Providence.</p>-->
@@ -65,6 +68,7 @@
                     <div class="slide-content">
                         <img src="capas/halo5.png" alt="Halo" />
                         <div class="slide-description">
+                            <h6>Lançamentos - #2</h6>
                             <h3>Halo 5: Guardians</h3>
                             <p>Elimine a ameaça de alienígenas através do 2º capítulo da história de Master Chief.</p>
                         </div>
@@ -75,6 +79,66 @@
             </div>
             <br>
             <div class="heading">
+                <h2 class="heading-title">Lançamentos</h2>
+                <div class="swiper-btn">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="popular-content swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/bayonetta.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/bully.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/dying-light2.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <a href="/">
+                                <img src="./mini-capas/csgo.jpg" alt="" class="movie-box-img">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/farcry6.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/marvel-spiderman.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/cod-warzone.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/gow.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+
+
+            <div class="slide-controls" data-slide="controls-wrapper">
+            </div>
+            <br>
+            <div class="heading" id="populares">
                 <h2 class="heading-title">Populares</h2>
                 <div class="swiper-btn">
                     <div class="swiper-button-prev"></div>
@@ -128,7 +192,68 @@
                 </div>
                 <br>
             </div>
+
+
+
+            <div class="slide-controls" data-slide="controls-wrapper">
+            </div>
+            <br>
+            <div class="heading" id="indies">
+                <h2 class="heading-title">Jogos Indies</h2>
+                <div class="swiper-btn">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="popular-content swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/bayonetta.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/bully.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/dying-light2.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <a href="/">
+                                <img src="./mini-capas/csgo.jpg" alt="" class="movie-box-img">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/farcry6.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/marvel-spiderman.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/cod-warzone.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="movie-box">
+                            <img src="./mini-capas/gow.jpg" alt="" class="movie-box-img">
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
         </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="scripts/collection.js"></script>

@@ -37,7 +37,7 @@ body {
                 color: #fff;
                 cursor: pointer;
                 background: transparent;
-                margin-top: -38rem;
+                top: 43vh;
                 font-size: 46px;
                 z-index: 1;
             }
@@ -123,7 +123,7 @@ body {
             }
             .heading{
                 display: flex;
-                width: 80%;
+                width: 70%;
                 margin-top: .7rem;
                 height: 60px;
                 border-radius: 5px;
@@ -166,13 +166,22 @@ body {
                     }
                 }
             }
+
+            #populares{
+                background-color: rgb(10, 34, 34);
+
+            }
+
+            #indies{
+
+            }
         
             .popular-content {
-                width: 80%;
+                width: 70%;
                 align-content: center;
         
                 .swiper-wrapper{
-                    padding: 5px;
+                    padding: 2px;
         
                     .swiper-slide{
                         padding: 10px;
@@ -256,8 +265,10 @@ body {
         justify-content: center;
     }
     .slide-nav-button {
-        margin-top: -22rem;
+        /*margin-top: -22rem;*/
         font-size: 28px;
+        /*top: 50%;
+        transform: translateY(-50%);*/
        
     }
     .slide-nav-previous {
