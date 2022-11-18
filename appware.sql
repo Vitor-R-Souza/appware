@@ -19,13 +19,14 @@
 -- Table structure for table `categorias`
 --
 
+DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categorias` (
-  `id_categorias` int NOT NULL AUTO_INCREMENT,
-  `Generos` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci; NOT NULL,
-  PRIMARY KEY (`id_categorias`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id_catego` int NOT NULL,
+  `generos` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_catego`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,13 +130,13 @@ INSERT INTO `jogos` VALUES (1,'Red Dead Redemption 2','+18','Red Dead Redemption
 UNLOCK TABLES;
 
 --
--- Table structure for table `requisitos minimos`
+-- Table structure for table `requisitos_minimos`
 --
 
-DROP TABLE IF EXISTS `requisitos minimos`;
+DROP TABLE IF EXISTS `requisitos_minimos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `requisitos minimos` (
+CREATE TABLE `requisitos_minimos` (
   `id_M` int NOT NULL AUTO_INCREMENT,
   `processador` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `placa_video` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -144,22 +145,22 @@ CREATE TABLE `requisitos minimos` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `requisitos minimos`
+-- Dumping data for table `requisitos_minimos`
 --
 
-LOCK TABLES `requisitos minimos` WRITE;
-/*!40000 ALTER TABLE `requisitos minimos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `requisitos minimos` ENABLE KEYS */;
+LOCK TABLES `requisitos_minimos` WRITE;
+/*!40000 ALTER TABLE `requisitos_minimos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `requisitos_minimos` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `requisitos recomendados`
+-- Table structure for table `requisitos_recomendados`
 --
 
-DROP TABLE IF EXISTS `requisitos recomendados`;
+DROP TABLE IF EXISTS `requisitos_recomendados`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `requisitos recomendados` (
+CREATE TABLE `requisitos_recomendados` (
   `id_R` int NOT NULL AUTO_INCREMENT,
   `processador` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `placa_video` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -168,12 +169,12 @@ CREATE TABLE `requisitos recomendados` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `requisitos recomendados`
+-- Dumping data for table `requisitos_recomendados`
 --
 
-LOCK TABLES `requisitos recomendados` WRITE;
-/*!40000 ALTER TABLE `requisitos recomendados` DISABLE KEYS */;
-/*!40000 ALTER TABLE `requisitos recomendados` ENABLE KEYS */;
+LOCK TABLES `requisitos_recomendados` WRITE;
+/*!40000 ALTER TABLE `requisitos_recomendados` DISABLE KEYS */;
+/*!40000 ALTER TABLE `requisitos_recomendados` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -243,4 +244,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-18 15:13:39
+-- Dump completed on 2022-11-18 17:54:14
