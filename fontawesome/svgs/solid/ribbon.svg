@@ -1,7 +1,0 @@
-ive - its driver will not be loaded
-WIA: 3888.4140 47 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
-WIA: 3888.4140 47 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
-WIA: 3888.4140 47 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
-WIA: 3888.4140 47 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @wiaacmgr.exe,-101
-WIA: 3888.4140 47 0 0 [wiaservc.dll] CEventNotifier::RestoreDevPersistentCBs, Restoring CBs for Device: NULL, Program: @WFSR.DLL,-25105
-WIA: 3888.4140 47 2 0 [wiaservc.dll] SCMControlHandler::UpdateServiceStatus, Updating service status. CurrentState=SERVICE_RUNNIN

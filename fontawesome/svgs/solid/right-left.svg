@@ -1,6 +1,0 @@
- 0x00000000
-WIA: 3936.4480 1016 0 0 [wiaservc.dll] wiasDebugTrace, WSDScDrv: Driver object (00000175C9A0BB90, process: 3936, thread: 4480) destroyed
-WIA: 3936.4480 1016 0 0 [wiaservc.dll] wiasDebugTrace, WSDScDrv: Internal device communication object (00000175C9A0BBE0, process: 3936, thread: 4480) destroyed
-WIA: 3936.4480 1016 0 0 [wiaservc.dll] wiasDebugTrace, WSDScDrv: DLL_PROCESS_DETACH (process: 3936, thread: 4480)
-WIA: 3936.4480 1016 4 0 [wiaservc.dll] USDWrapper::UnloadDriver, Driver for (EPSON37B4DC (L6160 Series)) is now unloaded
-WIA: 3936.4480 1016 0 0 [wiaservc.dll] ERROR: DeviceListManager::ProcessDeviceArrival, The driver for device (EPSON37B4DC (L6160 Series)) failed to load (hr = 

@@ -1,5 +1,0 @@
-7 0 0 [wiaservc.dll] SCMControlQueue::Pop, Control request (control: 11, event type: 32768) detached from queue
-WIA: 3908.4488 797 0 0 [wiaservc.dll] SCMControlHandler::ControlThread, Processing control request (control: 11, event type: 32768)...
-WIA: 3908.4488 797 2 0 [wiaservc.dll] Dispatcher::ProcessEvent, System event received: dwControl 11, dwEventType 32768, lpEventData: 0x0000024326A08CD0
-WIA: 3908.4488 797 0 0 [wiaservc.dll] DeviceClassEnumeratorHandler::ProcessEvent, Processing system event, control code 11, event type 32768..
-WIA: 3908.4488 797 2 0 [wiaservc.dll] DeviceClassEnumeratorHandler::ProcessEvent

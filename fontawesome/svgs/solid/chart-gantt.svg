@@ -1,5 +1,0 @@
-Settings, New PnP identifier for (NPI92E8D9 (HP LaserJet 400 MFP M425dn)): \\?\swd#dafwsdprovider#urn:uuid:53756e00-0000-0000-0000-80c16e92e8d9#uri:1cd4f16e-8668-a7a0-4497-0014deadbeef#scanner1#{6bdd1fc6-810f-11d0-bec7-08002be2092f}
-WIA: 3912.4008 31 8 0 [wiaservc.dll] DeviceListManager::ProcessDeviceArrival, Device (NPI92E8D9 (HP LaserJet 400 MFP M425dn)) state is currently marked 0x00000000
-WIA: 3912.4008 31 8 0 [wiaservc.dll] DeviceListManager::ProcessDeviceArrival, Device (NPI92E8D9 (HP LaserJet 400 MFP M425dn)) is inactive
-WIA: 3912.4236 31 8 0 [wiaservc.dll] DeviceListManager::ProcessDeviceArrival, Device (EPSON37B4DC (L6160 Series)) is inactive
-WIA: 3912.4008 31 8 0 [wiaservc.dll]
