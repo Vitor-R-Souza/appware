@@ -7,7 +7,7 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-    require_once('/requires/connect.php'); //conectar BD
+    require_once('requires/connect.php'); //conectar BD
 
     extract($_POST);//extraindo
 
@@ -19,7 +19,7 @@ require 'PHPMailer/src/SMTP.php';
         $senha = substr(md5(random_int(1, 999999)) ,0,6); //senha para o usuario
         $senhaF = substr(md5($senha),0,6) ; //senha no BD
 
-        if($BD->query("UPDATE `usuarios` SET `Senha` = '$senhaF' WHERE `Email` = '$user';")){ //update
+        if($BD->query("UPDATE `usuarios` SET `Senha` = '$senhaF' WHERE `email` = '$user';")){ //update
 
             //todo o role do email
             $mail->isSMTP();

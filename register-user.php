@@ -16,11 +16,11 @@
         require('header.php');
     ?>
     <main>
-        <form action="cadastro-act.php" class="signin" autocomplete="off">
+        <form action="cadastro-act.php" method="post" class="signin" autocomplete="off">
             <h2>Cadastro de Usuário</h2>
             <div class="data-user">
                 <div class="box-user">
-                    <input type="text" name="nameUser" id="nameUser" class="required" oninput="nameValidate()" required>
+                    <input type="text" name="name" id="nameUser" class="required" oninput="nameValidate()" required>
                     <label for="nameUser" class="label-error">Nome</label>
                     <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
                     <!-- <i><img class="img-success" src="imagens/success-icon.svg" alt=""></i> -->

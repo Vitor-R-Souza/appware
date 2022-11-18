@@ -30,8 +30,10 @@ if($busca->num_rows != 0){
 
 }else{
 
+    $senhaF = md5($senha);
+
     $sql_cadastro=$BD->query("INSERT INTO usuarios (nome, nome_usuario, data_nascimento, email, senha)
-    VALUES ('$name', '$user', '$date', '$email', '$senha')");
+    VALUES ('$name', '$user', '$date', '$email', '$senhaF')");
 
     if($sql_cadastro == true){
 

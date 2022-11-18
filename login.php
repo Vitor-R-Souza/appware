@@ -14,7 +14,7 @@
         require('header.php');
     ?>
     <main>
-        <form action="login-act.php" class="login">
+        <form action="login-act.php" method="post" class="login">
             <h2>Login</h2> 
             <div class="box-user">
                 <input type="text" name="user" id="user" required>

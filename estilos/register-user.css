@@ -76,6 +76,7 @@ main .signin .data-user .box-user input {
   border: 0;
   background-color: transparent;
   border-bottom: 1px solid white;
+  border-radius: 5px;
   color: white;
   font-size: 16px;
   margin-bottom: 30px;
