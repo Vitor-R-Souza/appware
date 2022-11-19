@@ -23,25 +23,25 @@ main {
   height: 100vh;
 }
 
-main .login {
+main .recover {
   background-color: #2A2F2E;
   border-radius: 10px;
   width: 500px;
   padding: 40px;
 }
 
-main .login h2 {
+main .recover h2 {
   margin-bottom: 30px;
   font-size: 30px;
   color: #03f484;
   text-align: center;
 }
 
-main .login .box-user {
+main .recover .box-user {
   position: relative;
 }
 
-main .login .box-user input {
+main .recover .box-user input {
   margin-top: 15px;
   width: 100%;
   padding: 10px 0;
@@ -54,7 +54,7 @@ main .login .box-user input {
   margin-bottom: 30px;
 }
 
-main .login .box-user label {
+main .recover .box-user label {
   margin-top: 15px;
   position: absolute;
   top: 0;
@@ -68,8 +68,8 @@ main .login .box-user label {
   transition: .5s;
 }
 
-main .login .box-user input:focus ~ label,
-main .login .box-user input:valid ~ label {
+main .recover .box-user input:focus ~ label,
+main .recover .box-user input:valid ~ label {
   /*imput focado, label muda*/
   top: -25px;
   left: 0;
@@ -77,86 +77,21 @@ main .login .box-user input:valid ~ label {
   font-size: 12px;
 }
 
-main .login .box-user input:-webkit-autofill,
-main .login .box-user input:-webkit-autofill:hover,
-main .login .box-user input:-webkit-autofill:focus,
-main .login .box-user input:-webkit-autofill:active {
+main .recover .box-user input:-webkit-autofill,
+main .recover .box-user input:-webkit-autofill:hover,
+main .recover .box-user input:-webkit-autofill:focus,
+main .recover .box-user input:-webkit-autofill:active {
   -webkit-text-fill-color: rgba(255, 255, 255, 0) tant;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-main .login .box-user input:-webkit-autofill:valid {
+main .recover .box-user input:-webkit-autofill:valid {
   -webkit-text-fill-color: #ffffff !important;
   /*Tava deixando bg do input branco meio transparente*/
 }
 
-main .login .connected-remember {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main .login .connected-remember .check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  font-size: 14px;
-  /*
-                input[type=checkbox]{
-                    border: 1px solid #03f484;
-                }
-                input[type=checkbox]:checked{
-                    background-color: darkgreen;
-                }*/
-  /*
-                input:checked~.checkmark{
-                    background-color: #006400;
-                }*/
-  /*
-                #connected:checked + .checkmark:after{
-                    content: "\f00c";
-                    background: darkgreen;
-                }*/
-}
-
-main .login .connected-remember .check label {
-  color: #03f484;
-  margin-left: 5px;
-}
-
-main .login .connected-remember .check input[type=checkbox] {
-  accent-color: darkgreen;
-}
-
-main .login .connected-remember .new-senha a {
-  font-size: 14px;
-  color: #03f484;
-  /*display:flex e justify-content: ;: flex-end ou*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  /*float: right; Sem o check funciona*/
-  text-decoration: none;
-}
-
-main .login .login-sign {
+main .recover .btn-recover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,7 +108,7 @@ main .login .login-sign {
   margin-top: 20px;
 }
 
-main .login .login-sign #btn {
+main .recover .btn-recover #btn {
   background-image: -webkit-gradient(linear, left top, right top, from(#137B7B), to(#00A3A3));
   background-image: linear-gradient(to right, #137B7B, #00A3A3);
   width: 300px;
@@ -187,41 +122,32 @@ main .login .login-sign #btn {
   text-transform: uppercase;
 }
 
-main .login .login-sign #btn:hover {
+main .recover .btn-recover #btn:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#179494), to(#01cccc));
   background-image: linear-gradient(to right, #179494, #01cccc);
   width: 300px;
   height: 60px;
 }
 
-main .login .login-sign #sign-in {
+main .recover .btn-recover #sign-in {
   margin-top: 15px;
   font-size: 13px;
 }
 
-main .login .login-sign #sign-in a {
+main .recover .btn-recover #sign-in a {
   text-decoration: none;
   font-weight: bold;
 }
 
-main .login .login-sign #sign-in a:hover {
+main .recover .btn-recover #sign-in a:hover {
   text-decoration: none;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.774);
 }
 
 @media (max-width: 405px) {
-  .login {
+  .recover {
     width: 90%;
   }
 }
-
-/*
-input#btn{
-    background-image: linear-gradient(to right,  #137B7B, #00A3A3);
-    width: 90px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-}*/
 /*# sourceMappingURL=rec-senha.css.map */

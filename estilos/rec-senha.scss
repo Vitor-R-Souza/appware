@@ -20,7 +20,7 @@ main{
     background-color: $primary-color;
     height: 100vh;
 
-    .login{
+    .recover{
         background-color: $secondary-color;
         border-radius: 10px;
         width: 500px;
@@ -83,57 +83,7 @@ main{
                 }
         }
 
-        .connected-remember{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-
-            .check{
-                display: flex;
-                justify-content: flex-start;
-                font-size: 14px;
-
-                label{
-                    color: $color-details;
-                    margin-left: 5px;
-                }
-
-                input[type=checkbox]{
-                    accent-color: darkgreen;
-                }
-
-                /*
-                input[type=checkbox]{
-                    border: 1px solid #03f484;
-                }
-                input[type=checkbox]:checked{
-                    background-color: darkgreen;
-                }*/
-                /*
-                input:checked~.checkmark{
-                    background-color: #006400;
-                }*/
-                
-                /*
-                #connected:checked + .checkmark:after{
-                    content: "\f00c";
-                    background: darkgreen;
-                }*/
-            }
-
-            .new-senha a{
-                font-size: 14px;
-                color: $color-details;
-                /*display:flex e justify-content: ;: flex-end ou*/
-                display: flex;
-                justify-content: flex-end;
-                /*float: right; Sem o check funciona*/
-                text-decoration: none;
-            }
-        }
-
-        .login-sign{
+        .btn-recover{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -180,16 +130,7 @@ main{
 }
 
 @media(max-width: 405px){
-    .login{
+    .recover{
         width: 90%;
     }
 }
-
-/*
-input#btn{
-    background-image: linear-gradient(to right,  #137B7B, #00A3A3);
-    width: 90px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-}*/

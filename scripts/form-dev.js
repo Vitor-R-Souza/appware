@@ -7,6 +7,17 @@ const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#!])[0-9a-zA-Z$*
 const userRegex =  /^[a-z\d](?:[a-z\d]|_(?=[a-z\d])){4,14}$/i ///^[A-Za-z]\\w{5,33}$/
 const btnEye = document.querySelector('.btn-eye')
 
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    nameValidate();
+    userValidate();
+    enterpriseValidate();
+    siteValidate();
+    dateValidate();
+    emailValidate();
+    passwordValidate();
+    comparePassword();
+})
 
 function setError(index){
     campos[index].style.borderBottom = '2px solid #e63636'
