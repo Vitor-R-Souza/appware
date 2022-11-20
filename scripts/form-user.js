@@ -79,7 +79,7 @@ function dateValidate(){
 function emailValidate(){
     if(campos[3].value.length == ''){
         removeError(3)
-    } else if(!emailRegex.test(campos[5].value)){
+    } else if(!emailRegex.test(campos[3].value)){
         setError(3)
     }else{
         removeError(3)
