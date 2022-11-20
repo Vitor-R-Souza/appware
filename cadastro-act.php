@@ -35,8 +35,7 @@ if($busca->num_rows != 0){
 
     $senhaF = gerarHash($senha);
 
-    $sql_cadastro=$BD->query("INSERT INTO usuarios (nome, nome_usuario, data_nascimento, email, senha, tipos)
-    VALUES ('$name', '$user', '$date', '$email', '$senhaF', '$tipo')");
+    $sql_cadastro=$BD->query("INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, `data_nascimento`, `empresa`, `site_empresa`, `senha`, `icone`) VALUES (NULL, '$name', '$user', '$email', '$tipo', '$date', '$enterprise', '$sitedev', '$senhaF', '')");
 
     if($sql_cadastro == true){
 

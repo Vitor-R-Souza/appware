@@ -39,28 +39,49 @@
                 <span class="fa fa-bars" id="bars"></span>
                 <span class="fa fa-times" id="times"></span>
             </label>
-
-            <div class="sub-menu-wrap" id="subMenu">
-                <div class="sub-menu">
-                    <div class="user-info">
-                        <img src="imagens/user.png">
+            <?php
+                echo "<div class='sub-menu-wrap' id='subMenu'>";
+                    echo "<div class='sub-menu'>";
+                        echo "<div class='user-info'>
+                        <img src='imagens/user.png'>
                         <h3>Admin</h3>
                     </div>
                     <hr>
-                    <a href="profile.php" class="sub-menu-link">
-                        <i class="fa-solid fa-user"></i><p>Perfil</p><span>></span>
+                    <a href='profile.php' class='sub-menu-link'>
+                        <i class='fa-solid fa-user'></i><p>Entrar</p><span>></span>
                     </a>
-                    <a href="contact.php" class="sub-menu-link">
-                        <i class="fa-solid fa-circle-question"></i><p>Suporte</p><span>></span>
+                    <a href='contact.php' class='sub-menu-link'>
+                        <i class='fa-solid fa-circle-question'></i><p>Suporte</p><span>></span>
                     </a>
-                    <a href="#" class="sub-menu-link">
-                        <i class="fa-solid fa-right-from-bracket"></i><p>Logout</p><span>></span>
-                    </a>
-                    <!-- <a href="#" class="sub-menu-link">
-                        <p>Perfil</p><span>></span>
-                    </a> -->
-                </div>
-            </div>
+                    <a href'#' class='sub-menu-link'>
+                        <i class='fa-solid fa-right-from-bracket'></i><p>Logout</p><span>></span>
+                    </a>";
+                    echo "</div>";
+                echo "</div>";
+
+                echo"
+                    <div class='sub-menu-wrap' id='subMenu'>
+                        <div class='sub-menu'>
+                            <div class='user-info'>
+                                <img src='imagens/user.png'>
+                                <h3>Admin</h3>
+                            </div>
+                            <hr>
+                            <a href='profile.php' class='sub-menu-link'>
+                                <i class='fa-solid fa-user'></i><p>Perfil</p><span>></span>
+                            </a>
+                            <a href='contact.php' class='sub-menu-link'>
+                                <i class='fa-solid fa-circle-question'></i><p>Suporte</p><span>></span>
+                            </a>
+                            <a href'#' class='sub-menu-link'>
+                                <i class='fa-solid fa-right-from-bracket'></i><p>Logout</p><span>></span>
+                            </a>
+                            <!-- <a href='#' class='sub-menu-link'>
+                                <p>Perfil</p><span>></span>
+                            </a> -->
+                        </div>
+                    </div>"
+            ?>
         </nav>
     </header>
 </body>
