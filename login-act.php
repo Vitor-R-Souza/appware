@@ -23,13 +23,9 @@ if(testarS($senha, $reg->senha)){
     header('location:index.php');
 
 }else {
-    
-    echo "<script>
-    
-    alert('Nome de usuário ou senha estão incorretos');
-    window.location.href='login.php'
+    $_SESSION['msg'] = msgError('usuario ou senha invalidos.');
 
-    </script>";
+    header("location:login.php");
 
 }
 

@@ -5,7 +5,14 @@ if(!isset($_SESSION['user'])){
     $_SESSION['user'] = "";
     $_SESSION['tipo'] = "";
     $_SESSION['senha'] = "";
+    $_SESSION['msg'] = "";
 }
+
+if(isset($_SESSION['msg'])){
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+}
+
 
 function thumb($foto){
     $arquivo = "mini-capas/$foto";
@@ -17,17 +24,17 @@ function thumb($foto){
 }
 
 function msgError($m){
-    $r = "alert('$m');";
+    $r = "<script>alert('$m');</script>";
     return $r;
 }
 
 function msgAviso($m){
-    $r = "alert('$m');";
+    $r = "<script>alert('$m');</script>";
     return $r;
 }
 
 function msgSucess($m){
-    $r = "alert('$m');";
+    $r = "<script>alert('$m');</script>";
     return $r;
 }
 
