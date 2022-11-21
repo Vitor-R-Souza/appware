@@ -20,6 +20,7 @@ function testarS($senha , $hash){ // teste
     return $ok;
 }
 
+<<<<<<< HEAD
 function logout(){
     unset($_SESSION['nome_usuario']);
     unset($_SESSION['nome']);
@@ -37,6 +38,8 @@ function is_logado(){
 function voltar(){
     return "<a href='index.php'></a>";
 }
+=======
+>>>>>>> parent of d580988 (testes logout)
 
 // verificar tipos de contas
 function is_adm(){ //admin

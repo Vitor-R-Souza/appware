@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +10,18 @@
     <script defer src="scripts/toggle-menu.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
 <?php
     echo "<header>";
         echo "<input type='checkbox' name='' id='check'>";
         echo "<nav class='navbar'>";
             echo "<a href='index.php' class='logo'>AppWare</a>";
+=======
+    <header>
+        <input type="checkbox" name="" id="check">
+        <nav class="navbar">
+            <a href="index.php" class="logo">AppWare</a>
+>>>>>>> parent of d580988 (testes logout)
 
             echo "<form class='search_box' method='get' action='filter.php'>";
                 echo "<input type='search' name='search' id='search' placeholder='Digite aqui...'>";
@@ -36,6 +43,7 @@
 
             echo "<img src='imagens/profile.png' class='user-pic' onclick='toggleMenu()'>";
 
+<<<<<<< HEAD
             echo "<label for='check' class='bar'>
                 <span class='fa fa-bars' id='bars'></span>
                 <span class='fa fa-times' id='times'></span>
@@ -64,28 +72,32 @@
                     echo "<div class='sub-menu-wrap' id='subMenu'>";
                     echo "<div class='sub-menu'>";
                     echo "<div class='user-info'>
+=======
+            <label for="check" class="bar">
+                <span class="fa fa-bars" id="bars"></span>
+                <span class="fa fa-times" id="times"></span>
+            </label>
+            <?php
+                echo "<div class='sub-menu-wrap' id='subMenu'>";
+                    echo "<div class='sub-menu'>";
+                        echo "<div class='user-info'>
+>>>>>>> parent of d580988 (testes logout)
                         <img src='imagens/user.png'>
-                        <h3>...</h3>
-                        </div>
-                        <hr>";
-                    if((is_dev()) || is_user() || is_adm()){
-                        
-                        echo "<a href='profile.php' class='sub-menu-link'>
-                        <i class='fa-solid fa-user'></i><p>Perfil</p><span>></span>
-                        </a>";
-                        
-                    }
-                    echo "<a href='contact.php' class='sub-menu-link'>
-                    <i class='fa-solid fa-circle-question'></i><p>Suporte</p><span>></span>
+                        <h3>Admin</h3>
+                    </div>
+                    <hr>
+                    <a href='profile.php' class='sub-menu-link'>
+                        <i class='fa-solid fa-user'></i><p>Entrar</p><span>></span>
                     </a>
-                    <a href='logout.php' class='sub-menu-link'>
-                    <i class='fa-solid fa-right-from-bracket'></i><p>Sair</p><span>></span>
+                    <a href='contact.php' class='sub-menu-link'>
+                        <i class='fa-solid fa-circle-question'></i><p>Suporte</p><span>></span>
+                    </a>
+                    <a href'#' class='sub-menu-link'>
+                        <i class='fa-solid fa-right-from-bracket'></i><p>Logout</p><span>></span>
                     </a>";
                     echo "</div>";
-                    echo "</div>";
-                    }
-                
-                /*
+                echo "</div>";
+
                 echo"
                     <div class='sub-menu-wrap' id='subMenu'>
                         <div class='sub-menu'>
@@ -107,9 +119,16 @@
                                 <p>Perfil</p><span>></span>
                             </a> -->
                         </div>
+<<<<<<< HEAD
                     </div>"*/
         echo "</nav>";
     echo "</header>";
     ?>
+=======
+                    </div>"
+            ?>
+        </nav>
+    </header>
+>>>>>>> parent of d580988 (testes logout)
 </body>
 </html>
