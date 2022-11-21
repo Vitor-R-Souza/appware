@@ -5,7 +5,7 @@ session_start();
 if(!isset($_SESSION['user'])){
     $_SESSION['user'] = "";
     $_SESSION['nome'] = "";
-    $_SESSION['tipos'] = "";
+    $_SESSION['tipo'] = "";
 }
 
 
@@ -20,26 +20,6 @@ function testarS($senha , $hash){ // teste
     return $ok;
 }
 
-<<<<<<< HEAD
-function logout(){
-    unset($_SESSION['nome_usuario']);
-    unset($_SESSION['nome']);
-    unset($_SESSION['tipos']);
-}
-
-function is_logado(){
-    if(empty($_SESSION['nome_usuario'])){
-        return false;
-    } else{
-        return true;
-    }
-}
-
-function voltar(){
-    return "<a href='index.php'></a>";
-}
-=======
->>>>>>> parent of d580988 (testes logout)
 
 // verificar tipos de contas
 function is_adm(){ //admin
