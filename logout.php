@@ -1,8 +1,8 @@
-<!-- <!DOCTYPE html>
-/*<?php
-    //require_once "requires/connect.php";
-    //require_once "requires/func.php";
-?>*/
+
+<?php
+    require_once "requires/connect.php";
+    require_once "requires/func.php";
+?>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -14,9 +14,14 @@
     <script defer src="scripts/toggle-menu.js"></script>
 </head>
 <body>
-    /*<?php
-        //logout();
-        //echo voltar();
-    ?>*/
+    <?php
+        logout();
+        echo "<script>
+        
+        alert('Usuário deslogado');
+        window.location.href='index.php'
+
+        </script>";
+    ?>
 </body>
-</html> -->
+</html> 

@@ -1,13 +1,35 @@
 <?php
 
-session_start();
-
+@session_start();
 if(!isset($_SESSION['user'])){
     $_SESSION['user'] = "";
-    $_SESSION['nome'] = "";
     $_SESSION['tipo'] = "";
+    $_SESSION['senha'] = "";
 }
 
+function thumb($foto){
+    $arquivo = "mini-capas/$foto";
+    if(is_null($foto) || !file_exists($arquivo)){
+        return "indisponivel";
+    }else{
+        return $arquivo;
+    }
+}
+
+function msgError($m){
+    $r = "alert('$m');";
+    return $r;
+}
+
+function msgAviso($m){
+    $r = "alert('$m');";
+    return $r;
+}
+
+function msgSucess($m){
+    $r = "alert('$m');";
+    return $r;
+}
 
 // gerar hash de senhas e testar
 function gerarHash($senha){ // gerar
@@ -53,6 +75,12 @@ function is_user(){ // user
     }else{
         return false;
     }
+}
+
+function logout(){
+    $_SESSION['user'] = null;
+    $_SESSION['tipo'] = null;
+    $_SESSION['senha'] = null;
 }
 
 ?>

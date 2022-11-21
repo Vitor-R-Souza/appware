@@ -32,20 +32,39 @@
             </label>
             <div class="sub-menu-wrap" id="subMenu">
                 <div class="sub-menu">
-                    <div class="user-info">
-                        <img src="imagens/user.png">
-                        <h3>-</h3>
-                    </div>
-                    <hr>
-                    <a href="login.php" class="sub-menu-link">
-                        <i class="fa-solid fa-right-from-bracket"></i><p>Entrar</p><span>></span>
-                    </a>
-                    <a href="pre-register.php" class="sub-menu-link">
-                        <i class="fa-solid fa-address-card"></i><p>Cadastrar</p><span>></span>
-                    </a>
-                    <a href="contact.php" class="sub-menu-link">
-                        <i class="fa-solid fa-circle-question"></i><p>Suporte</p><span>></span>
-                    </a>
+                    <?php
+                        if(empty($_SESSION['user'])){
+                            echo "<div class='user-info'>
+                                    <img src='imagens/user.png'>
+                                    <h3>-</h3>
+                                </div>
+                                <hr>
+                                <a href='login.php' class='sub-menu-link'>
+                                    <i class='fa-solid fa-right-from-bracket'></i><p>Entrar</p><span>></span>
+                                </a>
+                                <a href='pre-register.php' class='sub-menu-link'>
+                                    <i class='fa-solid fa-address-card'></i><p>Cadastrar</p><span>></span>
+                                </a>
+                                <a href='contact.php' class='sub-menu-link'>
+                                    <i class='fa-solid fa-circle-question'></i><p>Suporte</p><span>></span>
+                                </a>";
+                        }else{
+                            echo" <div class='user-info'>
+                                    <img src='imagens/user.png'>
+                                    <h3>$_SESSION[user]</h3>
+                                </div>
+                                    <hr>
+                                    <a href='profile.php' class='sub-menu-link'>
+                                        <i class='fa-solid fa-user'></i><p>Perfil</p><span>></span>
+                                    </a>
+                                    <a href='contact.php' class='sub-menu-link'>
+                                        <i class='fa-solid fa-circle-question'></i><p>Suporte</p><span>></span>
+                                    </a>
+                                    <a href='logout.php' class='sub-menu-link'>
+                                        <i class='fa-solid fa-right-from-bracket'></i><p>Logout</p><span>></span>
+                                    </a>";
+                        }
+                    ?>
                     <!-- <a href="#" class="sub-menu-link">
                         <p>Perfil</p><span>></span>
                     </a> -->

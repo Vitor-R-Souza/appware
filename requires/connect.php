@@ -14,11 +14,4 @@
     $BD->query("SET character_set_client=utf8");
     $BD->query("SET character_set_results=utf8");
     
-    /*
-    if(!$con = mysqli_connect('localhost','root','','appware')){
-        echo "erro ao se conectar";
-    }
-
-    mysqli_query($con, "SET NAMES utf8");
-    */
 ?>

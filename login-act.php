@@ -16,7 +16,9 @@ $reg = $busc->fetch_object();
 if(testarS($senha, $reg->senha)){
    
     $_SESSION['user'] = $user;
+    $_SESSION['tipo'] = $reg->tipos;
     $_SESSION['senha'] = $senha;
+    
     
     header('location:index.php');
 

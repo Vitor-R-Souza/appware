@@ -35,29 +35,65 @@ if($busca->num_rows != 0){
 
     $senhaF = gerarHash($senha);
 
-    $sql_cadastro=$BD->query("INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, `data_nascimento`, `empresa`, `site_empresa`, `senha`, `icone`) VALUES (NULL, '$name', '$user', '$email', '$tipo', '$date', '$enterprise', '$sitedev', '$senhaF', '')");
+    if($tipo == 'Dev'){
 
-    if($sql_cadastro == true){
+        $sql_cadastro=$BD->query("INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, `data_nascimento`, `empresa`, `site_empresa`, `senha`, `icone`) VALUES (NULL, '$name', '$user', '$email', '$tipo', '$date', '$enterprise', '$sitedev', '$senhaF', '')");
 
-        echo "<script>
-    
-        alert('Usuário cadastrado com Sucesso');
-        window.location.href='index.php'
+        if($sql_cadastro == true){
 
-        </script>"; 
+            $_SESSION['user'] = $user;
+            $_SESSION['tipo'] = $tipo;
+            $_SESSION['senha'] = $senha;
 
-    }else {
+            echo "<script>
+        
+            alert('Usuário cadastrado com Sucesso');
+            window.location.href='index.php'
 
-        echo "<script>
-    
-        alert('Falha no Cadastro');
-        window.location.href='register-dev.php'
+            </script>"; 
+
+        }else {
+
+            echo "<script>
+        
+            alert('Falha no Cadastro');
+            window.location.href='register-dev.php'
 
 
-        </script>";
+            </script>";
+
+        }
+    }else{
+
+        $sql_cadastro=$BD->query("INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, `data_nascimento`, `senha`, `icone`) VALUES (NULL, '$name', '$user', '$email', '$tipo', '$date', '$senhaF', '')");
+
+        if($sql_cadastro == true){
+
+            $_SESSION['user'] = $user;
+            $_SESSION['tipo'] = $tipo;
+            $_SESSION['senha'] = $senha;
+
+            echo "<script>
+        
+            alert('Usuário cadastrado com Sucesso');
+            window.location.href='index.php'
+
+            </script>"; 
+
+        }else {
+
+            echo "<script>
+        
+            alert('Falha no Cadastro');
+            window.location.href='register-dev.php'
+
+
+            </script>";
+
+        }
+
 
     }
-
 }
 
 ?>

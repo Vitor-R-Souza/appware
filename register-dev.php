@@ -13,9 +13,9 @@
 
 <body>
     <?php
-        require_once('header.php');
         require_once('requires/connect.php');
         require_once('requires/func.php');
+        require_once('header.php');
     ?>
     <main>
         <form action="cadastro-act.php" method="post" class="signin" autocomplete="off">
