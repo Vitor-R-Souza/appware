@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 19-Nov-2022 às 22:21
--- Versão do servidor: 5.7.36
+-- Tempo de geração: 21-Nov-2022 às 20:45
+-- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `categorias`;
 CREATE TABLE IF NOT EXISTS `categorias` (
-  `id_catego` int(11) NOT NULL,
-  `generos` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_catego` int NOT NULL,
+  `generos` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_catego`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -90,7 +90,7 @@ INSERT INTO `categorias` (`id_catego`, `generos`) VALUES
 
 DROP TABLE IF EXISTS `dados`;
 CREATE TABLE IF NOT EXISTS `dados` (
-  `id_dados` int(11) NOT NULL AUTO_INCREMENT,
+  `id_dados` int NOT NULL AUTO_INCREMENT,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
   `processador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `dados` (
   `nome_computador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_dados`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -109,11 +109,11 @@ CREATE TABLE IF NOT EXISTS `dados` (
 
 DROP TABLE IF EXISTS `historico`;
 CREATE TABLE IF NOT EXISTS `historico` (
-  `id_J` int(11) NOT NULL,
-  `id_U` int(11) NOT NULL,
+  `id_J` int NOT NULL,
+  `id_U` int NOT NULL,
   KEY `id_jogos_idx` (`id_J`),
   KEY `id_usuario_idx` (`id_U`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `historico` (
 
 DROP TABLE IF EXISTS `jogos`;
 CREATE TABLE IF NOT EXISTS `jogos` (
-  `id_jogos` int(11) NOT NULL AUTO_INCREMENT,
+  `id_jogos` int NOT NULL AUTO_INCREMENT,
   `nome_jogo` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `classificacao_indi` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `sinopse` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `jogos` (
   `capa_filtragem` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `qts_analisados` decimal(15,0) NOT NULL,
   PRIMARY KEY (`id_jogos`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `jogos`
@@ -208,11 +208,11 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 
 DROP TABLE IF EXISTS `requisitos_minimos`;
 CREATE TABLE IF NOT EXISTS `requisitos_minimos` (
-  `id_M` int(11) NOT NULL AUTO_INCREMENT,
+  `id_M` int NOT NULL AUTO_INCREMENT,
   `processador` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `placa_video` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_M`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -222,11 +222,11 @@ CREATE TABLE IF NOT EXISTS `requisitos_minimos` (
 
 DROP TABLE IF EXISTS `requisitos_recomendados`;
 CREATE TABLE IF NOT EXISTS `requisitos_recomendados` (
-  `id_R` int(11) NOT NULL AUTO_INCREMENT,
+  `id_R` int NOT NULL AUTO_INCREMENT,
   `processador` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `placa_video` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_R`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -236,12 +236,12 @@ CREATE TABLE IF NOT EXISTS `requisitos_recomendados` (
 
 DROP TABLE IF EXISTS `sistema_operacional`;
 CREATE TABLE IF NOT EXISTS `sistema_operacional` (
-  `id_sistema` int(11) NOT NULL AUTO_INCREMENT,
+  `id_sistema` int NOT NULL AUTO_INCREMENT,
   `NomeSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `VersaoSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `direct_x` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_sistema`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `sistema_operacional`
@@ -278,7 +278,7 @@ INSERT INTO `sistema_operacional` (`id_sistema`, `NomeSistema`, `VersaoSistema`,
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `id_usuario` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nome_usuario` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -289,7 +289,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `senha` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `icone` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `usuarios`
@@ -308,7 +308,8 @@ INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, 
 (10, 'Adriana', '', '', '', '1990-09-30', '', '', 'efdfg', ''),
 (11, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'Dev', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', ''),
 (12, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'User', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', ''),
-(13, 'ADMIN', 'admin', 'technology.ldr@gmail.com', 'Admin', '1995-07-11', 'LDR TECHNOLOGY', '', '21232f297a57a5a743894a0e4a801fc3', '');
+(13, 'ADMIN', 'admin', 'technology.ldr@gmail.com', 'Admin', '1995-07-11', 'LDR TECHNOLOGY', '', '$2y$10$2dDOjvcZxMrpB8BIgpVoLOJP/A7wgkCC05q2InqpHqY9uS1cmByRW', ''),
+(14, 'José', 'JOOJE', 'JoseHisth@gmail.com', 'Dev', '1986-08-13', 'CBHJS', '', '$2y$10$IT5wg8PQQm3e/zL/eSAkjeKMC.fqYorDPIHFyNk.9Iq5CHoI5Oqru', '');
 
 --
 -- Restrições para despejos de tabelas
