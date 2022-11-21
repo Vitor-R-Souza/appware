@@ -16,12 +16,8 @@
 <body>
     <?php
         logout();
-        echo "<script>
-        
-        alert('Usuário deslogado');
-        window.location.href='index.php'
-
-        </script>";
+        $_SESSION['msg'] = msgSucess('deslogado com sucesso');
+        header("location:index.php");
     ?>
 </body>
 </html> 

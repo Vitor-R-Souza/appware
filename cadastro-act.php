@@ -13,23 +13,32 @@ $buscaU = $BD->query("SELECT * from `usuarios` where `nome_usuario` = '$user'");
 
 if($busca->num_rows != 0){
 
-    echo "<script>
-    
-        alert('E-mail já possui uma conta.');
-        window.location.href='window.location.href='register-dev.php'
+    if($tipo == 'Dev'){
 
-        </script>"; 
-
+        echo "<script>
+            alert('E-mail já possui uma conta.');
+            </script>";
+            header("location:register-dev.php");
+    }elseif($tipo == 'User'){
+        echo "<script>
+            alert('E-mail já possui uma conta.');
+            </script>";
+            header("location:register-user.php");
+    }
     
 }else if($buscaU->num_rows != 0){
 
-    echo "<script>
-    
-    alert('nome de usuário já em uso.');
-    window.location.href='window.location.href='register-dev.php'
+    if($tipo == 'Dev'){
 
-    </script>"; 
+        $_SESSION['msg'] = msgError('nome de usuario já em uso.');
+        header("location:register-dev.php");
 
+    }elseif($tipo == 'User'){
+        
+        $_SESSION['msg'] = msgError('nome de usuario já em uso.');
+        header("location:register-user.php");
+
+    }
 
 }else{
 
@@ -45,22 +54,13 @@ if($busca->num_rows != 0){
             $_SESSION['tipo'] = $tipo;
             $_SESSION['senha'] = $senha;
 
-            echo "<script>
-        
-            alert('Usuário cadastrado com Sucesso');
-            window.location.href='index.php'
-
-            </script>"; 
+            $_SESSION['msg'] = msgSucess('cadastrado com sucesso.');
+            header("location:index.php");
 
         }else {
 
-            echo "<script>
-        
-            alert('Falha no Cadastro');
-            window.location.href='register-dev.php'
-
-
-            </script>";
+            $_SESSION['msg'] = msgError('erro ao cadastrar.');
+            header("location:register-dev.php");
 
         }
     }else{
@@ -73,22 +73,14 @@ if($busca->num_rows != 0){
             $_SESSION['tipo'] = $tipo;
             $_SESSION['senha'] = $senha;
 
-            echo "<script>
-        
-            alert('Usuário cadastrado com Sucesso');
-            window.location.href='index.php'
-
-            </script>"; 
+            $_SESSION['msg'] = msgSucess('cadastrado com sucesso.');
+            header("location:index.php");
 
         }else {
 
-            echo "<script>
-        
-            alert('Falha no Cadastro');
-            window.location.href='register-dev.php'
+            $_SESSION['msg'] = msgError('erro ao cadastrar.');
 
-
-            </script>";
+            header("location:register-user.php");
 
         }
 

@@ -18,7 +18,7 @@ require 'PHPMailer/src/SMTP.php';
         $mail = new PHPMailer(true);
 
         $senha = substr(md5(random_int(1, 999999)) ,0,6); //senha para o usuario
-        $senhaF = substr(md5($senha),0,6) ; //senha no BD
+        $senhaF = gerarHash($senha); //senha no BD
 
         if($BD->query("UPDATE `usuarios` SET `Senha` = '$senhaF' WHERE `email` = '$user';")){ //update
 
@@ -38,15 +38,11 @@ require 'PHPMailer/src/SMTP.php';
             $mail->Body = "Essa é sua nova senha nova, recomendamos trocar assim que efetuar o login: " .$senha;
 
             $mail->send(); //enviando o email
-            echo"<script>
-                    alert('codigo enviado');
-                    window.location.href='rec-senha.php'
-                </script>";
+            $_SESSION['msg'] = msgSucess('senha restaurada, cheque seu email.');
+            header("location:rec-senha.php");
         }else{
-            echo"<script>
-                    alert('ocorreu um erro');
-                    window.location.href='rec-senha.php'
-                </script>";
+            $_SESSION['msg'] = msgError('ocorreu um erro.');
+            header("location:rec-senha.php");
         }
         
 
