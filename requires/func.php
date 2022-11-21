@@ -20,6 +20,23 @@ function testarS($senha , $hash){ // teste
     return $ok;
 }
 
+function logout(){
+    unset($_SESSION['user']);
+    unset($_SESSION['user']);
+    unset($_SESSION['tipos']);
+}
+
+function is_logado(){
+    if(empty($_SESSION['user'])){
+        return false;
+    } else{
+        return true;
+    }
+}
+
+function voltar(){
+    return "<a href='index.php'></a>";
+}
 
 // verificar tipos de contas
 function is_adm(){ //admin

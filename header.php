@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,7 @@
     <script defer src="scripts/toggle-menu.js"></script>
 </head>
 <body>
+<?php
     <header>
         <input type="checkbox" name="" id="check">
         <nav class="navbar">
@@ -39,26 +40,52 @@
                 <span class="fa fa-bars" id="bars"></span>
                 <span class="fa fa-times" id="times"></span>
             </label>
-            <?php
-                echo "<div class='sub-menu-wrap' id='subMenu'>";
+            
+                if(empty($_SESSION['user'])){
+                    echo "<div class='sub-menu-wrap' id='subMenu'>";
                     echo "<div class='sub-menu'>";
-                        echo "<div class='user-info'>
-                        <img src='imagens/user.png'>
-                        <h3>Admin</h3>
-                    </div>
-                    <hr>
-                    <a href='profile.php' class='sub-menu-link'>
-                        <i class='fa-solid fa-user'></i><p>Entrar</p><span>></span>
+                        echo "<div class='user-info'>";
+                        echo "<img src='imagens/user.png'>";
+                        echo "<h3>" . $_SESSION['user'] . "</h3>";
+                        echo "</div>";
+                    echo "<hr>
+                    <a href='login.php' class='sub-menu-link'>
+                        <i class='fa-solid fa-right-from-bracket'></i><p>Entrar</p><span>></span>
                     </a>
-                    <a href='contact.php' class='sub-menu-link'>
+                    <a href='pre-register.php' class='sub-menu-link'>
+                        <i class='fa-solid fa-address-card'></i><p>Cadastrar</p><span>></span>
+                    </a>
+                    <a href'contact.php' class='sub-menu-link'>
                         <i class='fa-solid fa-circle-question'></i><p>Suporte</p><span>></span>
-                    </a>
-                    <a href'#' class='sub-menu-link'>
-                        <i class='fa-solid fa-right-from-bracket'></i><p>Logout</p><span>></span>
                     </a>";
                     echo "</div>";
-                echo "</div>";
-
+                    echo "</div>";
+                } else{
+                    echo "<div class='sub-menu-wrap' id='subMenu'>";
+                    echo "<div class='sub-menu'>";
+                    echo "<div class='user-info'>
+                        <img src='imagens/user.png'>
+                        <h3>...</h3>
+                        </div>
+                        <hr>";
+                    if((is_dev()) || is_user() || is_adm()){
+                        
+                        echo "<a href='profile.php' class='sub-menu-link'>
+                        <i class='fa-solid fa-user'></i><p>Perfil</p><span>></span>
+                        </a>";
+                        
+                    }
+                    echo "<a href='contact.php' class='sub-menu-link'>
+                    <i class='fa-solid fa-circle-question'></i><p>Suporte</p><span>></span>
+                    </a>
+                    <a href='logout.php' class='sub-menu-link'>
+                    <i class='fa-solid fa-right-from-bracket'></i><p>Sair</p><span>></span>
+                    </a>";
+                    echo "</div>";
+                    echo "</div>";
+                    }
+                
+                /*
                 echo"
                     <div class='sub-menu-wrap' id='subMenu'>
                         <div class='sub-menu'>
@@ -80,9 +107,9 @@
                                 <p>Perfil</p><span>></span>
                             </a> -->
                         </div>
-                    </div>"
-            ?>
+                    </div>"*/
         </nav>
     </header>
+    ?>
 </body>
 </html>
