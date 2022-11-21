@@ -5,7 +5,7 @@ session_start();
 if(!isset($_SESSION['user'])){
     $_SESSION['user'] = "";
     $_SESSION['nome'] = "";
-    $_SESSION['tipo'] = "";
+    $_SESSION['tipos'] = "";
 }
 
 
@@ -21,13 +21,13 @@ function testarS($senha , $hash){ // teste
 }
 
 function logout(){
-    unset($_SESSION['user']);
-    unset($_SESSION['user']);
+    unset($_SESSION['nome_usuario']);
+    unset($_SESSION['nome']);
     unset($_SESSION['tipos']);
 }
 
 function is_logado(){
-    if(empty($_SESSION['user'])){
+    if(empty($_SESSION['nome_usuario'])){
         return false;
     } else{
         return true;

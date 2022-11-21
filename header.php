@@ -11,42 +11,42 @@
 </head>
 <body>
 <?php
-    <header>
-        <input type="checkbox" name="" id="check">
-        <nav class="navbar">
-            <a href="index.php" class="logo">AppWare</a>
+    echo "<header>";
+        echo "<input type='checkbox' name='' id='check'>";
+        echo "<nav class='navbar'>";
+            echo "<a href='index.php' class='logo'>AppWare</a>";
 
-            <form class="search_box" method="get" action="filter.php">
-                <input type="search" name="search" id="search" placeholder="Digite aqui...">
-                <button type="submit"><span class="fa fa-search"></span></button>
+            echo "<form class='search_box' method='get' action='filter.php'>";
+                echo "<input type='search' name='search' id='search' placeholder='Digite aqui...'>";
+                echo "<button type='submit'><span class='fa fa-search'></span></button>";
 
-            </form>
-
+            echo "</form>";
+            /*
             <!-- <form action="list-catalog" method="get" id="search">
                 <input type="text" name="key-order" id="key-order" size="10">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form> -->
+            </form> -->*/
 
-            <ul>
-                <li><a href="index.php">Início</a></li>
-                <li><a href="about.php">Sobre</a></li>
-                <li><a href="contact.php">Contato</a></li>
-                <li><a href="filter.php">Catalógo</a></li>
-            </ul>
+            echo "<ul>
+                <li><a href='index.php'>Início</a></li>
+                <li><a href='about.php'>Sobre</a></li>
+                <li><a href='contact.php'>Contato</a></li>
+                <li><a href='filter.php'>Catalógo</a></li>
+            </ul>";
 
-            <img src="imagens/profile.png" class="user-pic" onclick="toggleMenu()">
+            echo "<img src='imagens/profile.png' class='user-pic' onclick='toggleMenu()'>";
 
-            <label for="check" class="bar">
-                <span class="fa fa-bars" id="bars"></span>
-                <span class="fa fa-times" id="times"></span>
-            </label>
+            echo "<label for='check' class='bar'>
+                <span class='fa fa-bars' id='bars'></span>
+                <span class='fa fa-times' id='times'></span>
+            </label>";
             
-                if(empty($_SESSION['user'])){
+                if(empty($_SESSION['nome_usuario'])){
                     echo "<div class='sub-menu-wrap' id='subMenu'>";
                     echo "<div class='sub-menu'>";
                         echo "<div class='user-info'>";
                         echo "<img src='imagens/user.png'>";
-                        echo "<h3>" . $_SESSION['user'] . "</h3>";
+                        echo "<h3>" . $_SESSION['nome_usuario'] . "</h3>";
                         echo "</div>";
                     echo "<hr>
                     <a href='login.php' class='sub-menu-link'>
@@ -108,8 +108,8 @@
                             </a> -->
                         </div>
                     </div>"*/
-        </nav>
-    </header>
+        echo "</nav>";
+    echo "</header>";
     ?>
 </body>
 </html>
