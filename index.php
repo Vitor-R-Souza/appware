@@ -24,7 +24,7 @@
             <div class="slide-list" data-slide="list">
                 <div class="slide-item" data-slide="item" data-index="0">
                     <div class="slide-content">
-                        <a href="game.php?id=9">
+                        <a href="game.php?id=1">
                             <img src="./capas/red-dead-redemption2.png" alt="Red Dead Redemption 2" />
                             <div class="slide-description">
                                 <h6>Mais populares - #1</h6>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="slide-item" data-slide="item" data-index="1">
                     <div class="slide-content">
-                        <a href="game.php?id=9">
+                        <a href="game.php?id=53">
                             <img src="./capas/league-of-legends.png" alt="League of Legends" />
                             <div class="slide-description">
                                 h6>Lançamentos - #1</h6>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="slide-item" data-slide="item" data-index="2">
                     <div class="slide-content">
-                        <a href="game.php?id=9">
+                        <a href="game.php?id=39">
                             <img src="./capas/gta5.png" alt="GTA" />
                             <div class="slide-description">
                                 <h6>Indies - #1</h6>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="slide-item" data-slide="item" data-index="3">
                     <div class="slide-content">
-                        <a href="game.php?id=9"></a>
+                        <a href="game.php?id=55">
                             <img src="capas/hitman2.jpg" alt="Hitman" />
                             <div class="slide-description">
                                 <h6>Mais populares - #2</h6>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="slide-item" data-slide="item" data-index="4">
                     <div class="slide-content">
-                        <a href="game.php?id=9"></a>
+                        <a href="game.php?id=9">
                             <img src="capas/halo5.png" alt="Halo" />
                             <div class="slide-description">
                                 <h6>Lançamentos - #2</h6>
