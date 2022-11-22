@@ -24,56 +24,62 @@
             <div class="slide-list" data-slide="list">
                 <div class="slide-item" data-slide="item" data-index="0">
                     <div class="slide-content">
-                        <img src="./capas/red-dead-redemption2.png" alt="Red Dead Redemption 2" />
-                        <div class="slide-description">
-                            <h6>Mais populares - #1</h6>
-                            <h3>Red Dead Redemption 2</h3>
-                            <p>Seja um fora da lei sobrevivendo a perseguições no Velho Oeste.</p>
-                        </div>
+                        <a href="game.php?id=9">
+                            <img src="./capas/red-dead-redemption2.png" alt="Red Dead Redemption 2" />
+                            <div class="slide-description">
+                                <h6>Mais populares - #1</h6>
+                                <h3>Red Dead Redemption 2</h3>
+                                <p>Seja um fora da lei sobrevivendo a perseguições no Velho Oeste.</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="slide-item" data-slide="item" data-index="1">
                     <div class="slide-content">
-                        <img src="./capas/league-of-legends.png" alt="League of Legends" />
-                        <div class="slide-description">
-                            <h6>Lançamentos - #1</h6>
-                            <h3>League of Legends</h3>
-                            <p>Escolha um campeão e ajude sua equipe a destruir a base inimiga.</p>
-                        </div>
+                        <a href="game.php?id=9">
+                            <img src="./capas/league-of-legends.png" alt="League of Legends" />
+                            <div class="slide-description">
+                                h6>Lançamentos - #1</h6>
+                                <h3>League of Legends</h3>
+                                <p>Escolha um campeão e ajude sua equipe a destruir a base inimiga.</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="slide-item" data-slide="item" data-index="2">
                     <div class="slide-content">
-                        <img src="./capas/gta5.png" alt="GTA" />
-                        <div class="slide-description">
-                            <h6>Indies - #1</h6>
-                            <h3>Grand Theft Auto V</h3>
-                            <p>Controle três criminosos na grande cidade de Los Santos.</p>
-                        </div>
+                        <a href="game.php?id=9">
+                            <img src="./capas/gta5.png" alt="GTA" />
+                            <div class="slide-description">
+                                <h6>Indies - #1</h6>
+                                <h3>Grand Theft Auto V</h3>
+                                <p>Controle três criminosos na grande cidade de Los Santos.</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="slide-item" data-slide="item" data-index="3">
                     <div class="slide-content">
-                        <a href="game.php">
-                            <img src="capas/big-stalker2.jpg" alt="">
-                            <!--<img src="./assets/imgs/hitman2.png" alt="Hitman" />-->
+                        <a href="game.php?id=9"></a>
+                            <img src="capas/hitman2.jpg" alt="Hitman" />
                             <div class="slide-description">
                                 <h6>Mais populares - #2</h6>
-                                <h3>S.T.A.L.K.E.R 2</h3>
-                                <p>Sobreviva na zona de exclusão no coração de Chernobyl.</p>
-                                <!--<p>Acompanhe o assassino Agente 47 em sua viagem para defender a Providence.</p>-->
+                                <h3>Hitman 2</h3>
+                                <p>Acompanhe o assassino Agente 47 em sua viagem para defender a Providence.</p>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="slide-item" data-slide="item" data-index="4">
                     <div class="slide-content">
-                        <img src="capas/halo5.png" alt="Halo" />
-                        <div class="slide-description">
-                            <h6>Lançamentos - #2</h6>
-                            <h3>Halo 5: Guardians</h3>
-                            <p>Elimine a ameaça de alienígenas através do 2º capítulo da história de Master Chief.</p>
-                        </div>
+                        <a href="game.php?id=9"></a>
+                            <img src="capas/halo5.png" alt="Halo" />
+                            <div class="slide-description">
+                                <h6>Lançamentos - #2</h6>
+                                <h3>Halo 5: Guardians</h3>
+                                <p>Elimine a ameaça de alienígenas através do 2º capítulo da história de Master Chief.</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -89,48 +95,24 @@
             </div>
             <div class="popular-content swiper mini-carousel1">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/cod-mw2.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/gotham-nights.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/elden-ring.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <a href="/">
-                                <img src="./mini-capas/aplague-tale-requiem.jpg" alt="" class="movie-box-img">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/elden-ring.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/marvel-spiderman-miles-morales.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/overwatch2.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/fifa23.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
+                <?php
+                    $busca = $BD->query("select * from jogos");
+                    if(!$busca){
+                        echo "<h1>falha de query</h1>";
+                    }else{
+                        while($reg = $busca->fetch_object()){
+                                $t = thumb($reg->capa_filtragem);
+                                echo"<div class='swiper-slide'>
+                                        <a href='game.php?id=$reg->id_jogos'>
+                                            <div class='movie-box'>
+                                                <img src='$t' alt='' class='movie-box-img'>
+                                            </div>
+                                        </a>
+                                    </div>";
+                        }
+                    }
+                                    
+                ?>
                 </div>
                 <br>
             </div>
@@ -144,48 +126,25 @@
             </div>
             <div class="popular-content swiper mini-carousel2">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/bayonetta.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/bully.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/dying-light2.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <a href="/">
-                                <img src="./mini-capas/csgo.jpg" alt="" class="movie-box-img">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/farcry6.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/marvel-spiderman.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/cod-warzone.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/gow.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
+                <?php
+                    $busca = $BD->query("select * from jogos");
+                    if(!$busca){
+                        echo "<h1>falha de query</h1>";
+                    }else{
+                        while($reg = $busca->fetch_object()){
+                                $t = thumb($reg->capa_filtragem);
+                                echo"<div class='swiper-slide'>
+                                        <a href='game.php?id=$reg->id_jogos'>
+                                            <div class='movie-box'>
+                                                <img src='$t' alt='' class='movie-box-img'>
+                                            </div>
+                                        </a>
+                                    </div>";
+                            
+                        }
+                    }
+                                    
+                ?>
                 </div>
                 <br>
             </div>
@@ -199,48 +158,25 @@
             </div>
             <div class="popular-content swiper mini-carousel3">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/bayonetta.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/bully.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/dying-light2.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <a href="/">
-                                <img src="./mini-capas/csgo.jpg" alt="" class="movie-box-img">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/farcry6.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/marvel-spiderman.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/cod-warzone.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="movie-box">
-                            <img src="./mini-capas/gow.jpg" alt="" class="movie-box-img">
-                        </div>
-                    </div>
+                <?php
+                    $busca = $BD->query("select * from jogos");
+                    if(!$busca){
+                        echo "<h1>falha de query</h1>";
+                    }else{
+                        while($reg = $busca->fetch_object()){
+                                $t = thumb($reg->capa_filtragem);
+                                echo"<div class='swiper-slide'>
+                                        <a href='game.php?id=$reg->id_jogos'>
+                                            <div class='movie-box'>
+                                                <img src='$t' alt='' class='movie-box-img'>
+                                            </div>
+                                        </a>
+                                    </div>";
+                            
+                        }
+                    }
+                                    
+                ?>
                 </div>
                 <br>
             </div>

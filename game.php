@@ -12,16 +12,23 @@
     <script defer src="scripts/favorite.js"></script>
 </head>
 <body>
-<?php
+    <?php
         require_once('requires/connect.php');
         require_once('requires/func.php');
         require_once('header.php');
+
+        $id = $_GET['id'];
+
+        $busc = $BD->query("SELECT * FROM `jogos` WHERE `id_jogos` = $id");
+        $r = $busc->fetch_object();
     ?>
     <main>
         <section class="section1">
             <div class="title-game">
                 <div class="titles">
-                    <h1>S.T.A.L.K.E.R 2</h1>
+                    <?php
+                        echo "<h1>$r->nome_jogo</h1>";
+                    ?>
                 </div>
                 <div id="favorite">
                     <i class="fas fa-heart"></i>
@@ -29,7 +36,9 @@
             </div>
             <div class="img-infos">
                 <div class="img-game">
-                    <img src="imagens/stalker-2-1.jpg" alt="S.t.a.l.k.e.r 2">
+                    <?php
+                        echo "<img src='capas/$r->capa_jogo' alt='$r->nome_jogo'>";
+                    ?>
                 </div>
                 <div class="infos-game">
                     <div class="sinopse">
@@ -37,13 +46,18 @@
                             <h4>Sinopse</h4>
                         </div>
                         <div class="text-sinopse">
-                            <p>Explore a vasta Zona de Exclusão de Tchornóbil, repleta de inimigos perigosos, anomalias letais e artefatos poderosos. Viva a sua própria história épica enquanto tenta alcançar o Coração de Tchornóbil.</p>
+                            <?php
+                               echo "<p>$r->sinopse</p>";
+                            ?>
                         </div>
                     </div>
                     <div class="year-note">
                         <div class="year">
                             <div class="title-year">Ano de lançamento:</div>
-                            <div class="year-lanced">2022</div>
+                            <?php
+                                echo "<div class='year-lanced'>$r->ano_lancamento</div>";
+                            ?>
+                            
                         </div>
                         <div class="notes">
                             <div class="title-note">Nota:</div>
@@ -59,12 +73,16 @@
                     <hr>
                     <div class="theme-dev">
                         <div class="theme">
-                            <div class="title-theme">Gênero:</div>
-                            <div class="genero">Sobrevivência</div>
+                            <div class="title-theme">Classificação indicativa:</div>
+                            <?php
+                                echo "<div class='genero'>$r->classificacao_indi</div>";
+                            ?>
                         </div>
                         <div class="dev">
                             <div class="title-dev">Desenvolvedor:</div>
-                            <div class="dev-name">GSC Game World</div>
+                            <?php
+                                echo "<div class='dev-name'>$r->desenvolvedora</div>";
+                            ?>
                         </div>
                     </div>
                     <div class="btn-analise">
