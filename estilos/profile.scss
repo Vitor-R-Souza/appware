@@ -19,3 +19,109 @@ body{
     background-color: $primary-color;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+$primary-color: #2E4242;
+$secondary-color: #2A2F2E;
+$color1-btn: #137B7B;
+$color2-btn: #00A3A3;
+$color-details: #03f484;
+
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+main{
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+
+    .container{
+        max-width: 95vw;
+        width: 100%;
+        background-color: $terciary-color;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.103);
+
+        .wrapper{
+            display: flex;
+
+
+            .profile-indicator{
+                background-color: $secondary-color;    
+                border-radius: 10px 0 0 10px;            
+    
+                .profile{
+    
+                    img{
+                        width: 200px;
+                        border-radius: 50%;
+                    }
+                }
+                ul{
+                    li{
+                        display: flex;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        padding: 10px 2rem;
+                        cursor: pointer;
+                        font-size: .875rem;
+                        color: #fff;
+                        border-right: 3px solid transparent;
+
+                        i{
+                            font-size: 1rem;
+                        }
+                    }
+                    li:hover{
+                        background-color: #fff;
+                        color: $secondary-color;
+
+                        i{
+                            color: $secondary-color;
+                        }
+                    }
+                    li.active{
+                        border-right-color: $color-details;
+                        color: $secondary-color;
+                        background-color: #fff;
+                        i{
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+
+            .content{
+                padding: 1.5rem 2rem;
+
+                li{
+                    display: none;
+
+                    h1{
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        color: #fff;
+                        margin-bottom: 0.75rem;
+                    }
+
+                    p{
+                        margin-bottom: .5rem;
+                        color: darkgray;
+                        font-size: .875rem;
+                    }
+                }
+
+                li.active{
+                    display: block;
+                }
+            }
+        }
+    }
+}
