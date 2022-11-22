@@ -55,7 +55,7 @@
                 <div class="slide-item" data-slide="item" data-index="3">
                     <div class="slide-content">
                         <a href="game.php">
-                            <img src="capas/stalker2.jpg" alt="">
+                            <img src="capas/big-stalker2.jpg" alt="">
                             <!--<img src="./assets/imgs/hitman2.png" alt="Hitman" />-->
                             <div class="slide-description">
                                 <h6>Mais populares - #2</h6>

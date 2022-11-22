@@ -36,7 +36,7 @@
                         if(empty($_SESSION['user'])){
                             echo "<div class='user-info'>
                                     <img src='imagens/user.png'>
-                                    <h3>-</h3>
+                                    <h3>Conecte-se</h3>
                                 </div>
                                 <hr>
                                 <a href='login.php' class='sub-menu-link'>
