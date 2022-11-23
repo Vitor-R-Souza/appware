@@ -40,7 +40,8 @@ main {
 
 main .container {
   max-width: 95vw;
-  width: 100%;
+  width: 80%;
+  /*!!!!!!!!Estava 100%*/
   background-color: #3c4643;
   border-radius: 10px;
   -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.103);
@@ -174,7 +175,7 @@ main .container .wrapper .profile-indicator .indicator li.active i {
 }
 
 main .container .wrapper .content {
-  padding: 1.5rem 2rem;
+  /*padding: 1.5rem 2rem;*/
 }
 
 main .container .wrapper .content li {
@@ -182,16 +183,24 @@ main .container .wrapper .content li {
 }
 
 main .container .wrapper .content li h1 {
-  font-size: 1.5rem;
+  font-size: 2.424vw;
   font-weight: 600;
   color: #fff;
   margin-bottom: 0.75rem;
+  background-color: #2A2F2E;
+  padding: 10px 0 10px 30px;
 }
 
 main .container .wrapper .content li p {
   margin-bottom: .5rem;
   color: darkgray;
-  font-size: .875rem;
+  font-size: 1.414vw;
+  /*.875rem*/
+  padding: 1.212vw 1.616vw;
+}
+
+main .container .wrapper .content li .edit-dados {
+  background-color: red;
 }
 
 main .container .wrapper .content li.active {
