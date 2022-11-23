@@ -44,7 +44,7 @@ main{
 
     .container{
         max-width: 95vw;
-        width: 80%; /*!!!!!!!!Estava 100%*/
+        width: 90%; /*!!!!!!!!Estava 100%*/
         background-color: $terciary-color;
         border-radius: 10px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.103);
@@ -166,7 +166,7 @@ main{
                         font-weight: 600;
                         color: #fff;
                         margin-bottom: 0.75rem;
-                        background-color: $secondary-color;
+                        background-image: linear-gradient(to right, #2A2F2E, transparent);
                         padding: 10px 0 10px 30px;
                         
                     }
@@ -178,13 +178,71 @@ main{
                         padding: 1.212vw 1.616vw;
                     }
 
-                    .edit-dados{
-                        background-color: red;
+                    .box-user{
+                        display: flex;
+                        justify-content: center;
+
+                        
+                        .edit-dados{
+                            margin: 35px 100px;
+                            width: 100%;
+                            
+
+                            h3{
+                                font-size: 14px;
+                            }
+
+                            .input-edit{
+                                display: flex;
+
+
+                                input{
+                                    border-radius: 15px;
+                                    background-color: transparent;
+                                    border: 2px solid $color-details;
+                                    outline: none;
+                                    margin-right: 5px;
+                                    width: 100%;
+                                    padding: 10px;
+                                }
+    
+                                i{
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 24px;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .button{
+                        display: flex;
+                        justify-content: center;
+
+                        #confirm{
+                            background-image: linear-gradient(to right,  #137B7B, #00A3A3);
+                            width: 400px;
+                            height: 80px;
+                            border: none;
+                            border-radius: 20px;
+                            cursor: pointer;
+                            font-size: 20px;
+                            font-weight: bold;
+                            letter-spacing: 3px;
+                            text-transform: uppercase;
+            
+                            &:hover{
+                                background-image: linear-gradient(to right, #179494, #01cccc);
+                                
+                            }
+                        }
                     }
                 }
 
                 li.active{
                     display: block;
+                    width: 100%;
                 }
             }
         }

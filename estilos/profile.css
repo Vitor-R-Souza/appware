@@ -40,7 +40,7 @@ main {
 
 main .container {
   max-width: 95vw;
-  width: 80%;
+  width: 90%;
   /*!!!!!!!!Estava 100%*/
   background-color: #3c4643;
   border-radius: 10px;
@@ -187,7 +187,8 @@ main .container .wrapper .content li h1 {
   font-weight: 600;
   color: #fff;
   margin-bottom: 0.75rem;
-  background-color: #2A2F2E;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2A2F2E), to(transparent));
+  background-image: linear-gradient(to right, #2A2F2E, transparent);
   padding: 10px 0 10px 30px;
 }
 
@@ -199,11 +200,80 @@ main .container .wrapper .content li p {
   padding: 1.212vw 1.616vw;
 }
 
-main .container .wrapper .content li .edit-dados {
-  background-color: red;
+main .container .wrapper .content li .box-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container .wrapper .content li .box-user .edit-dados {
+  margin: 35px 100px;
+  width: 100%;
+}
+
+main .container .wrapper .content li .box-user .edit-dados h3 {
+  font-size: 14px;
+}
+
+main .container .wrapper .content li .box-user .edit-dados .input-edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .wrapper .content li .box-user .edit-dados .input-edit input {
+  border-radius: 15px;
+  background-color: transparent;
+  border: 2px solid #03f484;
+  outline: none;
+  margin-right: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+main .container .wrapper .content li .box-user .edit-dados .input-edit i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+}
+
+main .container .wrapper .content li .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container .wrapper .content li .button #confirm {
+  background-image: -webkit-gradient(linear, left top, right top, from(#137B7B), to(#00A3A3));
+  background-image: linear-gradient(to right, #137B7B, #00A3A3);
+  width: 400px;
+  height: 80px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+main .container .wrapper .content li .button #confirm:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#179494), to(#01cccc));
+  background-image: linear-gradient(to right, #179494, #01cccc);
 }
 
 main .container .wrapper .content li.active {
   display: block;
+  width: 100%;
 }
 /*# sourceMappingURL=profile.css.map */
