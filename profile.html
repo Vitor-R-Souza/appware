@@ -7,6 +7,7 @@
     <title>Perfil</title>
     <link rel="stylesheet" href="estilos/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <script defer src="scripts/profile.js"></script>
 </head>
 <body>
     <main>
@@ -24,7 +25,7 @@
                             </div>
                             <div class="icon-dado">
                                 <i class="fa-solid fa-envelope"></i>
-                                <h4>admin_ldr@gmail.com</h4>
+                                <input type="text" name="email" id="email" size="12" value="admin-ldr@gmail.com" disabled>
                             </div>
                             <div class="icon-dado">
                                 <i class="fa-solid fa-building"></i>
@@ -32,15 +33,16 @@
                             </div>
                             <div class="icon-dado">
                                 <i class="fa-solid fa-circle-info"></i>
-                                <h4>ldr.tech@gmail.com</h4>
+                                <h4>ldr-tech.com.br</h4>
                             </div>
                         </div>
                     </div>
+                    <hr>
                     <ul class="indicator">
                         <li class="active" data-target="#edit"><i class="fa-solid fa-pen-to-square"></i> Editar Perfil</li>
                         <li data-target="#history"><i class="fa-solid fa-list"></i> Histórico</li>
                         <li data-target="#favorites"><i class="fa-solid fa-heart"></i> Favoritos</li>
-                        <li data-target="#machines"><i class="fa-solid fa-laptop"></i> Máquinas</li>
+                        <li data-target="#machines"><i class="fa-solid fa-computer"></i> Máquinas</li>
                         <li data-target="#publicateds"><i class="fa-solid fa-gamepad"></i> Publicados</li>
                     </ul>
                 </div>

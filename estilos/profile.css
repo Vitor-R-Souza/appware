@@ -56,48 +56,120 @@ main .container .wrapper {
 main .container .wrapper .profile-indicator {
   background-color: #2A2F2E;
   border-radius: 10px 0 0 10px;
+  text-align: center;
+}
+
+main .container .wrapper .profile-indicator .profile {
+  padding: 1rem 2rem;
 }
 
 main .container .wrapper .profile-indicator .profile img {
-  width: 200px;
+  width: 220px;
   border-radius: 50%;
 }
 
-main .container .wrapper .profile-indicator ul li {
+main .container .wrapper .profile-indicator .profile h2 {
+  margin-bottom: 10px;
+}
+
+main .container .wrapper .profile-indicator .profile .type {
+  background-color: red;
+  border-radius: 20px;
+  width: 60%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+main .container .wrapper .profile-indicator .profile .dados {
+  margin-top: 20px;
+}
+
+main .container .wrapper .profile-indicator .profile .dados .icon-dado {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: .5rem;
-  padding: 10px 2rem;
+  gap: .5rem;
+  margin: 10px 0;
+}
+
+main .container .wrapper .profile-indicator .profile .dados .icon-dado i {
+  font-size: 1.2rem;
+}
+
+main .container .wrapper .profile-indicator .profile .dados .icon-dado h4 {
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+main .container .wrapper .profile-indicator .profile .dados .icon-dado #email {
+  background-color: #2A2F2E;
+  border: none;
+  outline: none;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+main .container .wrapper .profile-indicator .indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #232726;
+}
+
+main .container .wrapper .profile-indicator .indicator li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  /*Uma margin right do icone pra palavra*/
+  padding: 12px 25%;
+  /*estava 2rem*/
   cursor: pointer;
-  font-size: .875rem;
+  font-size: 1.1rem;
+  /*.875rem*/
   color: #fff;
   border-right: 3px solid transparent;
 }
 
-main .container .wrapper .profile-indicator ul li i {
-  font-size: 1rem;
+main .container .wrapper .profile-indicator .indicator li i {
+  font-size: 1.5rem;
 }
 
-main .container .wrapper .profile-indicator ul li:hover {
+main .container .wrapper .profile-indicator .indicator li:hover {
   background-color: #fff;
   color: #2A2F2E;
 }
 
-main .container .wrapper .profile-indicator ul li:hover i {
+main .container .wrapper .profile-indicator .indicator li:hover i {
   color: #2A2F2E;
 }
 
-main .container .wrapper .profile-indicator ul li.active {
+main .container .wrapper .profile-indicator .indicator li.active {
   border-right-color: #03f484;
   color: #2A2F2E;
   background-color: #fff;
 }
 
-main .container .wrapper .profile-indicator ul li.active i {
+main .container .wrapper .profile-indicator .indicator li.active i {
   color: #2A2F2E;
 }
 

@@ -55,29 +55,83 @@ main{
 
             .profile-indicator{
                 background-color: $secondary-color;    
-                border-radius: 10px 0 0 10px;            
+                border-radius: 10px 0 0 10px;
+                text-align: center;
+
     
                 .profile{
+                    padding: 1rem 2rem;
     
                     img{
-                        width: 200px;
+                        width: 220px;
                         border-radius: 50%;
                     }
+
+                    h2{
+                        margin-bottom: 10px;
+                    }
+
+                    .type{
+                        background-color: red;
+                        border-radius: 20px;
+                        width: 60%;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0 auto;
+
+                        h3{
+
+                        }
+                    }
+
+                    .dados{
+                        margin-top: 20px;
+
+                        .icon-dado{
+                            display: flex;
+                            align-items: center;
+                            gap: .5rem;
+                            margin: 10px 0;
+                            
+
+                            i{
+                                font-size: 1.2rem;
+                            }
+                            h4{
+                                font-weight: normal;
+                                font-size: 0.8rem;
+                            }
+                            #email{
+                                background-color: $secondary-color;
+                                border: none;
+                                outline: none;
+                                word-wrap: break-word;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
                 }
-                ul{
+                .indicator{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #232726;
+                    
                     li{
                         display: flex;
                         align-items: center;
-                        grid-gap: .5rem;
-                        padding: 10px 2rem;
+                        gap: 1rem; /*Uma margin right do icone pra palavra*/
+                        padding: 12px 25%; /*estava 2rem*/
                         cursor: pointer;
-                        font-size: .875rem;
+                        font-size: 1.1rem; /*.875rem*/
                         color: #fff;
                         border-right: 3px solid transparent;
 
                         i{
-                            font-size: 1rem;
+                            font-size: 1.5rem;
                         }
+                        
                     }
                     li:hover{
                         background-color: #fff;
@@ -96,6 +150,7 @@ main{
                         }
                     }
                 }
+                
             }
 
             .content{
