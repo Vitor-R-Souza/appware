@@ -9,48 +9,46 @@ const btnEye = document.querySelector('.btn-eye')
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    nameValidate();
     userValidate();
+    nameValidate();
     enterpriseValidate();
     siteValidate();
-    dateValidate();
     emailValidate();
     passwordValidate();
-    comparePassword();
 })
 
 function setError(index){
-    campos[index].style.borderBottom = '2px solid #e63636'
+    campos[index].style.border = '2px solid #e63636'
     spans[index].style.display = 'block'
     labels[index].style.color = 'red'
 }
 
 function removeError(index){
-    campos[index].style.borderBottom = ''
+    campos[index].style.border = ''
     spans[index].style.display = 'none'
     labels[index].style.color = ''
 }
 
 
-function nameValidate(){
+function userValidate(){
     if(campos[0].value.length == ''){
         removeError(0)
-    } else if(campos[0].value.length < 3){
+    } else if(!userRegex.test(campos[0].value)){
         setError(0)
+        console.log("Usuário invalido")
     }else{
         removeError(0)
+        console.log("Usuario valido")
     }
 }
 
-function userValidate(){
+function nameValidate(){
     if(campos[1].value.length == ''){
         removeError(1)
-    } else if(!userRegex.test(campos[1].value)){
+    } else if(campos[1].value.length < 3){
         setError(1)
-        console.log("Usuário invalido")
     }else{
         removeError(1)
-        console.log("Usuario valido")
     }
 }
 
@@ -74,46 +72,24 @@ function siteValidate(){
     }
 }
 
-function dateValidate(){
-//4
-    //var datas = campos[4].value
-    const datas = document.getElementById('date')
-    let nasc = datas.value.split("-").map(Number)
 
-    let ageLimit = new Date(nasc[0] + 90, nasc[1] - 1, nasc[2])
-    let ageMin = new Date(nasc[0] + 10, nasc[1] - 1, nasc[2])
-
-    let today = new Date()
-
-    if (ageLimit < today){
+function emailValidate(){
+    if(campos[4].value.length == ''){
+        removeError(4)
+    } else if(!emailRegex.test(campos[4].value)){
         setError(4)
-        //console.log("Idade limite!")
-    } else if (ageMin > today){
-        console.log("Idade menor")
-        setError(4)
-        //console.log("Idade válida")
-    } else{
+    }else{
         removeError(4)
     }
 }
 
-function emailValidate(){
+function passwordValidate(){
     if(campos[5].value.length == ''){
         removeError(5)
-    } else if(!emailRegex.test(campos[5].value)){
+    } else if(!passwordRegex.test(campos[5].value)){
         setError(5)
-    }else{
-        removeError(5)
-    }
-}
-
-function passwordValidate(){
-    if(campos[6].value.length == ''){
-        removeError(6)
-    } else if(!passwordRegex.test(campos[6].value)){
-        setError(6)
     } else {
-        removeError(6)
+        removeError(5)
     }
 
     document.getElementById('btn-eye').addEventListener('click', function(){
@@ -121,22 +97,5 @@ function passwordValidate(){
     })
     document.getElementById('btn-eye').addEventListener('mouseout', function(){
         document.getElementById('senha').type = 'password'
-    })
-}
-
-
-function comparePassword(){
-    if(campos[7].value.length == ''){
-        removeError(7)
-    } else if(campos[6].value == campos[7].value && campos[7].value.length >= 8){
-        removeError(7)
-    } else {
-        setError(7)
-    }
-    document.getElementById('btn-eye2').addEventListener('click', function(){
-        document.getElementById('repeat-senha').type = 'text'
-    })
-    document.getElementById('btn-eye2').addEventListener('mouseout', function(){
-        document.getElementById('repeat-senha').type = 'password'
     })
 }

@@ -200,31 +200,42 @@ main .container .wrapper .content li p {
   padding: 1.212vw 1.616vw;
 }
 
-main .container .wrapper .content li .box-user {
+main .container .wrapper .content li .edit-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container .wrapper .content li .edit-profile .box-user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-main .container .wrapper .content li .box-user .edit-dados {
-  margin: 40px 100px;
   width: 100%;
 }
 
-main .container .wrapper .content li .box-user .edit-dados h3 {
+main .container .wrapper .content li .edit-profile .box-user .edit-dados {
+  margin: 1.010vw 5.051vw;
+  width: 100%;
+}
+
+main .container .wrapper .content li .edit-profile .box-user .edit-dados label {
   font-size: 14px;
 }
 
-main .container .wrapper .content li .box-user .edit-dados .input-edit {
+main .container .wrapper .content li .edit-profile .box-user .edit-dados .input-edit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .container .wrapper .content li .box-user .edit-dados .input-edit input {
+main .container .wrapper .content li .edit-profile .box-user .edit-dados .input-edit input {
   border-radius: 15px;
   background-color: transparent;
   border: 2px solid #03f484;
@@ -234,7 +245,7 @@ main .container .wrapper .content li .box-user .edit-dados .input-edit input {
   padding: 10px;
 }
 
-main .container .wrapper .content li .box-user .edit-dados .input-edit i {
+main .container .wrapper .content li .edit-profile .box-user .edit-dados .input-edit i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,7 +255,14 @@ main .container .wrapper .content li .box-user .edit-dados .input-edit i {
   font-size: 24px;
 }
 
-main .container .wrapper .content li .button {
+main .container .wrapper .content li .edit-profile .box-user .edit-dados .span-required {
+  font-size: 12px;
+  margin: -25px 0 0 1px;
+  color: red;
+  display: none;
+}
+
+main .container .wrapper .content li .edit-profile .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +271,7 @@ main .container .wrapper .content li .button {
           justify-content: center;
 }
 
-main .container .wrapper .content li .button #confirm {
+main .container .wrapper .content li .edit-profile .button #confirm {
   background-image: -webkit-gradient(linear, left top, right top, from(#137B7B), to(#00A3A3));
   background-image: linear-gradient(to right, #137B7B, #00A3A3);
   width: 400px;
@@ -265,9 +283,10 @@ main .container .wrapper .content li .button #confirm {
   font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
+  margin-top: 25px;
 }
 
-main .container .wrapper .content li .button #confirm:hover {
+main .container .wrapper .content li .edit-profile .button #confirm:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#179494), to(#01cccc));
   background-image: linear-gradient(to right, #179494, #01cccc);
 }

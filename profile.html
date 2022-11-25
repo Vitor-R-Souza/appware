@@ -49,22 +49,22 @@
                 </div>
                 <ul class="content">
                     <li class="active" id="edit">
-                        <form action="" method="POST" autocomplete="off" class="edit-profile">
-                            <h1>Editar Perfil</h1>
-                            <p>Aqui você poderá editar as informações cadastradas e adicionar uma foto de perfil.</p>
+                        <h1>Editar Perfil</h1>
+                        <p>Aqui você poderá editar as informações cadastradas e adicionar uma foto de perfil.</p>
+                        <form action="#" method="POST" autocomplete="off" class="edit-profile">
                             <div class="box-user">
                                 <div class="edit-dados">
-                                    <h3>Nome de usuário</h3>
+                                    <label for="user" class="label-error">Nome de usuário</label>
                                     <div class="input-edit">
-                                        <input type="text" name="nome_usuario" id="user" size="50" class="required">
+                                        <input type="text" name="nome_usuario" id="user" size="50" class="required" oninput="nameValidate()">
                                         <i class="fa-solid fa-circle-check"></i>
                                     </div>
                                     <span class="span-required">Usuário não válido</span>
                                 </div>
                                 <div class="edit-dados">
-                                    <h3>Nome</h3>
+                                    <label for="name" class="label-error">Nome</label>
                                     <div class="input-edit">
-                                        <input type="text" name="nome" id="name" size="50" class="required">
+                                        <input type="text" name="nome" id="name" size="50" class="required" oninput="nameValidate()">
                                         <i class="fa-solid fa-circle-check"></i>
                                     </div>
                                     <span class="span-required">Mínimo 3 caracteres</span>
@@ -72,17 +72,17 @@
                             </div>
                             <div class="box-user">
                                 <div class="edit-dados">
-                                    <h3>Nome da empresa/estúdio</h3>
+                                    <label for="enterprise" class="label-error">Nome da empresa/estúdio</label>
                                     <div class="input-edit">
-                                        <input type="text" name="nome_usuario" id="user" size="50" class="required">
+                                        <input type="text" name="nome_usuario" id="enterprise" size="50" class="required" oninput="enterpriseValidate()">
                                         <i class="fa-solid fa-circle-check"></i>
                                     </div>
                                     <span class="span-required">Mínimo 3 caracteres</span>
                                 </div>
                                 <div class="edit-dados">
-                                    <h3>Site/Página da empresa</h3>
+                                    <label for="site" class="label-error">Site/Página da empresa</label>
                                     <div class="input-edit">
-                                        <input type="text" name="nome" id="name" size="50" class="required">
+                                        <input type="text" name="nome" id="site" size="50" class="required" oninput="siteValidate()">
                                         <i class="fa-solid fa-circle-check"></i>
                                     </div>
                                     <span class="span-required">Endereço inválido</span>
@@ -90,17 +90,17 @@
                             </div>
                             <div class="box-user">
                                 <div class="edit-dados">
-                                    <h3>E-mail</h3>
+                                    <label for="email" class="label-error">E-mail</label>
                                     <div class="input-edit">
-                                        <input type="email" name="nome_usuario" id="user" size="50" class="required">
+                                        <input type="email" name="nome_usuario" id="email" size="50" class="required" oninput="emailValidate()">
                                         <i class="fa-solid fa-circle-check"></i>
                                     </div>
                                     <span class="span-required">Digite um e-mail válido</span>
                                 </div>
                                 <div class="edit-dados">
-                                    <h3>Senha</h3>
+                                    <label for="senha" class="label-error">Senha</label>
                                     <div class="input-edit">
-                                        <input type="password" name="nome" id="name" size="50">
+                                        <input type="password" name="nome" id="senha" size="50" class="required" oninput="passwordValidate()">
                                         <i class="fa-solid fa-circle-check"></i>
                                     </div>
                                     <span class="span-required">Digite uma senha válida</span>
