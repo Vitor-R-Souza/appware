@@ -11,6 +11,11 @@
     <script defer src="scripts/profile-validation.js"></script>
 </head>
 <body>
+    <?php
+        require_once('requires/connect.php');
+        require_once('requires/func.php');
+        require_once('header.php');
+    ?>
     <main>
         <section class="container">
             <section class="wrapper">
