@@ -179,6 +179,7 @@ main .container .wrapper .profile-indicator .indicator li.active i {
 main .container .wrapper .content {
   /*padding: 1.5rem 2rem;*/
   width: 80%;
+  overflow-x: hidden;
 }
 
 main .container .wrapper .content li {
