@@ -278,7 +278,7 @@ main .container .wrapper .content li #historico-favoritos {
 
 main .container .wrapper .content li #historico-favoritos iframe {
   width: 69.057vw;
-  height: 600px;
+  height: 570px;
 }
 
 main .container .wrapper .content li h1 {
@@ -289,6 +289,7 @@ main .container .wrapper .content li h1 {
   background-image: -webkit-gradient(linear, left top, right top, from(#2A2F2E), to(transparent));
   background-image: linear-gradient(to right, #2A2F2E, transparent);
   padding: 10px 0 10px 30px;
+  border-bottom: 2px solid #fff;
 }
 
 main .container .wrapper .content li p {
