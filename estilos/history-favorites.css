@@ -7,6 +7,7 @@
   color: white;
   list-style: none;
   font-family: 'Poppins', Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -47,7 +48,6 @@ main .historic-favorites .game i {
 
 main .historic-favorites .game .fa-circle-xmark {
   color: red;
-  color: #770808;
 }
 
 main .historic-favorites .game .fa-circle-check {
