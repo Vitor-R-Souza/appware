@@ -57,6 +57,7 @@ main{
                 background-color: $secondary-color;    
                 border-radius: 10px 0 0 10px;
                 text-align: center;
+                width: 20%;
                 
 
     
@@ -64,7 +65,8 @@ main{
                     padding: 1rem 2rem;
     
                     img{
-                        width: 220px;
+                        //width: 220px;
+                        width: 11.111vw;
                         border-radius: 50%;
                     }
 
@@ -110,6 +112,7 @@ main{
                                 outline: none;
                                 word-wrap: break-word;
                                 text-overflow: ellipsis;
+                                width: 100%;
                             }
                         }
                     }
@@ -125,12 +128,12 @@ main{
                         gap: 1rem; /*Uma margin right do icone pra palavra*/
                         padding: 12px 25%; /*estava 2rem*/
                         cursor: pointer;
-                        font-size: 1.1rem; /*.875rem*/
+                        font-size: 1rem; /*.875rem*/
                         color: #fff;
                         border-right: 3px solid transparent;
 
                         i{
-                            font-size: 1.5rem;
+                            font-size: 1rem;
                         }
                         
                     }
@@ -156,11 +159,27 @@ main{
 
             .content{
                 /*padding: 1.5rem 2rem;*/                
-                
+                //width: 80%;
+                width: 80%;
 
                 li{
                     display: none;
+                    width: 100%;
 
+                    #historico-favoritos{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: space-between;
+
+                        
+
+                        iframe{
+                            //width: 1300px;
+                            width: 69.057vw;
+                            //height: 350px;
+                            height: 600px;
+                        }
+                    }
                     h1{
                         font-size: 2.424vw;
                         font-weight: 600;
@@ -178,6 +197,7 @@ main{
                         padding: 1.212vw 1.616vw;
                     }
 
+                    /*
                     .edit-profile{
                         display: flex;
                         flex-direction: column;
@@ -253,7 +273,7 @@ main{
                                 }
                             }
                         }
-                    }
+                    }*/
 
                     
                 }
@@ -261,6 +281,12 @@ main{
                 li.active{
                     display: block;
                     width: 100%;
+                }
+
+                #favorites{
+                    h1{
+                        background-image: linear-gradient(to right, #491717, transparent);                        
+                    }
                 }
             }
         }

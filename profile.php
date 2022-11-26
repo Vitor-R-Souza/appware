@@ -54,78 +54,22 @@
                 </div>
                 <ul class="content">
                     <li class="active" id="edit">
-                        <h1>Editar Perfil</h1>
-                        <p>Aqui você poderá editar as informações cadastradas e adicionar uma foto de perfil.</p>
-                        <form action="#" method="POST" autocomplete="off" class="edit-profile">
-                            <div class="box-user">
-                                <div class="edit-dados">
-                                    <label for="user" class="label-error">Nome de usuário</label>
-                                    <div class="input-edit">
-                                        <input type="text" name="nome_usuario" id="user" size="50" class="required" oninput="nameValidate()">
-                                        <i class="fa-solid fa-circle-check"></i>
-                                    </div>
-                                    <span class="span-required">Usuário não válido</span>
-                                </div>
-                                <div class="edit-dados">
-                                    <label for="name" class="label-error">Nome</label>
-                                    <div class="input-edit">
-                                        <input type="text" name="nome" id="name" size="50" class="required" oninput="nameValidate()">
-                                        <i class="fa-solid fa-circle-check"></i>
-                                    </div>
-                                    <span class="span-required">Mínimo 3 caracteres</span>
-                                </div>
-                            </div>
-                            <div class="box-user">
-                                <div class="edit-dados">
-                                    <label for="enterprise" class="label-error">Nome da empresa/estúdio</label>
-                                    <div class="input-edit">
-                                        <input type="text" name="nome_usuario" id="enterprise" size="50" class="required" oninput="enterpriseValidate()">
-                                        <i class="fa-solid fa-circle-check"></i>
-                                    </div>
-                                    <span class="span-required">Mínimo 3 caracteres</span>
-                                </div>
-                                <div class="edit-dados">
-                                    <label for="site" class="label-error">Site/Página da empresa</label>
-                                    <div class="input-edit">
-                                        <input type="text" name="nome" id="site" size="50" class="required" oninput="siteValidate()">
-                                        <i class="fa-solid fa-circle-check"></i>
-                                    </div>
-                                    <span class="span-required">Endereço inválido</span>
-                                </div>
-                            </div>
-                            <div class="box-user">
-                                <div class="edit-dados">
-                                    <label for="email" class="label-error">E-mail</label>
-                                    <div class="input-edit">
-                                        <input type="email" name="nome_usuario" id="email" size="50" class="required" oninput="emailValidate()">
-                                        <i class="fa-solid fa-circle-check"></i>
-                                    </div>
-                                    <span class="span-required">Digite um e-mail válido</span>
-                                </div>
-                                <div class="edit-dados">
-                                    <label for="senha" class="label-error">Senha</label>
-                                    <div class="input-edit">
-                                        <input type="password" name="nome" id="senha" size="50" class="required" oninput="passwordValidate()">
-                                        <i class="fa-solid fa-circle-check"></i>
-                                    </div>
-                                    <span class="span-required">Digite uma senha válida</span>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <input type="submit" value="Confirmar alterações" id="confirm">
-                            </div>
-                        </form>
+                        <h1>Home</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
+                        <p>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. A deserunt fugiat, consequatur tenetur earum doloribus amet repellat quae illum dolore laborum voluptatum, autem, praesentium sunt soluta natus. Voluptates, quas tenetur.</p>
+                        <p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus velit alias facere ducimus quidem tenetur facilis cum architecto exercitationem ratione suscipit vel dignissimos totam qui ex error cupiditate rem, ipsa, quam magnam veniam inventore. Porro iure, nobis officia similique minima eaque obcaecati eos magnam, nisi quos aut, ipsam recusandae laudantium!</p>
                     </li>
                     <li id="history">
-                        <h1>Profile</h1>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem esse perspiciatis inventore. Modi, nostrum debitis eum placeat suscipit veniam adipisci explicabo est natus, doloribus reprehenderit dolor maiores ut asperiores quam voluptas iure a doloremque vel odio ipsam molestias nihil blanditiis nam, in. Soluta doloribus iste repellendus quos hic itaque eaque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
+                        <div id="historico-favoritos">
+                            <h1>Histórico</h1>
+                            <iframe src="history.php" frameborder="0"></iframe>
+                        </div>
                     </li>
-                    <li id="favorites">
-                        <h1>Contact</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum explicabo magni facere quo voluptas error, nulla nihil maxime fugiat earum iure fugit quas eligendi harum accusantium esse libero totam eveniet reprehenderit dignissimos ex, eius, voluptate! A maxime ad nostrum voluptatem, placeat, assumenda fugiat? Accusamus fuga repellendus nisi qui.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur optio in pariatur ab officiis aperiam harum veritatis adipisci eveniet fuga soluta voluptas minima a necessitatibus, blanditiis.</p>
+                    <li id="favorites" style="background-color: #770808;">
+                        <div id="historico-favoritos">
+                            <h1>Favoritos</h1>
+                            <iframe src="favorites.php" frameborder="0"></iframe>
+                        </div>
                     </li>
                     <li id="machines">
                         <h1>Settings</h1>

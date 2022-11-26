@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favoritos</title>
+    <title>Histórico</title>
     <link rel="stylesheet" href="estilos/history-favorites.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
 </head>
-<body style="background-color: #770808;">
+<body>
     <main>
         <section class="historic-favorites">
             <a href="">
                 <div class="game">
-                    <img src="mini-capas/battlefield2042.jpg" alt="">
+                    <img src="mini-capas/mortal-kombat11.jpg" alt="">
                     <i class="fa-regular fa-circle-xmark"></i>
                 </div>
             </a>
             <div class="game">
-                <img src="mini-capas/farcry6.jpg" alt="Marvel Spider-Man">
+                <img src="mini-capas/marvel-spiderman.jpg" alt="Marvel Spider-Man">
                 <i class="fa-regular fa-circle-check"></i>
             </div>
             <div class="game">
-                <img src="mini-capas/csgo.jpg" alt="The Witcher 3: Wild Hunt">
+                <img src="mini-capas/the-witcher3.jpg" alt="The Witcher 3: Wild Hunt">
             </div>
             <div class="game">
-                <img src="mini-capas/fortnite.jpg" alt="Valorant">
+                <img src="mini-capas/valorant.jpg" alt="Valorant">
             </div>
             <div class="game">
-                <img src="mini-capas/lol.jpg" alt="God of War">
+                <img src="mini-capas/gow.jpg" alt="God of War">
             </div>
             <div class="game">
-                <img src="mini-capas/bayonetta.jpg" alt="God of War">
+                <img src="mini-capas/hitman2.jpg" alt="God of War">
             </div>
             <div class="game">
-                <img src="mini-capas/totalwar-warhammer3.jpg" alt="God of War">
+                <img src="mini-capas/the-sims4.jpg" alt="God of War">
             </div>
             <div class="game">
-                <img src="mini-capas/splinter-cell-blacklist.jpg" alt="God of War">
+                <img src="mini-capas/stardew-valley.jpg" alt="God of War">
             </div>
         </section>
     </main>

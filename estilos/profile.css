@@ -58,6 +58,7 @@ main .container .wrapper .profile-indicator {
   background-color: #2A2F2E;
   border-radius: 10px 0 0 10px;
   text-align: center;
+  width: 20%;
 }
 
 main .container .wrapper .profile-indicator .profile {
@@ -65,7 +66,7 @@ main .container .wrapper .profile-indicator .profile {
 }
 
 main .container .wrapper .profile-indicator .profile img {
-  width: 220px;
+  width: 11.111vw;
   border-radius: 50%;
 }
 
@@ -120,6 +121,7 @@ main .container .wrapper .profile-indicator .profile .dados .icon-dado #email {
   outline: none;
   word-wrap: break-word;
   text-overflow: ellipsis;
+  width: 100%;
 }
 
 main .container .wrapper .profile-indicator .indicator {
@@ -145,14 +147,14 @@ main .container .wrapper .profile-indicator .indicator li {
   padding: 12px 25%;
   /*estava 2rem*/
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   /*.875rem*/
   color: #fff;
   border-right: 3px solid transparent;
 }
 
 main .container .wrapper .profile-indicator .indicator li i {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 main .container .wrapper .profile-indicator .indicator li:hover {
@@ -176,10 +178,107 @@ main .container .wrapper .profile-indicator .indicator li.active i {
 
 main .container .wrapper .content {
   /*padding: 1.5rem 2rem;*/
+  width: 80%;
 }
 
 main .container .wrapper .content li {
   display: none;
+  width: 100%;
+  /*
+                    .edit-profile{
+                        display: flex;
+                        flex-direction: column;
+
+
+                        .box-user{
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+    
+                            
+                            .edit-dados{
+                                margin: 1.010vw 5.051vw;
+                                width: 100%;
+                                
+                                
+    
+                                label{
+                                    font-size: 14px;
+                                }
+    
+                                .input-edit{
+                                    display: flex;
+    
+    
+                                    input{
+                                        border-radius: 15px;
+                                        background-color: transparent;
+                                        border: 2px solid $color-details;
+                                        outline: none;
+                                        margin-right: 5px;
+                                        width: 100%;
+                                        padding: 10px;
+                                    }
+        
+                                    i{
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 24px;
+                                    }
+                                }
+
+                                .span-required{
+                                    font-size: 12px;
+                                    margin: -25px 0 0 1px;
+                                    color: red;
+                                    display: none;
+                                }
+    
+                            }
+                        }
+    
+                        .button{
+                            display: flex;
+                            justify-content: center;
+    
+                            #confirm{
+                                background-image: linear-gradient(to right,  #137B7B, #00A3A3);
+                                width: 400px;
+                                height: 80px;
+                                border: none;
+                                border-radius: 20px;
+                                cursor: pointer;
+                                font-size: 20px;
+                                font-weight: bold;
+                                letter-spacing: 3px;
+                                text-transform: uppercase;
+                                margin-top: 25px;
+                
+                                &:hover{
+                                    background-image: linear-gradient(to right, #179494, #01cccc);
+                                    
+                                }
+                            }
+                        }
+                    }*/
+}
+
+main .container .wrapper .content li #historico-favoritos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+main .container .wrapper .content li #historico-favoritos iframe {
+  width: 69.057vw;
+  height: 600px;
 }
 
 main .container .wrapper .content li h1 {
@@ -200,99 +299,13 @@ main .container .wrapper .content li p {
   padding: 1.212vw 1.616vw;
 }
 
-main .container .wrapper .content li .edit-profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-main .container .wrapper .content li .edit-profile .box-user {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-main .container .wrapper .content li .edit-profile .box-user .edit-dados {
-  margin: 1.010vw 5.051vw;
-  width: 100%;
-}
-
-main .container .wrapper .content li .edit-profile .box-user .edit-dados label {
-  font-size: 14px;
-}
-
-main .container .wrapper .content li .edit-profile .box-user .edit-dados .input-edit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .container .wrapper .content li .edit-profile .box-user .edit-dados .input-edit input {
-  border-radius: 15px;
-  background-color: transparent;
-  border: 2px solid #03f484;
-  outline: none;
-  margin-right: 5px;
-  width: 100%;
-  padding: 10px;
-}
-
-main .container .wrapper .content li .edit-profile .box-user .edit-dados .input-edit i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 24px;
-}
-
-main .container .wrapper .content li .edit-profile .box-user .edit-dados .span-required {
-  font-size: 12px;
-  margin: -25px 0 0 1px;
-  color: red;
-  display: none;
-}
-
-main .container .wrapper .content li .edit-profile .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main .container .wrapper .content li .edit-profile .button #confirm {
-  background-image: -webkit-gradient(linear, left top, right top, from(#137B7B), to(#00A3A3));
-  background-image: linear-gradient(to right, #137B7B, #00A3A3);
-  width: 400px;
-  height: 80px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-top: 25px;
-}
-
-main .container .wrapper .content li .edit-profile .button #confirm:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(#179494), to(#01cccc));
-  background-image: linear-gradient(to right, #179494, #01cccc);
-}
-
 main .container .wrapper .content li.active {
   display: block;
   width: 100%;
+}
+
+main .container .wrapper .content #favorites h1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#491717), to(transparent));
+  background-image: linear-gradient(to right, #491717, transparent);
 }
 /*# sourceMappingURL=profile.css.map */
