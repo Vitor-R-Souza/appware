@@ -32,7 +32,6 @@ $color-details: #03f484;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     list-style: none;
-    overflow-x: hidden;
 }
 
 main{
@@ -178,8 +177,7 @@ main{
                             //width: 1300px;
                             width: 69.057vw;
                             //height: 350px;
-                            height: 580px;
-                            //overflow-x: hidden;
+                            height: 600px;
                         }
                     }
                     h1{
@@ -189,15 +187,14 @@ main{
                         margin-bottom: 0.75rem;
                         background-image: linear-gradient(to right, #2A2F2E, transparent);
                         padding: 10px 0 10px 30px;
-                        border-bottom: 2px solid white;
+                        
                     }
 
                     p{
-                        //margin-bottom: .5rem;
+                        margin-bottom: .5rem;
                         color: darkgray;
                         font-size: 1.414vw; /*.875rem*/
-                        padding: 0;
-                        padding: 0.212vw 0.616vw;
+                        padding: 1.212vw 1.616vw;
                     }
 
                     /*

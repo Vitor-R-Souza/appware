@@ -47,6 +47,7 @@ main .historic-favorites .game i {
 
 main .historic-favorites .game .fa-circle-xmark {
   color: red;
+  color: #770808;
 }
 
 main .historic-favorites .game .fa-circle-check {

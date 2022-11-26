@@ -21,7 +21,6 @@ body {
           box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   list-style: none;
-  overflow-x: hidden;
 }
 
 main {
@@ -279,7 +278,7 @@ main .container .wrapper .content li #historico-favoritos {
 
 main .container .wrapper .content li #historico-favoritos iframe {
   width: 69.057vw;
-  height: 580px;
+  height: 600px;
 }
 
 main .container .wrapper .content li h1 {
@@ -290,15 +289,14 @@ main .container .wrapper .content li h1 {
   background-image: -webkit-gradient(linear, left top, right top, from(#2A2F2E), to(transparent));
   background-image: linear-gradient(to right, #2A2F2E, transparent);
   padding: 10px 0 10px 30px;
-  border-bottom: 2px solid white;
 }
 
 main .container .wrapper .content li p {
+  margin-bottom: .5rem;
   color: darkgray;
   font-size: 1.414vw;
   /*.875rem*/
-  padding: 0;
-  padding: 0.212vw 0.616vw;
+  padding: 1.212vw 1.616vw;
 }
 
 main .container .wrapper .content li.active {

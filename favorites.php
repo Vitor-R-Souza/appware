@@ -14,10 +14,12 @@
             <a href="">
                 <div class="game">
                     <img src="mini-capas/battlefield2042.jpg" alt="">
+                    <i class="fa-regular fa-circle-xmark"></i>
                 </div>
             </a>
             <div class="game">
                 <img src="mini-capas/farcry6.jpg" alt="Marvel Spider-Man">
+                <i class="fa-regular fa-circle-check"></i>
             </div>
             <div class="game">
                 <img src="mini-capas/csgo.jpg" alt="The Witcher 3: Wild Hunt">
