@@ -54,10 +54,10 @@
                 </div>
                 <ul class="content">
                     <li class="active" id="edit">
-                        <h1>Home</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
-                        <p>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. A deserunt fugiat, consequatur tenetur earum doloribus amet repellat quae illum dolore laborum voluptatum, autem, praesentium sunt soluta natus. Voluptates, quas tenetur.</p>
-                        <p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus velit alias facere ducimus quidem tenetur facilis cum architecto exercitationem ratione suscipit vel dignissimos totam qui ex error cupiditate rem, ipsa, quam magnam veniam inventore. Porro iure, nobis officia similique minima eaque obcaecati eos magnam, nisi quos aut, ipsam recusandae laudantium!</p>
+                        <div id="historico-favoritos">
+                            <h1>Editar Perfil</h1>
+                            <iframe src="edit-profile.php" frameborder="0"></iframe>
+                        </div>
                     </li>
                     <li id="history">
                         <div id="historico-favoritos">

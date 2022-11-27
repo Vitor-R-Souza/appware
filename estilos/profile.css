@@ -180,6 +180,7 @@ main .container .wrapper .content {
   /*padding: 1.5rem 2rem;*/
   width: 80%;
   overflow-x: hidden;
+  border-radius: 0 10px 10px 0;
 }
 
 main .container .wrapper .content li {
