@@ -72,10 +72,10 @@
                         </div>
                     </li>
                     <li id="machines">
-                        <h1>Settings</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Velit quaerat magnam sit, nobis sed cum eius voluptatem quis facilis sunt, quia? Non atque, facere obcaecati veniam! Impedit atque, facilis similique doloribus quidem quibusdam quod! Quam odit quasi quia accusantium natus eos accusamus sequi repellat modi reiciendis vitae provident tenetur sint tempora quaerat expedita facere, assumenda quos consequatur minima quod deleniti.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sapiente.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
+                        <div id="historico-favoritos">
+                            <h1>Máquinas</h1>
+                            <iframe src="machines.php" frameborder="0"></iframe>
+                        </div>
                     </li>
                     <li id="publicateds">
                         <h1>Settings</h1>

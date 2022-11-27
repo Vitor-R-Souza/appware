@@ -24,6 +24,7 @@ main{
         padding: 40px;
         width: 80vw; //estava 1000px
         border-radius: 10px;
+        background-color: #2a2f2e6e;
 
         h2{
             margin-bottom: 30px;
@@ -44,18 +45,18 @@ main{
 
                 input{
                     width: 100%;
-                    padding: 10px 0;
+                    padding: 10px;
                     outline: none;
                     border: 0;
-                    background-color: transparent;
-                    border-bottom: 1px solid white;
+                    background-color: #8080805e;
+                    border: #8080805e;
                     border-radius: 5px;
                     color: white;
                     font-size: 16px;
                     margin-bottom: 30px;
                 }
 
-                
+                /*
                 input:-webkit-autofill,
                 input:-webkit-autofill:hover, 
                 input:-webkit-autofill:focus, 
@@ -65,7 +66,6 @@ main{
                 }
                 input:-webkit-autofill:valid{
                     -webkit-text-fill-color: #ffffff !important;
-                    /*Tava deixando bg do input branco meio transparente*/
                 }
     
                 label{
@@ -75,13 +75,13 @@ main{
                     padding: 15px 0;
                     color: white;
                     font-size: 16px;
-                    pointer-events: none; /*Indicando campo diitável*/
+                    pointer-events: none; Indicando campo diitável
                     transition: .5s;
                 }
 
                 input:focus~label,
                 input:valid~label
-                { /*imput focado, label muda*/
+                { /*imput focado, label muda
                     top: -25px;
                     left: 0;
                     color: $color-details;
@@ -117,12 +117,23 @@ main{
                 input[type="date"]::-webkit-calendar-picker-indicator {
                     cursor: pointer;
                     filter: invert(0.8) brightness(0500%) sepia(10%) saturate(10%) hue-rotate(20deg);
-                }
+                }*/
+                /*
+                label{
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                    padding: 15px 0;
+                    color: white;
+                    font-size: 16px;
+                    pointer-events: none; //Indicando campo diitável
+                    transition: .5s;
+                }*/
 
                 img{
                     position: absolute;
-                    top: 40%;
-                    right: 0px;
+                    top: 30%;
+                    right: 10px;
                     color: white;
                     transform: translateY(-50%);
                     width: 20px;
@@ -175,9 +186,9 @@ main{
                 border: none;
                 border-radius: 10px;
                 cursor: pointer;
-                font-size: 20px;
+                font-size: 14px;
                 font-weight: bold;
-                letter-spacing: 3px;
+                letter-spacing: 1px;
                 text-transform: uppercase;
                 margin-top: 15px;
                 color: #fff;

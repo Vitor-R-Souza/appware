@@ -20,13 +20,13 @@ form.addEventListener('submit', (event) => {
 })
 
 function setError(index){
-    campos[index].style.borderBottom = '2px solid #e63636'
+    campos[index].style.border = '2px solid #e63636'
     spans[index].style.display = 'block'
     labels[index].style.color = 'red'
 }
 
 function removeError(index){
-    campos[index].style.borderBottom = ''
+    campos[index].style.border = ''
     spans[index].style.display = 'none'
     labels[index].style.color = ''
 }
