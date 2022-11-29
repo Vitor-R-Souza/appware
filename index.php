@@ -39,7 +39,7 @@
                         <a href="game.php?id=53">
                             <img src="./capas/league-of-legends.png" alt="League of Legends" />
                             <div class="slide-description">
-                                h6>Lançamentos - #1</h6>
+                                <h6>Lançamentos - #1</h6>
                                 <h3>League of Legends</h3>
                                 <p>Escolha um campeão e ajude sua equipe a destruir a base inimiga.</p>
                             </div>
@@ -100,15 +100,16 @@
                     if(!$busca){
                         echo "<h1>falha de query</h1>";
                     }else{
-                        while($reg = $busca->fetch_object()){
-                                $t = thumb($reg->capa_filtragem);
-                                echo"<div class='swiper-slide'>
-                                        <a href='game.php?id=$reg->id_jogos'>
-                                            <div class='movie-box'>
-                                                <img src='$t' alt='' class='movie-box-img'>
-                                            </div>
-                                        </a>
-                                    </div>";
+                        for($x = 0; $x <= 9; $x++){
+                            $reg = $busca->fetch_object();
+                            $t = thumb($reg->capa_filtragem);
+                            echo"<div class='swiper-slide'>
+                                    <a href='game.php?id=$reg->id_jogos'>
+                                        <div class='movie-box'>
+                                            <img src='$t' alt='' class='movie-box-img'>
+                                        </div>
+                                    </a>
+                                </div>";      
                         }
                     }
                                     
@@ -131,16 +132,16 @@
                     if(!$busca){
                         echo "<h1>falha de query</h1>";
                     }else{
-                        while($reg = $busca->fetch_object()){
-                                $t = thumb($reg->capa_filtragem);
-                                echo"<div class='swiper-slide'>
-                                        <a href='game.php?id=$reg->id_jogos'>
-                                            <div class='movie-box'>
-                                                <img src='$t' alt='' class='movie-box-img'>
-                                            </div>
-                                        </a>
-                                    </div>";
-                            
+                        for($x = 0; $x <= 9; $x++){
+                            $reg = $busca->fetch_object();
+                            $t = thumb($reg->capa_filtragem);
+                            echo"<div class='swiper-slide'>
+                                    <a href='game.php?id=$reg->id_jogos'>
+                                        <div class='movie-box'>
+                                            <img src='$t' alt='' class='movie-box-img'>
+                                        </div>
+                                    </a>
+                                </div>";      
                         }
                     }
                                     
@@ -163,16 +164,16 @@
                     if(!$busca){
                         echo "<h1>falha de query</h1>";
                     }else{
-                        while($reg = $busca->fetch_object()){
-                                $t = thumb($reg->capa_filtragem);
-                                echo"<div class='swiper-slide'>
-                                        <a href='game.php?id=$reg->id_jogos'>
-                                            <div class='movie-box'>
-                                                <img src='$t' alt='' class='movie-box-img'>
-                                            </div>
-                                        </a>
-                                    </div>";
-                            
+                        for($x = 0; $x <= 9; $x++){
+                            $reg = $busca->fetch_object();
+                            $t = thumb($reg->capa_filtragem);
+                            echo"<div class='swiper-slide'>
+                                    <a href='game.php?id=$reg->id_jogos'>
+                                        <div class='movie-box'>
+                                            <img src='$t' alt='' class='movie-box-img'>
+                                        </div>
+                                    </a>
+                                </div>";      
                         }
                     }
                                     
