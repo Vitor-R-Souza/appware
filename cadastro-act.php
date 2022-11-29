@@ -53,6 +53,7 @@ if($busca->num_rows != 0){
             $_SESSION['user'] = $user;
             $_SESSION['tipo'] = $tipo;
             $_SESSION['senha'] = $senha;
+            $_SESSION['email'] = $email;
 
             $_SESSION['msg'] = msgSucess('cadastrado com sucesso.');
             header("location:index.php");
@@ -72,6 +73,7 @@ if($busca->num_rows != 0){
             $_SESSION['user'] = $user;
             $_SESSION['tipo'] = $tipo;
             $_SESSION['senha'] = $senha;
+            $_SESSION['email'] = $email;
 
             $_SESSION['msg'] = msgSucess('cadastrado com sucesso.');
             header("location:index.php");

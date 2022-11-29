@@ -15,33 +15,47 @@
         require_once('requires/connect.php');
         require_once('requires/func.php');
         require_once('header.php');
+
+        $busc = $BD->query("SELECT * FROM usuarios WHERE nome_usuario='$_SESSION[user]' LIMIT 1");
+        $reg = $busc->fetch_object();
     ?>
     <main>
         <section class="container">
             <section class="wrapper">
                 <div class="profile-indicator">
                     <div class="profile">
-                        <img src="imagens/profile.png" alt="Profile">
-                        <h2>Admin</h2>
-                        <div class="type"><h3>Admin</h3></div>
-                        <div class="dados">
-                            <div class="icon-dado">
-                                <i class="fa-solid fa-file-signature"></i>
-                                <h4>Admin LDR</h4>
-                            </div>
-                            <div class="icon-dado">
-                                <i class="fa-solid fa-envelope"></i>
-                                <input type="text" name="email" id="email" size="12" value="admin-ldr@gmail.com" disabled>
-                            </div>
-                            <div class="icon-dado">
-                                <i class="fa-solid fa-building"></i>
-                                <h4>LDR Technology</h4>
-                            </div>
-                            <div class="icon-dado">
-                                <i class="fa-solid fa-circle-info"></i>
-                                <h4>ldr-tech.com.br</h4>
-                            </div>
-                        </div>
+                        <?php
+                            if(empty($_SESSION['icon'])){
+                                echo "<img src='imagens/profile.png' alt='Profile'>";
+                            }else{
+                                echo "<img src='$_SESSION[icon]' alt='Profile'>";
+                            }
+                            echo "<h2>$_SESSION[user]</h2>
+                                    <div class='type'><h3>$_SESSION[tipo]</h3></div>";
+                        
+                            echo "<div class='dados'>
+                                    <div class='icon-dado'>
+                                        <i class='fa-solid fa-file-signature'></i>
+                                        <h4>$reg->nome</h4>
+                                    </div>
+                                    <div class='icon-dado'>
+                                        <i class='fa-solid fa-envelope'></i>
+                                        <input type='text' name='email' id='email' size='12' value='$reg->email' disabled>
+                                    </div>";
+                            if(is_dev() or is_adm()){    
+                                echo"<div class='icon-dado'>
+                                        <i class='fa-solid fa-building'></i>
+                                        <h4>$reg->empresa</h4>
+                                    </div>
+                                    <div class='icon-dado'>
+                                        <i class='fa-solid fa-circle-info'></i>
+                                        <h4>$reg->site_empresa</h4>
+                                    </div>
+                                </div>";
+                            }else{
+                                echo"</div>";
+                            }
+                        ?>
                     </div>
                     <hr>
                     <ul class="indicator">

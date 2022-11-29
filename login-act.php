@@ -18,6 +18,8 @@ if(testarS($senha, $reg->senha)){
     $_SESSION['user'] = $user;
     $_SESSION['tipo'] = $reg->tipos;
     $_SESSION['senha'] = $senha;
+    $_SESSION['email'] = $reg->email;
+    $_SESSION['icon'] = $reg->icone;
     
     
     header('location:index.php');

@@ -2,10 +2,12 @@
 
 @session_start();
 if(!isset($_SESSION['user'])){
-    $_SESSION['user'] = "";
-    $_SESSION['tipo'] = "";
-    $_SESSION['senha'] = "";
-    $_SESSION['msg'] = "";
+    $_SESSION['user'] = null;
+    $_SESSION['tipo'] = null;
+    $_SESSION['senha'] = null;
+    $_SESSION['msg'] = null;
+    $_SESSION['email'] = null;
+    $_SESSION['icon'] = null;
 }
 
 if(isset($_SESSION['msg'])){
@@ -52,7 +54,7 @@ function testarS($senha , $hash){ // teste
 
 // verificar tipos de contas
 function is_adm(){ //admin
-    $t = $_SESSION['tipos'] ?? null;
+    $t = $_SESSION['tipo'] ?? null;
     if(is_null($t)){
         return false;
     }elseif($t == 'Admin'){
@@ -63,7 +65,7 @@ function is_adm(){ //admin
 }
 
 function is_dev(){ // dev
-    $t = $_SESSION['tipos'] ?? null;
+    $t = $_SESSION['tipo'] ?? null;
     if(is_null($t)){
         return false;
     }elseif($t == 'Dev'){
@@ -74,7 +76,7 @@ function is_dev(){ // dev
 }
 
 function is_user(){ // user
-    $t = $_SESSION['tipos'] ?? null;
+    $t = $_SESSION['tipo'] ?? null;
     if(is_null($t)){
         return false;
     }elseif($t == 'User'){

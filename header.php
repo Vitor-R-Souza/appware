@@ -49,9 +49,13 @@
                                     <i class='fa-solid fa-circle-question'></i><p>Suporte</p><span>></span>
                                 </a>";
                         }else{
-                            echo" <div class='user-info'>
-                                    <img src='imagens/user.png'>
-                                    <h3>$_SESSION[user]</h3>
+                            echo" <div class='user-info'>";
+                                    if(empty($_SESSION['icon'])){
+                                        echo "<img src='imagens/user.png'>";
+                                    }else{
+                                        echo "<img src='$_SESSION[icon]'>";
+                                    }
+                                echo "<h3>$_SESSION[user]</h3>
                                 </div>
                                     <hr>
                                     <a href='profile.php' class='sub-menu-link'>
