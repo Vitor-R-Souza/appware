@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <?php
+        require_once('requires/connect.php');
+        require_once('requires/func.php');
+
+        $busc = $BD->query("SELECT * FROM `dados` WHERE `email` = '$_SESSION[email]'");
+        
+        
+    ?>
     <main>
     <table class="content-table">
         <thead>
@@ -22,29 +30,19 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Casa</td>
-            <td>Windows 10</td>
-            <td>AMD Ryzen 5 1600X</td>
-            <td>8 GB</td>
-            <td>150 GB</td>
-            <td>AMD Radeon RX 580 8GB</td>
-          </tr>
-          <tr class="active-row">
-            <td>PC ETEC</td>
-            <td>Linux Ubuntu</td>
-            <td>Intel Core i7-9700K</td>
-            <td>16 GB</td>
-            <td>150 GB</td>
-            <td>AMD Radeon RX 5700 XT 8GB</td>
-          </tr>
-          <tr>
-            <td>PC da Tia</td>
-            <td>Mac 64 bits</td>
-            <td>Core i5-7300U</td>
-            <td>12 GB</td>
-            <td>360 GB</td>
-            <td>Nvidia GTX 960</td>
+          <?php
+            while($reg = $busc->fetch_object()){
+              echo "<tr>
+                      <td>$reg->nome_computador</td>
+                      <td>$reg->sistema_operacional</td>
+                      <td>$reg->processador</td>
+                      <td>$reg->memoria_ram GB</td>
+                      <td>$reg->espaco_armazenamento GB</td>
+                      <td>$reg->placa_video</td>
+                      
+                  </tr>";
+            }
+          ?>
           </tr>
         </tbody>
       </table>

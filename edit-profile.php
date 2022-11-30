@@ -18,12 +18,15 @@
 
         $busc = $BD->query("SELECT * FROM usuarios WHERE nome_usuario='$_SESSION[user]' LIMIT 1");
         $reg = $busc->fetch_object();
+        
     ?>
     <main>
         
-        <form action="cadastro-act.php" method="post" class="signin" autocomplete="off">
+        <form action="e-profile-act.php" method="post" class="signin" autocomplete="off">
+            
             <?php
-                echo"<input type='hidden' name='tipo' value='Dev'>
+                echo "<input type='hidden' name='id' value='$reg->id_usuario'>";
+                echo "<input type='hidden' name='tipo' value='Dev'>
                     <h2>Atualizar informações</h2>
                     <div class='data-user'>
                         <div class='box-user'>
@@ -61,7 +64,7 @@
                             <span class='span-required'>Digite um e-mail válido</span>
                         </div>
                         <div class='box-user'>
-                            <input type='password' name='senha' id='senha' class='required' oninput='passwordValidate()' required placeholder='Nova senha'>
+                            <input type='password' name='senha' id='senha' class='required' oninput='passwordValidate()' placeholder='Nova senha'>
                             <!-- <i class='fa-solid fa-eye' id='btn-eye'></i> -->
                             <!-- <label for='senha' class='label-error'>Senha</label> -->
                             <img src='imagens/icon-eye-open.png' id='btn-eye'>

@@ -100,16 +100,18 @@
                     if(!$busca){
                         echo "<h1>falha de query</h1>";
                     }else{
-                        for($x = 0; $x <= 9; $x++){
-                            $reg = $busca->fetch_object();
-                            $t = thumb($reg->capa_filtragem);
-                            echo"<div class='swiper-slide'>
-                                    <a href='game.php?id=$reg->id_jogos'>
-                                        <div class='movie-box'>
-                                            <img src='$t' alt='' class='movie-box-img'>
-                                        </div>
-                                    </a>
-                                </div>";      
+                        while($reg = $busca->fetch_object()){
+                            $D = explode("-", $reg->ano_lancamento);
+                            if($D[0] == date("Y")){
+                                $t = thumb($reg->capa_filtragem);
+                                echo"<div class='swiper-slide'>
+                                        <a href='game.php?id=$reg->id_jogos'>
+                                            <div class='movie-box'>
+                                                <img src='$t' alt='' class='movie-box-img'>
+                                            </div>
+                                        </a>
+                                    </div>";
+                            }      
                         }
                     }
                                     
@@ -132,16 +134,17 @@
                     if(!$busca){
                         echo "<h1>falha de query</h1>";
                     }else{
-                        for($x = 0; $x <= 9; $x++){
-                            $reg = $busca->fetch_object();
+                        while($reg = $busca->fetch_object()){
                             $t = thumb($reg->capa_filtragem);
-                            echo"<div class='swiper-slide'>
-                                    <a href='game.php?id=$reg->id_jogos'>
-                                        <div class='movie-box'>
-                                            <img src='$t' alt='' class='movie-box-img'>
-                                        </div>
-                                    </a>
-                                </div>";      
+                            if($reg->qts_analisados >= 100){
+                                echo"<div class='swiper-slide'>
+                                        <a href='game.php?id=$reg->id_jogos'>
+                                            <div class='movie-box'>
+                                                <img src='$t' alt='' class='movie-box-img'>
+                                            </div>
+                                        </a>
+                                    </div>";      
+                            }
                         }
                     }
                                     
@@ -164,16 +167,17 @@
                     if(!$busca){
                         echo "<h1>falha de query</h1>";
                     }else{
-                        for($x = 0; $x <= 9; $x++){
-                            $reg = $busca->fetch_object();
+                        while($reg = $busca->fetch_object()){
                             $t = thumb($reg->capa_filtragem);
-                            echo"<div class='swiper-slide'>
-                                    <a href='game.php?id=$reg->id_jogos'>
-                                        <div class='movie-box'>
-                                            <img src='$t' alt='' class='movie-box-img'>
-                                        </div>
-                                    </a>
-                                </div>";      
+                            if($reg->indie == 1){
+                                echo"<div class='swiper-slide'>
+                                        <a href='game.php?id=$reg->id_jogos'>
+                                            <div class='movie-box'>
+                                                <img src='$t' alt='' class='movie-box-img'>
+                                            </div>
+                                        </a>
+                                    </div>";      
+                            }
                         }
                     }
                                     
