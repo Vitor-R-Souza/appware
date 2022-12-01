@@ -55,7 +55,8 @@
                         <div class="year">
                             <div class="title-year">Ano de lançamento:</div>
                             <?php
-                                echo "<div class='year-lanced'>$r->ano_lancamento</div>";
+                            $A = explode("-", $r->ano_lancamento);
+                                echo "<div class='year-lanced'>$A[0]</div>";
                             ?>
                             
                         </div>
