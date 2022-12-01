@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Dez-2022 às 17:47
+-- Tempo de geração: 01-Dez-2022 às 17:54
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `appware`
 --
+CREATE DATABASE IF NOT EXISTS `appware` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `appware`;
 
 -- --------------------------------------------------------
 
@@ -198,15 +200,15 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 (47, 'Assassin*s Creed Valhalla', '+18', 'Torne-se um viking lendário em busca de glória. Ataque seus inimigos, amplie seu assentamento e consolide seu poder político.', '2020-11-10', '64 bits', 'Ubisoft Montreal', '', '', 'ac-valhalla.jpg', '0', '85', 36, 41, NULL),
 (48, 'The Sims 4', '12', 'Curta o poder de criar e controlar pessoas num mundo virtual onde não há regras. Seja poderoso e livre, divirta-se e jogue com a vida!', '2014-09-02', '64 bits', 'Maxis', '', '', 'the-sims4.jpg', '0', '69', 15, 37, NULL),
 (49, 'Far Cry 6', '+18', 'Entregue-se ao mundo sombrio de uma guerrilha revolucionária para libertar um país de seus ditadores opressivos.', '2021-10-07', '64 bits', 'Ubisoft Toronto', '', '', 'farcry6.jpg', '0', '76', 7, 36, 1),
-(50, 'Elden Ring', '16', 'O NOVO RPG DE AÇÃO E FANTASIA. Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.', '2022-02-25', '64 bits', 'FromSoftware Inc.', '', '', 'elden-ring.jpg', '0', '81', 41, 36, NULL),
+(50, 'Elden Ring', '16', 'O NOVO RPG DE AÇÃO E FANTASIA. Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.', '2022-02-25', '64 bits', 'FromSoftware Inc.', 'big-elden-ring', '', 'elden-ring.jpg', '0', '81', 41, 36, NULL),
 (51, 'Call of Duty: Warzone', '+18', 'Em CoD Warzone, seu objetivo é seu o último sobrevivente em meio a uma multidão de competidores. Para quem está tendo dificuldades em superar os adversários, separamos algumas dicas importantes que podem te ajudar a vencer o Warzone (incluindo batalhas no Gulag).', '2020-03-10', '64 bits', 'Raven Software, Infinity Ward', '', '', 'cod-warzone.jpg', '0', '73', 13, 8, NULL),
 (52, 'Call of Duty: Modern Warfare II', '+18', 'O Call of Duty®: Modern Warfare® II coloca os jogadores dentro de um conflito global sem precedentes que conta com o retorno dos Operadores icônicos da Força-Tarefa 141.', '2022-10-28', '64 bits', 'Infinity Ward, Raven Software, Beenox, Treyarch, H', '', '', 'cod-mw2.jpg', '0', '77', 7, 1, NULL),
-(53, 'League of Legends', '12', 'League of Legends é um jogo de estratégia em que duas equipes de cinco poderosos Campeões se enfrentam para destruir a base uma da outra. Escolha entre mais de 140 Campeões para realizar jogadas épicas, assegurar abates e destruir torres conforme você luta até a vitória.', '2009-10-27', '32 ou 64 bits', 'Riot Games', '', '', 'lol.jpg', '0', '85', 10, 18, 35),
+(53, 'League of Legends', '12', 'League of Legends é um jogo de estratégia em que duas equipes de cinco poderosos Campeões se enfrentam para destruir a base uma da outra. Escolha entre mais de 140 Campeões para realizar jogadas épicas, assegurar abates e destruir torres conforme você luta até a vitória.', '2009-10-27', '32 ou 64 bits', 'Riot Games', 'big-lol.jpg', '', 'lol.jpg', '0', '85', 10, 18, 35),
 (54, 'God of War', '+18', 'Com a vingança contra os deuses do Olimpo em um passado distante, Kratos agora vive como um mortal no reino dos deuses e monstros nórdicos. É nesse mundo duro e implacável que ele deve lutar para sobreviver... e ensinar seu filho a fazer o mesmo.', '2018-04-20', '64 bits', ' Santa Monica Studio', '', '', 'gow.jpg', '0', '89', 39, 6, NULL),
 (55, 'Hitman 2', '18', 'Viaje ao redor do mundo e rastreie os seus alvos nos locais abertos, e exóticos, de HITMAN™ 2. Das ruas ensolaradas, às sombrias florestas tropicais, nenhum lugar está a salvo do assassino mais criativo do mundo, o Agente 47, em sua última história de suspense e espionagem.', '2018-11-13', '64 bits', 'IO Interactive A/S', '', '', 'hitman2.jpg', '0', '65', 21, 18, NULL),
-(56, '171 ', '+18 ', '171 é um jogo de ação e aventura de mundo aberto com ambientação inspirada no Brasil. ', '2022-11-17', '64 bits ', 'Betagames Group', '', '', '', '1', '55', 8, 36, 1),
-(57, 'Stardew Valley', '12 ', 'Você herdou a antiga fazenda do seu avô, em Stardew Valley. Com ferramentas de segunda-mão e algumas moedas, você parte para dar início a sua nova vida. Será que você vai aprender a viver da terra, a transformar esse matagal em um próspero lar? ', '2016-02-16', ' 32 ou 64 bits', 'ConcernedApe', '', '', '', '1', '43', 6, 15, NULL),
-(58, 'RIO - Raised In Oblivion ', '+18 ', 'Houve uma infecção em grande parte do Rio De Janeiro e para não se espalhar o governo construiu muros de contenção, quem está dentro não poderá sair e terá que sobreviver até a cura ser descoberta. ', '2021-07-30', '64 bits', 'First Phoenix Studio ', '', '', '', '1', '13', 1, 18, NULL);
+(56, '171 ', '+18 ', '171 é um jogo de ação e aventura de mundo aberto com ambientação inspirada no Brasil. ', '2022-11-17', '64 bits ', 'Betagames Group', 'big-171', '', '171.jpg', '1', '55', 8, 36, 1),
+(57, 'Stardew Valley', '12 ', 'Você herdou a antiga fazenda do seu avô, em Stardew Valley. Com ferramentas de segunda-mão e algumas moedas, você parte para dar início a sua nova vida. Será que você vai aprender a viver da terra, a transformar esse matagal em um próspero lar? ', '2016-02-16', ' 32 ou 64 bits', 'ConcernedApe', '', '', 'stardew-valley.jpg', '1', '43', 6, 15, NULL),
+(58, 'RIO - Raised In Oblivion ', '+18 ', 'Houve uma infecção em grande parte do Rio De Janeiro e para não se espalhar o governo construiu muros de contenção, quem está dentro não poderá sair e terá que sobreviver até a cura ser descoberta. ', '2021-07-30', '64 bits', 'First Phoenix Studio ', 'big-rio.jpg', '', 'rio-jpg', '1', '13', 1, 18, NULL);
 
 -- --------------------------------------------------------
 
