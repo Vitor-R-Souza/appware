@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <div class="btn-analise">
-                        <a href="" download><button>Analisar</button></a>
+                        <a href="DetectorAPPWARE.exe" download><button>Analisar</button></a>
                     </div>
                 </div>
             </div>
