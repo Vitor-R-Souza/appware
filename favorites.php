@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="estilos/history-favorites.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
 </head>
-<body style="background-color: #770808;">
+<body>
     <main>
         <section class="historic-favorites">
-            <a href="">
+            <a href="" target="_blank">
                 <div class="game">
                     <img src="mini-capas/battlefield2042.jpg" alt="">
                 </div>

@@ -24,12 +24,17 @@
             <section class="wrapper">
                 <div class="profile-indicator">
                     <div class="profile">
+                        <!-- <form action="#" method="post"> -->
                         <?php
+                            //echo "<form action='#' method='post'>";
                             if(empty($_SESSION['icon'])){
                                 echo "<img src='imagens/profile.png' alt='Profile'>";
+                                //<input type='file' name='icon' id='ft-perfil'>
+                                //<input type='submit' value=''>
                             }else{
                                 echo "<img src='$_SESSION[icon]' alt='Profile'>";
                             }
+                            //echo "</form>";
                             echo "<h2>$_SESSION[user]</h2>
                                     <div class='type'><h3>$_SESSION[tipo]</h3></div>";
                         
@@ -45,17 +50,18 @@
                             if(is_dev() or is_adm()){    
                                 echo"<div class='icon-dado'>
                                         <i class='fa-solid fa-building'></i>
-                                        <h4>$reg->empresa</h4>
+                                        <input type='text' name='email' id='email' size='12' value='$reg->empresa' disabled>
                                     </div>
                                     <div class='icon-dado'>
                                         <i class='fa-solid fa-circle-info'></i>
-                                        <h4>$reg->site_empresa</h4>
+                                        <input type='text' name='email' id='email' size='12' value='$reg->site_empresa' disabled>
                                     </div>
                                 </div>";
                             }else{
                                 echo"</div>";
                             }
                         ?>
+                        <!-- </form> -->
                     </div>
                     <hr>
                     <ul class="indicator">

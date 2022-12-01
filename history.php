@@ -11,7 +11,7 @@
 <body>
     <main>
         <section class="historic-favorites">
-            <a href="game.php?id=2">
+            <a href="game.php?id=2" target="_blank">
                 <div class="game">
                     <img src="mini-capas/mortal-kombat11.jpg" alt="">
                     <i class="fa-regular fa-circle-xmark"></i>
