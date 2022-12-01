@@ -136,7 +136,7 @@
                     }else{
                         while($reg = $busca->fetch_object()){
                             $t = thumb($reg->capa_filtragem);
-                            if($reg->qts_analisados >= 100){
+                            if($reg->qts_analisados >= 70){
                                 echo"<div class='swiper-slide'>
                                         <a href='game.php?id=$reg->id_jogos'>
                                             <div class='movie-box'>
@@ -169,7 +169,7 @@
                     }else{
                         while($reg = $busca->fetch_object()){
                             $t = thumb($reg->capa_filtragem);
-                            if($reg->indie == 1){
+                            if($reg->indies == 1){
                                 echo"<div class='swiper-slide'>
                                         <a href='game.php?id=$reg->id_jogos'>
                                             <div class='movie-box'>

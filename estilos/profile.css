@@ -63,19 +63,48 @@ main .container .wrapper .profile-indicator {
 
 main .container .wrapper .profile-indicator .profile {
   padding: 1rem 2rem;
-}
+  /*.photo-profile{
+                        margin: 0 auto;
+                        //width: 220px;
+                        width: 11.111vw;
+                        height: 11.111vw;
+                        position: relative;
+                        border: 5px solid #fff;
+                        border-radius: 50%;
+                        background: url('/imagens/halo5.png');
+                        background-size: 100% 100%;
+                        overflow: hidden;
+                        
+                        
 
-main .container .wrapper .profile-indicator .profile .photo-profile {
-  margin: 0 auto;
-  width: 11.111vw;
-  height: 11.111vw;
-  position: relative;
-  border: 5px solid #fff;
-  border-radius: 50%;
-  background: url("/imagens/halo5.png");
-  background-size: 100% 100%;
-  overflow: hidden;
-  /*
+                        .my_photo{
+                            position: absolute;
+                            bottom: 0;
+                            right: -41%;
+                            outline: none;
+                            color: transparent;
+                            width: 100%;
+                            box-sizing: border-box;
+                            padding: 15px 0px;
+                            cursor: pointer;
+                            transition: 0.5s;
+                            background: rgb(0,0,0,0.5);
+                        }
+
+                        .my_photo::-webkit-file-upload-button{
+                            visibility: hidden;
+                        }
+
+                        .my_photo::before{
+                            content: '\f030';
+                            font-family: 'fontAwesome';
+                            font-size: 30px;
+                            color: #fff;
+                            display: inline-block;
+                            -webkit-user-select: none;
+                        }
+
+                        
                         .my_photo::after{
                             content: 'Atualizar';
                             font-family: 'arial';
@@ -85,7 +114,15 @@ main .container .wrapper .profile-indicator .profile .photo-profile {
                             position: absolute;
                             top: 90px;
                             font-size: 14px;
-                        }*/
+                        }
+
+                    
+                    }*/
+}
+
+main .container .wrapper .profile-indicator .profile img {
+  width: 11.111vw;
+  border-radius: 50%;
 }
 
 main .container .wrapper .profile-indicator .profile h2 {
@@ -323,10 +360,5 @@ main .container .wrapper .content li p {
 main .container .wrapper .content li.active {
   display: block;
   width: 100%;
-}
-
-main .container .wrapper .content #favorites h1 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#491717), to(transparent));
-  background-image: linear-gradient(to right, #491717, transparent);
 }
 /*# sourceMappingURL=profile.css.map */
