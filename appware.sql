@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Dez-2022 às 02:48
--- Versão do servidor: 5.7.36
+-- Tempo de geração: 01-Dez-2022 às 17:47
+-- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `categorias`;
 CREATE TABLE IF NOT EXISTS `categorias` (
-  `id_catego` int(11) NOT NULL,
-  `generos` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_catego` int NOT NULL,
+  `generos` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_catego`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -90,14 +90,14 @@ INSERT INTO `categorias` (`id_catego`, `generos`) VALUES
 
 DROP TABLE IF EXISTS `dados`;
 CREATE TABLE IF NOT EXISTS `dados` (
-  `id_dados` int(11) NOT NULL AUTO_INCREMENT,
+  `id_dados` int NOT NULL AUTO_INCREMENT,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
-  `processador` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sistema_operacional` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_computador` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `processador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sistema_operacional` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_computador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_dados`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -109,8 +109,8 @@ CREATE TABLE IF NOT EXISTS `dados` (
 
 DROP TABLE IF EXISTS `historico`;
 CREATE TABLE IF NOT EXISTS `historico` (
-  `id_J` int(11) NOT NULL,
-  `id_U` int(11) NOT NULL,
+  `id_J` int NOT NULL,
+  `id_U` int NOT NULL,
   KEY `id_jogos_idx` (`id_J`),
   KEY `id_usuario_idx` (`id_U`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -123,26 +123,26 @@ CREATE TABLE IF NOT EXISTS `historico` (
 
 DROP TABLE IF EXISTS `jogos`;
 CREATE TABLE IF NOT EXISTS `jogos` (
-  `id_jogos` int(11) NOT NULL AUTO_INCREMENT,
-  `nome_jogo` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `classificacao_indi` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sinopse` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_jogos` int NOT NULL AUTO_INCREMENT,
+  `nome_jogo` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `classificacao_indi` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sinopse` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `ano_lancamento` date NOT NULL,
-  `arquitetura_sistema` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `desenvolvedora` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `capa_jogo` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avaliacao` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `capa_filtragem` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `arquitetura_sistema` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `desenvolvedora` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `capa_jogo` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avaliacao` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `capa_filtragem` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `indies` decimal(10,0) NOT NULL,
   `qts_analisados` decimal(15,0) NOT NULL,
-  `id_catego` int(11) DEFAULT NULL,
-  `id_catego2` int(11) DEFAULT NULL,
-  `id_catego3` int(11) DEFAULT NULL,
+  `id_catego` int DEFAULT NULL,
+  `id_catego2` int DEFAULT NULL,
+  `id_catego3` int DEFAULT NULL,
   PRIMARY KEY (`id_jogos`),
   KEY `id_catego` (`id_catego`),
   KEY `id_catego3` (`id_catego2`),
   KEY `id_catego2` (`id_catego3`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `jogos`
@@ -203,7 +203,10 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 (52, 'Call of Duty: Modern Warfare II', '+18', 'O Call of Duty®: Modern Warfare® II coloca os jogadores dentro de um conflito global sem precedentes que conta com o retorno dos Operadores icônicos da Força-Tarefa 141.', '2022-10-28', '64 bits', 'Infinity Ward, Raven Software, Beenox, Treyarch, H', '', '', 'cod-mw2.jpg', '0', '77', 7, 1, NULL),
 (53, 'League of Legends', '12', 'League of Legends é um jogo de estratégia em que duas equipes de cinco poderosos Campeões se enfrentam para destruir a base uma da outra. Escolha entre mais de 140 Campeões para realizar jogadas épicas, assegurar abates e destruir torres conforme você luta até a vitória.', '2009-10-27', '32 ou 64 bits', 'Riot Games', '', '', 'lol.jpg', '0', '85', 10, 18, 35),
 (54, 'God of War', '+18', 'Com a vingança contra os deuses do Olimpo em um passado distante, Kratos agora vive como um mortal no reino dos deuses e monstros nórdicos. É nesse mundo duro e implacável que ele deve lutar para sobreviver... e ensinar seu filho a fazer o mesmo.', '2018-04-20', '64 bits', ' Santa Monica Studio', '', '', 'gow.jpg', '0', '89', 39, 6, NULL),
-(55, 'Hitman 2', '18', 'Viaje ao redor do mundo e rastreie os seus alvos nos locais abertos, e exóticos, de HITMAN™ 2. Das ruas ensolaradas, às sombrias florestas tropicais, nenhum lugar está a salvo do assassino mais criativo do mundo, o Agente 47, em sua última história de suspense e espionagem.', '2018-11-13', '64 bits', 'IO Interactive A/S', '', '', 'hitman2.jpg', '0', '65', 21, 18, NULL);
+(55, 'Hitman 2', '18', 'Viaje ao redor do mundo e rastreie os seus alvos nos locais abertos, e exóticos, de HITMAN™ 2. Das ruas ensolaradas, às sombrias florestas tropicais, nenhum lugar está a salvo do assassino mais criativo do mundo, o Agente 47, em sua última história de suspense e espionagem.', '2018-11-13', '64 bits', 'IO Interactive A/S', '', '', 'hitman2.jpg', '0', '65', 21, 18, NULL),
+(56, '171 ', '+18 ', '171 é um jogo de ação e aventura de mundo aberto com ambientação inspirada no Brasil. ', '2022-11-17', '64 bits ', 'Betagames Group', '', '', '', '1', '55', 8, 36, 1),
+(57, 'Stardew Valley', '12 ', 'Você herdou a antiga fazenda do seu avô, em Stardew Valley. Com ferramentas de segunda-mão e algumas moedas, você parte para dar início a sua nova vida. Será que você vai aprender a viver da terra, a transformar esse matagal em um próspero lar? ', '2016-02-16', ' 32 ou 64 bits', 'ConcernedApe', '', '', '', '1', '43', 6, 15, NULL),
+(58, 'RIO - Raised In Oblivion ', '+18 ', 'Houve uma infecção em grande parte do Rio De Janeiro e para não se espalhar o governo construiu muros de contenção, quem está dentro não poderá sair e terá que sobreviver até a cura ser descoberta. ', '2021-07-30', '64 bits', 'First Phoenix Studio ', '', '', '', '1', '13', 1, 18, NULL);
 
 -- --------------------------------------------------------
 
@@ -213,9 +216,9 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 
 DROP TABLE IF EXISTS `requisitos_minimos`;
 CREATE TABLE IF NOT EXISTS `requisitos_minimos` (
-  `id_M` int(11) NOT NULL AUTO_INCREMENT,
-  `processador` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_M` int NOT NULL AUTO_INCREMENT,
+  `processador` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
   PRIMARY KEY (`id_M`)
@@ -229,9 +232,9 @@ CREATE TABLE IF NOT EXISTS `requisitos_minimos` (
 
 DROP TABLE IF EXISTS `requisitos_recomendados`;
 CREATE TABLE IF NOT EXISTS `requisitos_recomendados` (
-  `id_R` int(11) NOT NULL AUTO_INCREMENT,
-  `processador` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_R` int NOT NULL AUTO_INCREMENT,
+  `processador` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
   PRIMARY KEY (`id_R`)
@@ -245,10 +248,10 @@ CREATE TABLE IF NOT EXISTS `requisitos_recomendados` (
 
 DROP TABLE IF EXISTS `sistema_operacional`;
 CREATE TABLE IF NOT EXISTS `sistema_operacional` (
-  `id_sistema` int(11) NOT NULL AUTO_INCREMENT,
-  `NomeSistema` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `VersaoSistema` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `direct_x` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_sistema` int NOT NULL AUTO_INCREMENT,
+  `NomeSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `VersaoSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `direct_x` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_sistema`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -287,17 +290,17 @@ INSERT INTO `sistema_operacional` (`id_sistema`, `NomeSistema`, `VersaoSistema`,
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_usuario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tipos` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_usuario` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_usuario` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipos` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `data_nascimento` date NOT NULL,
-  `empresa` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `site_empresa` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `senha` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `icone` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_dados` int(11) DEFAULT NULL,
+  `empresa` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `site_empresa` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `senha` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icone` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_dados` int DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   KEY `id_dados` (`id_dados`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
