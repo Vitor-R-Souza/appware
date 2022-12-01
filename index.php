@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./estilos/estilo.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <title>Início</title>
 </head>
 
@@ -37,11 +38,11 @@
                 <div class="slide-item" data-slide="item" data-index="1">
                     <div class="slide-content">
                         <a href="game.php?id=53">
-                            <img src="./capas/league-of-legends.png" alt="League of Legends" />
+                            <img src="./capas/big-fifa23.jpg" alt="FIFA 23" />
                             <div class="slide-description">
                                 <h6>Lançamentos - #1</h6>
-                                <h3>League of Legends</h3>
-                                <p>Escolha um campeão e ajude sua equipe a destruir a base inimiga.</p>
+                                <h3>FIFA 23</h3>
+                                <p>Seja o melhor jogador ou treinador do mundo.</p>
                             </div>
                         </a>
                     </div>
@@ -49,11 +50,11 @@
                 <div class="slide-item" data-slide="item" data-index="2">
                     <div class="slide-content">
                         <a href="game.php?id=39">
-                            <img src="./capas/gta5.png" alt="GTA" />
+                            <img src="./capas/big-171.jpg" alt="171" />
                             <div class="slide-description">
                                 <h6>Indies - #1</h6>
-                                <h3>Grand Theft Auto V</h3>
-                                <p>Controle três criminosos na grande cidade de Los Santos.</p>
+                                <h3>171</h3>
+                                <p>Uma versão brasileira baseada no sucesso GTA na cidade de Sumaré-SP.</p>
                             </div>
                         </a>
                     </div>
@@ -61,11 +62,11 @@
                 <div class="slide-item" data-slide="item" data-index="3">
                     <div class="slide-content">
                         <a href="game.php?id=55">
-                            <img src="capas/hitman2.jpg" alt="Hitman" />
+                            <img src="capas/big-marvel-spiderman.jpg" alt="Hitman" />
                             <div class="slide-description">
                                 <h6>Mais populares - #2</h6>
-                                <h3>Hitman 2</h3>
-                                <p>Acompanhe o assassino Agente 47 em sua viagem para defender a Providence.</p>
+                                <h3>Spider-Man Remastered</h3>
+                                <p>Controle Peter Parker no combate aos vilões em Nova Iorque.</p>
                             </div>
                         </a>
                     </div>
@@ -73,11 +74,11 @@
                 <div class="slide-item" data-slide="item" data-index="4">
                     <div class="slide-content">
                         <a href="game.php?id=9">
-                            <img src="capas/halo5.png" alt="Halo" />
+                            <img src="capas/big-elden-ring.jpg" alt="Elden Ring" />
                             <div class="slide-description">
                                 <h6>Lançamentos - #2</h6>
-                                <h3>Halo 5: Guardians</h3>
-                                <p>Elimine a ameaça de alienígenas através do 2º capítulo da história de Master Chief.</p>
+                                <h3>Elden Ring</h3>
+                                <p>Controle um guerreiro em busca do poder do Anel Prístino.</p>
                             </div>
                         </a>
                     </div>
