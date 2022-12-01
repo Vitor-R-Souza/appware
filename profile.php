@@ -28,15 +28,15 @@
                         <?php
                             //echo "<form action='#' method='post'>";
                             if(empty($_SESSION['icon'])){
-                                echo "<div class='photo-profile'>
-                                    <input type='file' name='icon' id='ft-perfil' class='my_photo'>
+                                /*echo "<div class='photo-profile'>
+                                    <input type='file' name='icon' id='ft-perfil' class='my_photo' value='imagens/profile.png'>
                                     <img src='imagens/profile.png' width='150px'>
-                                </div>";
-                                //echo "<img src='imagens/profile.png' alt='Profile'>";
+                                </div>";*/
+                                echo "<img src='imagens/profile.png' alt='Profile'>";
                                 //<input type='file' name='icon' id='ft-perfil'>
                                 //<input type='submit' value=''>
                             }else{
-                                //echo "<img src='$_SESSION[icon]' alt='Profile'>";
+                                echo "<img src='$_SESSION[icon]' alt='Profile'>";
                             }
                             //echo "</form>";
                             echo "<h2>$_SESSION[user]</h2>
@@ -89,7 +89,7 @@
                             <iframe src="history.php" frameborder="0"></iframe>
                         </div>
                     </li>
-                    <li id="favorites" style="background-color: #770808;">
+                    <li id="favorites">
                         <div id="historico-favoritos">
                             <h1>Favoritos</h1>
                             <iframe src="favorites.php" frameborder="0"></iframe>

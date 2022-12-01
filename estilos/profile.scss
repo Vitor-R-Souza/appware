@@ -64,7 +64,7 @@ main{
                 .profile{
                     padding: 1rem 2rem;
     
-                    .photo-profile{
+                    /*.photo-profile{
                         margin: 0 auto;
                         //width: 220px;
                         width: 11.111vw;
@@ -105,7 +105,7 @@ main{
                             -webkit-user-select: none;
                         }
 
-                        /*
+                        
                         .my_photo::after{
                             content: 'Atualizar';
                             font-family: 'arial';
@@ -115,9 +115,13 @@ main{
                             position: absolute;
                             top: 90px;
                             font-size: 14px;
-                        }*/
+                        }
 
                     
+                    }*/
+                    img{
+                        width: 11.111vw;
+                        border-radius: 50%;
                     }
 
                     h2{
@@ -336,11 +340,7 @@ main{
                     width: 100%;
                 }
 
-                #favorites{
-                    h1{
-                        background-image: linear-gradient(to right, #491717, transparent);                        
-                    }
-                }
+                
             }
         }
     }
