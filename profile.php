@@ -28,11 +28,14 @@
                         <?php
                             //echo "<form action='#' method='post'>";
                             if(empty($_SESSION['icon'])){
-                                echo "<img src='imagens/profile.png' alt='Profile'>";
+                                echo "<div class='photo-profile'>
+                                    <input type='file' name='icon' id='ft-perfil' class='my_photo'>
+                                </div>";
+                                //echo "<img src='imagens/profile.png' alt='Profile'>";
                                 //<input type='file' name='icon' id='ft-perfil'>
                                 //<input type='submit' value=''>
                             }else{
-                                echo "<img src='$_SESSION[icon]' alt='Profile'>";
+                                //echo "<img src='$_SESSION[icon]' alt='Profile'>";
                             }
                             //echo "</form>";
                             echo "<h2>$_SESSION[user]</h2>
