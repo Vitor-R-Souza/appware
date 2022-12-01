@@ -30,6 +30,7 @@
                             if(empty($_SESSION['icon'])){
                                 echo "<div class='photo-profile'>
                                     <input type='file' name='icon' id='ft-perfil' class='my_photo'>
+                                    <img src='imagens/profile.png' width='150px'>
                                 </div>";
                                 //echo "<img src='imagens/profile.png' alt='Profile'>";
                                 //<input type='file' name='icon' id='ft-perfil'>

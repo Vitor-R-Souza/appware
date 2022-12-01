@@ -75,33 +75,17 @@ main .container .wrapper .profile-indicator .profile .photo-profile {
   background: url("/imagens/halo5.png");
   background-size: 100% 100%;
   overflow: hidden;
-}
-
-main .container .wrapper .profile-indicator .profile .photo-profile .my_photo {
-  position: absolute;
-  bottom: 0;
-  right: -41%;
-  outline: none;
-  color: transparent;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 15px 0px;
-  cursor: pointer;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background: black;
-}
-
-main .container .wrapper .profile-indicator .profile .photo-profile .my_photo::-webkit-file-upload-button {
-  visibility: hidden;
-}
-
-main .container .wrapper .profile-indicator .profile .photo-profile .my_photo::before {
-  content: '\f030';
-  font-family: 'fontAwesome';
-  font-size: 30px;
-  color: #fff;
+  /*
+                        .my_photo::after{
+                            content: 'Atualizar';
+                            font-family: 'arial';
+                            font-weight: bold;
+                            color: #fff;
+                            display: block;
+                            position: absolute;
+                            top: 90px;
+                            font-size: 14px;
+                        }*/
 }
 
 main .container .wrapper .profile-indicator .profile h2 {
