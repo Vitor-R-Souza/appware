@@ -13,4 +13,11 @@
   text-transform: none;
   font-weight: normal;
 }
+
+main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=filter.css.map */

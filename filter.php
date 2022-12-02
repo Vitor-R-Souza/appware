@@ -17,21 +17,75 @@
     ?>
     <main>
         <aside class="categ">
-            <form action="filter.php" method="post">
-                <div class="category">
-
-                </div>
-                <div class="age">
-
-                </div>
-                <div class="favorites">
-
-                </div>
-            </form>
+            <div class="category">
+                <h2>Categorias</h2>
+                <form action="filter.php" method="get" id="busca">
+                    <a href="filter.php">Ação</a>
+                    <a href="filter.php">Aventura</a>
+                    <a href="filter.php">Terror</a>
+                    <a href="filter.php">Corrida</a>
+                    <a href="filter.php">Esportes</a>
+                    <a href="filter.php">RPG</a>
+                    <a href="filter.php">FPS</a>
+                    <a href="filter.php">TPS</a>
+                    <a href="filter.php">RTS</a>
+                    <a href="filter.php">PVP</a>
+                    <a href="filter.php">MMORPG</a>
+                    <a href="filter.php">MOBA</a>
+                    <a href="filter.php">Battle Royale</a>
+                    <a href="filter.php">Hack'n Slash</a>
+                    <a href="filter.php">Simulador</a>
+                    <a href="filter.php">Luta</a>
+                    <a href="filter.php">Puzzle</a>
+                    <a href="filter.php">Estratégia</a>
+                    <a href="filter.php">Plataforma</a>
+                    <a href="filter.php">Beat 'em up</a>
+                    <a href="filter.php">Stealth</a>
+                    <a href="filter.php">Sobrevivência</a>
+                    <a href="filter.php">Ritmo</a>
+                    <a href="filter.php">Sandbox</a>
+                    <a href="filter.php">Militar</a>
+                    <a href="filter.php">Text-Adventude</a><a href="filter.php">Graphic Adventure</a>
+                    <a href="filter.php">Visual Novel</a>
+                    <a href="filter.php">Filmes Interativos</a>
+                    <a href="filter.php">Run'N Guns</a>
+                    <a href="filter.php">Metroidvania</a>
+                    <a href="filter.php">Anime</a>
+                    <a href="filter.php">JRPG</a>
+                    <a href="filter.php">RTT</a>
+                    <a href="filter.php">Torre Defensiva</a>
+                    <a href="filter.php">Mundo Aberto</a>
+                    <a href="filter.php">Party Games</a>
+                    <a href="filter.php">Roguelike</a>
+                </form>
+            </div>
+            <div class="age">
+                <h2>Classificação Indicativa</h2>
+                <form action="filter.php" method="get" id="busca">
+                    <a href="filter.php">Livre</a>
+                    <a href="filter.php">+10</a>
+                    <a href="filter.php">+12</a>
+                    <a href="filter.php">+14</a>
+                    <a href="filter.php">+16</a>
+                    <a href="filter.php">+18</a>
+                </form>
+            </div>
+            <div class="favorites">
+                <h2>Favoritos</h2>
+                <form action="filter.php" method="get" id="busca">
+                    <a href="filter.php">Favoritos</a>
+                </form>
+            </div>
+            <div class="dev-mode">
+                <h2>Modo Desenvolvedor</h2>
+                <form action="filter.php" method="get" id="busca">
+                    <a href="filter.php">Meus Projetos</a>
+                </form>
+            </div>
         </aside>
-        <div class="catalog">
+        <section class="catalog">
 
-        </div>
+        </section>
     </main>
     <?php
         require_once('footer.php');
