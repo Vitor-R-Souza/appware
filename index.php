@@ -189,6 +189,9 @@
         </div>
 
     </div>
+    <?php
+        require_once('footer.php');
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="scripts/collection.js"></script>
     <script src="scripts/slides.js"></script>

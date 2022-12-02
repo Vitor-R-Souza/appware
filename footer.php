@@ -10,7 +10,20 @@
 </head>
 <body>
     <footer>
-    
+        <div class="social">
+            <a href="http://fb.com/ldr.technology"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <ul class="list">
+            <li> <a href="navbar.html">Início</a> </li>
+            <li> <a href="#">Trabalhe Conosco</a> </li>
+            <li> <a href="#">Termos</a> </li>
+            <li> <a href="#">Políticas de Privacidade</a> </li>
+        </ul>
+        <p class="copyright">Todos os direitos reservados @ 2022</p>
     </footer>
 </body>
 </html>

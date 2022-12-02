@@ -80,7 +80,7 @@
 
             <div class="sign-up">
                 <div class="check">
-                    <input type="checkbox" name="connected" id="connected">
+                    <input type="checkbox" name="connected" id="connected" required>
                     <span class="checkmark"></span>
                     <label for="connected" class="checkmark">Li e concordo com os <a href="#">Termos de Uso</a> e <a
                             href="#">Política de Privacidade</a></label>
