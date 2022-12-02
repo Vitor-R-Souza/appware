@@ -19,8 +19,11 @@
 
         <ul class="list">
             <li> <a href="navbar.html">Início</a> </li>
+            <li class="sep">|</li>
             <li> <a href="#">Trabalhe Conosco</a> </li>
+            <li class="sep">|</li>
             <li> <a href="#">Termos</a> </li>
+            <li class="sep">|</li>
             <li> <a href="#">Políticas de Privacidade</a> </li>
         </ul>
         <p class="copyright">Todos os direitos reservados @ 2022</p>

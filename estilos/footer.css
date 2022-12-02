@@ -59,7 +59,8 @@ footer .list {
 
 footer .list li {
   display: inline-block;
-  padding: 0 15px;
+  padding: 0 5px;
+  color: #03f484;
 }
 
 footer .list li a {
@@ -69,6 +70,10 @@ footer .list li a {
 
 footer .list li a:hover {
   opacity: 1;
+}
+
+footer .list .sep {
+  font-size: 12px;
 }
 
 footer .copyright {

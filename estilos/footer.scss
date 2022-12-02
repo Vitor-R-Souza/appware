@@ -62,7 +62,8 @@ footer{
 
         li{
             display: inline-block;
-            padding: 0 15px;
+            padding: 0 5px;
+            color: $color-details;
 
             a{
                 opacity: 0.8;
@@ -72,6 +73,9 @@ footer{
             a:hover{
                 opacity: 1;
             }
+        }
+        .sep{
+            font-size: 12px;
         }
     }
 
