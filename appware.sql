@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.6.6deb5ubuntu0.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Dez-2022 às 17:54
--- Versão do servidor: 8.0.27
--- versão do PHP: 7.4.26
+-- Host: localhost:3306
+-- Generation Time: 02-Dez-2022 às 18:30
+-- Versão do servidor: 5.7.39-0ubuntu0.18.04.2
+-- PHP Version: 7.2.24-0ubuntu0.18.04.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -18,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `appware`
+-- Database: `appware`
 --
 CREATE DATABASE IF NOT EXISTS `appware` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `appware`;
@@ -29,11 +28,9 @@ USE `appware`;
 -- Estrutura da tabela `categorias`
 --
 
-DROP TABLE IF EXISTS `categorias`;
-CREATE TABLE IF NOT EXISTS `categorias` (
-  `id_catego` int NOT NULL,
-  `generos` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id_catego`)
+CREATE TABLE `categorias` (
+  `id_catego` int(11) NOT NULL,
+  `generos` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -90,17 +87,15 @@ INSERT INTO `categorias` (`id_catego`, `generos`) VALUES
 -- Estrutura da tabela `dados`
 --
 
-DROP TABLE IF EXISTS `dados`;
-CREATE TABLE IF NOT EXISTS `dados` (
-  `id_dados` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `dados` (
+  `id_dados` int(11) NOT NULL,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
-  `processador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sistema_operacional` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_computador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id_dados`)
+  `processador` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sistema_operacional` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_computador` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -109,12 +104,9 @@ CREATE TABLE IF NOT EXISTS `dados` (
 -- Estrutura da tabela `historico`
 --
 
-DROP TABLE IF EXISTS `historico`;
-CREATE TABLE IF NOT EXISTS `historico` (
-  `id_J` int NOT NULL,
-  `id_U` int NOT NULL,
-  KEY `id_jogos_idx` (`id_J`),
-  KEY `id_usuario_idx` (`id_U`)
+CREATE TABLE `historico` (
+  `id_J` int(11) NOT NULL,
+  `id_U` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -123,28 +115,23 @@ CREATE TABLE IF NOT EXISTS `historico` (
 -- Estrutura da tabela `jogos`
 --
 
-DROP TABLE IF EXISTS `jogos`;
-CREATE TABLE IF NOT EXISTS `jogos` (
-  `id_jogos` int NOT NULL AUTO_INCREMENT,
-  `nome_jogo` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `classificacao_indi` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sinopse` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+CREATE TABLE `jogos` (
+  `id_jogos` int(11) NOT NULL,
+  `nome_jogo` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `classificacao_indi` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sinopse` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `ano_lancamento` date NOT NULL,
-  `arquitetura_sistema` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `desenvolvedora` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `capa_jogo` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avaliacao` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `capa_filtragem` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `arquitetura_sistema` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `desenvolvedora` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `capa_jogo` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avaliacao` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `capa_filtragem` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `indies` decimal(10,0) NOT NULL,
   `qts_analisados` decimal(15,0) NOT NULL,
-  `id_catego` int DEFAULT NULL,
-  `id_catego2` int DEFAULT NULL,
-  `id_catego3` int DEFAULT NULL,
-  PRIMARY KEY (`id_jogos`),
-  KEY `id_catego` (`id_catego`),
-  KEY `id_catego3` (`id_catego2`),
-  KEY `id_catego2` (`id_catego3`)
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `id_catego` int(11) DEFAULT NULL,
+  `id_catego2` int(11) DEFAULT NULL,
+  `id_catego3` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `jogos`
@@ -175,13 +162,13 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 (22, 'ARK: Survival Evolved', '14', 'Como um homem ou mulher abandonado nu, congelando e morrendo de fome numa ilha misteriosa, você precisa caçar, colher, construir itens, cultivar e construir abrigos para sobreviver. Use habilidade e astúcia para matar, domar, criar e montar Dinossauros e criaturas primitivas vivendo...', '2015-06-02', '64 bits', 'Studio Wildcard, Instinct Games, Efecto Studios, V', 'big-ark.jpg', '', 'ark.jpg', '0', '0', 22, 39, 6),
 (23, 'Geometry Dash', 'L', 'Pule e voe através do perigo neste plataforma de ação baseada em ritmo!', '2013-08-13', '32 ou 64 bits', 'RobTop Games', 'big-geometry-dash.jpg', '', 'geometry-dash.jpg', '0', '0', 23, 17, 19),
 (24, 'Minecraft', 'L', 'Minecraft é um jogo eletrônico dos gêneros sandbox e sobrevivência que não possui objetivos específicos a serem alcançados, permitindo aos jogadores uma grande liberdade de escolha de como jogá-lo.', '2011-11-18', '32 ou 64 bits', 'Mojang Studios, Other Ocean Interactive, 4J Studio', 'big-minecraft.jpg', '', 'minecraft.jpg', '0', '75', 24, 36, 2),
-(25, 'Verdun', '16', 'Guerra de trincheiras impiedosa mergulha você e seu esquadrão em intensas batalhas de ataque e defesa. Verdun é o primeiro FPS multiplayer ambientado em um autêntico cenário da Primeira Guerra Mundial oferecendo uma experiência de campo de batalha raramente vista.', '2015-04-28', '32 ou 64 bits', ' M2H, Blackmill Games', 'big-verdun.jpg', '', 'verdun.jpg', '0', '0', 25, 1, 7),
+(25, 'Verdun', '16', 'Guerra de trincheiras impiedosa mergulha você e seu esquadrão em intensas batalhas de ataque e defesa. Verdun é o primeiro FPS multiplayer ambientado em um autêntico cenário da Primeira Guerra Mundial oferecendo uma experiência de campo de batalha raramente vista.', '2015-04-28', '32 ou 64 bits', ' M2H, Blackmill Games', 'big-verdun.jpg', '', 'verdun.jpg', '1', '0', 25, 1, 7),
 (26, 'Zork Anthology', '10', 'Uma vez que você entra pela porta para Zork, você deixa o mundo dos jogos de arcade e fantasias banais para trás e entra na dimensão de sua imaginação.', '1989-07-14', '32 ou 64 bits', ' Infocom', 'big-zork.jpg', '', 'zork.jpg', '0', '0', 26, 2, NULL),
 (27, 'Life is Strange - Episode 1', '16', 'O Episódio 1 agora é GRÁTIS! Life is Strange é uma premiada aventura em episódios, aclamada pela crítica, que permite ao jogador voltar no tempo e alterar passado, presente e futuro.', '2015-01-30', '32 ou 64 bits', 'DONTNOD Entertainment, Feral Interactive (Mac), Fe', 'big-life-is-strange-ep1.jpg', '', 'life-is-strange-ep1.jpg', '0', '0', 27, 39, 29),
 (28, 'Phoenix Wright: Ace Attorney Trilogy', '14', 'Torne-se Phoenix Wright e experimente a emoção da batalha lutando para salvar seus clientes inocentes no tribunal. Jogue todos os 14 episódios, cobrindo os três primeiros jogos, em uma bela coleção.', '2019-04-09', '64 bits', 'CAPCOM Co., Ltd.', 'big-phoenix-wright.jpg', '', 'phoenix-wright.jpg', '0', '0', 28, 2, 18),
 (29, 'The Walking Dead: Season 1', '16', 'Uma série de terror de aventura de cinco partes ambientada no mesmo universo da premiada série de quadrinhos de Robert Kirkman.', '2012-04-24', '32 ou 64 bits', 'Telltale Games', 'big-twd-season1.jpg', '', 'twd-season1.jpg', '0', '0', 29, 22, NULL),
 (30, 'Metal Slug', '10', '\"METAL SLUG\", o primeiro título da lendária série de jogos de tiro 2D e gun da SNK, onde tudo começou, retorna às missões na plataforma de jogos!', '1996-04-18', '32 ou 64 bits', 'Dotemu', 'big-metal-slug.jpg', '', 'metal-slug.jpg', '0', '0', 30, 19, NULL),
-(31, 'Hollow Knight', 'L', 'Forje seu caminho em Hollow Knight! Uma aventura de ação épica em um vasto reino arruinado de insetos e heróis. Explore cavernas serpenteantes, lute contra criaturas malignas e alie-se a insetos bizarros num estilo clássico 2D desenhado à mão.\r\nSe você gosta de jogos clássicos, personagens fofos mas assustadores, aventuras épicas e mundos lindos e góticos, Hollow Knight estará à sua espera!', '2017-02-24', '64 bits', 'Team Cherry', 'big-hollow-knight.jpg', '', 'hollow-knight.jpg', '0', '0', 31, 30, NULL),
+(31, 'Hollow Knight', 'L', 'Forje seu caminho em Hollow Knight! Uma aventura de ação épica em um vasto reino arruinado de insetos e heróis. Explore cavernas serpenteantes, lute contra criaturas malignas e alie-se a insetos bizarros num estilo clássico 2D desenhado à mão.\r\nSe você gosta de jogos clássicos, personagens fofos mas assustadores, aventuras épicas e mundos lindos e góticos, Hollow Knight estará à sua espera!', '2017-02-24', '64 bits', 'Team Cherry', 'big-hollow-knight.jpg', '', 'hollow-knight.jpg', '1', '0', 31, 30, NULL),
 (32, 'Dragon Ball Z: Kakarot', '12', 'Viva novamente a história de Goku e outros Guerreiros Z em DRAGON BALL Z: KAKAROT! Além das batalhas épicas, sinta como é a vida no mundo de DRAGON BALL Z lutando, pescando, comendo e treinando com Goku, Gohan, Vegeta e outros. Explore novas áreas e aventuras: avance pela história e forme vínculos com outros heróis de DRAGON BALL Z.', '2020-01-16', '64 bits', 'CyberConnect2 Co., Ltd.', 'big-dbz-kakarot.jpg', '', 'dbz-kakarot.jpg', '0', '0', 32, 41, 36),
 (33, 'Final Fantasy VII Remake Intergrade', '14', 'Cloud Strife, ex-agente da SOLDIER, chega a Midgar, a cidade movida a energia de mako. O clássico atemporal FINAL FANTASY VII renasceu, com gráficos de última geração, um novo sistema de combate e uma aventura adicional com Yuffie Kisaragi.', '2020-03-03', '64 bits', 'Square Enix', 'big-final-fantasy7-remake.jpg', '', 'final-fantasy7-remake.jpg', '0', '79', 33, 41, 2),
 (34, 'Total War: Warhammer III', '12', 'O final cataclísmico da trilogia Total War: WARHAMMER chegou. Reúna seus exércitos e adentre o Reino do Caos, uma dimensão de terrores enlouquecedores, onde será decidido o destino do mundo. Você dominará os seus demônios... ou os comandará?', '2022-02-17', '64 bits', 'Creative Assembly, Feral Interactive ', 'big-totalwar-warhammer3.jpg', '', 'totalwar-warhammer3.jpg', '0', '0', 34, 1, 18),
@@ -208,7 +195,7 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 (55, 'Hitman 2', '18', 'Viaje ao redor do mundo e rastreie os seus alvos nos locais abertos, e exóticos, de HITMAN™ 2. Das ruas ensolaradas, às sombrias florestas tropicais, nenhum lugar está a salvo do assassino mais criativo do mundo, o Agente 47, em sua última história de suspense e espionagem.', '2018-11-13', '64 bits', 'IO Interactive A/S', '', '', 'hitman2.jpg', '0', '65', 21, 18, NULL),
 (56, '171 ', '+18 ', '171 é um jogo de ação e aventura de mundo aberto com ambientação inspirada no Brasil. ', '2022-11-17', '64 bits ', 'Betagames Group', 'big-171', '', '171.jpg', '1', '55', 8, 36, 1),
 (57, 'Stardew Valley', '12 ', 'Você herdou a antiga fazenda do seu avô, em Stardew Valley. Com ferramentas de segunda-mão e algumas moedas, você parte para dar início a sua nova vida. Será que você vai aprender a viver da terra, a transformar esse matagal em um próspero lar? ', '2016-02-16', ' 32 ou 64 bits', 'ConcernedApe', '', '', 'stardew-valley.jpg', '1', '43', 6, 15, NULL),
-(58, 'RIO - Raised In Oblivion ', '+18 ', 'Houve uma infecção em grande parte do Rio De Janeiro e para não se espalhar o governo construiu muros de contenção, quem está dentro não poderá sair e terá que sobreviver até a cura ser descoberta. ', '2021-07-30', '64 bits', 'First Phoenix Studio ', 'big-rio.jpg', '', 'rio-jpg', '1', '13', 1, 18, NULL);
+(58, 'RIO - Raised In Oblivion ', '+18 ', 'Houve uma infecção em grande parte do Rio De Janeiro e para não se espalhar o governo construiu muros de contenção, quem está dentro não poderá sair e terá que sobreviver até a cura ser descoberta. ', '2021-07-30', '64 bits', 'First Phoenix Studio ', 'big-rio.jpg', '', 'rio.jpg', '1', '13', 1, 18, NULL);
 
 -- --------------------------------------------------------
 
@@ -216,14 +203,12 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 -- Estrutura da tabela `requisitos_minimos`
 --
 
-DROP TABLE IF EXISTS `requisitos_minimos`;
-CREATE TABLE IF NOT EXISTS `requisitos_minimos` (
-  `id_M` int NOT NULL AUTO_INCREMENT,
-  `processador` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+CREATE TABLE `requisitos_minimos` (
+  `id_M` int(11) NOT NULL,
+  `processador` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
-  `memoria_ram` decimal(15,0) NOT NULL,
-  PRIMARY KEY (`id_M`)
+  `memoria_ram` decimal(15,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -232,14 +217,12 @@ CREATE TABLE IF NOT EXISTS `requisitos_minimos` (
 -- Estrutura da tabela `requisitos_recomendados`
 --
 
-DROP TABLE IF EXISTS `requisitos_recomendados`;
-CREATE TABLE IF NOT EXISTS `requisitos_recomendados` (
-  `id_R` int NOT NULL AUTO_INCREMENT,
-  `processador` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+CREATE TABLE `requisitos_recomendados` (
+  `id_R` int(11) NOT NULL,
+  `processador` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
-  `memoria_ram` decimal(15,0) NOT NULL,
-  PRIMARY KEY (`id_R`)
+  `memoria_ram` decimal(15,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -248,14 +231,12 @@ CREATE TABLE IF NOT EXISTS `requisitos_recomendados` (
 -- Estrutura da tabela `sistema_operacional`
 --
 
-DROP TABLE IF EXISTS `sistema_operacional`;
-CREATE TABLE IF NOT EXISTS `sistema_operacional` (
-  `id_sistema` int NOT NULL AUTO_INCREMENT,
-  `NomeSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `VersaoSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `direct_x` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id_sistema`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `sistema_operacional` (
+  `id_sistema` int(11) NOT NULL,
+  `NomeSistema` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `VersaoSistema` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `direct_x` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `sistema_operacional`
@@ -290,22 +271,19 @@ INSERT INTO `sistema_operacional` (`id_sistema`, `NomeSistema`, `VersaoSistema`,
 -- Estrutura da tabela `usuarios`
 --
 
-DROP TABLE IF EXISTS `usuarios`;
-CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuario` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_usuario` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tipos` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+CREATE TABLE `usuarios` (
+  `id_usuario` int(11) NOT NULL,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_usuario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipos` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `data_nascimento` date NOT NULL,
-  `empresa` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `site_empresa` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `senha` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `icone` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_dados` int DEFAULT NULL,
-  PRIMARY KEY (`id_usuario`),
-  KEY `id_dados` (`id_dados`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `empresa` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `site_empresa` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `senha` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icone` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_dados` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `usuarios`
@@ -325,10 +303,102 @@ INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, 
 (11, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'Dev', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', '', NULL),
 (12, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'User', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', '', NULL),
 (13, 'ADMIN', 'admin', 'technology.ldr@gmail.com', 'Admin', '1995-07-11', 'LDR TECHNOLOGY', '', '$2y$10$2dDOjvcZxMrpB8BIgpVoLOJP/A7wgkCC05q2InqpHqY9uS1cmByRW', '', NULL),
-(14, 'José', 'JOOJE', 'JoseHisth@gmail.com', 'Dev', '1986-08-13', 'CBHJS', '', '$2y$10$IT5wg8PQQm3e/zL/eSAkjeKMC.fqYorDPIHFyNk.9Iq5CHoI5Oqru', '', NULL);
+(14, 'José', 'JOOJE', 'JoseHisth@gmail.com', 'Dev', '1986-08-13', 'CBHJS', '', '$2y$10$IT5wg8PQQm3e/zL/eSAkjeKMC.fqYorDPIHFyNk.9Iq5CHoI5Oqru', '', NULL),
+(15, 'Geovani', 'geo_ldr', 'geovaninascimento2001@gmail.com', 'User', '2001-04-21', NULL, NULL, '$2y$10$hGUaMtx1y3K4vTBpdxZqGeK3ONJ4w3V4PW1LDMLPk5lFUIyEAUt.i', '', NULL);
 
 --
--- Restrições para despejos de tabelas
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id_catego`);
+
+--
+-- Indexes for table `dados`
+--
+ALTER TABLE `dados`
+  ADD PRIMARY KEY (`id_dados`);
+
+--
+-- Indexes for table `historico`
+--
+ALTER TABLE `historico`
+  ADD KEY `id_jogos_idx` (`id_J`),
+  ADD KEY `id_usuario_idx` (`id_U`);
+
+--
+-- Indexes for table `jogos`
+--
+ALTER TABLE `jogos`
+  ADD PRIMARY KEY (`id_jogos`),
+  ADD KEY `id_catego` (`id_catego`),
+  ADD KEY `id_catego3` (`id_catego2`),
+  ADD KEY `id_catego2` (`id_catego3`);
+
+--
+-- Indexes for table `requisitos_minimos`
+--
+ALTER TABLE `requisitos_minimos`
+  ADD PRIMARY KEY (`id_M`);
+
+--
+-- Indexes for table `requisitos_recomendados`
+--
+ALTER TABLE `requisitos_recomendados`
+  ADD PRIMARY KEY (`id_R`);
+
+--
+-- Indexes for table `sistema_operacional`
+--
+ALTER TABLE `sistema_operacional`
+  ADD PRIMARY KEY (`id_sistema`);
+
+--
+-- Indexes for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD KEY `id_dados` (`id_dados`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `dados`
+--
+ALTER TABLE `dados`
+  MODIFY `id_dados` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `jogos`
+--
+ALTER TABLE `jogos`
+  MODIFY `id_jogos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+--
+-- AUTO_INCREMENT for table `requisitos_minimos`
+--
+ALTER TABLE `requisitos_minimos`
+  MODIFY `id_M` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `requisitos_recomendados`
+--
+ALTER TABLE `requisitos_recomendados`
+  MODIFY `id_R` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `sistema_operacional`
+--
+ALTER TABLE `sistema_operacional`
+  MODIFY `id_sistema` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
+-- AUTO_INCREMENT for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+--
+-- Constraints for dumped tables
 --
 
 --
@@ -351,7 +421,6 @@ ALTER TABLE `jogos`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_dados`) REFERENCES `dados` (`id_dados`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

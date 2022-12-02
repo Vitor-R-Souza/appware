@@ -10,6 +10,31 @@
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <?php
+        require_once('requires/connect.php');
+        require_once('requires/func.php');
+        require_once('header.php');
+    ?>
+    <main>
+        <aside class="categ">
+            <form action="filter.php" method="post">
+                <div class="category">
+
+                </div>
+                <div class="age">
+
+                </div>
+                <div class="favorites">
+
+                </div>
+            </form>
+        </aside>
+        <div class="catalog">
+
+        </div>
+    </main>
+    <?php
+        require_once('footer.php');
+    ?>
 </body>
 </html>
