@@ -39,7 +39,9 @@
             </div>
         </section>
     </main>
-
+    <?php
+        require_once('footer.php');
+    ?>
     <script type="text/javascript" src="scripts/alterate-text.js"></script>
 </body>
 

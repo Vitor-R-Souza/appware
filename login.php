@@ -45,6 +45,9 @@
             </div>
         </form>
     </main>
+    <?php
+        require_once('footer.php');
+    ?>
     <script src="scripts/mobile-navbar.js"></script>
 </body>
 </html>

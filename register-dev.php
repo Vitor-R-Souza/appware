@@ -89,6 +89,9 @@
             </div>
         </form>
     </main>
+    <?php
+        require_once('footer.php');
+    ?>
     <script src="scripts/form-dev.js"></script>
 </body>
 

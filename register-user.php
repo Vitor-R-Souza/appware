@@ -94,7 +94,9 @@
             </div>
         </form>
     </main>
-
+    <?php
+        require_once('footer.php');
+    ?>
     <script src="scripts/form-user.js"></script>
 </body>
 
