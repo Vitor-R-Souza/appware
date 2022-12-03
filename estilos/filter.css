@@ -32,6 +32,7 @@ main .categ {
 
 main .categ .category > h2,
 main .categ .age > h2,
+main .categ .indies > h2,
 main .categ .favorites > h2,
 main .categ .dev-mode > h2 {
   text-align: center;
@@ -43,7 +44,7 @@ main .categ .dev-mode > h2 {
   font-size: 1.1em;
 }
 
-main .categ .category, main .categ .age,
+main .categ .category, main .categ .age, main .categ .indies,
 main .categ .favorites, main .categ .dev-mode {
   margin: 10px;
   background-color: darkslategrey;
@@ -52,7 +53,7 @@ main .categ .favorites, main .categ .dev-mode {
   padding-bottom: .5vw;
 }
 
-main .categ .category form, main .categ .age form,
+main .categ .category form, main .categ .age form, main .categ .indies form,
 main .categ .favorites form, main .categ .dev-mode form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,7 +66,7 @@ main .categ .favorites form, main .categ .dev-mode form {
   padding: 0 0.4vw;
 }
 
-main .categ .category form a, main .categ .age form a,
+main .categ .category form a, main .categ .age form a, main .categ .indies form a,
 main .categ .favorites form a, main .categ .dev-mode form a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,5 +89,51 @@ main .categ .favorites form a, main .categ .dev-mode form a {
 main .catalog {
   width: 80%;
   background-color: #2E4242;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+}
+
+main .catalog .game {
+  width: 200px;
+  height: 333px;
+  background-color: black;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+main .catalog .game .capa {
+  height: 80%;
+  width: 100%;
+}
+
+main .catalog .game .capa img {
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+main .catalog .game .name-game {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+main .catalog .game .name-game h3 {
+  /*
+                    word-wrap: break-word !important;
+                    text-overflow: ellipsis;
+                    overflow: hidden !important;
+                    white-space: nowrap;*/
 }
 /*# sourceMappingURL=filter.css.map */

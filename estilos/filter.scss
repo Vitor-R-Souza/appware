@@ -32,6 +32,7 @@ main{
 
         .category > h2,
         .age > h2,
+        .indies > h2,
         .favorites > h2,
         .dev-mode > h2{
             text-align: center;
@@ -43,7 +44,7 @@ main{
             font-size: 1.1em;
         }
 
-        .category, .age,
+        .category, .age, .indies,
         .favorites, .dev-mode{
             margin: 10px;
             background-color: darkslategrey;
@@ -53,9 +54,6 @@ main{
 
             //padding: 0 1.26vw;//25px;
 
-            h2{
-
-            }
             form{
                 display: flex;
                 flex-wrap: wrap;
@@ -83,5 +81,43 @@ main{
     .catalog{
         width: 80%;
         background-color: $primary-color;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+
+        .game{
+            width: 200px;
+            height: 333px;
+            background-color: black;
+            margin: 20px 10px;
+            border-radius: 10px;
+
+            .capa{
+                height: 80%;
+                width: 100%;
+
+                img{
+                    height: 100%;
+                    border-radius: 10px 10px 0 0;
+
+                }
+            }
+
+            .name-game{
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+
+
+                h3{/*
+                    word-wrap: break-word !important;
+                    text-overflow: ellipsis;
+                    overflow: hidden !important;
+                    white-space: nowrap;*/
+                }
+            }
+        }
     }
 }
