@@ -45,7 +45,7 @@
                     <a href="filter.php">Ritmo</a>
                     <a href="filter.php">Sandbox</a>
                     <a href="filter.php">Militar</a>
-                    <a href="filter.php">Text-Adventude</a><a href="filter.php">Graphic Adventure</a>
+                    <a href="filter.php">Text-Adventure</a><a href="filter.php">Graphic Adventure</a>
                     <a href="filter.php">Visual Novel</a>
                     <a href="filter.php">Filmes Interativos</a>
                     <a href="filter.php">Run'N Guns</a>

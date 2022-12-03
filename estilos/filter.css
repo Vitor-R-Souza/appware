@@ -15,9 +15,78 @@
 }
 
 main {
+  width: 100%;
+  background-color: #2E4242;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+main .categ {
+  width: 20%;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #2E4242;
+}
+
+main .categ .category > h2,
+main .categ .age > h2,
+main .categ .favorites > h2,
+main .categ .dev-mode > h2 {
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 10px;
+  background-color: #000;
+  border-radius: 15px 15px 0 0;
+  padding: 0.500vw 0;
+  font-size: 1.1em;
+}
+
+main .categ .category, main .categ .age,
+main .categ .favorites, main .categ .dev-mode {
+  margin: 10px;
+  background-color: darkslategrey;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding-bottom: .5vw;
+}
+
+main .categ .category form, main .categ .age form,
+main .categ .favorites form, main .categ .dev-mode form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0.4vw;
+}
+
+main .categ .category form a, main .categ .age form a,
+main .categ .favorites form a, main .categ .dev-mode form a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  width: 8vw;
+  font-size: 0.8em;
+  padding: 0.500vw;
+  background-color: #137B7B;
+  margin: 0.253vw;
+  border-radius: 10px;
+}
+
+main .catalog {
+  width: 80%;
+  background-color: #137B7B;
 }
 /*# sourceMappingURL=filter.css.map */
