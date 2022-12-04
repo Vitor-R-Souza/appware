@@ -284,6 +284,8 @@ body .more-games .container-btn {
   display: -ms-flexbox;
   display: flex;
   border-radius: 12px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body .more-games .container-btn .img-games {
@@ -301,7 +303,7 @@ body .more-games .container-btn .img-games {
 }
 
 body .more-games .container-btn .img-games img {
-  width: 80%;
+  width: 90%;
   height: 80%;
   border-radius: 10px;
 }
@@ -321,7 +323,27 @@ body .more-games .container-btn .frases {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: red;
+}
+
+body .more-games .container-btn .frases h2 {
+  font-weight: bold;
+}
+
+body .more-games .container-btn .frases h4 {
+  margin-bottom: 10px;
+}
+
+body .more-games .container-btn .frases button {
+  height: 45px;
+  width: 140px;
+  border-radius: 15px;
+  background-color: #137B7B;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+body .more-games .container-btn .frases button:hover {
+  background-color: #00A3A3;
 }
 
 @media screen and (max-width: 1168px) {

@@ -248,7 +248,8 @@ body {
             background-color: $secondary-color;
             display: flex;
             border-radius: 12px;
-
+            flex-wrap: wrap;
+            
             .img-games{
                 width: 65%;
                 display: flex;
@@ -258,7 +259,7 @@ body {
 
                 
                 img{
-                    width: 80%;
+                    width: 90%;
                     height: 80%;
                     //background-color: red;
                     border-radius: 10px;
@@ -271,7 +272,24 @@ body {
                 justify-content: center;
                 align-items: flex-start;
                 flex-direction: column;
-                background-color: red;
+
+                h2{
+                    font-weight: bold;
+                }
+                h4{
+                    margin-bottom: 10px;
+                }
+                button{
+                    height: 45px;
+                    width: 140px;
+                    border-radius: 15px;
+                    background-color: $color1-btn;
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+                button:hover{
+                    background-color: $color2-btn;
+                }
             }
         }
     }
