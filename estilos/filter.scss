@@ -84,8 +84,11 @@ main{
         display: flex;
         flex-wrap: wrap;
         padding: 20px;
-        margin: 0;
-
+        flex-direction: row;
+        align-content: flex-start;
+        //margin: 0;
+        //justify-content: flex-start;
+        //align-items: stretch;
 
         .game{
             width: 200px;

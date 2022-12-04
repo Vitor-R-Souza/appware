@@ -95,7 +95,12 @@ main .catalog {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 20px;
-  margin: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 main .catalog .game {
