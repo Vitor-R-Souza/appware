@@ -84,12 +84,14 @@ main{
         display: flex;
         flex-wrap: wrap;
         padding: 20px;
+        margin: 0;
+
 
         .game{
             width: 200px;
             height: 333px;
             background-color: black;
-            margin: 5px 10px;
+            margin: 10px;
             border-radius: 10px;
 
             .capa{
@@ -112,7 +114,7 @@ main{
 
 
                 h3{
-                    font-size: .8em;
+                    //font-size: .9em;
                     /*
                     word-wrap: break-word !important;
                     text-overflow: ellipsis;

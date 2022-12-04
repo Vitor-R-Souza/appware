@@ -95,14 +95,14 @@ main .catalog {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 20px;
-  background-color: red;
+  margin: 0;
 }
 
 main .catalog .game {
   width: 200px;
   height: 333px;
   background-color: black;
-  margin: 5px 10px;
+  margin: 10px;
   border-radius: 10px;
 }
 
