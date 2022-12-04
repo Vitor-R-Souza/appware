@@ -84,7 +84,6 @@ main{
         display: flex;
         flex-wrap: wrap;
         padding: 20px;
-        background-color: red;
 
         .game{
             width: 200px;
@@ -112,7 +111,9 @@ main{
                 padding: 5px;
 
 
-                h3{/*
+                h3{
+                    font-size: .8em;
+                    /*
                     word-wrap: break-word !important;
                     text-overflow: ellipsis;
                     overflow: hidden !important;

@@ -189,6 +189,18 @@
         </div>
 
     </div>
+    <section class="more-games">
+        <div class="container-btn">
+            <div class="img-games">
+                <img src="/imagens/jogos-site.png" alt="Catálogo">
+            </div>
+            <div class="frases">
+                <h2>Veja todo o catálogo</h2>
+                <h4>Aventure-se na variedade de jogos.</h4>
+                <a href="filter.php"><button>Ver mais jogos</button></a>
+            </div>
+        </div>
+    </section>
     <?php
         require_once('footer.php');
     ?>
