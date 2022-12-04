@@ -130,6 +130,14 @@
                     <h3>Age of Empires III: Definitive Edition</h3>
                 </div>
             </div>
+            <div class="game">
+                <div class="capa">
+                    <img src="mini-capas/splinter-cell-blacklist.jpg" alt="">
+                </div>
+                <div class="name-game">
+                    <h3>Tom Clancy: Splinter Cell Blacklist</h3>
+                </div>
+            </div>
         </section>
     </main>
     <?php
