@@ -155,7 +155,7 @@
             </div>
             <br>
             <div class="heading" id="indies">
-                <h2 class="heading-title">Jogos Indies</h2>
+                <h2 class="heading-title">Indies</h2>
                 <div class="swiper-btn">
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -192,7 +192,7 @@
     <section class="more-games">
         <div class="container-btn">
             <div class="img-games">
-                <img src="/imagens/jogos-site.png" alt="Catálogo">
+                <img src="imagens/jogos_site.png" alt="Catálogo">
             </div>
             <div class="frases">
                 <h2>Veja todo o catálogo</h2>

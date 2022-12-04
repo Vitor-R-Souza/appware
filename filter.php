@@ -90,14 +90,16 @@
             </div>
         </aside>
         <section class="catalog">
-            <div class="game">
-                <div class="capa">
-                    <img src="mini-capas/red-dead-redemption2.jpg" alt="Read Dead Redemption 2">
+            <a href="#">
+                <div class="game">
+                    <div class="capa">
+                        <img src="mini-capas/red-dead-redemption2.jpg" alt="Read Dead Redemption 2">
+                    </div>
+                    <div class="name-game">
+                        <h3>Read Dead Redemption 2</h3>
+                    </div>
                 </div>
-                <div class="name-game">
-                    <h3>Read Dead Redemption 2</h3>
-                </div>
-            </div>
+            </a>
             <div class="game">
                 <div class="capa">
                     <img src="mini-capas/elden-ring.jpg" alt="Elden Ring">
