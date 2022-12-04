@@ -70,6 +70,12 @@
                     <a href="filter.php">+18</a>
                 </form>
             </div>
+            <div class="indies">
+                <h2>Jogos Indies</h2>
+                <form action="filter.php" method="get" id="busca">
+                    <a href="filter.php">Indies</a>
+                </form>
+            </div>
             <div class="favorites">
                 <h2>Favoritos</h2>
                 <form action="filter.php" method="get" id="busca">
@@ -84,7 +90,54 @@
             </div>
         </aside>
         <section class="catalog">
-
+            <div class="game">
+                <div class="capa">
+                    <img src="mini-capas/red-dead-redemption2.jpg" alt="Read Dead Redemption 2">
+                </div>
+                <div class="name-game">
+                    <h3>Read Dead Redemption 2</h3>
+                </div>
+            </div>
+            <div class="game">
+                <div class="capa">
+                    <img src="mini-capas/elden-ring.jpg" alt="Elden Ring">
+                </div>
+                <div class="name-game">
+                    <h3>Elden Ring</h3>
+                </div>
+            </div>
+            <div class="game">
+                <div class="capa">
+                    <img src="mini-capas/marvel-spiderman.jpg" alt="Marvel Spider-Man">
+                </div>
+                <div class="name-game">
+                    <h3>Marvel Spider-Man Remastered</h3>
+                </div>
+            </div>
+            <div class="game">
+                <div class="capa">
+                    <img src="mini-capas/csgo.jpg" alt="">
+                </div>
+                <div class="name-game">
+                    <h3>Counter Strike: Global Offensive</h3>
+                </div>
+            </div>
+            <div class="game">
+                <div class="capa">
+                    <img src="mini-capas/age-of-empires3.jpg" alt="">
+                </div>
+                <div class="name-game">
+                    <h3>Age of Empires III: Definitive Edition</h3>
+                </div>
+            </div>
+            <div class="game">
+                <div class="capa">
+                    <img src="mini-capas/splinter-cell-blacklist.jpg" alt="">
+                </div>
+                <div class="name-game">
+                    <h3>Tom Clancy: Splinter Cell Blacklist</h3>
+                </div>
+            </div>
         </section>
     </main>
     <?php
