@@ -16,7 +16,12 @@
         require_once('header.php');
     ?>
     <main>
-        
+        <section class="about-origin">
+
+        </section>
+        <section class="about-objective">
+            
+        </section>
     </main>
     <?php
         require_once('footer.php')

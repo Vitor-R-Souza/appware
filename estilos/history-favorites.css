@@ -2,10 +2,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: white;
   list-style: none;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
 body {
@@ -15,29 +16,40 @@ body {
 main {
   width: 100vw;
 }
+
 main .historic-favorites {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 main .historic-favorites .game {
   position: relative;
 }
+
 main .historic-favorites .game img {
   margin: 10px;
   border-radius: 10px;
   width: 200px;
 }
+
 main .historic-favorites .game i {
   position: absolute;
   color: white;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 4rem;
 }
+
 main .historic-favorites .game .fa-circle-xmark {
   color: red;
 }
+
 main .historic-favorites .game .fa-circle-check {
   color: green;
-}/*# sourceMappingURL=history-favorites.css.map */
+}
+/*# sourceMappingURL=history-favorites.css.map */

@@ -4,32 +4,43 @@
 * {
   margin: 0%;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #2E4242;
   height: 100vh;
 }
+
 main .recover {
   background-color: #2A2F2E;
   border-radius: 10px;
   width: 500px;
   padding: 40px;
 }
+
 main .recover h2 {
   margin-bottom: 30px;
   font-size: 30px;
   color: #03f484;
   text-align: center;
 }
+
 main .recover .box-user {
   position: relative;
 }
+
 main .recover .box-user input {
   margin-top: 15px;
   width: 100%;
@@ -42,6 +53,7 @@ main .recover .box-user input {
   font-size: 16px;
   margin-bottom: 30px;
 }
+
 main .recover .box-user label {
   margin-top: 15px;
   position: absolute;
@@ -50,16 +62,21 @@ main .recover .box-user label {
   padding: 15px 0;
   color: white;
   font-size: 16px;
-  pointer-events: none; /*Indicando campo diitável*/
-  transition: 0.5s;
+  pointer-events: none;
+  /*Indicando campo diitável*/
+  -webkit-transition: .5s;
+  transition: .5s;
 }
+
 main .recover .box-user input:focus ~ label,
-main .recover .box-user input:valid ~ label { /*imput focado, label muda*/
+main .recover .box-user input:valid ~ label {
+  /*imput focado, label muda*/
   top: -25px;
   left: 0;
   color: #03f484;
   font-size: 12px;
 }
+
 main .recover .box-user input:-webkit-autofill,
 main .recover .box-user input:-webkit-autofill:hover,
 main .recover .box-user input:-webkit-autofill:focus,
@@ -68,18 +85,31 @@ main .recover .box-user input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
+
 main .recover .box-user input:-webkit-autofill:valid {
   -webkit-text-fill-color: #ffffff !important;
   /*Tava deixando bg do input branco meio transparente*/
 }
+
 main .recover .btn-recover {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
 }
+
 main .recover .btn-recover #btn {
+  background-image: -webkit-gradient(linear, left top, right top, from(#137B7B), to(#00A3A3));
   background-image: linear-gradient(to right, #137B7B, #00A3A3);
   width: 300px;
   height: 60px;
@@ -91,19 +121,24 @@ main .recover .btn-recover #btn {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+
 main .recover .btn-recover #btn:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#179494), to(#01cccc));
   background-image: linear-gradient(to right, #179494, #01cccc);
   width: 300px;
   height: 60px;
 }
+
 main .recover .btn-recover #sign-in {
   margin-top: 15px;
   font-size: 13px;
 }
+
 main .recover .btn-recover #sign-in a {
   text-decoration: none;
   font-weight: bold;
 }
+
 main .recover .btn-recover #sign-in a:hover {
   text-decoration: none;
   font-weight: bold;
@@ -114,4 +149,5 @@ main .recover .btn-recover #sign-in a:hover {
   .recover {
     width: 90%;
   }
-}/*# sourceMappingURL=rec-senha.css.map */
+}
+/*# sourceMappingURL=rec-senha.css.map */
