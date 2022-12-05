@@ -74,8 +74,12 @@ main{
                     margin: 0.253vw;//5px;
                     border-radius: 10px;
                 }
+                a:hover{
+                    background-color: $color2-btn;
+                }
             }
         }
+        
     }    
 
     .catalog{
@@ -91,11 +95,16 @@ main{
         //align-items: stretch;
 
         .game{
+            //width: 201px;
+            //height: 331px;
             width: 200px;
             height: 333px;
             background-color: black;
             margin: 10px;
             border-radius: 10px;
+            outline: 3px solid black;
+            //border: 4px solid black;
+
 
             .capa{
                 height: 80%;
@@ -103,7 +112,7 @@ main{
 
                 img{
                     height: 100%;
-                    border-radius: 10px 10px 0 0;
+                    border-radius: 8px 8px 0 0;
 
                 }
             }
@@ -117,7 +126,7 @@ main{
 
 
                 h3{
-                    //font-size: .9em;
+                    font-size: 1.1em;
                     /*
                     word-wrap: break-word !important;
                     text-overflow: ellipsis;
@@ -126,5 +135,9 @@ main{
                 }
             }
         }
+        .game:hover{
+            outline: 3px solid $color-details;
+        }
+
     }
 }
