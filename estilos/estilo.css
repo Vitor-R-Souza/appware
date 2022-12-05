@@ -325,21 +325,24 @@ body .more-games .container-btn .frases {
           flex-direction: column;
 }
 
-body .more-games .container-btn .frases h2 {
+body .more-games .container-btn .frases h1 {
   font-weight: bold;
+  font-size: 2.02vw;
 }
 
-body .more-games .container-btn .frases h4 {
+body .more-games .container-btn .frases h3 {
   margin-bottom: 10px;
+  font-size: 1.1vw;
 }
 
 body .more-games .container-btn .frases button {
-  height: 45px;
-  width: 140px;
-  border-radius: 15px;
+  height: 3.03vw;
+  width: 15.15vw;
+  border-radius: 20px;
   background-color: #137B7B;
   cursor: pointer;
   font-weight: bold;
+  font-size: 1.1vw;
 }
 
 body .more-games .container-btn .frases button:hover {

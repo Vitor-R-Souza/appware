@@ -273,19 +273,22 @@ body {
                 align-items: flex-start;
                 flex-direction: column;
 
-                h2{
+                h1{
                     font-weight: bold;
+                    font-size: 2.02vw;
                 }
-                h4{
+                h3{
                     margin-bottom: 10px;
+                    font-size: 1.1vw;
                 }
                 button{
-                    height: 45px;
-                    width: 140px;
-                    border-radius: 15px;
+                    height: 3.03vw;
+                    width: 15.15vw;
+                    border-radius: 20px;
                     background-color: $color1-btn;
                     cursor: pointer;
                     font-weight: bold;
+                    font-size: 1.1vw;
                 }
                 button:hover{
                     background-color: $color2-btn;

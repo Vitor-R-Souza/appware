@@ -195,8 +195,8 @@
                 <img src="imagens/jogos_site.png" alt="Catálogo">
             </div>
             <div class="frases">
-                <h2>Veja todo o catálogo</h2>
-                <h4>Aventure-se na variedade de jogos.</h4>
+                <h1>Veja todo o catálogo</h1>
+                <h3>Aventure-se na variedade de jogos.</h3>
                 <a href="filter.php"><button>Ver mais jogos</button></a>
             </div>
         </div>
