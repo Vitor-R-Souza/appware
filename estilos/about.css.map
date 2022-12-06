@@ -1,1 +1,9 @@
-{"version":3,"sources":["about.scss","about.css"],"names":[],"mappings":"AAAQ,6FAAA;AAOR;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,kCAAA;ACLJ","file":"about.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,qFAAI;AAOZ,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,WAAW,EAAE,qBAAqB;CACrC;;AAED,AAAA,IAAI,CAAA;EACA,KAAK,EAAE,IAAI;CAad;;AAdD,AAGI,IAHA,CAGA,aAAa,CAAA;EACT,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAlBN,OAAO;CAmBpB;;AAPL,AASI,IATA,CASA,gBAAgB,CAAA;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAzBR,OAAO;CA0BlB",
+    "sources": [
+        "about.scss"
+    ],
+    "names": [],
+    "file": "about.css"
+}
