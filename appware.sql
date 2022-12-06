@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 04-Dez-2022 às 03:46
+-- Tempo de geração: 06-Dez-2022 às 01:18
 -- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
@@ -111,10 +111,14 @@ CREATE TABLE IF NOT EXISTS `dados` (
 
 DROP TABLE IF EXISTS `historico`;
 CREATE TABLE IF NOT EXISTS `historico` (
-  `id_J` int(11) NOT NULL,
-  `id_U` int(11) NOT NULL,
-  KEY `id_jogos_idx` (`id_J`),
-  KEY `id_usuario_idx` (`id_U`)
+  `id_historico` int(11) NOT NULL AUTO_INCREMENT,
+  `id_jogo` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `data_analise` date NOT NULL,
+  `analise` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id_historico`),
+  KEY `id_usuario` (`id_usuario`),
+  KEY `id_jogo` (`id_jogo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -228,73 +232,75 @@ CREATE TABLE IF NOT EXISTS `requisitos_minimos` (
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
   `id_jogo` int(11) DEFAULT NULL,
+  `id_sistema` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_M`),
-  KEY `id_jogo` (`id_jogo`)
+  KEY `id_jogo` (`id_jogo`),
+  KEY `id_sistema` (`id_sistema`)
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `requisitos_minimos`
 --
 
-INSERT INTO `requisitos_minimos` (`id_M`, `processador`, `placa_video`, `espaco_armazenamento`, `memoria_ram`, `id_jogo`) VALUES
-(1, '', '', '150', '12', 1),
-(2, '', '', '75', '8', 2),
-(3, '', '', '30', '4', 3),
-(4, '', '', '110', '8', 4),
-(5, '', '', '100', '8', 5),
-(6, '', '', '35', '6', 6),
-(7, '', '', '50', '8', 7),
-(8, '', '', '26', '8', 8),
-(9, '', '', '2', '1', 9),
-(10, '', '', '15', '2', 10),
-(11, '', '', '70', '4', 11),
-(12, '', '', '15', '4', 12),
-(13, '', '', '15', '4', 13),
-(14, '', '', '90', '4', 14),
-(15, '', '', '4', '8', 15),
-(16, '', '', '6', '6', 16),
-(17, '', '', '8', '2', 17),
-(18, '', '', '42', '8', 18),
-(19, '', '', '4', '3', 19),
-(20, '', '', '20', '4', 20),
-(21, '', '', '25', '2', 21),
-(22, '', '', '60', '8', 22),
-(23, '', '', '100', '512', 23),
-(24, '', '', '1', '2', 24),
-(25, '', '', '12', '4', 25),
-(26, '', '', '26', '256', 26),
-(27, '', '', '5', '2', 27),
-(28, '', '', '2', '4', 28),
-(29, '', '', '2', '3', 29),
-(30, '', '', '500', '1', 30),
-(31, '', '', '9', '4', 31),
-(32, '', '', '36', '4', 32),
-(33, '', '', '100', '8', 33),
-(34, '', '', '120', '6', 34),
-(35, '', '', '40', '4', 35),
-(36, '', '', '5', '1', 36),
-(37, '', '', '8', '8', 37),
-(38, '', '', '449', '2', 38),
-(39, '', '', '72', '4', 39),
-(40, '', '', '35', '4', 40),
-(41, '', '', '12', '8', 41),
-(42, '', '', '30', '8', 42),
-(43, '', '', '70', '8', 43),
-(44, '', '', '30', '8', 44),
-(45, '', '', '60', '8', 45),
-(46, '', '', '56', '6', 46),
-(47, '', '', '160', '8', 47),
-(48, '', '', '26', '4', 48),
-(49, '', '', '60', '8', 49),
-(50, '', '', '60', '12', 50),
-(51, '', '', '175', '8', 51),
-(52, '', '', '125', '8', 52),
-(53, '', '', '16', '2', 53),
-(54, '', '', '70', '8', 54),
-(55, '', '', '60', '8', 55),
-(56, '', '', '17', '8', 56),
-(57, '', '', '500', '2', 57),
-(58, '', '', '20', '8', 58);
+INSERT INTO `requisitos_minimos` (`id_M`, `processador`, `placa_video`, `espaco_armazenamento`, `memoria_ram`, `id_jogo`, `id_sistema`) VALUES
+(1, '', '', '150', '12', 1, NULL),
+(2, '', '', '75', '8', 2, NULL),
+(3, '', '', '30', '4', 3, NULL),
+(4, '', '', '110', '8', 4, NULL),
+(5, '', '', '100', '8', 5, NULL),
+(6, '', '', '35', '6', 6, NULL),
+(7, '', '', '50', '8', 7, NULL),
+(8, '', '', '26', '8', 8, NULL),
+(9, '', '', '2', '1', 9, NULL),
+(10, '', '', '15', '2', 10, NULL),
+(11, '', '', '70', '4', 11, NULL),
+(12, '', '', '15', '4', 12, NULL),
+(13, '', '', '15', '4', 13, NULL),
+(14, '', '', '90', '4', 14, NULL),
+(15, '', '', '4', '8', 15, NULL),
+(16, '', '', '6', '6', 16, NULL),
+(17, '', '', '8', '2', 17, NULL),
+(18, '', '', '42', '8', 18, NULL),
+(19, '', '', '4', '3', 19, NULL),
+(20, '', '', '20', '4', 20, NULL),
+(21, '', '', '25', '2', 21, NULL),
+(22, '', '', '60', '8', 22, NULL),
+(23, '', '', '100', '512', 23, NULL),
+(24, '', '', '1', '2', 24, NULL),
+(25, '', '', '12', '4', 25, NULL),
+(26, '', '', '26', '256', 26, NULL),
+(27, '', '', '5', '2', 27, NULL),
+(28, '', '', '2', '4', 28, NULL),
+(29, '', '', '2', '3', 29, NULL),
+(30, '', '', '500', '1', 30, NULL),
+(31, '', '', '9', '4', 31, NULL),
+(32, '', '', '36', '4', 32, NULL),
+(33, '', '', '100', '8', 33, NULL),
+(34, '', '', '120', '6', 34, NULL),
+(35, '', '', '40', '4', 35, NULL),
+(36, '', '', '5', '1', 36, NULL),
+(37, '', '', '8', '8', 37, NULL),
+(38, '', '', '449', '2', 38, NULL),
+(39, '', '', '72', '4', 39, NULL),
+(40, '', '', '35', '4', 40, NULL),
+(41, '', '', '12', '8', 41, NULL),
+(42, '', '', '30', '8', 42, NULL),
+(43, '', '', '70', '8', 43, NULL),
+(44, '', '', '30', '8', 44, NULL),
+(45, '', '', '60', '8', 45, NULL),
+(46, '', '', '56', '6', 46, NULL),
+(47, '', '', '160', '8', 47, NULL),
+(48, '', '', '26', '4', 48, NULL),
+(49, '', '', '60', '8', 49, NULL),
+(50, '', '', '60', '12', 50, NULL),
+(51, '', '', '175', '8', 51, NULL),
+(52, '', '', '125', '8', 52, NULL),
+(53, '', '', '16', '2', 53, NULL),
+(54, '', '', '70', '8', 54, NULL),
+(55, '', '', '60', '8', 55, NULL),
+(56, '', '', '17', '8', 56, NULL),
+(57, '', '', '500', '2', 57, NULL),
+(58, '', '', '20', '8', 58, NULL);
 
 -- --------------------------------------------------------
 
@@ -305,78 +311,80 @@ INSERT INTO `requisitos_minimos` (`id_M`, `processador`, `placa_video`, `espaco_
 DROP TABLE IF EXISTS `requisitos_recomendados`;
 CREATE TABLE IF NOT EXISTS `requisitos_recomendados` (
   `id_R` int(11) NOT NULL AUTO_INCREMENT,
-  `processador` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `processador` varchar(90) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
   `id_jogo` int(11) DEFAULT NULL,
+  `id_sistema` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_R`),
-  KEY `id_jogo` (`id_jogo`)
+  KEY `id_jogo` (`id_jogo`),
+  KEY `id_sistema` (`id_sistema`)
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `requisitos_recomendados`
 --
 
-INSERT INTO `requisitos_recomendados` (`id_R`, `processador`, `placa_video`, `espaco_armazenamento`, `memoria_ram`, `id_jogo`) VALUES
-(1, '', '', '150', '12', 1),
-(2, '', '', '75', '16', 2),
-(3, '', '', '30', '8', 3),
-(4, '', '', '110', '16', 4),
-(5, '', '', '100', '12', 5),
-(6, '', '', '35', '8', 6),
-(7, '', '', '50', '16', 7),
-(8, '', '', '26', '8', 8),
-(9, '', '', '2', '2', 9),
-(10, '', '', '15', '2', 10),
-(11, '', '', '70', '8', 11),
-(12, '', '', '15', '4', 12),
-(13, '', '', '15', '8', 13),
-(14, '', '', '90', '8', 14),
-(15, '', '', '4', '16', 15),
-(16, '', '', '6', '8', 16),
-(17, '', '', '8', '2', 17),
-(18, '', '', '42', '16', 18),
-(19, '', '', '4', '3', 19),
-(20, '', '', '20', '8', 20),
-(21, '', '', '25', '4', 21),
-(22, '', '', '60', '8', 22),
-(23, '', '', '100', '512', 23),
-(24, '', '', '4', '4', 24),
-(25, '', '', '12', '4', 25),
-(26, '', '', '26', '512', 26),
-(27, '', '', '14', '2', 27),
-(28, '', '', '2', '4', 28),
-(29, '', '', '2', '3', 29),
-(30, '', '', '500', '2', 30),
-(31, '', '', '9', '8', 31),
-(32, '', '', '40', '8', 32),
-(33, '', '', '100', '12', 33),
-(34, '', '', '120', '8', 34),
-(35, '', '', '40', '16', 35),
-(36, '', '', '5', '1', 36),
-(37, '', '', '8', '8', 37),
-(38, '', '', '449', '8', 38),
-(39, '', '', '72', '8', 39),
-(40, '', '', '35', '8', 40),
-(41, '', '', '12', '8', 41),
-(42, '', '', '30', '8', 42),
-(43, '', '', '70', '12', 43),
-(44, '', '', '30', '16', 44),
-(45, '', '', '60', '16', 45),
-(46, '', '', '56', '8', 46),
-(47, '', '', '160', '8', 47),
-(48, '', '', '51', '8', 48),
-(49, '', '', '60', '16', 49),
-(50, '', '', '60', '16', 50),
-(51, '', '', '175', '12', 51),
-(52, '', '', '125', '12', 52),
-(53, '', '', '16', '4', 53),
-(54, '', '', '70', '8', 54),
-(55, '', '', '60', '16', 55),
-(56, '', '', '17', '16', 56),
-(57, '', '', '500', '2', 57),
-(58, '', '', '20', '16', 58);
+INSERT INTO `requisitos_recomendados` (`id_R`, `processador`, `placa_video`, `espaco_armazenamento`, `memoria_ram`, `id_jogo`, `id_sistema`) VALUES
+(1, 'Intel® Core™ i7-4770K', 'Nvidia GeForce GTX 1060 6GB ', '150', '12', 1, 10),
+(2, ' Intel Core i5-4670, 3.4 Ghz ', 'NVIDIA GTX 1060 6GB ', '75', '16', 2, 10),
+(3, 'Intel Core i5', 'NVIDIA GeForce GTX 660', '30', '8', 3, NULL),
+(4, 'Intel i5-8400 / AMD Ryzen 5 1500X', ' NVidia GTX 1070 / AMD RX 590', '110', '16', 4, 10),
+(5, 'Intel Core i7 6700 / AMD Ryzen 7 2700X', 'NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT', '100', '12', 5, 10),
+(6, 'Intel CPU Core i7 3770 3.4 GHz / AMD CPU AMD FX-8350 4 GHz', 'Nvidia GPU GeForce GTX 770 / AMD GPU Radeon R9 290', '35', '8', 6, NULL),
+(7, 'AMD FX 8350 / Intel Core i7 4790', 'AMD Radeon™ RX 480 4GB / NVIDIA GeForce® GTX 1060 3GB', '50', '16', 7, 10),
+(8, 'Intel® Core™ i7-3770 / AMD FX™-9590 ', 'NVIDIA® GeForce® GTX 1060 / AMD Radeon™ RX 480 with 3GB VRAM ', '26', '8', 8, 10),
+(9, 'Dual Core CPU', 'OpenGL 3.0 compliant with 512MB', '2', '2', 9, NULL),
+(10, 'Intel® Core™ 2 Duo E6600 / AMD Phenom™ X3 8750', 'A placa de vídeo precisa ter 256 MB ou mais de memória e ser compatível com DirectX 9.', '15', '2', 10, NULL),
+(11, 'Intel Core i5-760', 'NVIDIA GeForce GTX 560 2GB', '70', '8', 11, NULL),
+(12, 'Processador com dois núcleos da Intel ou AMD (2,8 GHz)', 'NVIDIA GeForce 8600/9600GT / ATI/AMD Radeon HD2600/3600', '15', '4', 12, NULL),
+(13, 'Intel Core i5-7300U 3.5 GHz', 'Nvidia GTX 960, AMD R9 280 / GPU DX11', '15', '8', 13, 10),
+(14, 'Intel Core i5-7500 / AMD Ryzen 5 1400', 'NVIDIA GeForce GTX1080 with 3 GB VRAM /\r\nAMD Radeon RX580 with 4 GB VRAM', '90', '8', 14, 11),
+(15, 'AMD Ryzen 5 1600', 'GeForce GTX 1060 6GB', '4', '16', 15, 10),
+(16, 'Intel Core i5-4690K @3.50GHz / AMD FX-9370', 'Intel Core i5-4690K @3.50GHz / AMD FX-9370', '6', '8', 16, NULL),
+(17, '3.0 GHz P4, Dual Core 2.0 / AMD64X2 ', 'ATI Radeon X800 / NVIDIA GeForce 7600 / Intel HD Graphics 2000', '8', '2', 17, NULL),
+(18, ' Intel i5-3300 @ 3.0GHz / AMD FX-8350', 'GeForce GTX 980 / Radeon R9 Fury', '42', '16', 18, 10),
+(19, 'Intel Core2 Duo E8400, 3.0GHz / AMD Athlon 64 X2 6000+, 3.0GHz', 'Geforce 9600 GT / AMD HD 3870 512MB ', '4', '3', 19, NULL),
+(20, 'Intel Core i5 4460', 'Radeon HD7870 / Geforce GTX 760', '20', '8', 20, 5),
+(21, '2.66 GHz Intel® Core™2 Quad Q8400 / 3.00 GHz AMD Phenom™ II X4 940 ', 'Shader Model 4.0 ', '25', '4', 21, 5),
+(22, 'Intel Core i5-4670K', 'NVIDIA GTX 670 2 GB', '60', '8', 22, 10),
+(23, '2.0+ GHz', 'OpenGL 2.0', '100', '512', 23, 1),
+(24, 'Intel Core i5-4690 3.5GHz / AMD A10-7800 APU 3.5', 'GeForce 700 Series / AMD Radeon RX 200', '4', '4', 24, NULL),
+(25, 'Intel Core i5-2500K de 3.3 GHz', 'Geforce GTX 960M', '12', '4', 25, 8),
+(26, '1.4 GHz', 'DirectX 9 Compatible 3D Card', '26', '512', 26, 6),
+(27, 'Dual Core 3.0GHz ', 'ATI / NVidia card w/ 1024 MB RAM NVIDIA GeForce GTX 260 / ATI HD 4890', '14', '2', 27, 6),
+(28, 'Intel® Core™ i5-3570', 'NVIDIA® GeForce® GTX 660　', '2', '4', 28, NULL),
+(29, 'Core 2 Duo 2GHz', 'NVidia com 1024 MB de RAM', '2', '3', 29, 5),
+(30, '', '', '500', '2', 30, NULL),
+(31, '', '', '9', '8', 31, NULL),
+(32, '', '', '40', '8', 32, NULL),
+(33, '', '', '100', '12', 33, NULL),
+(34, '', '', '120', '8', 34, NULL),
+(35, '', '', '40', '16', 35, NULL),
+(36, 'Intel Pentium 4 3GHZ', 'Nvidia 6800', '5', '1', 36, 3),
+(37, '', '', '8', '8', 37, NULL),
+(38, '', '', '449', '8', 38, NULL),
+(39, '', '', '72', '8', 39, NULL),
+(40, '', '', '35', '8', 40, NULL),
+(41, 'Intel i5-2400', 'NVIDIA GTX 780 de 3 GB', '12', '8', 41, 6),
+(42, '', '', '30', '8', 42, NULL),
+(43, 'Intel Core i7-4790', 'NVIDIA GeForce GTX 1060', '70', '12', 43, 10),
+(44, 'Intel Core i7', 'NVIDIA® GeForce® GTX 1060 de 6 GB', '30', '16', 44, NULL),
+(45, ' AMD / Intel CPU running at 3.6 GHz / AMD Ryzen 5 3600X / Intel i5-8600K', 'NVIDIA® GeForce RTX™ 2060 6GB / AMD RX Vega 56 8GB ', '60', '16', 45, 10),
+(46, 'Ryzen 5 CPU', ' AMD Radeon™ R9 290 / NVIDIA GeForce® GTX 970', '56', '8', 46, 6),
+(47, 'AMD Ryzen 5 1600 3.2 GHz / Intel Core i7-4790 3.6 GHz', 'AMD R9 380 / NVIDIA GeForce GTX 960', '160', '8', 47, 10),
+(48, ' Intel core i5 4 núcleos / AMD Ryzen 5', 'NVIDIA GTX 650 / AMD Radeon HD 7750', '51', '8', 48, 10),
+(49, 'AMD Ryzen 3 1200 3.1GHz / Intel Core i5-4460 3.2GHz', 'AMD Radeon RX 460 4GB / Nvidia GeForce GTX 960 4GB', '60', '16', 49, 10),
+(50, ' INTEL CORE I7-8700K / AMD RYZEN 5 3600X', ' NVIDIA GEFORCE GTX 1070 8 GB / AMD RADEON RX VEGA 56 8 GB', '60', '16', 50, 11),
+(51, '', '', '175', '12', 51, NULL),
+(52, '', '', '125', '12', 52, NULL),
+(53, '', '', '16', '4', 53, NULL),
+(54, '', '', '70', '8', 54, NULL),
+(55, '', '', '60', '16', 55, NULL),
+(56, '', '', '17', '16', 56, NULL),
+(57, '', '', '500', '2', 57, NULL),
+(58, '', '', '20', '16', 58, NULL);
 
 -- --------------------------------------------------------
 
@@ -398,17 +406,17 @@ CREATE TABLE IF NOT EXISTS `sistema_operacional` (
 --
 
 INSERT INTO `sistema_operacional` (`id_sistema`, `NomeSistema`, `VersaoSistema`, `direct_x`) VALUES
-(1, 'Windows XP', '32 bits', ''),
-(2, 'Windows XP', '64 bits', ''),
-(3, 'Windows VS', '32 bits', ''),
-(4, 'Windows VS', '64 bits', ''),
-(5, 'Windows 7', '32 bits', ''),
-(6, 'Windows 7', '64 bits', ''),
-(7, 'Windows 8', '32 bits', ''),
-(8, 'Windows 8', '64 bits', ''),
-(9, 'Windows 10', '32 bits', ''),
-(10, 'Windows 10', '64 bits', ''),
-(11, 'Windows 11', '64 bits', ''),
+(1, 'Windows XP', '32 bits', '9.0'),
+(2, 'Windows XP', '64 bits', '9.0'),
+(3, 'Windows VS', '32 bits', '10'),
+(4, 'Windows VS', '64 bits', '10'),
+(5, 'Windows 7', '32 bits', '11'),
+(6, 'Windows 7', '64 bits', '11'),
+(7, 'Windows 8', '32 bits', '11.1'),
+(8, 'Windows 8', '64 bits', '11.1'),
+(9, 'Windows 10', '32 bits', '12'),
+(10, 'Windows 10', '64 bits', '12'),
+(11, 'Windows 11', '64 bits', '12'),
 (12, 'Ubuntu 14.04 LTS', '64 bits', ''),
 (13, 'Ubuntu 16.04 LTS', '64 bits', ''),
 (14, 'Ubuntu 18.04 LTS', '64 bits', ''),
@@ -439,30 +447,33 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `senha` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `icone` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `id_dados` int(11) DEFAULT NULL,
+  `id_jogos` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
-  KEY `id_dados` (`id_dados`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  KEY `id_dados` (`id_dados`),
+  KEY `id_jogos` (`id_jogos`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, `data_nascimento`, `empresa`, `site_empresa`, `senha`, `icone`, `id_dados`) VALUES
-(1, 'João da Silva', '', '', '', '1969-11-25', '', '', 'fefgh', '', NULL),
-(2, 'Gabriel', '', '', '', '2002-02-23', '', '', 'gaga123', '', NULL),
-(3, 'Fernanda', '', '', '', '2005-06-09', '', '', 'fefe1367', '', NULL),
-(4, 'Gustavo', '', '', '', '1999-12-05', '', '', 'gusjava', '', NULL),
-(5, 'Alexandre', '', '', '', '1999-03-10', '', '', 'axe2799', '', NULL),
-(6, 'Paulo', '', '', '', '2002-11-03', '', '', 'wde4dfn', '', NULL),
-(7, 'Marcos', '', '', '', '2005-05-25', '', '', 'uvhfcvb', '', NULL),
-(8, 'Patrick', '', '', '', '1995-07-15', '', '', 'dgdhcv', '', NULL),
-(9, 'Júlio', '', '', '', '2001-03-06', '', '', 'kkd23vn', '', NULL),
-(10, 'Adriana', '', '', '', '1990-09-30', '', '', 'efdfg', '', NULL),
-(11, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'Dev', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', '', NULL),
-(12, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'User', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', '', NULL),
-(13, 'ADMIN', 'admin', 'technology.ldr@gmail.com', 'Admin', '1995-07-11', 'LDR TECHNOLOGY', '', '$2y$10$2dDOjvcZxMrpB8BIgpVoLOJP/A7wgkCC05q2InqpHqY9uS1cmByRW', '', NULL),
-(14, 'José', 'JOOJE', 'JoseHisth@gmail.com', 'Dev', '1986-08-13', 'CBHJS', '', '$2y$10$IT5wg8PQQm3e/zL/eSAkjeKMC.fqYorDPIHFyNk.9Iq5CHoI5Oqru', '', NULL),
-(15, 'Geovani', 'geo_ldr', 'geovaninascimento2001@gmail.com', 'User', '2001-04-21', NULL, NULL, '$2y$10$hGUaMtx1y3K4vTBpdxZqGeK3ONJ4w3V4PW1LDMLPk5lFUIyEAUt.i', '', NULL);
+INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, `data_nascimento`, `empresa`, `site_empresa`, `senha`, `icone`, `id_dados`, `id_jogos`) VALUES
+(1, 'João da Silva', '', '', '', '1969-11-25', '', '', 'fefgh', '', NULL, NULL),
+(2, 'Gabriel', '', '', '', '2002-02-23', '', '', 'gaga123', '', NULL, NULL),
+(3, 'Fernanda', '', '', '', '2005-06-09', '', '', 'fefe1367', '', NULL, NULL),
+(4, 'Gustavo', '', '', '', '1999-12-05', '', '', 'gusjava', '', NULL, NULL),
+(5, 'Alexandre', '', '', '', '1999-03-10', '', '', 'axe2799', '', NULL, NULL),
+(6, 'Paulo', '', '', '', '2002-11-03', '', '', 'wde4dfn', '', NULL, NULL),
+(7, 'Marcos', '', '', '', '2005-05-25', '', '', 'uvhfcvb', '', NULL, NULL),
+(8, 'Patrick', '', '', '', '1995-07-15', '', '', 'dgdhcv', '', NULL, NULL),
+(9, 'Júlio', '', '', '', '2001-03-06', '', '', 'kkd23vn', '', NULL, NULL),
+(10, 'Adriana', '', '', '', '1990-09-30', '', '', 'efdfg', '', NULL, NULL),
+(11, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'Dev', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', '', NULL, NULL),
+(12, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'User', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', '', NULL, NULL),
+(13, 'ADMIN', 'admin', 'technology.ldr@gmail.com', 'Admin', '1995-07-11', 'LDR TECHNOLOGY', '', '$2y$10$2dDOjvcZxMrpB8BIgpVoLOJP/A7wgkCC05q2InqpHqY9uS1cmByRW', '', NULL, NULL),
+(14, 'José', 'JOOJE', 'JoseHisth@gmail.com', 'Dev', '1986-08-13', 'CBHJS', '', '$2y$10$IT5wg8PQQm3e/zL/eSAkjeKMC.fqYorDPIHFyNk.9Iq5CHoI5Oqru', '', NULL, NULL),
+(15, 'Geovani', 'geo_ldr', 'geovaninascimento2001@gmail.com', 'User', '2001-04-21', NULL, NULL, '$2y$10$hGUaMtx1y3K4vTBpdxZqGeK3ONJ4w3V4PW1LDMLPk5lFUIyEAUt.i', '', NULL, NULL),
+(16, 'Henrique', 'Henri123', 'Henri123@gmail.com', 'User', '1997-07-09', NULL, NULL, '$2y$10$LXwqOqC8dwcc0a2ap2CHiebGRyAR5b2mKGSc3n.SHGdd9Qrs0LQeO', '', NULL, NULL);
 
 --
 -- Restrições para despejos de tabelas
@@ -472,8 +483,8 @@ INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, 
 -- Limitadores para a tabela `historico`
 --
 ALTER TABLE `historico`
-  ADD CONSTRAINT `id_jogos` FOREIGN KEY (`id_J`) REFERENCES `jogos` (`id_jogos`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `id_usuario` FOREIGN KEY (`id_U`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `historico_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`),
+  ADD CONSTRAINT `historico_ibfk_2` FOREIGN KEY (`id_jogo`) REFERENCES `jogos` (`id_jogos`);
 
 --
 -- Limitadores para a tabela `jogos`
@@ -489,19 +500,22 @@ ALTER TABLE `jogos`
 -- Limitadores para a tabela `requisitos_minimos`
 --
 ALTER TABLE `requisitos_minimos`
-  ADD CONSTRAINT `requisitos_minimos_ibfk_1` FOREIGN KEY (`id_jogo`) REFERENCES `jogos` (`id_jogos`);
+  ADD CONSTRAINT `requisitos_minimos_ibfk_1` FOREIGN KEY (`id_jogo`) REFERENCES `jogos` (`id_jogos`),
+  ADD CONSTRAINT `requisitos_minimos_ibfk_2` FOREIGN KEY (`id_sistema`) REFERENCES `sistema_operacional` (`id_sistema`);
 
 --
 -- Limitadores para a tabela `requisitos_recomendados`
 --
 ALTER TABLE `requisitos_recomendados`
-  ADD CONSTRAINT `requisitos_recomendados_ibfk_1` FOREIGN KEY (`id_jogo`) REFERENCES `jogos` (`id_jogos`);
+  ADD CONSTRAINT `requisitos_recomendados_ibfk_1` FOREIGN KEY (`id_jogo`) REFERENCES `jogos` (`id_jogos`),
+  ADD CONSTRAINT `requisitos_recomendados_ibfk_2` FOREIGN KEY (`id_sistema`) REFERENCES `sistema_operacional` (`id_sistema`);
 
 --
 -- Limitadores para a tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_dados`) REFERENCES `dados` (`id_dados`);
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_dados`) REFERENCES `dados` (`id_dados`),
+  ADD CONSTRAINT `usuarios_ibfk_2` FOREIGN KEY (`id_jogos`) REFERENCES `jogos` (`id_jogos`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
