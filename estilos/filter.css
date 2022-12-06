@@ -115,6 +115,8 @@ main .catalog .game {
   margin: 10px;
   border-radius: 10px;
   outline: 3px solid black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 main .catalog .game .capa {

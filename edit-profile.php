@@ -71,9 +71,14 @@
                             <span class='span-required'>Digite uma senha válida</span>
                         </div>
                     </div>
-
-                    <div class='sign-up'>
-                        <div>
+                    <div class='data-user'>
+                        <div class='box-user'>
+                            <label for='icon'><i class='fa-solid fa-upload'></i>Adicionar foto de perfil</label>
+                            <input type='file' name='icon' id='icon' class='required' /*oninput='emailValidate()'*/ value='$reg->icone' required>
+                            <!-- <label for='email' class='label-error'>E-mail</label> -->
+                            <span class='span-required'>Digite um e-mail válido</span>
+                        </div>
+                        <div class='box-user'>
                             <input type='submit' value='Confirmar Alterações' id='btn'>
                         </div>
                     </div>";
