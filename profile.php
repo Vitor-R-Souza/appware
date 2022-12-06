@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
     <script defer src="scripts/profile.js"></script>
     <script defer src="scripts/profile-validation.js"></script>
+    <script defer src="scripts/profile-edit-icon.js"></script>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -27,6 +28,11 @@
                     <div class="profile">
                         <!-- <form action="#" method="post"> -->
                         <?php
+                            /*echo "<div class='edit-icon'>
+                            <form method='post' action='' id=''>
+
+                            </form>
+                            </div>";*/
                             //echo "<form action='#' method='post'>";
                             if(empty($_SESSION['icon'])){
                                 /*echo "<div class='photo-profile'>
@@ -103,7 +109,7 @@
                         </div>
                     </li>
                     <li id="publicateds">
-                        <h1>Settings</h1>
+                        <h1>Publicados</h1>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Velit quaerat magnam sit, nobis sed cum eius voluptatem quis facilis sunt, quia? Non atque, facere obcaecati veniam! Impedit atque, facilis similique doloribus quidem quibusdam quod! Quam odit quasi quia accusantium natus eos accusamus sequi repellat modi reiciendis vitae provident tenetur sint tempora quaerat expedita facere, assumenda quos consequatur minima quod deleniti.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sapiente.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias quasi est expedita, a pariatur deleniti cum reiciendis similique cupiditate?</p>
