@@ -22,7 +22,7 @@
     ?>
     <main>
         
-        <form action="e-profile-act.php" method="post" class="signin" autocomplete="off">
+        <form action="e-profile-act.php" method="post" class="signin" enctype="multipart/form-data" autocomplete="off">
             
             <?php
                 echo "<input type='hidden' name='id' value='$reg->id_usuario'>";
@@ -50,7 +50,7 @@
                                 <span class='span-required'>Nome deve ter no mínimo 3 caracteres</span>
                             </div>
                             <div class='box-user'>
-                                <input type='text' name='site' id='site-dev' class='required' oninput='siteValidate()' value='$reg->site_empresa' required placeholder='Site/Página da Empresa/Estúdio'>
+                                <input type='text' name='web' id='site-dev' class='required' oninput='siteValidate()' value='$reg->site_empresa' required placeholder='Site/Página da Empresa/Estúdio'>
                                 <!-- <label for='site-dev' class='label-error'>Site ou Página da Empresa/Estúdio</label> -->
                                 <span class='span-required'>Site deve ter o endereço correto</span>
                             </div>";

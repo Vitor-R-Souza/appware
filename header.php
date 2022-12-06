@@ -25,7 +25,14 @@
                 <li><a href="contact.php">Contato</a></li>
                 <li><a href="filter.php">Catalógo</a></li>
             </ul>
-            <img src="imagens/profile.png" class="user-pic" onclick="toggleMenu()">
+            <?php
+                if(empty($_SESSION['icon'])){
+                    echo"<img src='imagens/profile.png' class='user-pic' onclick='toggleMenu()'>";
+                }else{
+                    echo"<img src='$_SESSION[icon]' class='user-pic' onclick='toggleMenu()'>";
+                }
+            ?>
+            
             <label for="check" class="bar">
                 <span class="fa fa-bars" id="bars"></span>
                 <span class="fa fa-times" id="times"></span>
