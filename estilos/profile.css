@@ -132,6 +132,7 @@ main .container .wrapper .profile-indicator .profile {
 
 main .container .wrapper .profile-indicator .profile img {
   width: 11.111vw;
+  height: 11.111vw;
   border-radius: 50%;
 }
 

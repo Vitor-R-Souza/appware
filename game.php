@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php
+        require_once('requires/connect.php');
+        $id = $_GET['id'];
+
+        $busc = $BD->query("SELECT * FROM `jogos` WHERE `id_jogos` = $id");
+        $r = $busc->fetch_object();
+    ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo</title>
+    <?php
+        echo "<title>$r->nome_jogo</title>";
+    ?>
     <link rel="stylesheet" href="estilos/game.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
@@ -13,14 +22,11 @@
 </head>
 <body>
     <?php
-        require_once('requires/connect.php');
+        
         require_once('requires/func.php');
         require_once('header.php');
 
-        $id = $_GET['id'];
-
-        $busc = $BD->query("SELECT * FROM `jogos` WHERE `id_jogos` = $id");
-        $r = $busc->fetch_object();
+        
     ?>
     <main>
         <section class="section1">

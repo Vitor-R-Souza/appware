@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 06-Dez-2022 às 01:18
--- Versão do servidor: 5.7.36
+-- Tempo de geração: 06-Dez-2022 às 20:40
+-- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -31,8 +31,8 @@ USE `appware`;
 
 DROP TABLE IF EXISTS `categorias`;
 CREATE TABLE IF NOT EXISTS `categorias` (
-  `id_catego` int(11) NOT NULL,
-  `generos` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_catego` int NOT NULL,
+  `generos` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_catego`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -92,14 +92,14 @@ INSERT INTO `categorias` (`id_catego`, `generos`) VALUES
 
 DROP TABLE IF EXISTS `dados`;
 CREATE TABLE IF NOT EXISTS `dados` (
-  `id_dados` int(11) NOT NULL AUTO_INCREMENT,
+  `id_dados` int NOT NULL AUTO_INCREMENT,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
-  `processador` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sistema_operacional` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_computador` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `processador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sistema_operacional` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_computador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_dados`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -111,11 +111,11 @@ CREATE TABLE IF NOT EXISTS `dados` (
 
 DROP TABLE IF EXISTS `historico`;
 CREATE TABLE IF NOT EXISTS `historico` (
-  `id_historico` int(11) NOT NULL AUTO_INCREMENT,
-  `id_jogo` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
+  `id_historico` int NOT NULL AUTO_INCREMENT,
+  `id_jogo` int NOT NULL,
+  `id_usuario` int NOT NULL,
   `data_analise` date NOT NULL,
-  `analise` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `analise` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_historico`),
   KEY `id_usuario` (`id_usuario`),
   KEY `id_jogo` (`id_jogo`)
@@ -129,23 +129,23 @@ CREATE TABLE IF NOT EXISTS `historico` (
 
 DROP TABLE IF EXISTS `jogos`;
 CREATE TABLE IF NOT EXISTS `jogos` (
-  `id_jogos` int(11) NOT NULL AUTO_INCREMENT,
-  `nome_jogo` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `classificacao_indi` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sinopse` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_jogos` int NOT NULL AUTO_INCREMENT,
+  `nome_jogo` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `classificacao_indi` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sinopse` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `ano_lancamento` date NOT NULL,
-  `arquitetura_sistema` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `desenvolvedora` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `capa_jogo` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avaliacao` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `capa_filtragem` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `arquitetura_sistema` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `desenvolvedora` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `capa_jogo` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avaliacao` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `capa_filtragem` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `indies` decimal(10,0) NOT NULL,
   `qts_analisados` decimal(15,0) NOT NULL,
-  `id_catego` int(11) DEFAULT NULL,
-  `id_catego2` int(11) DEFAULT NULL,
-  `id_catego3` int(11) DEFAULT NULL,
-  `id_R` int(11) DEFAULT NULL,
-  `id_M` int(11) DEFAULT NULL,
+  `id_catego` int DEFAULT NULL,
+  `id_catego2` int DEFAULT NULL,
+  `id_catego3` int DEFAULT NULL,
+  `id_R` int DEFAULT NULL,
+  `id_M` int DEFAULT NULL,
   PRIMARY KEY (`id_jogos`),
   KEY `id_catego` (`id_catego`),
   KEY `id_catego3` (`id_catego2`),
@@ -159,8 +159,8 @@ CREATE TABLE IF NOT EXISTS `jogos` (
 --
 
 INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `ano_lancamento`, `arquitetura_sistema`, `desenvolvedora`, `capa_jogo`, `avaliacao`, `capa_filtragem`, `indies`, `qts_analisados`, `id_catego`, `id_catego2`, `id_catego3`, `id_R`, `id_M`) VALUES
-(1, 'Red Dead Redemption 2', '+18', 'Red Dead Redemption 2, a épica aventura de mundo aberto da Rockstar Games aclamada pela crítica e o jogo mais bem avaliado desta geração de consoles, agora chega aprimorado para PC com conteúdos inéditos no Modo História, melhorias visuais e muito mais.', '2018-10-26', '64 bits', 'Rockstar Games', 'big-red-dead-redemption2.jpg', '', 'red-dead-redemption2.jpg', '0', '95', 1, 36, 39, 1, 1),
-(2, 'Marvel Spider-Man Remastered', '12', 'Em Marvel\'s Spider-Man Remasterizado, os mundos de Peter Parker e Spider-Man entram em conflito em uma história original cheia de ação. Jogue como um Peter Parker experiente que combate as maiores ameaças do crime e vilões icônicos na Nova York da Marvel.', '2019-08-28', '64 bits', 'Insomniac Games, Nixxes Software', 'big-marvel-spiderman.jpg', '', 'marvel-spiderman.jpg', '0', '70', 2, 36, 39, 2, 2),
+(1, 'Red Dead Redemption 2', '+18', 'Red Dead Redemption 2, a épica aventura de mundo aberto da Rockstar Games aclamada pela crítica e o jogo mais bem avaliado desta geração de consoles, agora chega aprimorado para PC com conteúdos inéditos no Modo História, melhorias visuais e muito mais.', '2018-10-26', '64 bits', 'Rockstar Games', 'big-red-dead-redemption2.jpg', '', 'red-dead-redemption2.jpg', '0', '95', 1, 36, 8, 1, 1),
+(2, 'Marvel Spider-Man Remastered', '12', 'Em Marvel\'s Spider-Man Remasterizado, os mundos de Peter Parker e Spider-Man entram em conflito em uma história original cheia de ação. Jogue como um Peter Parker experiente que combate as maiores ameaças do crime e vilões icônicos na Nova York da Marvel.', '2019-08-28', '64 bits', 'Insomniac Games, Nixxes Software', 'big-marvel-spiderman.jpg', '', 'marvel-spiderman.jpg', '0', '70', 2, 36, 1, 2, 2),
 (3, 'Outlast 2', '+18', 'Em Outlast 2, você controla Blake Langermann, um cinegrafista que, junto da esposa repórter, vai até o Arizona, nos Estados Unidos, para cobrir o suposto assassinato de uma jovem. Um acidente o isola da mulher e encontrá-la se torna sua missão principal.\r\nEntretanto, o local é povoado por uma seita satanista, com direito a sacrifícios por todo lado.', '2017-04-24', '64 bits', 'Red Barrels', 'big-outlast2.jpg', '', 'outlast2.jpg', '0', '0', 3, 40, NULL, 3, 3),
 (4, 'Forza Horizon 5', 'L', 'Sua maior aventura Horizon te espera! Explore o mundo aberto vibrante e em constante evolução nas terras mexicanas. Participe de corridas divertidas e sem limites enquanto pilota centenas dos melhores carros do mundo. Comece hoje sua Aventura Horizon e adicione o jogo a sua Lista de Desejos!', '2021-11-05', '64 bits', 'Playground Games', 'big-forza-horizon5.jpg', '', 'forza-horizon5.jpg', '0', '84', 4, 36, NULL, 4, 4),
 (5, 'FIFA 23', 'L', 'FIFA 23 traz o Jogo de Todo Mundo aos gramados com a tecnologia HyperMotion2, proporcionando ainda mais realismo às partidas, a FIFA World Cup™ masculina e feminina (lançamento durante a temporada), times femininos, recursos de crossplay* e muito mais.', '2022-09-30', '64 bits', 'EA Canada & EA Romania', 'big-fifa23.jpg', '', 'fifa23.jpg', '0', '65', 5, NULL, NULL, 5, 5),
@@ -177,15 +177,15 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 (16, 'Street Fighter V', '12', 'Experimente os intensos combates um contra um de Street Fighter® V! Escolha entre 16 personagens icônicos e lute contra amigos, online ou offline, com uma robusta variedade de opções de partidas.', '2016-02-16', '64 bits', 'Capcom', 'big-street-fighter5.jpg', '', 'street-fighter5.jpg', '0', '0', 16, NULL, NULL, 16, 16),
 (17, 'Portal 2', 'L', 'A \"Iniciativa de Testes Perpétuos\" foi expandida para permitir que você projete quebra-cabeças cooperativos para você e seus amigos!', '2011-04-18', '32 ou 64 bits', 'Valve', 'big-portal2.jpg', '', 'portal2.jpg', '0', '0', 17, 18, NULL, 17, 17),
 (18, 'Age of Empires III: Definitive Edition', '10', 'Age of Empires III: Definitive Edition marca a celebração de uma das mais famosas franquias de estratégia em tempo real em formato definitivo, com gráficos e música remasterizados, todas as expansões lançadas anteriormente e conteúdo novo para ser desfrutado pela primeira vez.', '2020-10-15', '64 bits', 'Tantalus Media, Forgotten Empires', 'big-age-of-empires3.jpg', '', 'age-of-empires3.jpg', '0', '0', 18, 35, NULL, 18, 18),
-(19, 'Cuphead', '10', 'Cuphead é um jogo de ação e tiros clássico, com enorme ênfase nas batalhas de chefes. Inspirado nas animações infantis da década de 1930, os visuais e efeitos sonoros foram minuciosamente recriados com as mesmíssimas técnicas dessa era, com destaque para desenhos feitos à mão, fundos...', '2017-09-29', '32 ou 64 bits', 'Studio MDHR Entertainment Inc.', 'big-cuphead.jpg', '', 'cuphead.jpg', '0', '0', 19, 39, 30, 19, 19),
+(19, 'Cuphead', '10', 'Cuphead é um jogo de ação e tiros clássico, com enorme ênfase nas batalhas de chefes. Inspirado nas animações infantis da década de 1930, os visuais e efeitos sonoros foram minuciosamente recriados com as mesmíssimas técnicas dessa era, com destaque para desenhos feitos à mão, fundos...', '2017-09-29', '32 ou 64 bits', 'Studio MDHR Entertainment Inc.', 'big-cuphead.jpg', '', 'cuphead.jpg', '0', '0', 19, 1, 30, 19, 19),
 (20, 'Bayonetta', '+18', 'A obra-prima de ação universalmente aclamada da PlatinumGames finalmente chega ao PC. Experimente a ação elegante over-the-top em 60fps em resoluções HD desbloqueadas. A maneira definitiva de jogar: ser ruim nunca me pareceu tão bom.', '2009-10-29', '32 ou 64 bits', 'PlatinumGames', 'big-bayonetta.jpg', '', 'bayonetta.jpg', '0', '0', 20, 1, NULL, 20, 20),
 (21, 'Tom Clancy: Splinter Cell Blacklist', '16', 'Infiltre nas posições terroristas, adquira inteligência crítica usando qualquer meio necessário, execute com extremo dano e saia sem deixar rastros!Você é Sam Fisher, um agente altamente treinado pela secreta Third Echelon, da NSA.', '2002-11-17', '32 ou 64 bits', 'Ubisoft', 'big-splinter-cell-blacklist.jpg', '', 'splinter-cell-blacklist.jpg', '0', '0', 21, 18, 1, 21, 21),
-(22, 'ARK: Survival Evolved', '14', 'Como um homem ou mulher abandonado nu, congelando e morrendo de fome numa ilha misteriosa, você precisa caçar, colher, construir itens, cultivar e construir abrigos para sobreviver. Use habilidade e astúcia para matar, domar, criar e montar Dinossauros e criaturas primitivas vivendo...', '2015-06-02', '64 bits', 'Studio Wildcard, Instinct Games, Efecto Studios, V', 'big-ark.jpg', '', 'ark.jpg', '0', '0', 22, 39, 6, 22, 22),
+(22, 'ARK: Survival Evolved', '14', 'Como um homem ou mulher abandonado nu, congelando e morrendo de fome numa ilha misteriosa, você precisa caçar, colher, construir itens, cultivar e construir abrigos para sobreviver. Use habilidade e astúcia para matar, domar, criar e montar Dinossauros e criaturas primitivas vivendo...', '2015-06-02', '64 bits', 'Studio Wildcard, Instinct Games, Efecto Studios, V', 'big-ark.jpg', '', 'ark.jpg', '0', '0', 22, 1, 6, 22, 22),
 (23, 'Geometry Dash', 'L', 'Pule e voe através do perigo neste plataforma de ação baseada em ritmo!', '2013-08-13', '32 ou 64 bits', 'RobTop Games', 'big-geometry-dash.jpg', '', 'geometry-dash.jpg', '0', '0', 23, 17, 19, 23, 23),
 (24, 'Minecraft', 'L', 'Minecraft é um jogo eletrônico dos gêneros sandbox e sobrevivência que não possui objetivos específicos a serem alcançados, permitindo aos jogadores uma grande liberdade de escolha de como jogá-lo.', '2011-11-18', '32 ou 64 bits', 'Mojang Studios, Other Ocean Interactive, 4J Studio', 'big-minecraft.jpg', '', 'minecraft.jpg', '0', '75', 24, 36, 2, 24, 24),
 (25, 'Verdun', '16', 'Guerra de trincheiras impiedosa mergulha você e seu esquadrão em intensas batalhas de ataque e defesa. Verdun é o primeiro FPS multiplayer ambientado em um autêntico cenário da Primeira Guerra Mundial oferecendo uma experiência de campo de batalha raramente vista.', '2015-04-28', '32 ou 64 bits', ' M2H, Blackmill Games', 'big-verdun.jpg', '', 'verdun.jpg', '1', '0', 25, 1, 7, 25, 25),
 (26, 'Zork Anthology', '10', 'Uma vez que você entra pela porta para Zork, você deixa o mundo dos jogos de arcade e fantasias banais para trás e entra na dimensão de sua imaginação.', '1989-07-14', '32 ou 64 bits', ' Infocom', 'big-zork.jpg', '', 'zork.jpg', '0', '0', 26, 2, NULL, 26, 26),
-(27, 'Life is Strange - Episode 1', '16', 'O Episódio 1 agora é GRÁTIS! Life is Strange é uma premiada aventura em episódios, aclamada pela crítica, que permite ao jogador voltar no tempo e alterar passado, presente e futuro.', '2015-01-30', '32 ou 64 bits', 'DONTNOD Entertainment, Feral Interactive (Mac), Fe', 'big-life-is-strange-ep1.jpg', '', 'life-is-strange-ep1.jpg', '0', '0', 27, 39, 29, 27, 27),
+(27, 'Life is Strange - Episode 1', '16', 'O Episódio 1 agora é GRÁTIS! Life is Strange é uma premiada aventura em episódios, aclamada pela crítica, que permite ao jogador voltar no tempo e alterar passado, presente e futuro.', '2015-01-30', '32 ou 64 bits', 'DONTNOD Entertainment, Feral Interactive (Mac), Fe', 'big-life-is-strange-ep1.jpg', '', 'life-is-strange-ep1.jpg', '0', '0', 27, 17, 29, 27, 27),
 (28, 'Phoenix Wright: Ace Attorney Trilogy', '14', 'Torne-se Phoenix Wright e experimente a emoção da batalha lutando para salvar seus clientes inocentes no tribunal. Jogue todos os 14 episódios, cobrindo os três primeiros jogos, em uma bela coleção.', '2019-04-09', '64 bits', 'CAPCOM Co., Ltd.', 'big-phoenix-wright.jpg', '', 'phoenix-wright.jpg', '0', '0', 28, 2, 18, 28, 28),
 (29, 'The Walking Dead: Season 1', '16', 'Uma série de terror de aventura de cinco partes ambientada no mesmo universo da premiada série de quadrinhos de Robert Kirkman.', '2012-04-24', '32 ou 64 bits', 'Telltale Games', 'big-twd-season1.jpg', '', 'twd-season1.jpg', '0', '0', 29, 22, NULL, 29, 29),
 (30, 'Metal Slug', '10', '\"METAL SLUG\", o primeiro título da lendária série de jogos de tiro 2D e gun da SNK, onde tudo começou, retorna às missões na plataforma de jogos!', '1996-04-18', '32 ou 64 bits', 'Dotemu', 'big-metal-slug.jpg', '', 'metal-slug.jpg', '0', '0', 30, 19, NULL, 30, 30),
@@ -197,14 +197,14 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 (36, 'Bully: Scholarship Edition', '14', 'Bully: Scholarship Edition se passa em uma escola fictícia em New England, Bullworth Academy, e conta a história de Jimmy Hopkins, um adolescente malandro de 15 anos que passa pela hilaridade e pela estranheza da adolescência. Acabe com os esportistas jogando queimada, sacaneie as patricinhas, salve os nerds, beije a garota e, por fim, navegue pela hierarquia social da pior escola das redondezas.', '2006-10-17', '32 ou 64 bits', 'Rockstar Games', 'big-bully.jpg', '', 'bully.jpg', '0', '0', 36, 2, 1, 36, 36),
 (37, 'House Party', '16', 'Este histérico, rico em histórias e jogo de aventura 3D é tudo sobre escolha do jogador e festa do jeito que você quer. O sistema exclusivo de IA e scripting do House Party permite que o jogo modele e molde seu conteúdo em torno de suas escolhas. Você verá algo novo ou diferente cada vez que jogar.\r\nAté hoje, há centenas de histórias diferentes, missões secundárias e narrativas, e milhares de histórias ramificando e elementos dinâmicos. O conteúdo está sendo adicionado regularmente, então ele continua ficando cada vez maior e melhor!', '2022-07-15', '32 ou 64 bits', 'Eek! Games, LLC', 'big-house-party.jpg', '', 'house-party.jpg', '0', '0', 37, 15, NULL, 37, 37),
 (38, 'The Binding of Isaac: Rebirth', '14', 'The Binding of Isaac: Rebirth é um atirador de RPG de ação gerado aleatoriamente com elementos pesados semelhantes a Rogue. Seguindo Isaac em sua jornada, os jogadores encontrarão tesouros bizarros que mudam a forma de Isaac dando-lhe habilidades super humanas e permitindo que ele lute contra as massas de criaturas misteriosas, descubra segredos e lute seu caminho para a segurança...', '2014-11-04', '32 ou 64 bits', 'Nicalis, Inc, Edmund McMillen', '', '', 'the-binding-of-isaac-rebirth.jpg', '0', '0', 38, 1, 22, 38, 38),
-(39, 'Grand Theft Auto V', '+18', 'Grand Theft Auto V para PC oferece aos jogadores a opção de explorar o gigantesco e premiado mundo de Los Santos e Blaine County em resoluções de até 4K e além, assim como a chance de experimentar o jogo rodando a 60 FPS (quadros por segundo).', '2013-09-17', '64 bits', 'Rockstar Games', '', '', 'gta5.jpg', '0', '83', 39, 36, 8, 39, 39),
+(39, 'Grand Theft Auto V', '+18', 'Grand Theft Auto V para PC oferece aos jogadores a opção de explorar o gigantesco e premiado mundo de Los Santos e Blaine County em resoluções de até 4K e além, assim como a chance de experimentar o jogo rodando a 60 FPS (quadros por segundo).', '2013-09-17', '64 bits', 'Rockstar Games', '', '', 'gta5.jpg', '0', '83', 1, 36, 8, 39, 39),
 (40, 'Alien: Isolation', '+18', 'Descubra o verdadeiro significado do medo em Alien: Isolation, um horror de sobrevivência ambientado em uma atmosfera de medo constante e perigo mortal.', '2014-10-07', '32 ou 64 bits', 'Creative Assembly, Feral Interactive (Mac), Feral', '', '', 'alien-isolation.jpg', '0', '0', 40, 3, NULL, 40, 40),
 (41, 'The Elder Scrolls V: Skyrim Special Edition', '+18', 'Vencedora de mais de 200 Prêmios de Jogos do Ano, a Skyrim Special Edition dá vida à fantasia épica em detalhes impressionantes. A Edição Especial inclui o jogo aclamado pela crítica e complementos com recursos totalmente novos, como arte e efeitos remasterizados, raios de deus volumoscos, profundidade dinâmica de campo, reflexões de espaço de tela e muito mais.', '2011-11-11', '64 bits', 'Bethesda Game Studios', '', '', 'skyrim.jpg', '0', '90', 41, 36, NULL, 41, 41),
 (42, 'Fallout 4', '+18', 'Bethesda Game Studios, os premiados criadores de Fallout 3 e The Elder Scrolls V: Skyrim, dão as boas-vindas ao mundo de Fallout 4 – seu jogo mais ambicioso de todos os tempos, e a próxima geração de jogos de mundo aberto.', '2015-11-10', '64 bits', 'Bethesda Game Studios', '', '', 'fallout4.jpg', '0', '0', 42, 41, NULL, 42, 42),
 (43, 'Cyberpunk 2077', '+18', 'Cyberpunk 2077 é um RPG de ação e aventura em mundo aberto que se passa em Night City, uma megalópole perigosa onde todos são obcecados por poder, glamour e alterações corporais.', '2020-12-10', '64 bits', 'CD PROJEKT RED', '', '', 'cyberpunk2077.jpg', '0', '80', 41, 36, NULL, 43, 43),
-(44, 'Genshin Impact', '10', 'Você irá explorar um mundo de fantasia chamado \"Teyvat\" no jogo, onde você pode viajar por sete nações, encontrar companheiros com diferentes personalidades e habilidades únicas, lutar contra inimigos e embarcar na estrada para reencontrar seu parente de sangue.', '2020-09-28', '64 bits', 'COGNOSPHERE PTE. LTD.', '', '', 'genshin-impact.jpg', '0', '68', 33, 36, 39, 44, 44),
+(44, 'Genshin Impact', '10', 'Você irá explorar um mundo de fantasia chamado \"Teyvat\" no jogo, onde você pode viajar por sete nações, encontrar companheiros com diferentes personalidades e habilidades únicas, lutar contra inimigos e embarcar na estrada para reencontrar seu parente de sangue.', '2020-09-28', '64 bits', 'COGNOSPHERE PTE. LTD.', '', '', 'genshin-impact.jpg', '0', '68', 33, 36, 2, 44, 44),
 (45, 'Dying Light 2 Stay Human', '+18', 'O vírus venceu. A civilização voltou à Idade das Trevas. A Cidade, um dos últimos locais dos humanos, está prestes a entrar em colapso. Use sua agilidade e habilidades de combate para sobreviver e transformar o mundo. Suas escolhas fazem a diferença.', '2022-02-04', '64 bits', 'Techland', '', '', 'dying-light2.jpg', '0', '82', 40, 36, 1, 45, 45),
-(46, 'Apex Legends', '14', 'Domine com personalidade em Apex Legends, um jogo de tiro grátis* no qual personagens lendários com habilidades poderosas se unem para lutar por fama e fortuna na Fronteira.\nDomine um elenco diverso de Lendas, jogabilidade tática de equipe e inovações ousadas que elevam o nível da experiência battle royale, tudo dentro de um mundo inóspito onde vale tudo. Esta é a próxima evolução do jogo de tiro de heróis e heroínas.', '2019-02-04', '64 bits', 'Respawn Entertainment', '', '', 'apex-legends.jpg', '0', '70', 39, 10, NULL, 46, 46),
+(46, 'Apex Legends', '14', 'Domine com personalidade em Apex Legends, um jogo de tiro grátis* no qual personagens lendários com habilidades poderosas se unem para lutar por fama e fortuna na Fronteira.\nDomine um elenco diverso de Lendas, jogabilidade tática de equipe e inovações ousadas que elevam o nível da experiência battle royale, tudo dentro de um mundo inóspito onde vale tudo. Esta é a próxima evolução do jogo de tiro de heróis e heroínas.', '2019-02-04', '64 bits', 'Respawn Entertainment', '', '', 'apex-legends.jpg', '0', '70', 1, 10, 13, 46, 46),
 (47, 'Assassin*s Creed Valhalla', '+18', 'Torne-se um viking lendário em busca de glória. Ataque seus inimigos, amplie seu assentamento e consolide seu poder político.', '2020-11-10', '64 bits', 'Ubisoft Montreal', '', '', 'ac-valhalla.jpg', '0', '85', 36, 41, NULL, 47, 47),
 (48, 'The Sims 4', '12', 'Curta o poder de criar e controlar pessoas num mundo virtual onde não há regras. Seja poderoso e livre, divirta-se e jogue com a vida!', '2014-09-02', '64 bits', 'Maxis', '', '', 'the-sims4.jpg', '0', '69', 15, 37, NULL, 48, 48),
 (49, 'Far Cry 6', '+18', 'Entregue-se ao mundo sombrio de uma guerrilha revolucionária para libertar um país de seus ditadores opressivos.', '2021-10-07', '64 bits', 'Ubisoft Toronto', '', '', 'farcry6.jpg', '0', '76', 7, 36, 1, 49, 49),
@@ -212,7 +212,7 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 (51, 'Call of Duty: Warzone', '+18', 'Em CoD Warzone, seu objetivo é seu o último sobrevivente em meio a uma multidão de competidores. Para quem está tendo dificuldades em superar os adversários, separamos algumas dicas importantes que podem te ajudar a vencer o Warzone (incluindo batalhas no Gulag).', '2020-03-10', '64 bits', 'Raven Software, Infinity Ward', '', '', 'cod-warzone.jpg', '0', '73', 13, 8, NULL, 51, 51),
 (52, 'Call of Duty: Modern Warfare II', '+18', 'O Call of Duty®: Modern Warfare® II coloca os jogadores dentro de um conflito global sem precedentes que conta com o retorno dos Operadores icônicos da Força-Tarefa 141.', '2022-10-28', '64 bits', 'Infinity Ward, Raven Software, Beenox, Treyarch, H', '', '', 'cod-mw2.jpg', '0', '77', 7, 1, NULL, 52, 52),
 (53, 'League of Legends', '12', 'League of Legends é um jogo de estratégia em que duas equipes de cinco poderosos Campeões se enfrentam para destruir a base uma da outra. Escolha entre mais de 140 Campeões para realizar jogadas épicas, assegurar abates e destruir torres conforme você luta até a vitória.', '2009-10-27', '32 ou 64 bits', 'Riot Games', 'big-lol.jpg', '', 'lol.jpg', '0', '85', 10, 18, 35, 53, 53),
-(54, 'God of War', '+18', 'Com a vingança contra os deuses do Olimpo em um passado distante, Kratos agora vive como um mortal no reino dos deuses e monstros nórdicos. É nesse mundo duro e implacável que ele deve lutar para sobreviver... e ensinar seu filho a fazer o mesmo.', '2018-04-20', '64 bits', ' Santa Monica Studio', '', '', 'gow.jpg', '0', '89', 39, 6, NULL, 54, 54),
+(54, 'God of War', '+18', 'Com a vingança contra os deuses do Olimpo em um passado distante, Kratos agora vive como um mortal no reino dos deuses e monstros nórdicos. É nesse mundo duro e implacável que ele deve lutar para sobreviver... e ensinar seu filho a fazer o mesmo.', '2018-04-20', '64 bits', ' Santa Monica Studio', '', '', 'gow.jpg', '0', '89', 1, 6, 36, 54, 54),
 (55, 'Hitman 2', '18', 'Viaje ao redor do mundo e rastreie os seus alvos nos locais abertos, e exóticos, de HITMAN™ 2. Das ruas ensolaradas, às sombrias florestas tropicais, nenhum lugar está a salvo do assassino mais criativo do mundo, o Agente 47, em sua última história de suspense e espionagem.', '2018-11-13', '64 bits', 'IO Interactive A/S', '', '', 'hitman2.jpg', '0', '65', 21, 18, NULL, 55, 55),
 (56, '171 ', '+18 ', '171 é um jogo de ação e aventura de mundo aberto com ambientação inspirada no Brasil. ', '2022-11-17', '64 bits ', 'Betagames Group', 'big-171', '', '171.jpg', '1', '55', 8, 36, 1, 56, 56),
 (57, 'Stardew Valley', '12 ', 'Você herdou a antiga fazenda do seu avô, em Stardew Valley. Com ferramentas de segunda-mão e algumas moedas, você parte para dar início a sua nova vida. Será que você vai aprender a viver da terra, a transformar esse matagal em um próspero lar? ', '2016-02-16', ' 32 ou 64 bits', 'ConcernedApe', '', '', 'stardew-valley.jpg', '1', '43', 6, 15, NULL, 57, 57),
@@ -226,13 +226,13 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 
 DROP TABLE IF EXISTS `requisitos_minimos`;
 CREATE TABLE IF NOT EXISTS `requisitos_minimos` (
-  `id_M` int(11) NOT NULL AUTO_INCREMENT,
-  `processador` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_M` int NOT NULL AUTO_INCREMENT,
+  `processador` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
-  `id_jogo` int(11) DEFAULT NULL,
-  `id_sistema` int(11) DEFAULT NULL,
+  `id_jogo` int DEFAULT NULL,
+  `id_sistema` int DEFAULT NULL,
   PRIMARY KEY (`id_M`),
   KEY `id_jogo` (`id_jogo`),
   KEY `id_sistema` (`id_sistema`)
@@ -310,13 +310,13 @@ INSERT INTO `requisitos_minimos` (`id_M`, `processador`, `placa_video`, `espaco_
 
 DROP TABLE IF EXISTS `requisitos_recomendados`;
 CREATE TABLE IF NOT EXISTS `requisitos_recomendados` (
-  `id_R` int(11) NOT NULL AUTO_INCREMENT,
-  `processador` varchar(90) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_R` int NOT NULL AUTO_INCREMENT,
+  `processador` varchar(90) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
-  `id_jogo` int(11) DEFAULT NULL,
-  `id_sistema` int(11) DEFAULT NULL,
+  `id_jogo` int DEFAULT NULL,
+  `id_sistema` int DEFAULT NULL,
   PRIMARY KEY (`id_R`),
   KEY `id_jogo` (`id_jogo`),
   KEY `id_sistema` (`id_sistema`)
@@ -394,10 +394,10 @@ INSERT INTO `requisitos_recomendados` (`id_R`, `processador`, `placa_video`, `es
 
 DROP TABLE IF EXISTS `sistema_operacional`;
 CREATE TABLE IF NOT EXISTS `sistema_operacional` (
-  `id_sistema` int(11) NOT NULL AUTO_INCREMENT,
-  `NomeSistema` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `VersaoSistema` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `direct_x` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_sistema` int NOT NULL AUTO_INCREMENT,
+  `NomeSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `VersaoSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `direct_x` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_sistema`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -436,18 +436,18 @@ INSERT INTO `sistema_operacional` (`id_sistema`, `NomeSistema`, `VersaoSistema`,
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_usuario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tipos` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_usuario` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_usuario` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipos` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `data_nascimento` date NOT NULL,
-  `empresa` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `site_empresa` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `senha` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `icone` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_dados` int(11) DEFAULT NULL,
-  `id_jogos` int(11) DEFAULT NULL,
+  `empresa` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `site_empresa` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `senha` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icone` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_dados` int DEFAULT NULL,
+  `id_jogos` int DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   KEY `id_dados` (`id_dados`),
   KEY `id_jogos` (`id_jogos`)
@@ -470,10 +470,10 @@ INSERT INTO `usuarios` (`id_usuario`, `nome`, `nome_usuario`, `email`, `tipos`, 
 (10, 'Adriana', '', '', '', '1990-09-30', '', '', 'efdfg', '', NULL, NULL),
 (11, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'Dev', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', '', NULL, NULL),
 (12, 'João', 'JJ_JAVA', 'Jojo@gmail.com', 'User', '1995-07-12', 'CyberSpace', 'www.CyberSpace.com', 'jojo123', '', NULL, NULL),
-(13, 'ADMIN', 'admin', 'technology.ldr@gmail.com', 'Admin', '1995-07-11', 'LDR TECHNOLOGY', '', '$2y$10$2dDOjvcZxMrpB8BIgpVoLOJP/A7wgkCC05q2InqpHqY9uS1cmByRW', '', NULL, NULL),
+(13, 'ADMIN', 'admin', 'technology.ldr@gmail.com', 'Admin', '1995-07-11', 'LDR TECHNOLOGY', 'https://www.youtube.com/watch?v=7XTRbvMc9Vg', '$2y$10$2dDOjvcZxMrpB8BIgpVoLOJP/A7wgkCC05q2InqpHqY9uS1cmByRW', 'profilepic/7de5c9ab60fa4191c7893aa3af7cf5b4.j', NULL, NULL),
 (14, 'José', 'JOOJE', 'JoseHisth@gmail.com', 'Dev', '1986-08-13', 'CBHJS', '', '$2y$10$IT5wg8PQQm3e/zL/eSAkjeKMC.fqYorDPIHFyNk.9Iq5CHoI5Oqru', '', NULL, NULL),
 (15, 'Geovani', 'geo_ldr', 'geovaninascimento2001@gmail.com', 'User', '2001-04-21', NULL, NULL, '$2y$10$hGUaMtx1y3K4vTBpdxZqGeK3ONJ4w3V4PW1LDMLPk5lFUIyEAUt.i', '', NULL, NULL),
-(16, 'Henrique', 'Henri123', 'Henri123@gmail.com', 'User', '1997-07-09', NULL, NULL, '$2y$10$LXwqOqC8dwcc0a2ap2CHiebGRyAR5b2mKGSc3n.SHGdd9Qrs0LQeO', '', NULL, NULL);
+(16, 'Henrique', 'Henri123', 'Henri123@gmail.com', 'User', '1997-07-09', NULL, NULL, '$2y$10$LXwqOqC8dwcc0a2ap2CHiebGRyAR5b2mKGSc3n.SHGdd9Qrs0LQeO', '$url', NULL, NULL);
 
 --
 -- Restrições para despejos de tabelas
