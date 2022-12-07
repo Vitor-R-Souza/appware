@@ -13,13 +13,107 @@ main {
 
 main .about-origin {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   background-color: #2A2F2E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .about-origin .origin {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px;
+}
+
+main .about-origin .origin h1, main .about-origin .origin p {
+  margin: 15px 0;
+}
+
+main .about-origin .origin h1 {
+  text-transform: uppercase;
+  color: #03f484;
+}
+
+main .about-origin .logo-enterprise {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .about-origin .logo-enterprise img {
+  width: 400px;
 }
 
 main .about-objective {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   background-color: #2E4242;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .about-objective .ware {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .about-objective .ware img {
+  width: 400px;
+}
+
+main .about-objective .objective {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px;
+}
+
+main .about-objective .objective h1, main .about-objective .objective p {
+  margin: 15px 0;
+}
+
+main .about-objective .objective h1 {
+  text-transform: uppercase;
+  color: #03f484;
 }
 /*# sourceMappingURL=about.css.map */

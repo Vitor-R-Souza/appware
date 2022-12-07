@@ -17,13 +17,75 @@ main{
 
     .about-origin{
         width: 100%;
-        height: 80vh;
+        height: 70vh;
         background-color: $secondary-color;
+        //background-image: linear-gradient(to bottom, $secondary-color, $primary-color);
+        display: flex;
+
+        .origin{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 100px;
+
+            h1, p{
+                margin: 15px 0;
+            }
+
+            h1{
+                text-transform: uppercase;
+                color: $color-details;
+            }
+        }
+
+        .logo-enterprise{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+            img{
+                width: 400px;
+            }
+        }
     }
 
     .about-objective{
         width: 100%;
-        height: 80vh;
+        height: 70vh;
         background-color: $primary-color;
+        //background-image: linear-gradient(to bottom, $primary-color, $secondary-color);
+        display: flex;
+
+        .ware{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 400px;
+            }
+        }
+
+        .objective{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 100px;
+
+            h1, p{
+                margin: 15px 0;
+            }
+            h1{
+                text-transform: uppercase;
+                color: $color-details;
+            }
+        }
     }
 }
