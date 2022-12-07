@@ -32,8 +32,8 @@
             </div>
             <div class="objective">
                 <h1>Para que serve o AppWare?</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatem possimus pariatur fugiat eveniet tenetur ipsam. Odio, dolor amet itaque placeat ducimus natus in pariatur consectetur perspiciatis facilis assumenda illo.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quo sequi odit tenetur ab quam! Reiciendis, similique! Unde perferendis voluptas, quaerat iure libero eos reiciendis ea odio nulla tempore minus.</p>
+                <p>O Appware serve para facilitar a vida do jogador, principalmente para aqueles que não conhecem sobre hardware, simplificando o modo de testar se determinado jogo irá executar em sua máquina, antes mesmo de instalá-lo, evitando assim que prejudiquem o computador do usuário.</p>
+                <p>Otimizando assim, tempo e evitando possíveis problema, trazendo de forma rápida e eficiente o resultado, o quanto sua máquina é compatível com o jogo desejado.</p>
             </div>
         </section>
     </main>
