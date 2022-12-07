@@ -172,17 +172,11 @@ main section.section1 .img-infos .infos-game .theme-dev .dev .title-dev {
   color: #03f484;
 }
 main section.section1 .img-infos .infos-game .btn-analise {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
   margin-top: 15px;
 }
 main section.section1 .img-infos .infos-game .btn-analise button {
-  width: 50%;
+  width: 90%;
   height: 60px;
   border-radius: 10px;
   outline: none;
