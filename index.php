@@ -26,7 +26,7 @@
                 <div class="slide-item" data-slide="item" data-index="0">
                     <div class="slide-content">
                         <a href="game.php?id=1">
-                            <img src="./capas/red-dead-redemption2.png" alt="Red Dead Redemption 2" />
+                            <img src="./capas/big-red-dead-redemption2.jpg" alt="Red Dead Redemption 2" />
                             <div class="slide-description">
                                 <h6>Mais populares - #1</h6>
                                 <h3>Red Dead Redemption 2</h3>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="slide-item" data-slide="item" data-index="1">
                     <div class="slide-content">
-                        <a href="game.php?id=53">
+                        <a href="game.php?id=5">
                             <img src="./capas/big-fifa23.jpg" alt="FIFA 23" />
                             <div class="slide-description">
                                 <h6>Lançamentos - #1</h6>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="slide-item" data-slide="item" data-index="2">
                     <div class="slide-content">
-                        <a href="game.php?id=39">
+                        <a href="game.php?id=56">
                             <img src="./capas/big-171.jpg" alt="171" />
                             <div class="slide-description">
                                 <h6>Indies - #1</h6>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="slide-item" data-slide="item" data-index="3">
                     <div class="slide-content">
-                        <a href="game.php?id=55">
+                        <a href="game.php?id=2">
                             <img src="capas/big-marvel-spiderman.jpg" alt="Hitman" />
                             <div class="slide-description">
                                 <h6>Mais populares - #2</h6>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="slide-item" data-slide="item" data-index="4">
                     <div class="slide-content">
-                        <a href="game.php?id=9">
+                        <a href="game.php?id=50">
                             <img src="capas/big-elden-ring.jpg" alt="Elden Ring" />
                             <div class="slide-description">
                                 <h6>Lançamentos - #2</h6>
@@ -192,7 +192,8 @@
     <section class="more-games">
         <div class="container-btn">
             <div class="img-games">
-                <img src="imagens/jogos_site.png" alt="Catálogo">
+                <!-- <img src="imagens/jogos_site.png" alt="Catálogo"> -->
+                <img src="imagens/ver-mais-catalogo.jpg" alt="">
             </div>
             <div class="frases">
                 <h1>Veja todo o catálogo</h1>
