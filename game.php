@@ -119,46 +119,91 @@
                 <div class="title-results">
                     <h2>Seu Sistema</h2>
                 </div>
-                <div class="component operationSystem">
-                    <div class="title-component">
-                        <h5>Sistema Operacional</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>Windows 10</p>
-                    </div>
-                </div>
-                <div class="component processor">
-                    <div class="title-component">
-                        <h5>Processador</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>-</p>
-                    </div>
-                </div>
-                <div class="component ramMemory">
-                    <div class="title-component">
-                        <h5>Memória RAM</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>-</p>
-                    </div>
-                </div>
-                <div class="component storageMemory">
-                    <div class="title-component">
-                        <h5>Capacidade de Armazenamento</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>-</p>
-                    </div>
-                </div>
-                <div class="component videoCard">
-                    <div class="title-component">
-                        <h5>Placa de Vídeo</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>-</p>
-                    </div>
-                </div>
+                    <?php
+                        if($_SESSION['teste']){
+                            echo"<div class='component operationSystem'>
+                                    <div class='title-component'>
+                                        <h5>Sistema Operacional</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>Windows 10</p>
+                                    </div>
+                                </div>
+                                <div class='component processor'>
+                                    <div class='title-component'>
+                                        <h5>Processador</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component ramMemory'>
+                                    <div class='title-component'>
+                                        <h5>Memória RAM</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component storageMemory'>
+                                    <div class='title-component'>
+                                        <h5>Capacidade de Armazenamento</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component videoCard'>
+                                    <div class='title-component'>
+                                        <h5>Placa de Vídeo</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>";
+                            }else{
+                                echo"<div class='component operationSystem'>
+                                    <div class='title-component'>
+                                        <h5>Sistema Operacional</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>Windows 10</p>
+                                    </div>
+                                </div>
+                                <div class='component processor'>
+                                    <div class='title-component'>
+                                        <h5>Processador</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component ramMemory'>
+                                    <div class='title-component'>
+                                        <h5>Memória RAM</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component storageMemory'>
+                                    <div class='title-component'>
+                                        <h5>Capacidade de Armazenamento</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component videoCard'>
+                                    <div class='title-component'>
+                                        <h5>Placa de Vídeo</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>";
+                            }
+                    ?>
                 <!--<div class="component videoCardInteg">
                     <div class="title-component">
                         <h5>Placa de Vídeo Integrada</h5>
