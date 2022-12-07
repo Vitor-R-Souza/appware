@@ -82,4 +82,25 @@ main{
             }*/
         }
     }
+    .btn-analise{
+        text-align: center;
+        margin-top: 15px;
+
+        button{
+            width: 90%;
+            height: 60px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            background-image: linear-gradient(to right,  #137B7B, #00A3A3);               
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 50px;
+        }
+    }
 }

@@ -46,6 +46,9 @@
           </tr>
         </tbody>
       </table>
+      <div class="btn-analise">
+          <a href="DetectorAPPWARE.exe" download><button>Baixar Detector</button></a>
+      </div>
     </main>
 </body>
 </html>

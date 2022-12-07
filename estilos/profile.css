@@ -7,7 +7,7 @@
           box-sizing: border-box;
   color: white;
   list-style: none;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   list-style: none;
 }
 
@@ -37,109 +37,101 @@ main {
   min-height: 100vh;
   padding: 1rem;
 }
-
 main .container {
   max-width: 95vw;
-  width: 90%;
-  /*!!!!!!!!Estava 100%*/
+  width: 90%; /*!!!!!!!!Estava 100%*/
   background-color: #3c4643;
   border-radius: 10px;
   -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.103);
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.103);
 }
-
 main .container .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
 main .container .wrapper .profile-indicator {
   background-color: #2A2F2E;
   border-radius: 10px 0 0 10px;
   text-align: center;
   width: 20%;
 }
-
 main .container .wrapper .profile-indicator .profile {
   padding: 1rem 2rem;
   /*
-                    .edit-icon{
-                        position: absolute;
-                        top: 15%;
-                        left: 6%;
-                        //transform: translate(-50%, -50%);
-                        height: 400px;
-                        width: 250px;
-                        background-color: black;
-                    }*/
+  .edit-icon{
+      position: absolute;
+      top: 15%;
+      left: 6%;
+      //transform: translate(-50%, -50%);
+      height: 400px;
+      width: 250px;
+      background-color: black;
+  }*/
   /*.photo-profile{
-                        margin: 0 auto;
-                        //width: 220px;
-                        width: 11.111vw;
-                        height: 11.111vw;
-                        position: relative;
-                        border: 5px solid #fff;
-                        border-radius: 50%;
-                        background: url('/imagens/halo5.png');
-                        background-size: 100% 100%;
-                        overflow: hidden;
-                        
-                        
+      margin: 0 auto;
+      //width: 220px;
+      width: 11.111vw;
+      height: 11.111vw;
+      position: relative;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      background: url('/imagens/halo5.png');
+      background-size: 100% 100%;
+      overflow: hidden;
 
-                        .my_photo{
-                            position: absolute;
-                            bottom: 0;
-                            right: -41%;
-                            outline: none;
-                            color: transparent;
-                            width: 100%;
-                            box-sizing: border-box;
-                            padding: 15px 0px;
-                            cursor: pointer;
-                            transition: 0.5s;
-                            background: rgb(0,0,0,0.5);
-                        }
 
-                        .my_photo::-webkit-file-upload-button{
-                            visibility: hidden;
-                        }
 
-                        .my_photo::before{
-                            content: '\f030';
-                            font-family: 'fontAwesome';
-                            font-size: 30px;
-                            color: #fff;
-                            display: inline-block;
-                            -webkit-user-select: none;
-                        }
+      .my_photo{
+          position: absolute;
+          bottom: 0;
+          right: -41%;
+          outline: none;
+          color: transparent;
+          width: 100%;
+          box-sizing: border-box;
+          padding: 15px 0px;
+          cursor: pointer;
+          transition: 0.5s;
+          background: rgb(0,0,0,0.5);
+      }
 
-                        
-                        .my_photo::after{
-                            content: 'Atualizar';
-                            font-family: 'arial';
-                            font-weight: bold;
-                            color: #fff;
-                            display: block;
-                            position: absolute;
-                            top: 90px;
-                            font-size: 14px;
-                        }
+      .my_photo::-webkit-file-upload-button{
+          visibility: hidden;
+      }
 
-                    
-                    }*/
+      .my_photo::before{
+          content: '\f030';
+          font-family: 'fontAwesome';
+          font-size: 30px;
+          color: #fff;
+          display: inline-block;
+          -webkit-user-select: none;
+      }
+
+
+      .my_photo::after{
+          content: 'Atualizar';
+          font-family: 'arial';
+          font-weight: bold;
+          color: #fff;
+          display: block;
+          position: absolute;
+          top: 90px;
+          font-size: 14px;
+      }
+
+
+  }*/
 }
-
 main .container .wrapper .profile-indicator .profile img {
   width: 11.111vw;
   height: 11.111vw;
   border-radius: 50%;
 }
-
 main .container .wrapper .profile-indicator .profile h2 {
   margin-bottom: 10px;
 }
-
 main .container .wrapper .profile-indicator .profile .type {
   background-color: red;
   border-radius: 20px;
@@ -156,11 +148,9 @@ main .container .wrapper .profile-indicator .profile .type {
           align-items: center;
   margin: 0 auto;
 }
-
 main .container .wrapper .profile-indicator .profile .dados {
   margin-top: 20px;
 }
-
 main .container .wrapper .profile-indicator .profile .dados .icon-dado {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,19 +158,16 @@ main .container .wrapper .profile-indicator .profile .dados .icon-dado {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   margin: 10px 0;
 }
-
 main .container .wrapper .profile-indicator .profile .dados .icon-dado i {
   font-size: 1.2rem;
 }
-
 main .container .wrapper .profile-indicator .profile .dados .icon-dado h4 {
   font-weight: normal;
   font-size: 0.8rem;
 }
-
 main .container .wrapper .profile-indicator .profile .dados .icon-dado #email {
   background-color: #2A2F2E;
   border: none;
@@ -189,7 +176,6 @@ main .container .wrapper .profile-indicator .profile .dados .icon-dado #email {
   text-overflow: ellipsis;
   width: 100%;
 }
-
 main .container .wrapper .profile-indicator .indicator {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,7 +186,6 @@ main .container .wrapper .profile-indicator .indicator {
           flex-direction: column;
   background-color: #232726;
 }
-
 main .container .wrapper .profile-indicator .indicator li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,129 +193,118 @@ main .container .wrapper .profile-indicator .indicator li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
-  /*Uma margin right do icone pra palavra*/
-  padding: 12px 25%;
-  /*estava 2rem*/
+  gap: 1rem; /*Uma margin right do icone pra palavra*/
+  padding: 12px 25%; /*estava 2rem*/
   cursor: pointer;
-  font-size: 1rem;
-  /*.875rem*/
+  font-size: 1rem; /*.875rem*/
   color: #fff;
   border-right: 3px solid transparent;
 }
-
 main .container .wrapper .profile-indicator .indicator li i {
   font-size: 1rem;
 }
-
 main .container .wrapper .profile-indicator .indicator li:hover {
   background-color: #fff;
   color: #2A2F2E;
 }
-
 main .container .wrapper .profile-indicator .indicator li:hover i {
   color: #2A2F2E;
 }
-
 main .container .wrapper .profile-indicator .indicator li.active {
   border-right-color: #03f484;
   color: #2A2F2E;
   background-color: #fff;
 }
-
 main .container .wrapper .profile-indicator .indicator li.active i {
   color: #2A2F2E;
 }
-
 main .container .wrapper .content {
   /*padding: 1.5rem 2rem;*/
   width: 80%;
   overflow-x: hidden;
   border-radius: 0 10px 10px 0;
 }
-
 main .container .wrapper .content li {
   display: none;
   width: 100%;
   /*
-                    .edit-profile{
-                        display: flex;
-                        flex-direction: column;
+  .edit-profile{
+      display: flex;
+      flex-direction: column;
 
 
-                        .box-user{
-                            display: flex;
-                            justify-content: center;
-                            width: 100%;
-    
-                            
-                            .edit-dados{
-                                margin: 1.010vw 5.051vw;
-                                width: 100%;
-                                
-                                
-    
-                                label{
-                                    font-size: 14px;
-                                }
-    
-                                .input-edit{
-                                    display: flex;
-    
-    
-                                    input{
-                                        border-radius: 15px;
-                                        background-color: transparent;
-                                        border: 2px solid $color-details;
-                                        outline: none;
-                                        margin-right: 5px;
-                                        width: 100%;
-                                        padding: 10px;
-                                    }
-        
-                                    i{
-                                        display: flex;
-                                        align-items: center;
-                                        font-size: 24px;
-                                    }
-                                }
+      .box-user{
+          display: flex;
+          justify-content: center;
+          width: 100%;
 
-                                .span-required{
-                                    font-size: 12px;
-                                    margin: -25px 0 0 1px;
-                                    color: red;
-                                    display: none;
-                                }
-    
-                            }
-                        }
-    
-                        .button{
-                            display: flex;
-                            justify-content: center;
-    
-                            #confirm{
-                                background-image: linear-gradient(to right,  #137B7B, #00A3A3);
-                                width: 400px;
-                                height: 80px;
-                                border: none;
-                                border-radius: 20px;
-                                cursor: pointer;
-                                font-size: 20px;
-                                font-weight: bold;
-                                letter-spacing: 3px;
-                                text-transform: uppercase;
-                                margin-top: 25px;
-                
-                                &:hover{
-                                    background-image: linear-gradient(to right, #179494, #01cccc);
-                                    
-                                }
-                            }
-                        }
-                    }*/
+
+          .edit-dados{
+              margin: 1.010vw 5.051vw;
+              width: 100%;
+
+
+
+              label{
+                  font-size: 14px;
+              }
+
+              .input-edit{
+                  display: flex;
+
+
+                  input{
+                      border-radius: 15px;
+                      background-color: transparent;
+                      border: 2px solid $color-details;
+                      outline: none;
+                      margin-right: 5px;
+                      width: 100%;
+                      padding: 10px;
+                  }
+
+                  i{
+                      display: flex;
+                      align-items: center;
+                      font-size: 24px;
+                  }
+              }
+
+              .span-required{
+                  font-size: 12px;
+                  margin: -25px 0 0 1px;
+                  color: red;
+                  display: none;
+              }
+
+          }
+      }
+
+      .button{
+          display: flex;
+          justify-content: center;
+
+          #confirm{
+              background-image: linear-gradient(to right,  #137B7B, #00A3A3);
+              width: 400px;
+              height: 80px;
+              border: none;
+              border-radius: 20px;
+              cursor: pointer;
+              font-size: 20px;
+              font-weight: bold;
+              letter-spacing: 3px;
+              text-transform: uppercase;
+              margin-top: 25px;
+
+              &:hover{
+                  background-image: linear-gradient(to right, #179494, #01cccc);
+
+              }
+          }
+      }
+  }*/
 }
-
 main .container .wrapper .content li #historico-favoritos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,12 +317,10 @@ main .container .wrapper .content li #historico-favoritos {
       -ms-flex-align: space-between;
           align-items: space-between;
 }
-
 main .container .wrapper .content li #historico-favoritos iframe {
   width: 69.057vw;
   height: 570px;
 }
-
 main .container .wrapper .content li h1 {
   font-size: 2.424vw;
   font-weight: 600;
@@ -359,17 +331,13 @@ main .container .wrapper .content li h1 {
   padding: 10px 0 10px 30px;
   border-bottom: 2px solid #fff;
 }
-
 main .container .wrapper .content li p {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   color: darkgray;
-  font-size: 1.414vw;
-  /*.875rem*/
+  font-size: 1.414vw; /*.875rem*/
   padding: 1.212vw 1.616vw;
 }
-
 main .container .wrapper .content li.active {
   display: block;
   width: 100%;
-}
-/*# sourceMappingURL=profile.css.map */
+}/*# sourceMappingURL=profile.css.map */

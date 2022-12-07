@@ -19,8 +19,8 @@
         <section class="about-origin">
             <div class="origin">
                 <h1>Como surgiu o AppWare?</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam rerum optio aut necessitatibus, illum velit dolore perferendis deserunt accusamus excepturi nulla ad modi laborum eos aliquid beatae aperiam iste in?</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque itaque officiis veniam ut voluptatum! Odio id quos ratione? Doloribus inventore praesentium quis? Consectetur amet ab ex voluptatem sapiente, cumque similique.</p>
+                <p>A ideia surgiu após muito tempo discutindo sobre como seria o projeto. Após vermos um site auxiliando compradores a comprar suas máquinas, verificamos que todas as lojas onlines de jogos vendem os games apresentando os requisitos mínimos e os recomendados como um mero detalhe, onde muitos usuários não possuem conhecimento suficiente para distinguir alguns dos componentes.</p>
+                <p>Com isso o projeto AppWare foi iniciado pela equipe da empresa LDR Technology, uma empresa voltada para inovar e facilitar a vida dos usuários com o uso da tecnologia. Misturando tecnologias para criar um sistema de fácil uso.</p>
             </div>
             <div class="logo-enterprise">
                 <img src="imagens/ldr-technology.png" alt="Logo da LDR Technology">

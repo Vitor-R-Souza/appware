@@ -4,7 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 main {
@@ -20,7 +20,6 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
-
 main section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,30 +27,25 @@ main section {
   width: 1000px;
   max-width: 1000px;
 }
-
 main section .contact {
   width: 50%;
   background-color: #2A2F2E;
   border-radius: 10px 0 0 10px;
   padding: 20px 40px;
 }
-
 main section .contact h1 {
   font-size: 2rem;
   margin-bottom: -5px;
   color: #03f484;
 }
-
 main section .contact h3 {
   margin-bottom: 30px;
   color: #8cfac6;
 }
-
 main section .contact p {
   line-height: 1.2em;
   text-align: justify;
 }
-
 main section .contact .img {
   margin-top: 70px;
   display: -webkit-box;
@@ -66,27 +60,24 @@ main section .contact .img {
           align-items: center;
   margin: 50px auto;
 }
-
 main section .contact .img img {
   width: 270px;
   margin: auto;
   text-align: center;
 }
-
 main section .contact .icons {
   margin: 0 auto;
   text-align: center;
   width: 90%;
   max-width: 1200px;
 }
-
 main section .contact .icons .btn-icon {
   display: inline-block;
   width: 45px;
   height: 45px;
   background: whitesmoke;
-  -webkit-box-shadow: 0 5px 15px -5px #7c7b7b;
-          box-shadow: 0 5px 15px -5px #7c7b7b;
+  -webkit-box-shadow: 0 5px 15px -5px rgb(124, 123, 123);
+          box-shadow: 0 5px 15px -5px rgb(124, 123, 123);
   margin: 10px;
   border-radius: 30%;
   position: relative;
@@ -94,22 +85,18 @@ main section .contact .icons .btn-icon {
   /*color: #42d2ff;*/
   outline: none;
 }
-
 main section .contact .icons .btn-icon i {
   color: #2E4242;
   position: relative;
   z-index: 4;
-  line-height: 45px;
-  /*Cemtralizar com wid e hei de 45px*/
+  line-height: 45px; /*Cemtralizar com wid e hei de 45px*/
   font-size: 20px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-
 main section .contact .icons .btn-icon i:hover {
   color: #fff;
 }
-
 main section .contact .icons .btn-icon::before {
   content: "";
   position: absolute;
@@ -123,13 +110,11 @@ main section .contact .icons .btn-icon::before {
   top: 90%;
   color: #fff;
 }
-
 main section .contact .icons .btn-icon:hover {
   color: #fff;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
-
 main section .contact .icons .btn-icon:hover::before {
   -webkit-animation: onHover 0.7s 1;
           animation: onHover 0.7s 1;
@@ -137,11 +122,9 @@ main section .contact .icons .btn-icon:hover::before {
   top: -10%;
   color: #fff;
 }
-
 main section .contact .icons .btn-icon .btn-icon:hover i:hover {
   color: white;
 }
-
 @-webkit-keyframes onHover {
   0% {
     left: -110%;
@@ -156,7 +139,6 @@ main section .contact .icons .btn-icon .btn-icon:hover i:hover {
     top: -10%;
   }
 }
-
 @keyframes onHover {
   0% {
     left: -110%;
@@ -171,7 +153,6 @@ main section .contact .icons .btn-icon .btn-icon:hover i:hover {
     top: -10%;
   }
 }
-
 main section .contact-form {
   width: 50%;
   background-color: #2A2F2E;
@@ -186,7 +167,6 @@ main section .contact-form {
           justify-content: center;
   border-radius: 0 10px 10px 0;
 }
-
 main section .contact-form form {
   width: 100%;
   display: -webkit-box;
@@ -203,32 +183,30 @@ main section .contact-form form {
           align-items: flex-start;
   text-align: left;
   /*
-                #btn{
-                    background-image: linear-gradient(to right,  #137B7B, #00A3A3);
-                    width: 90%;
-                    height: 60px;
-                    border: none;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    font-size: 20px;
-                    font-weight: bold;
-                    letter-spacing: 3px;
-                    text-transform: uppercase;
-                    margin-top: 15px;
+  #btn{
+      background-image: linear-gradient(to right,  #137B7B, #00A3A3);
+      width: 90%;
+      height: 60px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 15px;
 
-                    &:hover{
-                        background-image: linear-gradient(to right, #179494, #01cccc);
-                        height: 60px;
-                    }
-                }*/
+      &:hover{
+          background-image: linear-gradient(to right, #179494, #01cccc);
+          height: 60px;
+      }
+  }*/
 }
-
 main section .contact-form form h1 {
   margin-left: 5%;
   font-size: 2em;
   margin-bottom: 15px;
 }
-
 main section .contact-form form input, main section .contact-form form textarea, main section .contact-form form button {
   width: 90%;
   padding: 1.25rem;
@@ -236,7 +214,6 @@ main section .contact-form form input, main section .contact-form form textarea,
   border-radius: 10px;
   margin: 0 auto;
 }
-
 main section .contact-form form input, main section .contact-form form textarea {
   margin-bottom: 1rem;
   background-color: #2E4242;
@@ -246,7 +223,6 @@ main section .contact-form form input, main section .contact-form form textarea 
   transition: border-color 0.3s, box-shadow 0.3s;
   transition: border-color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
-
 main section .contact-form form input:hover,
 main section .contact-form form input:focus,
 main section .contact-form form textarea:hover,
@@ -254,19 +230,16 @@ main section .contact-form form textarea:focus {
   outline: none;
   border-color: #03f484;
 }
-
 main section .contact-form form label {
   margin-bottom: 0.5rem;
   color: #03f484;
   display: block;
   margin-left: 5%;
 }
-
 main section .contact-form form textarea {
   min-height: 12.5rem;
   resize: none;
 }
-
 main section .contact-form form button {
   border: none;
   border: 99px;
@@ -281,36 +254,28 @@ main section .contact-form form button {
   transition: 0.3s;
   font-weight: bold;
 }
-
 main section .contact-form form button:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#179494), to(#01cccc));
   background-image: linear-gradient(to right, #179494, #01cccc);
 }
-
 main section .contact-form form button:disabled {
   cursor: not-allowed;
   background-image: -webkit-gradient(linear, left top, right top, from(#555b69), to(#4b505c));
   background-image: linear-gradient(to right, #555b69, #4b505c);
 }
-
 main section .contact-form form .success,
-main section .contact-form form .success-h3
-.error {
+main section .contact-form form .success-h3 .error {
   text-align: center;
 }
-
 main section .contact-form form .success {
   color: #03f484;
   margin: 0 auto;
 }
-
 main section .contact-form form .success-h3 {
   color: white;
   margin: 0 auto;
 }
-
 main section .contact-form form .error {
   color: tomato;
   margin: 0 auto;
-}
-/*# sourceMappingURL=contact.css.map */
+}/*# sourceMappingURL=contact.css.map */

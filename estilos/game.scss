@@ -172,11 +172,14 @@ main{
                 }
 
                 .btn-analise{
+                    display: flex;
+                    align-items: center;
                     text-align: center;
                     margin-top: 15px;
+                    
 
                     button{
-                        width: 90%;
+                        width: 50%;
                         height: 60px;
                         border-radius: 10px;
                         outline: none;

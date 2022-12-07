@@ -9,7 +9,7 @@
   list-style: none;
   text-decoration: none;
   color: #fff;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   text-transform: none;
   font-weight: normal;
 }
@@ -22,14 +22,11 @@ main {
   display: -ms-flexbox;
   display: flex;
 }
-
 main .categ {
   width: 20%;
-  position: -webkit-sticky;
   position: sticky;
   background-color: #2E4242;
 }
-
 main .categ .category > h2,
 main .categ .age > h2,
 main .categ .indies > h2,
@@ -40,19 +37,17 @@ main .categ .dev-mode > h2 {
   margin-bottom: 10px;
   background-color: #000;
   border-radius: 15px 15px 0 0;
-  padding: 0.500vw 0;
+  padding: 0.5vw 0;
   font-size: 1.1em;
 }
-
 main .categ .category, main .categ .age, main .categ .indies,
 main .categ .favorites, main .categ .dev-mode {
   margin: 10px;
   background-color: darkslategrey;
   border-radius: 15px;
   margin-bottom: 20px;
-  padding-bottom: .5vw;
+  padding-bottom: 0.5vw;
 }
-
 main .categ .category form, main .categ .age form, main .categ .indies form,
 main .categ .favorites form, main .categ .dev-mode form {
   display: -webkit-box;
@@ -65,7 +60,6 @@ main .categ .favorites form, main .categ .dev-mode form {
           justify-content: space-between;
   padding: 0 0.4vw;
 }
-
 main .categ .category form a, main .categ .age form a, main .categ .indies form a,
 main .categ .favorites form a, main .categ .dev-mode form a {
   display: -webkit-box;
@@ -80,17 +74,15 @@ main .categ .favorites form a, main .categ .dev-mode form a {
   align-items: center;
   width: 8vw;
   font-size: 0.8em;
-  padding: 0.500vw;
+  padding: 0.5vw;
   background-color: #137B7B;
   margin: 0.253vw;
   border-radius: 10px;
 }
-
 main .categ .category form a:hover, main .categ .age form a:hover, main .categ .indies form a:hover,
 main .categ .favorites form a:hover, main .categ .dev-mode form a:hover {
   background-color: #00A3A3;
 }
-
 main .catalog {
   width: 80%;
   background-color: #2E4242;
@@ -107,7 +99,6 @@ main .catalog {
   -ms-flex-line-pack: start;
       align-content: flex-start;
 }
-
 main .catalog .game {
   width: 200px;
   height: 333px;
@@ -118,17 +109,14 @@ main .catalog .game {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 main .catalog .game .capa {
   height: 80%;
   width: 100%;
 }
-
 main .catalog .game .capa img {
   height: 100%;
   border-radius: 8px 8px 0 0;
 }
-
 main .catalog .game .name-game {
   text-align: center;
   display: -webkit-box;
@@ -142,17 +130,14 @@ main .catalog .game .name-game {
           align-items: center;
   padding: 5px;
 }
-
 main .catalog .game .name-game h3 {
   font-size: 1.1em;
   /*
-                    word-wrap: break-word !important;
-                    text-overflow: ellipsis;
-                    overflow: hidden !important;
-                    white-space: nowrap;*/
+  word-wrap: break-word !important;
+  text-overflow: ellipsis;
+  overflow: hidden !important;
+  white-space: nowrap;*/
 }
-
 main .catalog .game:hover {
   outline: 3px solid #03f484;
-}
-/*# sourceMappingURL=filter.css.map */
+}/*# sourceMappingURL=filter.css.map */

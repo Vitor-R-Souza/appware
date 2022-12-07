@@ -37,6 +37,11 @@ main{
             h1{
                 text-transform: uppercase;
                 color: $color-details;
+                font-weight: bold;
+            }
+
+            p{
+                text-align: justify;
             }
         }
 
@@ -85,6 +90,10 @@ main{
             h1{
                 text-transform: uppercase;
                 color: $color-details;
+                font-weight: bold;
+            }
+            p{
+                text-align: justify;
             }
         }
     }
