@@ -26,7 +26,22 @@
         require_once('requires/func.php');
         require_once('header.php');
 
+        if($b2 = $BD->query("SELECT * FROM `requisitos_recomendados` WHERE `id_R` = $r->id_R")){
+            $rr = $b2->fetch_object();
+        }
         
+        if($bs2 = $BD->query("SELECT * FROM `sistema_operacional` WHERE `id_sistema` = 1")){//$rr->id_sistema trocar pelo 1
+            $sr = $bs2->fetch_object();
+        }
+
+        if($b1 = $BD->query("SELECT * FROM `requisitos_minimos` WHERE `id_M` = $r->id_M")){
+            $rm = $b1->fetch_object();
+        }
+        
+        if($bs1 = $BD->query("SELECT * FROM `sistema_operacional` WHERE `id_sistema` = 1")){//$rm->id_sistema trocar pelo 1
+            $sm = $bs1->fetch_object();
+        }
+
     ?>
     <main>
         <section class="section1">
@@ -104,46 +119,91 @@
                 <div class="title-results">
                     <h2>Seu Sistema</h2>
                 </div>
-                <div class="component operationSystem">
-                    <div class="title-component">
-                        <h5>Sistema Operacional</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>Windows 10</p>
-                    </div>
-                </div>
-                <div class="component processor">
-                    <div class="title-component">
-                        <h5>Processador</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>-</p>
-                    </div>
-                </div>
-                <div class="component ramMemory">
-                    <div class="title-component">
-                        <h5>Memória RAM</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>-</p>
-                    </div>
-                </div>
-                <div class="component storageMemory">
-                    <div class="title-component">
-                        <h5>Capacidade de Armazenamento</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>-</p>
-                    </div>
-                </div>
-                <div class="component videoCard">
-                    <div class="title-component">
-                        <h5>Placa de Vídeo</h5>
-                    </div>
-                    <div class="result-component">
-                        <p>-</p>
-                    </div>
-                </div>
+                    <?php
+                        if($_SESSION['teste']){
+                            echo"<div class='component operationSystem'>
+                                    <div class='title-component'>
+                                        <h5>Sistema Operacional</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>Windows 10</p>
+                                    </div>
+                                </div>
+                                <div class='component processor'>
+                                    <div class='title-component'>
+                                        <h5>Processador</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component ramMemory'>
+                                    <div class='title-component'>
+                                        <h5>Memória RAM</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component storageMemory'>
+                                    <div class='title-component'>
+                                        <h5>Capacidade de Armazenamento</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component videoCard'>
+                                    <div class='title-component'>
+                                        <h5>Placa de Vídeo</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>";
+                            }else{
+                                echo"<div class='component operationSystem'>
+                                    <div class='title-component'>
+                                        <h5>Sistema Operacional</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>Windows 10</p>
+                                    </div>
+                                </div>
+                                <div class='component processor'>
+                                    <div class='title-component'>
+                                        <h5>Processador</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component ramMemory'>
+                                    <div class='title-component'>
+                                        <h5>Memória RAM</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component storageMemory'>
+                                    <div class='title-component'>
+                                        <h5>Capacidade de Armazenamento</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>
+                                <div class='component videoCard'>
+                                    <div class='title-component'>
+                                        <h5>Placa de Vídeo</h5>
+                                    </div>
+                                    <div class='result-component'>
+                                        <p>-</p>
+                                    </div>
+                                </div>";
+                            }
+                    ?>
                 <!--<div class="component videoCardInteg">
                     <div class="title-component">
                         <h5>Placa de Vídeo Integrada</h5>
@@ -172,6 +232,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="requireds">
                 <div class="title-requireds" id="minimum-req">
                     <div class="req-min">
@@ -183,48 +244,50 @@
                 </div>
                 <div class="minimum-recommended">
                     <!-- <div class="req">
-                        <h3>Requisitos Mínimos</h3>
-                    </div> -->
-                    <div class="requireds-game">
-                        <div class="title-requisit first-component">
-                            <h6>Sistema Operacional:</h6>
-                        </div>
-                        <div class="component-requisit">
-                            <p>Windows 10</p>
-                        </div>
-                    </div>
-                    <div class="requireds-game">
-                        <div class="title-requisit">
-                            <h6>Processador:</h6>
-                        </div>
-                        <div class="component-requisit">
-                            <p>AMD Ryzen 5 1600X ou Intel Core i5-7600k</p>
-                        </div>
-                    </div>
-                    <div class="requireds-game">
-                        <div class="title-requisit">
-                            <h6>Memória RAM:</h6>
-                        </div>
-                        <div class="component-requisit">
-                            <p>8 <span>GB</span></p>
-                        </div>
-                    </div>
-                    <div class="requireds-game">
-                        <div class="title-requisit">
-                            <h6>Capacidade de Armazenamento:</h6>
-                        </div>
-                        <div class="component-requisit">
-                            <p>150 <span>GB</span></p>
-                        </div>
-                    </div>
-                    <div class="requireds-game">
-                        <div class="title-requisit">
-                            <h6>Placa de Vídeo:</h6>
-                        </div>
-                        <div class="component-requisit last-component">
-                            <p>AMD Radeon RX 580 8GB ou NVIDIA GeForce GTX 1060 6GB</p>
-                        </div>
-                    </div>
+                            <h3>Requisitos Mínimos</h3>
+                        </div> -->
+                        <?php
+                        echo"<div class='requireds-game'>
+                                <div class='title-requisit first-component'>
+                                    <h6>Sistema Operacional:</h6>
+                                </div>
+                                <div class='component-requisit'>
+                                    <p>$sm->NomeSistema</p>
+                                </div>
+                            </div>
+                            <div class='requireds-game'>
+                                <div class='title-requisit'>
+                                    <h6>Processador:</h6>
+                                </div>
+                                <div class='component-requisit'>
+                                    <p>$rm->processador</p>
+                                </div>
+                            </div>
+                            <div class='requireds-game'>
+                                <div class='title-requisit'>
+                                    <h6>Memória RAM:</h6>
+                                </div>
+                                <div class='component-requisit'>
+                                    <p>$rm->memoria_ram <span>GB</span></p>
+                                </div>
+                            </div>
+                            <div class='requireds-game'>
+                                <div class='title-requisit'>
+                                    <h6>Capacidade de Armazenamento:</h6>
+                                </div>
+                                <div class='component-requisit'>
+                                    <p>$rm->espaco_armazenamento <span>GB</span></p>
+                                </div>
+                            </div>
+                            <div class='requireds-game'>
+                                <div class='title-requisit'>
+                                    <h6>Placa de Vídeo:</h6>
+                                </div>
+                                <div class='component-requisit last-component'>
+                                    <p>$rm->placa_video</p>
+                                </div>
+                            </div>";
+                    ?>
                     <!--<div class="requireds-game">
                         <div class="title-requisit">
                             <h6>Placa de Vídeo Integrada:</h6>
@@ -244,46 +307,48 @@
                     </div>
                 </div>
                 <div class="minimum-recommended">
-                    <div class="requireds-game">
-                        <div class="title-requisit first-component">
-                            <h6>Sistema Operacional:</h6>
-                        </div>
-                        <div class="component-requisit">
-                            <p>Windows 10</p>
-                        </div>
-                    </div>
-                    <div class="requireds-game">
-                        <div class="title-requisit">
-                            <h6>Processador:</h6>
-                        </div>
-                        <div class="component-requisit">
-                            <p>AMD Ryzen 7 3700X / Intel Core i7-9700K</p>
-                        </div>
-                    </div>
-                    <div class="requireds-game">
-                        <div class="title-requisit">
-                            <h6>Memória RAM:</h6>
-                        </div>
-                        <div class="component-requisit">
-                            <p>16 <span>GB</span></p>
-                        </div>
-                    </div>
-                    <div class="requireds-game">
-                        <div class="title-requisit">
-                            <h6>Capacidade de Armazenamento:</h6>
-                        </div>
-                        <div class="component-requisit">
-                            <p>150 <span>GB</span></p>
-                        </div>
-                    </div>
-                    <div class="requireds-game">
-                        <div class="title-requisit">
-                            <h6>Placa de Vídeo:</h6>
-                        </div>
-                        <div class="component-requisit last-component">
-                            <p>AMD Radeon RX 5700 XT 8GB / NVIDIA GeForce RTX 2070 SUPER 8GB / NVIDIA GeForce GTX 1080 Ti 11GB</p>
-                        </div>
-                    </div>
+                    <?php
+                        echo"<div class='requireds-game'>
+                                <div class='title-requisit first-component'>
+                                    <h6>Sistema Operacional:</h6>
+                                </div>
+                                <div class='component-requisit'>
+                                    <p>$sr->NomeSistema</p>
+                                </div>
+                            </div>
+                            <div class='requireds-game'>
+                                <div class='title-requisit'>
+                                    <h6>Processador:</h6>
+                                </div>
+                                <div class='component-requisit'>
+                                    <p>$rr->processador</p>
+                                </div>
+                            </div>
+                            <div class='requireds-game'>
+                                <div class='title-requisit'>
+                                    <h6>Memória RAM:</h6>
+                                </div>
+                                <div class='component-requisit'>
+                                    <p>$rr->memoria_ram <span>GB</span></p>
+                                </div>
+                            </div>
+                            <div class='requireds-game'>
+                                <div class='title-requisit'>
+                                    <h6>Capacidade de Armazenamento:</h6>
+                                </div>
+                                <div class='component-requisit'>
+                                    <p>$rr->espaco_armazenamento <span>GB</span></p>
+                                </div>
+                            </div>
+                            <div class='requireds-game'>
+                                <div class='title-requisit'>
+                                    <h6>Placa de Vídeo:</h6>
+                                </div>
+                                <div class='component-requisit last-component'>
+                                    <p>$rr->placa_video</p>
+                                </div>
+                            </div>";
+                    ?>
                     <!--<div class="requireds-game">
                         <div class="title-requisit">
                             <h6>Placa de Vídeo Integrada:</h6>

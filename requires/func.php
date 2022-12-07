@@ -8,6 +8,7 @@ if(!isset($_SESSION['user'])){
     $_SESSION['msg'] = null;
     $_SESSION['email'] = null;
     $_SESSION['icon'] = null;
+    $_SESSION['teste'] = false;
 }
 
 if(isset($_SESSION['msg'])){
