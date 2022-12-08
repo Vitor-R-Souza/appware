@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 07-Dez-2022 às 20:36
--- Versão do servidor: 8.0.27
+-- Tempo de geração: 08-Dez-2022 às 14:34
+-- Versão do servidor: 5.7.36
 -- versão do PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -31,8 +31,8 @@ USE `appware`;
 
 DROP TABLE IF EXISTS `categorias`;
 CREATE TABLE IF NOT EXISTS `categorias` (
-  `id_catego` int NOT NULL,
-  `generos` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_catego` int(11) NOT NULL,
+  `generos` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_catego`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -92,14 +92,14 @@ INSERT INTO `categorias` (`id_catego`, `generos`) VALUES
 
 DROP TABLE IF EXISTS `dados`;
 CREATE TABLE IF NOT EXISTS `dados` (
-  `id_dados` int NOT NULL AUTO_INCREMENT,
+  `id_dados` int(11) NOT NULL AUTO_INCREMENT,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
-  `processador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `placa_video` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sistema_operacional` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_computador` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `processador` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `placa_video` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sistema_operacional` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_computador` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_dados`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -118,11 +118,11 @@ INSERT INTO `dados` (`id_dados`, `espaco_armazenamento`, `memoria_ram`, `process
 
 DROP TABLE IF EXISTS `historico`;
 CREATE TABLE IF NOT EXISTS `historico` (
-  `id_historico` int NOT NULL AUTO_INCREMENT,
-  `id_jogo` int NOT NULL,
-  `id_usuario` int NOT NULL,
+  `id_historico` int(11) NOT NULL AUTO_INCREMENT,
+  `id_jogo` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   `data_analise` date NOT NULL,
-  `analise` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `analise` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_historico`),
   KEY `id_usuario` (`id_usuario`),
   KEY `id_jogo` (`id_jogo`)
@@ -136,23 +136,23 @@ CREATE TABLE IF NOT EXISTS `historico` (
 
 DROP TABLE IF EXISTS `jogos`;
 CREATE TABLE IF NOT EXISTS `jogos` (
-  `id_jogos` int NOT NULL AUTO_INCREMENT,
-  `nome_jogo` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `classificacao_indi` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sinopse` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_jogos` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_jogo` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `classificacao_indi` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sinopse` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `ano_lancamento` date NOT NULL,
-  `arquitetura_sistema` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `desenvolvedora` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `capa_jogo` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avaliacao` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `capa_filtragem` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `arquitetura_sistema` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `desenvolvedora` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `capa_jogo` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avaliacao` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `capa_filtragem` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `indies` decimal(10,0) NOT NULL,
   `qts_analisados` decimal(15,0) NOT NULL,
-  `id_catego` int DEFAULT NULL,
-  `id_catego2` int DEFAULT NULL,
-  `id_catego3` int DEFAULT NULL,
-  `id_R` int DEFAULT NULL,
-  `id_M` int DEFAULT NULL,
+  `id_catego` int(11) DEFAULT NULL,
+  `id_catego2` int(11) DEFAULT NULL,
+  `id_catego3` int(11) DEFAULT NULL,
+  `id_R` int(11) DEFAULT NULL,
+  `id_M` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_jogos`),
   KEY `id_catego` (`id_catego`),
   KEY `id_catego3` (`id_catego2`),
@@ -233,7 +233,7 @@ INSERT INTO `jogos` (`id_jogos`, `nome_jogo`, `classificacao_indi`, `sinopse`, `
 
 DROP TABLE IF EXISTS `placa_video`;
 CREATE TABLE IF NOT EXISTS `placa_video` (
-  `id_placa` int NOT NULL AUTO_INCREMENT,
+  `id_placa` int(11) NOT NULL AUTO_INCREMENT,
   `nome_placa` varchar(90) COLLATE utf8mb4_unicode_ci NOT NULL,
   `valor` float NOT NULL,
   PRIMARY KEY (`id_placa`)
@@ -260,7 +260,7 @@ INSERT INTO `placa_video` (`id_placa`, `nome_placa`, `valor`) VALUES
 
 DROP TABLE IF EXISTS `processadores`;
 CREATE TABLE IF NOT EXISTS `processadores` (
-  `id_processador` int NOT NULL AUTO_INCREMENT,
+  `id_processador` int(11) NOT NULL AUTO_INCREMENT,
   `nome_processador` varchar(90) COLLATE utf8mb4_unicode_ci NOT NULL,
   `valor` float NOT NULL,
   PRIMARY KEY (`id_processador`)
@@ -287,79 +287,83 @@ INSERT INTO `processadores` (`id_processador`, `nome_processador`, `valor`) VALU
 
 DROP TABLE IF EXISTS `requisitos_minimos`;
 CREATE TABLE IF NOT EXISTS `requisitos_minimos` (
-  `id_M` int NOT NULL AUTO_INCREMENT,
+  `id_M` int(11) NOT NULL AUTO_INCREMENT,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
-  `id_jogo` int DEFAULT NULL,
-  `id_sistema` int DEFAULT NULL,
+  `id_jogo` int(11) DEFAULT NULL,
+  `id_sistema` int(11) DEFAULT NULL,
+  `id_placa` int(11) DEFAULT NULL,
+  `id_processador` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_M`),
   KEY `id_jogo` (`id_jogo`),
-  KEY `id_sistema` (`id_sistema`)
+  KEY `id_sistema` (`id_sistema`),
+  KEY `id_processador` (`id_processador`),
+  KEY `id_placa` (`id_placa`)
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `requisitos_minimos`
 --
 
-INSERT INTO `requisitos_minimos` (`id_M`, `espaco_armazenamento`, `memoria_ram`, `id_jogo`, `id_sistema`) VALUES
-(1, '150', '12', 1, 10),
-(2, '75', '8', 2, NULL),
-(3, '30', '4', 3, NULL),
-(4, '110', '8', 4, NULL),
-(5, '100', '8', 5, NULL),
-(6, '35', '6', 6, 6),
-(7, '50', '8', 7, NULL),
-(8, '26', '8', 8, NULL),
-(9, '2', '1', 9, NULL),
-(10, '15', '2', 10, NULL),
-(11, '70', '4', 11, NULL),
-(12, '15', '4', 12, NULL),
-(13, '15', '4', 13, NULL),
-(14, '90', '4', 14, NULL),
-(15, '4', '8', 15, NULL),
-(16, '6', '6', 16, NULL),
-(17, '8', '2', 17, NULL),
-(18, '42', '8', 18, NULL),
-(19, '4', '3', 19, NULL),
-(20, '20', '4', 20, NULL),
-(21, '25', '2', 21, NULL),
-(22, '60', '8', 22, NULL),
-(23, '100', '512', 23, NULL),
-(24, '1', '2', 24, NULL),
-(25, '12', '4', 25, NULL),
-(26, '26', '256', 26, NULL),
-(27, '5', '2', 27, NULL),
-(28, '2', '4', 28, NULL),
-(29, '2', '3', 29, NULL),
-(30, '500', '1', 30, NULL),
-(31, '9', '4', 31, NULL),
-(32, '36', '4', 32, NULL),
-(33, '100', '8', 33, NULL),
-(34, '120', '6', 34, NULL),
-(35, '40', '4', 35, NULL),
-(36, '5', '1', 36, NULL),
-(37, '8', '8', 37, NULL),
-(38, '449', '2', 38, NULL),
-(39, '72', '4', 39, NULL),
-(40, '35', '4', 40, NULL),
-(41, '12', '8', 41, NULL),
-(42, '30', '8', 42, NULL),
-(43, '70', '8', 43, NULL),
-(44, '30', '8', 44, NULL),
-(45, '60', '8', 45, NULL),
-(46, '56', '6', 46, NULL),
-(47, '160', '8', 47, NULL),
-(48, '26', '4', 48, NULL),
-(49, '60', '8', 49, NULL),
-(50, '60', '12', 50, NULL),
-(51, '175', '8', 51, NULL),
-(52, '125', '8', 52, NULL),
-(53, '16', '2', 53, NULL),
-(54, '70', '8', 54, NULL),
-(55, '60', '8', 55, NULL),
-(56, '17', '8', 56, NULL),
-(57, '500', '2', 57, NULL),
-(58, '20', '8', 58, NULL);
+INSERT INTO `requisitos_minimos` (`id_M`, `espaco_armazenamento`, `memoria_ram`, `id_jogo`, `id_sistema`, `id_placa`, `id_processador`) VALUES
+(1, '150', '12', 1, 10, 3, 6),
+(2, '75', '8', 2, NULL, NULL, NULL),
+(3, '30', '4', 3, NULL, NULL, NULL),
+(4, '110', '8', 4, NULL, NULL, NULL),
+(5, '100', '8', 5, NULL, NULL, NULL),
+(6, '35', '6', 6, 6, 7, 1),
+(7, '50', '8', 7, NULL, NULL, NULL),
+(8, '26', '8', 8, NULL, NULL, NULL),
+(9, '2', '1', 9, NULL, NULL, NULL),
+(10, '15', '2', 10, NULL, NULL, NULL),
+(11, '70', '4', 11, NULL, NULL, NULL),
+(12, '15', '4', 12, NULL, NULL, NULL),
+(13, '15', '4', 13, NULL, NULL, NULL),
+(14, '90', '4', 14, NULL, NULL, NULL),
+(15, '4', '8', 15, NULL, NULL, NULL),
+(16, '6', '6', 16, NULL, NULL, NULL),
+(17, '8', '2', 17, NULL, NULL, NULL),
+(18, '42', '8', 18, NULL, NULL, NULL),
+(19, '4', '3', 19, NULL, NULL, NULL),
+(20, '20', '4', 20, NULL, NULL, NULL),
+(21, '25', '2', 21, NULL, NULL, NULL),
+(22, '60', '8', 22, NULL, NULL, NULL),
+(23, '100', '512', 23, NULL, NULL, NULL),
+(24, '1', '2', 24, NULL, NULL, NULL),
+(25, '12', '4', 25, NULL, NULL, NULL),
+(26, '26', '256', 26, NULL, NULL, NULL),
+(27, '5', '2', 27, NULL, NULL, NULL),
+(28, '2', '4', 28, NULL, NULL, NULL),
+(29, '2', '3', 29, NULL, NULL, NULL),
+(30, '500', '1', 30, NULL, NULL, NULL),
+(31, '9', '4', 31, NULL, NULL, NULL),
+(32, '36', '4', 32, NULL, NULL, NULL),
+(33, '100', '8', 33, NULL, NULL, NULL),
+(34, '120', '6', 34, NULL, NULL, NULL),
+(35, '40', '4', 35, NULL, NULL, NULL),
+(36, '5', '1', 36, NULL, NULL, NULL),
+(37, '8', '8', 37, NULL, NULL, NULL),
+(38, '449', '2', 38, NULL, NULL, NULL),
+(39, '72', '4', 39, NULL, NULL, NULL),
+(40, '35', '4', 40, NULL, NULL, NULL),
+(41, '12', '8', 41, NULL, NULL, NULL),
+(42, '30', '8', 42, NULL, NULL, NULL),
+(43, '70', '8', 43, NULL, NULL, NULL),
+(44, '30', '8', 44, NULL, NULL, NULL),
+(45, '60', '8', 45, NULL, NULL, NULL),
+(46, '56', '6', 46, NULL, NULL, NULL),
+(47, '160', '8', 47, NULL, NULL, NULL),
+(48, '26', '4', 48, NULL, NULL, NULL),
+(49, '60', '8', 49, NULL, NULL, NULL),
+(50, '60', '12', 50, NULL, NULL, NULL),
+(51, '175', '8', 51, NULL, NULL, NULL),
+(52, '125', '8', 52, NULL, NULL, NULL),
+(53, '16', '2', 53, NULL, NULL, NULL),
+(54, '70', '8', 54, NULL, NULL, NULL),
+(55, '60', '8', 55, NULL, NULL, NULL),
+(56, '17', '8', 56, NULL, NULL, NULL),
+(57, '500', '2', 57, NULL, NULL, NULL),
+(58, '20', '8', 58, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -369,79 +373,83 @@ INSERT INTO `requisitos_minimos` (`id_M`, `espaco_armazenamento`, `memoria_ram`,
 
 DROP TABLE IF EXISTS `requisitos_recomendados`;
 CREATE TABLE IF NOT EXISTS `requisitos_recomendados` (
-  `id_R` int NOT NULL AUTO_INCREMENT,
+  `id_R` int(11) NOT NULL AUTO_INCREMENT,
   `espaco_armazenamento` decimal(15,0) NOT NULL,
   `memoria_ram` decimal(15,0) NOT NULL,
-  `id_jogo` int DEFAULT NULL,
-  `id_sistema` int DEFAULT NULL,
+  `id_jogo` int(11) DEFAULT NULL,
+  `id_sistema` int(11) DEFAULT NULL,
+  `id_processador` int(11) DEFAULT NULL,
+  `id_placa` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_R`),
   KEY `id_jogo` (`id_jogo`),
-  KEY `id_sistema` (`id_sistema`)
+  KEY `id_sistema` (`id_sistema`),
+  KEY `id_processador` (`id_processador`),
+  KEY `id_placa` (`id_placa`)
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `requisitos_recomendados`
 --
 
-INSERT INTO `requisitos_recomendados` (`id_R`, `espaco_armazenamento`, `memoria_ram`, `id_jogo`, `id_sistema`) VALUES
-(1, '150', '12', 1, 10),
-(2, '75', '16', 2, 10),
-(3, '30', '8', 3, NULL),
-(4, '110', '16', 4, 10),
-(5, '100', '12', 5, 10),
-(6, '35', '8', 6, 10),
-(7, '50', '16', 7, 10),
-(8, '26', '8', 8, 10),
-(9, '2', '2', 9, NULL),
-(10, '15', '2', 10, NULL),
-(11, '70', '8', 11, NULL),
-(12, '15', '4', 12, NULL),
-(13, '15', '8', 13, 10),
-(14, '90', '8', 14, 11),
-(15, '4', '16', 15, 10),
-(16, '6', '8', 16, NULL),
-(17, '8', '2', 17, NULL),
-(18, '42', '16', 18, 10),
-(19, '4', '3', 19, NULL),
-(20, '20', '8', 20, 5),
-(21, '25', '4', 21, 5),
-(22, '60', '8', 22, 10),
-(23, '100', '512', 23, 1),
-(24, '4', '4', 24, NULL),
-(25, '12', '4', 25, 8),
-(26, '26', '512', 26, 6),
-(27, '14', '2', 27, 6),
-(28, '2', '4', 28, NULL),
-(29, '2', '3', 29, 5),
-(30, '500', '2', 30, NULL),
-(31, '9', '8', 31, NULL),
-(32, '40', '8', 32, NULL),
-(33, '100', '12', 33, NULL),
-(34, '120', '8', 34, NULL),
-(35, '40', '16', 35, NULL),
-(36, '5', '1', 36, 3),
-(37, '8', '8', 37, NULL),
-(38, '449', '8', 38, NULL),
-(39, '72', '8', 39, NULL),
-(40, '35', '8', 40, NULL),
-(41, '12', '8', 41, 6),
-(42, '30', '8', 42, NULL),
-(43, '70', '12', 43, 10),
-(44, '30', '16', 44, NULL),
-(45, '60', '16', 45, 10),
-(46, '56', '8', 46, 6),
-(47, '160', '8', 47, 10),
-(48, '51', '8', 48, 10),
-(49, '60', '16', 49, 10),
-(50, '60', '16', 50, 11),
-(51, '175', '12', 51, NULL),
-(52, '125', '12', 52, NULL),
-(53, '16', '4', 53, NULL),
-(54, '70', '8', 54, NULL),
-(55, '60', '16', 55, NULL),
-(56, '17', '16', 56, NULL),
-(57, '500', '2', 57, NULL),
-(58, '20', '16', 58, NULL);
+INSERT INTO `requisitos_recomendados` (`id_R`, `espaco_armazenamento`, `memoria_ram`, `id_jogo`, `id_sistema`, `id_processador`, `id_placa`) VALUES
+(1, '150', '12', 1, 10, 2, 1),
+(2, '75', '16', 2, 10, NULL, NULL),
+(3, '30', '8', 3, NULL, NULL, NULL),
+(4, '110', '16', 4, 10, NULL, NULL),
+(5, '100', '12', 5, 10, NULL, NULL),
+(6, '35', '8', 6, 10, 4, 2),
+(7, '50', '16', 7, 10, NULL, NULL),
+(8, '26', '8', 8, 10, NULL, NULL),
+(9, '2', '2', 9, NULL, NULL, NULL),
+(10, '15', '2', 10, NULL, NULL, NULL),
+(11, '70', '8', 11, NULL, NULL, NULL),
+(12, '15', '4', 12, NULL, NULL, NULL),
+(13, '15', '8', 13, 10, NULL, NULL),
+(14, '90', '8', 14, 11, NULL, NULL),
+(15, '4', '16', 15, 10, NULL, NULL),
+(16, '6', '8', 16, NULL, NULL, NULL),
+(17, '8', '2', 17, NULL, NULL, NULL),
+(18, '42', '16', 18, 10, NULL, NULL),
+(19, '4', '3', 19, NULL, NULL, NULL),
+(20, '20', '8', 20, 5, NULL, NULL),
+(21, '25', '4', 21, 5, NULL, NULL),
+(22, '60', '8', 22, 10, NULL, NULL),
+(23, '100', '512', 23, 1, NULL, NULL),
+(24, '4', '4', 24, NULL, NULL, NULL),
+(25, '12', '4', 25, 8, NULL, NULL),
+(26, '26', '512', 26, 6, NULL, NULL),
+(27, '14', '2', 27, 6, NULL, NULL),
+(28, '2', '4', 28, NULL, NULL, NULL),
+(29, '2', '3', 29, 5, NULL, NULL),
+(30, '500', '2', 30, NULL, NULL, NULL),
+(31, '9', '8', 31, NULL, NULL, NULL),
+(32, '40', '8', 32, NULL, NULL, NULL),
+(33, '100', '12', 33, NULL, NULL, NULL),
+(34, '120', '8', 34, NULL, NULL, NULL),
+(35, '40', '16', 35, NULL, NULL, NULL),
+(36, '5', '1', 36, 3, NULL, NULL),
+(37, '8', '8', 37, NULL, NULL, NULL),
+(38, '449', '8', 38, NULL, NULL, NULL),
+(39, '72', '8', 39, NULL, NULL, NULL),
+(40, '35', '8', 40, NULL, NULL, NULL),
+(41, '12', '8', 41, 6, NULL, NULL),
+(42, '30', '8', 42, NULL, NULL, NULL),
+(43, '70', '12', 43, 10, NULL, NULL),
+(44, '30', '16', 44, NULL, NULL, NULL),
+(45, '60', '16', 45, 10, NULL, NULL),
+(46, '56', '8', 46, 6, NULL, NULL),
+(47, '160', '8', 47, 10, NULL, NULL),
+(48, '51', '8', 48, 10, NULL, NULL),
+(49, '60', '16', 49, 10, NULL, NULL),
+(50, '60', '16', 50, 11, NULL, NULL),
+(51, '175', '12', 51, NULL, NULL, NULL),
+(52, '125', '12', 52, NULL, NULL, NULL),
+(53, '16', '4', 53, NULL, NULL, NULL),
+(54, '70', '8', 54, NULL, NULL, NULL),
+(55, '60', '16', 55, NULL, NULL, NULL),
+(56, '17', '16', 56, NULL, NULL, NULL),
+(57, '500', '2', 57, NULL, NULL, NULL),
+(58, '20', '16', 58, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -451,10 +459,10 @@ INSERT INTO `requisitos_recomendados` (`id_R`, `espaco_armazenamento`, `memoria_
 
 DROP TABLE IF EXISTS `sistema_operacional`;
 CREATE TABLE IF NOT EXISTS `sistema_operacional` (
-  `id_sistema` int NOT NULL AUTO_INCREMENT,
-  `NomeSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `VersaoSistema` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `direct_x` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_sistema` int(11) NOT NULL AUTO_INCREMENT,
+  `NomeSistema` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `VersaoSistema` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `direct_x` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_sistema`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -493,18 +501,18 @@ INSERT INTO `sistema_operacional` (`id_sistema`, `NomeSistema`, `VersaoSistema`,
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuario` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_usuario` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tipos` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_usuario` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipos` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `data_nascimento` date NOT NULL,
-  `empresa` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `site_empresa` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `senha` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `icone` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_dados` int DEFAULT NULL,
-  `id_jogos` int DEFAULT NULL,
+  `empresa` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `site_empresa` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `senha` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `icone` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_dados` int(11) DEFAULT NULL,
+  `id_jogos` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   KEY `id_dados` (`id_dados`),
   KEY `id_jogos` (`id_jogos`)
@@ -558,14 +566,18 @@ ALTER TABLE `jogos`
 --
 ALTER TABLE `requisitos_minimos`
   ADD CONSTRAINT `requisitos_minimos_ibfk_1` FOREIGN KEY (`id_jogo`) REFERENCES `jogos` (`id_jogos`),
-  ADD CONSTRAINT `requisitos_minimos_ibfk_2` FOREIGN KEY (`id_sistema`) REFERENCES `sistema_operacional` (`id_sistema`);
+  ADD CONSTRAINT `requisitos_minimos_ibfk_2` FOREIGN KEY (`id_sistema`) REFERENCES `sistema_operacional` (`id_sistema`),
+  ADD CONSTRAINT `requisitos_minimos_ibfk_3` FOREIGN KEY (`id_processador`) REFERENCES `requisitos_minimos` (`id_M`),
+  ADD CONSTRAINT `requisitos_minimos_ibfk_4` FOREIGN KEY (`id_placa`) REFERENCES `requisitos_minimos` (`id_M`);
 
 --
 -- Limitadores para a tabela `requisitos_recomendados`
 --
 ALTER TABLE `requisitos_recomendados`
   ADD CONSTRAINT `requisitos_recomendados_ibfk_1` FOREIGN KEY (`id_jogo`) REFERENCES `jogos` (`id_jogos`),
-  ADD CONSTRAINT `requisitos_recomendados_ibfk_2` FOREIGN KEY (`id_sistema`) REFERENCES `sistema_operacional` (`id_sistema`);
+  ADD CONSTRAINT `requisitos_recomendados_ibfk_2` FOREIGN KEY (`id_sistema`) REFERENCES `sistema_operacional` (`id_sistema`),
+  ADD CONSTRAINT `requisitos_recomendados_ibfk_3` FOREIGN KEY (`id_processador`) REFERENCES `requisitos_recomendados` (`id_R`),
+  ADD CONSTRAINT `requisitos_recomendados_ibfk_4` FOREIGN KEY (`id_placa`) REFERENCES `requisitos_recomendados` (`id_R`);
 
 --
 -- Limitadores para a tabela `usuarios`
