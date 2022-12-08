@@ -18,7 +18,7 @@
     <main>
         <h1>Termos e Condições de Uso</h1>
         <p>Seja bem-vindo ao Appware!</p>
-        <p>Estes termos e condições descrevem as regras de uso do site da empresa Appware, localizado no endereço <a href="http://appware.com.br">appware.com.br</a>.</p>
+        <p>Estes termos e condições descrevem as regras de uso do site da empresa LDR Technology, localizado no endereço <a href="http://appware.com.br">appware.com.br</a>.</p>
 
         <p>Ao acessar este site, consideramos que você está de acordo com os termos e condições abaixo. Não continue a usar o Appware caso você discorde dos termos e condições descritos neste contrato.</p>
 
