@@ -4,12 +4,13 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
   width: 100%;
 }
+
 main .about-origin {
   width: 100%;
   height: 70vh;
@@ -18,6 +19,7 @@ main .about-origin {
   display: -ms-flexbox;
   display: flex;
 }
+
 main .about-origin .origin {
   width: 50%;
   display: -webkit-box;
@@ -35,17 +37,21 @@ main .about-origin .origin {
           flex-direction: column;
   padding: 100px;
 }
+
 main .about-origin .origin h1, main .about-origin .origin p {
   margin: 15px 0;
 }
+
 main .about-origin .origin h1 {
   text-transform: uppercase;
   color: #03f484;
   font-weight: bold;
 }
+
 main .about-origin .origin p {
   text-align: justify;
 }
+
 main .about-origin .logo-enterprise {
   width: 50%;
   display: -webkit-box;
@@ -58,9 +64,11 @@ main .about-origin .logo-enterprise {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 main .about-origin .logo-enterprise img {
   width: 400px;
 }
+
 main .about-objective {
   width: 100%;
   height: 70vh;
@@ -69,6 +77,7 @@ main .about-objective {
   display: -ms-flexbox;
   display: flex;
 }
+
 main .about-objective .ware {
   width: 50%;
   display: -webkit-box;
@@ -81,9 +90,11 @@ main .about-objective .ware {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 main .about-objective .ware img {
   width: 400px;
 }
+
 main .about-objective .objective {
   width: 50%;
   display: -webkit-box;
@@ -101,14 +112,18 @@ main .about-objective .objective {
           flex-direction: column;
   padding: 100px;
 }
+
 main .about-objective .objective h1, main .about-objective .objective p {
   margin: 15px 0;
 }
+
 main .about-objective .objective h1 {
   text-transform: uppercase;
   color: #03f484;
   font-weight: bold;
 }
+
 main .about-objective .objective p {
   text-align: justify;
-}/*# sourceMappingURL=about.css.map */
+}
+/*# sourceMappingURL=about.css.map */

@@ -18,13 +18,13 @@
         </div>
 
         <ul class="list">
-            <li> <a href="navbar.html">Início</a> </li>
+            <li> <a href="index.php">Início</a> </li>
             <li class="sep">|</li>
-            <li> <a href="#">Trabalhe Conosco</a> </li>
+            <li> <a href="contact.php">Trabalhe Conosco</a> </li>
             <li class="sep">|</li>
-            <li> <a href="#">Termos</a> </li>
+            <li> <a href="terms.php">Termos</a> </li>
             <li class="sep">|</li>
-            <li> <a href="#">Políticas de Privacidade</a> </li>
+            <li> <a href="politic-privacy.php">Políticas de Privacidade</a> </li>
         </ul>
         <p class="copyright">Todos os direitos reservados @ 2022</p>
     </footer>

@@ -5,7 +5,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
@@ -21,58 +21,60 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
+
 main .signin {
   padding: 40px;
   width: 80vw;
   border-radius: 10px;
-  background-color: rgba(42, 47, 46, 0.431372549);
+  background-color: #2a2f2e6e;
   /*
-  .sign-up{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0px; //20px
+        .sign-up{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px; //20px
 
 
-      #btn{
-          background-image: linear-gradient(to right,  #137B7B, #00A3A3);
-          width: 300px;
-          height: 60px;
-          border: none;
-          border-radius: 10px;
-          cursor: pointer;
-          font-size: 14px;
-          font-weight: bold;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          margin-top: 10px; //15px
-          color: #fff;
+            #btn{
+                background-image: linear-gradient(to right,  #137B7B, #00A3A3);
+                width: 300px;
+                height: 60px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-top: 10px; //15px
+                color: #fff;
 
-          &:hover{
-              background-image: linear-gradient(to right, #179494, #01cccc);
+                &:hover{
+                    background-image: linear-gradient(to right, #179494, #01cccc);
+                    
+                }
+            }
 
-          }
-      }
 
+            #sign-in{
+                margin-top: 15px;
+                font-size: 13px;
 
-      #sign-in{
-          margin-top: 15px;
-          font-size: 13px;
+                a{
+                    text-decoration: none;
+                    font-weight: bold;
 
-          a{
-              text-decoration: none;
-              font-weight: bold;
-
-              &:hover{
-                  text-decoration: none;
-                  font-weight: bold;
-                  color: rgba(255, 255, 255, 0.774);  
-              }
-          }
-      }
-  }*/
+                    &:hover{
+                        text-decoration: none;
+                        font-weight: bold;
+                        color: rgba(255, 255, 255, 0.774);  
+                    }
+                }
+            }
+        }*/
 }
+
 main .signin h2 {
   margin-bottom: 30px;
   font-size: 30px;
@@ -80,6 +82,7 @@ main .signin h2 {
   text-align: center;
   font-weight: bolder;
 }
+
 main .signin .data-user {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,99 +91,103 @@ main .signin .data-user {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 main .signin .data-user .box-user {
   position: relative;
   width: 45%;
   margin-bottom: 5px;
   /*
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover, 
-  input:-webkit-autofill:focus, 
-  input:-webkit-autofill:active{
-      -webkit-text-fill-color: rgba(255, 255, 255, 0)tant;
-      transition: background-color 5000s ease-in-out 0s;
-  }
-  input:-webkit-autofill:valid{
-      -webkit-text-fill-color: #ffffff !important;
-  }
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover, 
+                input:-webkit-autofill:focus, 
+                input:-webkit-autofill:active{
+                    -webkit-text-fill-color: rgba(255, 255, 255, 0)tant;
+                    transition: background-color 5000s ease-in-out 0s;
+                }
+                input:-webkit-autofill:valid{
+                    -webkit-text-fill-color: #ffffff !important;
+                }
+    
+                label{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 15px 0;
+                    color: white;
+                    font-size: 16px;
+                    pointer-events: none; Indicando campo diitável
+                    transition: .5s;
+                }
 
-  label{
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 15px 0;
-      color: white;
-      font-size: 16px;
-      pointer-events: none; Indicando campo diitável
-      transition: .5s;
-  }
+                input:focus~label,
+                input:valid~label
+                { /*imput focado, label muda
+                    top: -25px;
+                    left: 0;
+                    color: $color-details;
+                    font-size: 12px;
+                }
 
-  input:focus~label,
-  input:valid~label
-  { /*imput focado, label muda
-      top: -25px;
-      left: 0;
-      color: $color-details;
-      font-size: 12px;
-  }
+                input[type="date"]{
+                    width: 100%;
+                }
 
-  input[type="date"]{
-      width: 100%;
-  }
+                input:focus{
+                    border-color: $color-details
+                }
+                
+                label#date{
+                    visibility: hidden;
+                    transition: none;
+                }
 
-  input:focus{
-      border-color: $color-details
-  }
+                input[type="date"]:focus~label#date{
+                    transition: 0.5s;
+                }
 
-  label#date{
-      visibility: hidden;
-      transition: none;
-  }
+                input[type="date"]:focus~label#date,
+                input[type="date"]:valid~label#date{
+                    visibility: visible;
+                    top: -25px;
+                    left: 0;
+                    color: $color-details;
+                    font-size: 12px;
+                }
 
-  input[type="date"]:focus~label#date{
-      transition: 0.5s;
-  }
-
-  input[type="date"]:focus~label#date,
-  input[type="date"]:valid~label#date{
-      visibility: visible;
-      top: -25px;
-      left: 0;
-      color: $color-details;
-      font-size: 12px;
-  }
-
-  input[type="date"]::-webkit-calendar-picker-indicator {
-      cursor: pointer;
-      filter: invert(0.8) brightness(0500%) sepia(10%) saturate(10%) hue-rotate(20deg);
-  }*/
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    cursor: pointer;
+                    filter: invert(0.8) brightness(0500%) sepia(10%) saturate(10%) hue-rotate(20deg);
+                }*/
   /*
-  label{
-      position: absolute;
-      top: -10px;
-      left: 0;
-      padding: 15px 0;
-      color: white;
-      font-size: 16px;
-      pointer-events: none; //Indicando campo diitável
-      transition: .5s;
-  }*/
+                label{
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                    padding: 15px 0;
+                    color: white;
+                    font-size: 16px;
+                    pointer-events: none; //Indicando campo diitável
+                    transition: .5s;
+                }*/
 }
+
 main .signin .data-user .box-user input {
   width: 100%;
   padding: 10px;
   outline: none;
   border: 0;
-  background-color: rgba(128, 128, 128, 0.368627451);
-  border: rgba(128, 128, 128, 0.368627451);
+  background-color: #8080805e;
+  border: #8080805e;
   border-radius: 5px;
   color: white;
   font-size: 16px;
   margin-bottom: 30px;
 }
-main .signin .data-user .box-user input[type=file] {
+
+main .signin .data-user .box-user input[type="file"] {
   display: none;
 }
+
 main .signin .data-user .box-user label {
   padding: 20px 10px;
   width: 100%;
@@ -193,12 +200,15 @@ main .signin .data-user .box-user label {
   gap: 0.5rem;
   border-radius: 5px;
 }
+
 main .signin .data-user .box-user label i {
   margin-right: 0.5rem;
 }
+
 main .signin .data-user .box-user label:hover {
   background-color: #414040;
 }
+
 main .signin .data-user .box-user #btn {
   background-image: -webkit-gradient(linear, left top, right top, from(#137B7B), to(#00A3A3));
   background-image: linear-gradient(to right, #137B7B, #00A3A3);
@@ -214,10 +224,12 @@ main .signin .data-user .box-user #btn {
   margin-top: 10px;
   color: #fff;
 }
+
 main .signin .data-user .box-user #btn:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#179494), to(#01cccc));
   background-image: linear-gradient(to right, #179494, #01cccc);
 }
+
 main .signin .data-user .box-user img {
   position: absolute;
   top: 30%;
@@ -229,9 +241,11 @@ main .signin .data-user .box-user img {
   height: 20px;
   cursor: pointer;
 }
+
 main .signin .data-user .box-user .span-required {
   font-size: 12px;
   margin: -25px 0 0 1px;
   color: red;
   display: none;
-}/*# sourceMappingURL=edit-profile.css.map */
+}
+/*# sourceMappingURL=edit-profile.css.map */

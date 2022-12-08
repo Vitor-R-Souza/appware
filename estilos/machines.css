@@ -6,7 +6,7 @@
           box-sizing: border-box;
   color: #000;
   list-style: none;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
 body {
@@ -19,6 +19,7 @@ main {
   background-color: #fff;
   border-radius: 10px;
 }
+
 main table {
   border-collapse: collapse;
   margin: 0px 0;
@@ -29,45 +30,55 @@ main table {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
+
 main table thead tr {
   background-color: #304a46;
   text-align: left;
   font-weight: bold;
 }
+
 main table thead tr th {
   padding: 12px 15px;
   color: #ffffff;
 }
+
 main table tbody {
   /*
-  tr.active-row {
+            tr.active-row {
 
-      td{
-          font-weight: bold;
-          color: #009879;
-      }
-  }*/
+                td{
+                    font-weight: bold;
+                    color: #009879;
+                }
+            }*/
 }
+
 main table tbody tr {
   border-bottom: 1px solid #dddddd;
 }
+
 main table tbody tr td {
   padding: 12px 15px;
 }
+
 main table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
+
 main table tbody tr:last-of-type {
   border-bottom: 2px solid #304a46;
 }
+
 main table tbody tr:hover td {
   font-weight: bold;
   color: #304a31;
 }
+
 main .btn-analise {
   text-align: center;
   margin-top: 15px;
 }
+
 main .btn-analise button {
   width: 40%;
   height: 60px;
@@ -85,4 +96,5 @@ main .btn-analise button {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin-bottom: 50px;
-}/*# sourceMappingURL=machines.css.map */
+}
+/*# sourceMappingURL=machines.css.map */
