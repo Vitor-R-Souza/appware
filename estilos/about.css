@@ -89,26 +89,10 @@ main .about-objective .ware {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
 }
 
 main .about-objective .ware img {
   width: 400px;
-  position: absolute;
-  top: 25%;
-  /*altura da classe*/
-  left: 25%;
-  -webkit-animation: float 5s ease-in-out infinite;
-          animation: float 5s ease-in-out infinite;
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.342));
-          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.342));
-  z-index: 50;
-  -webkit-filter: grayscale(15%);
-          filter: grayscale(15%);
-  -webkit-filter: saturate(60%);
-          filter: saturate(60%);
-  cursor: pointer;
-  scroll-behavior: smooth;
 }
 
 main .about-objective .objective {
@@ -141,35 +125,5 @@ main .about-objective .objective h1 {
 
 main .about-objective .objective p {
   text-align: justify;
-}
-
-@-webkit-keyframes float {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@keyframes float {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
 }
 /*# sourceMappingURL=about.css.map */

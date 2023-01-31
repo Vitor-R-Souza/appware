@@ -70,21 +70,9 @@ main{
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
 
             img{
                 width: 400px;
-                position: absolute;
-                top:25%;/*altura da classe*/
-                left: 25%;
-                //transform: translate(-25%, -25%);
-                animation: float 5s ease-in-out infinite;
-                filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.342));
-                z-index: 50;
-                filter: grayscale(15%);
-                filter: saturate(60%);
-                cursor: pointer;
-                scroll-behavior: smooth;
             }
         }
 
@@ -108,17 +96,5 @@ main{
                 text-align: justify;
             }
         }
-    }
-}
-
-@keyframes float {
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(-20px);
-    }
-    100%{
-        transform: translateY(0px);
     }
 }

@@ -252,7 +252,7 @@
                                     <h6>Sistema Operacional:</h6>
                                 </div>
                                 <div class='component-requisit'>
-                                    <p>$sm->NomeSistema</p>
+                                    <p>------------</p>
                                 </div>
                             </div>
                             <div class='requireds-game'>
@@ -260,7 +260,7 @@
                                     <h6>Processador:</h6>
                                 </div>
                                 <div class='component-requisit'>
-                                    <p>$rm->processador</p>
+                                    <p>------------</p>
                                 </div>
                             </div>
                             <div class='requireds-game'>
@@ -284,7 +284,7 @@
                                     <h6>Placa de Vídeo:</h6>
                                 </div>
                                 <div class='component-requisit last-component'>
-                                    <p>$rm->placa_video</p>
+                                    <p>------------</p>
                                 </div>
                             </div>";
                     ?>
@@ -313,7 +313,7 @@
                                     <h6>Sistema Operacional:</h6>
                                 </div>
                                 <div class='component-requisit'>
-                                    <p>$sr->NomeSistema</p>
+                                    <p>Windowns 10</p>
                                 </div>
                             </div>
                             <div class='requireds-game'>

@@ -82,8 +82,8 @@
                 <div class="check">
                     <input type="checkbox" name="connected" id="connected" required>
                     <span class="checkmark"></span>
-                    <label for="connected" class="checkmark">Li e concordo com os <a href="terms.php">Termos de Uso</a> e <a
-                            href="politic-privacy.php">Política de Privacidade</a></label>
+                    <label for="connected" class="checkmark">Li e concordo com os <a href="#">Termos de Uso</a> e <a
+                            href="#">Política de Privacidade</a></label>
                 </div>
                 <div>
                     <input type="submit" value="Cadastrar" id="btn">

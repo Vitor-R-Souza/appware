@@ -43,7 +43,7 @@
         if(!isset($senha)){
             $senhaF = gerarHash($senha);
 
-            $BD->query("UPDATE `usuarios` SET `nome` = '$name', `nome_usuario` = '$user', `email` = '$email', `empresa` = '$enterprise', `site_empresa` = '$web', `senha` = '$senhaF', `icone` = '$url' WHERE `usuarios`.`id_usuario` = $id");
+            $BD->query("UPDATE `usuarios` SET `nome` = '$name', `nome_usuario` = '$user', `email` = '$email', `empresa` = '$enterprise', `site_empresa` = '$site', `senha` = '$senhaF', `icone` = '$url' WHERE `usuarios`.`id_usuario` = $id");
 
             move_uploaded_file($icon['tmp_name'],$url);
 
@@ -53,7 +53,7 @@
             $_SESSION['icon'] = $url;
 
         }else{
-            $BD->query("UPDATE `usuarios` SET `nome` = '$name', `nome_usuario` = '$user', `email` = '$email', `empresa` = '$enterprise', `site_empresa` = '$web', `icone` = '$url' WHERE `usuarios`.`id_usuario` = $id");
+            $BD->query("UPDATE `usuarios` SET `nome` = '$name', `nome_usuario` = '$user', `email` = '$email', `empresa` = '$enterprise', `site_empresa` = '$site', `icone` = '$url' WHERE `usuarios`.`id_usuario` = $id");
 
             move_uploaded_file($icon['tmp_name'],$url);
 
