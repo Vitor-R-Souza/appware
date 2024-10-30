@@ -1,4 +1,4 @@
-# APPWARE
+![BANNER](README-assets/APPWARE-Banner.png)
 
 **APPWARE** é um projeto de site desenvolvido como Trabalho de Conclusão de Curso em Análise e Desenvolvimento de Sistemas na Etec Centro Paula Souza. O projeto utiliza PHP, HTML, CSS, MySQL, JavaScript, Python e SCSS.
 
@@ -27,9 +27,15 @@ O repositório e o projeto não serão continuados, servindo apenas como registr
 
 O projeto foi desenvolvido ao longo de um ano, sendo seis meses dedicados à idealização e planejamento, e seis meses à produção e codificação. Cada membro da equipe ficou responsável por áreas de acordo com suas preferências, trabalhando em conjunto sob a orientação dos professores e realizando pesquisas adicionais.
 
+![carbon banner 1](README-assets/APPWARE-Banner.png)
+
 Durante o desenvolvimento, optamos por usar PHP, pois já tínhamos familiaridade com a linguagem. Utilizamos SCSS para estilizar o site, GitHub para controle de versão, e Python para criar um executável que coletava as especificações da máquina e enviava para o banco de dados vinculado à conta do usuário.
 
+![Carbon banner 2](README-assets/login.png)
+
 Embora o projeto tenha enfrentado muitos desafios — incluindo problemas com a detecção de especificações e perda de uma versão atualizada (o que motivou a adoção do GitHub) — conseguimos criar uma versão funcional e sem erros significativos. O maior desafio foi trabalhar com uma equipe reduzida de três pessoas, mas o esforço permitiu transmitir a visão do projeto em código.
+
+![carbon banner 3](README-assets/Catalogo.png)
 
 ## Status do Projeto
 
